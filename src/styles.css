@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+h1,h2,h3,h4,h5,h6
+{
+    font-family: "Volkhov",Times,serif;
+}
+p
+{
+    font-family: "Poppins",sans-serif;
+}
+ul li
+{
+    font-family: "Poppins",sans-serif;
+    list-style-type: none;
+    cursor: pointer;
+}
+a
+{
+    cursor: pointer;
+    text-decoration: none;
+}
