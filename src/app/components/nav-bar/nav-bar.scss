@@ -3,6 +3,7 @@
     --H1Color:#484848;
     --Acolor:#484848;   
     --HoverColor:#b08484;
+    --MobileMenuColor:white;
 }
 
 nav
@@ -13,7 +14,7 @@ nav
     max-width: 1280px;
     margin: 0px auto;
     margin-top: 30px;
-
+    position: relative;
     h1
     {
         font-size: 3.5rem;
@@ -55,7 +56,8 @@ nav
        color: var(--HoverColor);
     }
 
-    .UserMenu
+
+    .UserMenu, .MobileMenu
     {
         display: none;
     }
@@ -71,7 +73,7 @@ nav
     {
         color: var(--HoverColor);
     }
-
+    
     div
     {
         display: flex;
@@ -89,13 +91,45 @@ nav
         {
             margin-left: 32px;
         }
+
         .HamburgerMenu
         {
             display: block;
         }
+
         ul
         {
             display: none;
+        }
+        .MobileMenu
+        {
+            position: absolute;
+            background-color: var(--MobileMenuColor);
+            top: 60px;
+            left: 10;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .MobileMenu.open 
+        {
+            max-height: 300px;
+        }
+
+        .MobileMenu li:not(:last-child) 
+        {
+            padding: 1rem 0rem 1rem 0rem;
+            border-bottom: 1px solid #444;
+            text-align: center;
+        }
+        .MobileMenu li:last-child
+        {
+            margin: 20px;
+            text-align: center;
+        }
+        .MobileMenu a 
+        {
+            color: var(--Acolor);
         }
     }
 }
