@@ -8,8 +8,6 @@
         <li><a href="#Deals">Deals</a></li>
         <li><a href="#NewArrivals">New Arrivals</a></li>
         <li><a href="#Packages">Packages</a></li>
-        <li><a href="#Signin">Sign in</a></li>
-        <li><a href="SignUp">Sign Up</a></li>
         -->
          @if (IsLoggedIn) 
          {
@@ -19,6 +17,7 @@
                   <a [href]="item.link">{{ item.text }}</a>
                 </li>
             }
+            <a href="#Pages">Pages</a>
         } @else 
         {
             @for (item of loggedOutMenu; track item.link) 
@@ -26,7 +25,11 @@
                 <li>
                   <a [href]="item.link">{{ item.text }}</a>
                 </li>
-            }   
+            }  
+             <div class="Buttons">
+                <a href="#SignIn">Sign in</a> 
+                <a href="#SignUp">Sign Up</a>
+            </div>
         }
     </ul>
     @if(IsLoggedIn)
@@ -60,7 +63,11 @@
                 <li>
                   <a [href]="item.link">{{ item.text }}</a>
                 </li>
-            }   
+            }  
+            <div class="Buttons">
+                <a href="#SignIn">Sign in</a> 
+                <a href="#SignUp">Sign Up</a>
+            </div>
         }
     </ul>
     

@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
-import {faArrowRightFromBracket,faUser,faMagnifyingGlass,faStar,faBagShopping,faBars,faXmark} from '@fortawesome/free-solid-svg-icons';
+import {faArrowRightFromBracket,faUser,faMagnifyingGlass,faStar,faBagShopping,faBars,faXmark, faL} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-nav-bar',
@@ -33,9 +33,7 @@ export class NavBar {
     {link:"#Home",text:'Home'},
     {link:"#Deals",text:'Deals'},
     {link:"#NewArrivals",text:'New Arrivals'},
-    {link:"#Packages",text:'Packages'},
-    {link:"#SignIn",text:'Sign In'},
-    {link:"SignUp",text:'Sign Up'}
+    {link:"#Packages",text:'Packages'}
   ];
 
   LoggedInMenu:{link:string,text:string}[]=
@@ -43,6 +41,6 @@ export class NavBar {
     {link:"#Home",text:'Home'},
     {link:"#shop",text:'Shop'},
     {link:"#Products",text:'Products'},
-    {link:"#Pages",text:'Pages'},
+    {link:"#Pages",text:'Pages'}
   ];
 }

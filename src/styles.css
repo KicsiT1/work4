@@ -26,6 +26,7 @@ ul li
 }
 a
 {
+    font-family: "Poppins",sans-serif;
     cursor: pointer;
     text-decoration: none;
 }

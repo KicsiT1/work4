@@ -36,44 +36,31 @@ nav
         color: var(--Acolor);
         font-weight: bold;
     }
-
-    ul li a:hover 
+    .Buttons a:last-child
     {
-        color: var(--HoverColor);
-    }
-
-    ul li:last-child a
-    {
-        color: white;
-        padding: 20px 46px 20px 45px;
+        margin-left: 3.5rem;
         background-color: black;
+        color: white;
+        padding: 20px 46px 20px 46px;
         border-radius: 10px;
-        box-shadow: 0px 5px 4px black;
+          box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
     }
-
-    ul li:last-child a:hover
-    {
-       color: var(--HoverColor);
-    }
-
-
     .MobileMenu
     {
         display: none;
     }
-
     .HamburgerMenu
     {
         display: none;
         font-size: 32px;
         cursor: pointer;
     }
-
+    
     .HamburgerMenu:hover
     {
         color: var(--HoverColor);
     }
-    
+   
     div
     {
         display: flex;
@@ -124,13 +111,17 @@ nav
         }
         .MobileMenu li:last-child
         {
-            margin: 20px;
+            margin: 16px;
             text-align: center;
         }
         .MobileMenu a 
         {
             color: var(--Acolor);
         }
+        .Buttons
+        {
+            margin-top: 16px;
+            margin-bottom: 35px;
+        }
     }
 }
-
