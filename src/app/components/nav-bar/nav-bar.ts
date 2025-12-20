@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import {faUser,faMagnifyingGlass,faStar,faBagShopping,faBars,faXmark} from '@fortawesome/free-solid-svg-icons';
+import {Component} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import {faArrowRightFromBracket,faUser,faMagnifyingGlass,faStar,faBagShopping,faBars,faXmark} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-nav-bar',
-  imports: [FontAwesomeModule],
+  imports: [CommonModule,FontAwesomeModule],
+  standalone: true,
   templateUrl: './nav-bar.html',
   styleUrl: './nav-bar.scss',
 })
@@ -16,11 +18,31 @@ export class NavBar {
   faBagShopping = faBagShopping;
   faBars = faBars;
   faXmark = faXmark;
-
+  faArrowRightFromBracket=faArrowRightFromBracket;
+  
   MenuOpen:boolean=false;
+  IsLoggedIn:boolean=false;
 
   IconChange()
   {
     this.MenuOpen=!this.MenuOpen;
   }
+
+  loggedOutMenu:{link:string,text:string}[]=
+  [
+    {link:"#Home",text:'Home'},
+    {link:"#Deals",text:'Deals'},
+    {link:"#NewArrivals",text:'New Arrivals'},
+    {link:"#Packages",text:'Packages'},
+    {link:"#SignIn",text:'Sign In'},
+    {link:"SignUp",text:'Sign Up'}
+  ];
+
+  LoggedInMenu:{link:string,text:string}[]=
+  [
+    {link:"#Home",text:'Home'},
+    {link:"#shop",text:'Shop'},
+    {link:"#Products",text:'Products'},
+    {link:"#Pages",text:'Pages'},
+  ];
 }
