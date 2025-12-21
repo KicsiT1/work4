@@ -14,10 +14,9 @@
             @for (item of LoggedInMenu; track item.link) 
             {
                 <li>
-                  <a [href]="item.link">{{ item.text }}</a>
+                  <a [href]="item.link">{{ item.text }}  @if(item.icon) {<fa-icon [icon]="item.icon"></fa-icon>}</a>
                 </li>
             }
-            <a href="#Pages">Pages</a>
         } @else 
         {
             @for (item of loggedOutMenu; track item.link) 
@@ -52,7 +51,7 @@
             @for (item of LoggedInMenu; track item.link) 
             {
                 <li>
-                  <a [href]="item.link">{{ item.text }}</a>
+                  <a [href]="item.link">{{ item.text }}  @if(item.icon) {<fa-icon [icon]="item.icon"></fa-icon>}</a>
                 </li>
             }
         } 
