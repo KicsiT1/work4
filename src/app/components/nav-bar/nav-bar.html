@@ -1,14 +1,8 @@
 <nav>
-
+     <!-- Logo -->
     <h1>FASCO</h1>
-
+    <!-- Dynamic Menu list -->
     <ul>
-        <!--
-        <li><a href="#Home">Home</a></li>
-        <li><a href="#Deals">Deals</a></li>
-        <li><a href="#NewArrivals">New Arrivals</a></li>
-        <li><a href="#Packages">Packages</a></li>
-        -->
          @if (IsLoggedIn) 
          {
             @for (item of LoggedInMenu; track item.link) 
@@ -31,6 +25,7 @@
             </div>
         }
     </ul>
+    <!-- This is the icon menu (appears after logging in) -->
     @if(IsLoggedIn)
     {
         <div class="UserMenu">
@@ -41,10 +36,11 @@
             <fa-icon [icon]="faArrowRightFromBracket"></fa-icon>
         </div>
     }
+    <!-- The hamburger menu -->
     <div class="HamburgerMenu">
         <fa-icon [icon]="MenuOpen ? faXmark:faBars" (click)="IconChange()"></fa-icon>
     </div>
-
+     <!--Dynamic menu displayed on the phone-->
      <ul class="MobileMenu" [class.HamburgerMenu]="MenuOpen">
          @if (IsLoggedIn) 
          {
