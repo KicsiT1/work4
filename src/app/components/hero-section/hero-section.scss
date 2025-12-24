@@ -5,6 +5,8 @@
     --Acolor:#484848;   
     --HoverColor:#b08484;
     --MobileMenuColor:white;
+    --SpanColor:#484848;
+    --FaIconColor:#b08484;
 }
 section
 {
@@ -13,9 +15,9 @@ section
     margin-top: 60px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(1, 1fr);
     gap: 35px;
 }
+
 .item
 {
     height: 756px;
@@ -58,8 +60,8 @@ section
     p
     {
         color: white;     
-        text-align: center;          /* betű belseje fehér */
-        -webkit-text-stroke: 1px black;  /* körvonal vastagság és szín */
+        text-align: center;         
+        -webkit-text-stroke: 1px black;  
         -webkit-text-stroke: 1px black;  
         font-size: 8rem;
     }
@@ -68,6 +70,7 @@ section
         display: block;
         text-align: center;
         font-size: 1.3rem;
+        color: var(--SpanColor);
     }
     button
         {
@@ -89,7 +92,69 @@ section
         }
         a:hover
         {
-            color: var(--HoverColor);
+            color: var(--FaIconColor);
         }
     }
-}
+ }
+
+ .carusel1
+ {
+    margin: 0 auto;
+    margin-top: 27px;
+    max-width: 1281px;
+    padding: 82px 0px;
+    overflow-x: hidden;
+ }
+
+ .group
+ {
+    display: flex;
+    align-items: center;
+    gap: 4.875em;
+    animation: Spin 15s linear infinite;
+    will-change: transform;
+ }
+
+ .card
+ {
+    flex: 0 0 5em;
+ }
+
+ @keyframes Spin 
+ {
+    from{transform:translatex(0);}
+    to{transform:translateX(-100%);}
+ }
+ .Icons
+ {
+    position: fixed;
+    bottom: 2%;
+    right: 0;
+    transform: translate(-50%,-50%);
+     fa-icon
+    {
+        font-size: 21px;
+    }
+    fa-icon:first-child
+    {
+        padding: 17px;
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+        cursor: pointer;
+    }
+    fa-icon:last-child
+    {
+        padding: 17px;
+        cursor: pointer;
+        border: 1px solid black;
+        border-radius: 50%;
+        margin-left: 35px;
+    }
+    fa-icon:hover
+    {
+        color: var(--HoverColor);
+        border-color: var(--FaIconColor);
+    }
+ }

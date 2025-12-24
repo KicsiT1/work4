@@ -1,25 +1,46 @@
 <section>
+    <!--Left side grey card-->
     <aside class="item item1 LeftSide">
         <img [src]="LeftSideImg" alt="">
     </aside>
-
+     <!--Middle card -->
     <div class="item item2 Middle">     
-
+         <!--Middle card img in up-->
         <img [src]="MiddleUpImg" alt="">
-        
-
+          <!--Middle card text-->
         <div class="MiddleText">
             <h1>ULTIMATE</h1>
             <p>SALE</p>
             <span>NEW COLLECTION</span>
             <button><a href="#ShopNow">SHOP NOW</a></button>
         </div>
-
+         <!--Middle card img in down-->
         <img [src]="MiddleUpDown" alt="">
 
     </div>
-
+    <!--Right side grey card-->
     <aside class="item item3 RightSide">
         <img [src]="RightSideImg" alt="">
     </aside>
+    <!--Two buttons in right side Cart Shopping and arrow up-->
+    <div class="Icons">
+        <fa-icon [icon]="faCartShopping"></fa-icon>
+        <fa-icon [icon]="faArrowUp"></fa-icon>
+    </div>
 </section>
+<!--Partners banner-->
+<div class="carusel1">
+    <div class="group">
+        <div class="card"><img [src]="ChanelLogo" alt=""></div>
+        <div class="card"><img [src]="LouisVoittonLogo" alt=""></div>
+        <div class="card"><img [src]="PradaLogo" alt=""></div>
+        <div class="card"><img [src]="CalvinKleinLogo" alt=""></div>
+        <div class="card"><img [src]="DenimLogo" alt=""></div>
+
+        <div class="card"><img [src]="ChanelLogo" alt=""></div>
+        <div class="card"><img [src]="LouisVoittonLogo" alt=""></div>
+        <div class="card"><img [src]="PradaLogo" alt=""></div>
+        <div class="card"><img [src]="CalvinKleinLogo" alt=""></div>
+        <div class="card"><img [src]="DenimLogo" alt=""></div>
+    </div>
+</div>

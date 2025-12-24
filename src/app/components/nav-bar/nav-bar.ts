@@ -17,37 +17,37 @@ import {faAngleDown,faArrowRightFromBracket,faUser,faMagnifyingGlass,faStar,faBa
 })
 export class NavBar {
   // Font Awesome icons
-  faUser = faUser;
-  faMagnifyingGlass = faMagnifyingGlass;
-  faStar = faStar;
-  faBagShopping = faBagShopping;
-  faBars = faBars;
-  faXmark = faXmark;
-  faArrowRightFromBracket=faArrowRightFromBracket;
-  faAngleDown=faAngleDown;
+  faUser:IconDefinition = faUser;
+  faMagnifyingGlass:IconDefinition = faMagnifyingGlass;
+  faStar:IconDefinition = faStar;
+  faBagShopping:IconDefinition = faBagShopping;
+  faBars:IconDefinition = faBars;
+  faXmark:IconDefinition = faXmark;
+  faArrowRightFromBracket:IconDefinition = faArrowRightFromBracket;
+  faAngleDown:IconDefinition = faAngleDown;
   // This variable helps to open the phone menu
-  MenuOpen:boolean=false;
+  MenuOpen:boolean = false;
   // This variable helps to change the content in the menu after a possible login.
-  IsLoggedIn:boolean=false;
+  IsLoggedIn:boolean = false;
   //This function reverses the value of the MenuOpen variable
   IconChange()
   {
-    this.MenuOpen=!this.MenuOpen;
+    this.MenuOpen =! this.MenuOpen;
   }
   // This array contains the data that is displayed when the user is not yet logged in.
-  loggedOutMenu:{link:string,text:string}[]=
+  loggedOutMenu:{link:string, text:string}[]=
   [
-    {link:"#Home",text:'Home'},
-    {link:"#Deals",text:'Deals'},
-    {link:"#NewArrivals",text:'New Arrivals'},
-    {link:"#Packages",text:'Packages'}
+    {link:"#Home", text:'Home'},
+    {link:"#Deals", text:'Deals'},
+    {link:"#NewArrivals", text:'New Arrivals'},
+    {link:"#Packages", text:'Packages'}
   ];
   // This array contains the data that is displayed after logging in.
-  LoggedInMenu:{link:string,text:string,icon:IconDefinition|null}[]=
+  LoggedInMenu:{link:string, text:string, icon:IconDefinition|null}[]=
   [
-    {link:"#Home",text:'Home',icon:null},
-    {link:"#shop",text:'Shop',icon:null},
-    {link:"#Products",text:'Products',icon:null},
-    {link:"#Pages",text:'Pages',icon:faAngleDown}
+    {link:"#Home", text:'Home', icon:null},
+    {link:"#shop", text:'Shop', icon:null},
+    {link:"#Products", text:'Products', icon:null},
+    {link:"#Pages", text:'Pages', icon:faAngleDown}
   ];
 }
