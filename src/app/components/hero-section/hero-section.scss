@@ -96,24 +96,31 @@ section
         }
     }
  }
-
- .carusel1
- {
+.background
+{
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
+}
+.carusel1
+{
     margin: 0 auto;
     margin-top: 27px;
     max-width: 1281px;
     padding: 82px 0px;
     overflow-x: hidden;
- }
-
+}
  .group
  {
     display: flex;
     align-items: center;
-    gap: 4.875em;
+    --gap:4.875em;
+    gap: var(--gap);
     animation: Spin 15s linear infinite;
-    will-change: transform;
  }
+
+.group:hover
+{
+    animation-play-state: paused;
+}
 
  .card
  {
@@ -122,8 +129,7 @@ section
 
  @keyframes Spin 
  {
-    from{transform:translatex(0);}
-    to{transform:translateX(-100%);}
+    to{transform:translateX(calc(-100% - var(--gap)));}
  }
  .Icons
  {

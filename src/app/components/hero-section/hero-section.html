@@ -29,18 +29,17 @@
     </div>
 </section>
 <!--Partners banner-->
-<div class="carusel1">
-    <div class="group">
-        <div class="card"><img [src]="ChanelLogo" alt=""></div>
-        <div class="card"><img [src]="LouisVoittonLogo" alt=""></div>
-        <div class="card"><img [src]="PradaLogo" alt=""></div>
-        <div class="card"><img [src]="CalvinKleinLogo" alt=""></div>
-        <div class="card"><img [src]="DenimLogo" alt=""></div>
-
-        <div class="card"><img [src]="ChanelLogo" alt=""></div>
-        <div class="card"><img [src]="LouisVoittonLogo" alt=""></div>
-        <div class="card"><img [src]="PradaLogo" alt=""></div>
-        <div class="card"><img [src]="CalvinKleinLogo" alt=""></div>
-        <div class="card"><img [src]="DenimLogo" alt=""></div>
+<div class="background">
+    <div class="carusel1">
+        <div class="group" aria-hidden="true">
+            @for(logo of LogoIms; track $index)
+            {
+                <div class="card"><img [src]="logo" alt=""></div>
+            }
+            @for(logo of LogoIms; track $index)
+            {
+                <div class="card"><img [src]="logo" alt=""></div>
+            }
+        </div>
     </div>
 </div>
