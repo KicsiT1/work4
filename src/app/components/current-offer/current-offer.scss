@@ -1,0 +1,239 @@
+@font-face {
+  font-family: 'Digital-7';
+  src: url('/public/assets/fonts/digital-7.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:host
+{
+    --H1Color:#484848;
+    --Pcolor:#8A8A8A;
+    --ButtonColor:black;
+    --ButtonTextColor:White;
+    --H4Color:#484848;
+    --HoverColor: #b08484;
+}
+
+//Ebben helyezkedik el a tartalom nagy resze
+section
+{
+    background: linear-gradient(
+    90deg,
+    #F2EFEA 0%,
+    #F7F6F2 50%,
+    #FFFFFF 100%
+    );
+
+  // Ez tartalmazza az elhelyezkedeset a tartalomnak
+  .Content
+  {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 165px;
+    padding-bottom: 145px;
+    // Itt kezdoik a baloladali resze a tartalomnak
+    .Description
+    {
+        h1
+        {
+          font-size: 3rem;
+          margin-bottom: 20px;
+          color: var(--H1Color);
+        }
+        p
+        {
+          font-size: 1rem;
+          line-height: 26px;
+          margin-bottom: 40px;
+          color: var(--Pcolor);
+        }
+        button
+        {
+          padding: 20px 70px 20px 70px;
+          border: none;
+          border-radius: 10px;
+          color: var(--ButtonTextColor);
+          background-color: var(--ButtonColor);
+          margin-bottom: 70px;
+          font-size: 1rem;
+          box-shadow: 0 20px 35px rgba(0, 0, 0, 0.35);
+          font-weight: bold;
+        }
+        button:hover
+        {
+          cursor: pointer;
+          color: var(--HoverColor);
+        }
+        h4
+        {
+          font-size: 1.5rem;
+          color: var(--H4Color);
+        }
+      }
+    // itt van az idezito resz  
+    .Timer_Flex_content
+    {
+      display: flex;
+      gap: 30px;
+      margin-top: 37px;
+      .Timer
+      {
+        span
+        {
+          font-size: 2rem;
+          padding: 22px 12px 22px 12px;
+          background-color: white;
+          border-radius: 10px;
+          font-family: 'Digital-7', monospace;
+          letter-spacing: 4px;
+           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),0 1px 3px rgba(0, 0, 0, 0.06);
+        }
+        p
+        {
+          text-align: center;
+          margin: 0;
+          margin-top: 37px;
+          font-size: 24px;
+        }
+      }
+    }
+    //Ez mar balolalt van a kartyak
+    .ProductsGrid
+    {
+      display: grid;
+      grid-template-columns: 112px 404px 372px 372px;
+      grid-template-areas: 
+      "Icons Item1 Item2 Item3"
+      "Icons Item1 step  step"
+      ;
+      gap: 24px;
+      overflow-x: hidden;
+      .Icons
+      {
+        grid-area: Icons;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        gap: 16px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        fa-icon:hover
+        {
+          cursor: pointer;
+        }
+        fa-icon
+        {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          width: 48px;
+          height: 48px;
+
+          background-color: white;
+          border-radius: 50%;
+          font-size: 14px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+      }
+      .Item1
+      {
+        grid-area: Item1;
+        height: 582px;
+        background-color: #8A8A8A;
+        .Product
+        {
+          position: relative;
+          img
+          {
+            display: block;
+          }
+        }
+        .ProductInfo
+        {
+          position: absolute;
+          top: 70%;
+          left: 5%;
+          width: 217px;
+          height: 150px;
+          background-color: white;
+          p:first-child
+          {
+            font-size: 1rem;
+            padding-top: 32px;
+            padding-right: 42px;
+            padding-left: 26px;
+            text-align: center;
+          }
+          p:last-child
+          {
+            font-size: 1.5rem;
+            padding-right: 42px;
+            padding-left: 26px;
+            text-align: center;
+          }
+        }
+      }
+      .Item2
+      {
+        grid-area: Item2;
+        height: 486px;
+        background-color: #8A8A8A;
+      }
+      .Item3
+      {
+        grid-area: Item3;
+        height: 486px;
+        background-color: #8A8A8A;
+      }
+      .step
+      {
+        grid-area: step;
+        ul 
+        {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        padding: 0;
+        margin: 0;
+        }
+
+        li 
+        {
+          width: 11px;
+          height: 11px;
+          border-radius: 50%;
+          background-color: #b3b3b3; /* szürke pont */
+          position: relative;
+        }
+        li.active 
+        {
+          width: 27px;
+          height: 27px;
+          background-color: transparent;
+          border: 2px solid #444444;
+        }
+        li.active::before 
+        {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background-color: black;
+        }
+
+        li:not(.active) 
+        {
+          border: none;
+          margin-top: 8px; 
+        }
+        ul li:hover{cursor: pointer;}
+      }
+    }
+  }
+}
