@@ -39,33 +39,32 @@
          <fa-icon [icon]="faAngleRight"></fa-icon>
     </div>
 
-    <div class="Item1">
+    <div class="Item Item1">
                     
         <div class="Product">
-            <img [src]="Product1" alt="">
+            <img [src]="ProductInfoItems[NextIndex].ProductImg" alt="">
                         
             <div class="ProductInfo">
-                <p>01 - Spring Sale </p> <br>
-                <p>30% OFF</p>
+                <p>{{ProductInfoItems[NextIndex].SaleNumber}} - {{ProductInfoItems[NextIndex].SaleSeason}}  </p> <br>
+                <p>{{ProductInfoItems[NextIndex].DiscountValue}} OFF</p>
             </div>
         </div>
                     
     </div>
 
     <div class="Item2">
-        <img [src]="Product2" alt="">
+        <img [src]="ProductInfoItems[(NextIndex+1)%ProductInfoItems.length].ProductImg" alt="">
     </div>
 
     <div class="Item3">
-        <img [src]="Product3" alt="">
+        <img [src]="ProductInfoItems[(NextIndex+2)%ProductInfoItems.length].ProductImg" alt="">
     </div>
 
     <div class="step">
         <ul>
-            <li class="active"></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li [class.active]="NextIndex === 0" (click)="NextProduct(0)"></li>
+            <li [class.active]="NextIndex === 1" (click)="NextProduct(1)"></li>
+            <li [class.active]="NextIndex === 2" (click)="NextProduct(2)"></li>
         </ul>
     </div>
     </div>

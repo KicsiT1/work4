@@ -147,6 +147,8 @@ section
           position: relative;
           img
           {
+            width: 100%;
+            height: 582px;
             display: block;
           }
         }
@@ -179,12 +181,24 @@ section
       {
         grid-area: Item2;
         height: 486px;
+        img
+        {
+          display: block;
+          height: 486px;
+          width: 100%;
+        }
         background-color: #8A8A8A;
       }
       .Item3
       {
         grid-area: Item3;
         height: 486px;
+         img
+        {
+          display: block;
+          height: 486px;
+          width: 100%;
+        }
         background-color: #8A8A8A;
       }
       .step
