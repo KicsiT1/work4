@@ -5,13 +5,8 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {IconDefinition,} from '@fortawesome/fontawesome-svg-core';
 // The different icons I use for the hero right side 
 import {faAngleLeft,faAngleRight} from '@fortawesome/free-solid-svg-icons';
-interface ProductInfo 
-{
-  ProductImg: string;
-  SaleNumber: string;
-  DiscountValue:string;
-  SaleSeason: string;
-}
+import { Product } from '../../models/product.model';
+
 
 @Component({
   selector: 'app-current-offer',
@@ -19,6 +14,7 @@ interface ProductInfo
   templateUrl: './current-offer.html',
   styleUrl: './current-offer.scss',
 })
+
 export class CurrentOffer {
   NextIndex:number=0;
   constructor() 
@@ -33,11 +29,11 @@ export class CurrentOffer {
   Product2:string='/public/assets/images/currentOffer/p2.png';
   Product3:string='/public/assets/images/currentOffer/p3.png';
 
-  ProductInfoItems: ProductInfo [] = 
+  ProductItems:Product [] = 
   [
-    {ProductImg:this.Product1,SaleNumber:"01",SaleSeason:"Spring sale",DiscountValue:"30%"},
-    {ProductImg:this.Product2,SaleNumber:"02",SaleSeason:"Spring sale",DiscountValue:"20%"},
-    {ProductImg:this.Product3,SaleNumber:"03",SaleSeason:"Spring sale",DiscountValue:"50%"},
+    {ID:1, Name:"P1",Price:0,ProductType:"Dress",Thumbnail:this.Product1,Discount:30,DiscountSeason:"Spring Sale",SaleNumber:1},
+    {ID:2, Name:"P2",Price:0,ProductType:"Dress",Thumbnail:this.Product2,Discount:50,DiscountSeason:"Spring Sale",SaleNumber:2},
+    {ID:3, Name:"P3",Price:0,ProductType:"Dress",Thumbnail:this.Product3,Discount:10,DiscountSeason:"Spring Sale",SaleNumber:3},
   ];
   
   NextProduct(NewIndex:number)

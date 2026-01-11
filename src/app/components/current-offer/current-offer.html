@@ -42,22 +42,22 @@
     <div class="Item Item1">
                     
         <div class="Product">
-            <img [src]="ProductInfoItems[NextIndex].ProductImg" alt="">
+            <img [src]="ProductItems[NextIndex].Thumbnail" alt="">
                         
             <div class="ProductInfo">
-                <p>{{ProductInfoItems[NextIndex].SaleNumber}} - {{ProductInfoItems[NextIndex].SaleSeason}}  </p> <br>
-                <p>{{ProductInfoItems[NextIndex].DiscountValue}} OFF</p>
+                <p>{{ProductItems[NextIndex].SaleNumber}} - {{ProductItems[NextIndex].DiscountSeason}}  </p> <br>
+                <p>{{ProductItems[NextIndex].Discount}}% OFF</p>
             </div>
         </div>
                     
     </div>
 
     <div class="Item2">
-        <img [src]="ProductInfoItems[(NextIndex+1)%ProductInfoItems.length].ProductImg" alt="">
+        <img [src]="ProductItems[(NextIndex+1)%ProductItems.length].Thumbnail" alt="">
     </div>
 
     <div class="Item3">
-        <img [src]="ProductInfoItems[(NextIndex+2)%ProductInfoItems.length].ProductImg" alt="">
+        <img [src]="ProductItems[(NextIndex+2)%ProductItems.length].Thumbnail" alt="">
     </div>
 
     <div class="step">
