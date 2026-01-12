@@ -8,28 +8,37 @@
                 Scelerisque duis ultrices sollicitudin 
             </p>
             <button>Buy Now</button>
+            @if (Distance > 0) 
+            {
             <h4>Hurry, Before It’s Too Late!</h4>
             <div class="Timer_Flex_content">
+
                 <div class="Timer Days">
-                <span class="Days">00</span>
-                <p>Days</p>
-            </div>
+                    <span class="Days">{{  format(Days) }}</span>
+                    <p>Days</p>
+                </div>
 
-            <div class="Timer Hours">
-                <span class="Hours">00</span>
-                <p>Hr</p>
-            </div>
+                <div class="Timer Hours">
+                    <span class="Hours">{{ format(Hours)}}</span>
+                    <p>Hr</p>
+                </div>
 
-            <div class="Timer Mins">
-                <span class="Mins">00</span>
-                <p>Mins</p>
-            </div>
+                <div class="Timer Mins">
+                    <span class="Mins">{{ format(Minutes)}}</span>
+                    <p>Mins</p>
+                </div>
 
-            <div class="Timer Sec">
-                <span class="Sec">00</span>
-                <p>Sec</p>
+                <div class="Timer Sec">
+                    <span class="Sec">{{format(Seconds)}}</span>
+                    <p>Sec</p>
+                </div>
+
             </div>
-        </div>
+        } 
+        @else
+        {
+            <h4>The promotion has expired!</h4>
+        }
     </aside>
 
     <div class="ProductsGrid">

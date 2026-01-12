@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component,OnInit,OnDestroy,ChangeDetectorRef} from '@angular/core';
 // Font Awesome module need for the icons
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 // This makes it safe to use icons (special type for icons)
@@ -11,16 +11,22 @@ import { Product } from '../../models/product.model';
 @Component({
   selector: 'app-current-offer',
   imports: [FontAwesomeModule],
+  standalone: true,
   templateUrl: './current-offer.html',
   styleUrl: './current-offer.scss',
 })
 
-export class CurrentOffer {
+export class CurrentOffer implements OnInit,OnDestroy{
   NextIndex:number=0;
-  constructor() 
-  {
-    this.NextProduct(0);
-  }
+  CurentDate:number=0;
+  Distance:number=0;
+  Days:number=0;
+  Hours:number=0;
+  Minutes:number=0;
+  Seconds:number=0;
+  private timerId: any;
+  constructor(private cdr: ChangeDetectorRef) 
+  {}
 
   faAngleLeft:IconDefinition=faAngleLeft;
   faAngleRight:IconDefinition=faAngleRight;
@@ -40,5 +46,38 @@ export class CurrentOffer {
   {
     this.NextIndex=NewIndex;
   }
+  TargetDate: number = new Date("February 1 2026 00:00:00").getTime();
+  timer()
+  {
+    this.CurentDate = new Date().getTime();
+    this.Distance = this.TargetDate - this.CurentDate;
+    if(this.Distance>0)
+    {
+    this.Days=Math.floor(this.Distance/1000/60/60/24);
+    this.Hours=Math.floor(this.Distance/1000/60/60)%24;
+    this.Minutes=Math.floor(this.Distance/1000/60)%60;
+    this.Seconds=Math.floor(this.Distance/1000)%60;
+    }
+    this.cdr.detectChanges();
+  }
 
+  format(v: number) 
+  {
+  return v < 10 ? '0' + v : v;
+  }
+
+  ngOnInit() {
+    
+    this.NextProduct(0);
+    this.timer();
+    this.timerId = setInterval(() => this.timer(), 1000);
+  }
+
+  ngOnDestroy() 
+  {
+    if (this.timerId) {
+      clearInterval(this.timerId);
+      console.log("Time stop.")
+  }
+}
 }

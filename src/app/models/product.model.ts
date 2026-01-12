@@ -15,4 +15,5 @@ export interface Product
     BrandName?:string;
     ProductFor?:string;
     Accessories?:boolean;
+    CustomerReviews?:number;
 }
