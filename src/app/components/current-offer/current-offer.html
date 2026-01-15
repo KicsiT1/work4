@@ -1,4 +1,5 @@
 <section>
+    <!--The content on the left-->
     <div class="Content">
         <aside class="Description">
             <h1>Deals Of The Month</h1>
@@ -40,14 +41,14 @@
             <h4>The promotion has expired!</h4>
         }
     </aside>
-
+    <!--The content on the right-->
     <div class="ProductsGrid">
                 
     <div class="Icons">
          <fa-icon [icon]="faAngleLeft"></fa-icon>
          <fa-icon [icon]="faAngleRight"></fa-icon>
     </div>
-
+    <!--The 3 product cards-->
     <div class="Item Item1">
                     
         <div class="Product">
@@ -55,7 +56,10 @@
                         
             <div class="ProductInfo">
                 <p>{{ProductItems[NextIndex].SaleNumber}} - {{ProductItems[NextIndex].DiscountSeason}}  </p> <br>
+                @if(this.Distance>0)
+                {
                 <p>{{ProductItems[NextIndex].Discount}}% OFF</p>
+                }
             </div>
         </div>
                     
@@ -68,7 +72,7 @@
     <div class="Item3">
         <img [src]="ProductItems[(NextIndex+2)%ProductItems.length].Thumbnail" alt="">
     </div>
-
+    <!--The point steppers-->
     <div class="step">
         <ul>
             <li [class.active]="NextIndex === 0" (click)="NextProduct(0)"></li>

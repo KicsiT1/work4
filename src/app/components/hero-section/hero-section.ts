@@ -13,9 +13,11 @@ import {faCartShopping,faArrowUp} from '@fortawesome/free-solid-svg-icons';
   styleUrl: './hero-section.scss',
 })
 export class HeroSection {
+  
   // If you need to change an image in the 
   // hero section, you just need to replace the path with the new image.
   // Images (Importent put images to folder public/assets)
+
   LeftSideImg:string = '/public/assets/images/herosection/left-handmodel.png';
   MiddleUpImg:string = '/public/assets/images/herosection/middle up models.png';
   MiddleUpDown:string = '/public/assets/images/herosection/middle down models.png';

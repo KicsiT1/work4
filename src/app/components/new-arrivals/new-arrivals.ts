@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 // This makes it safe to use icons (special type for icons)
 import {IconDefinition} from '@fortawesome/fontawesome-svg-core';
