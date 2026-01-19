@@ -1,4 +1,5 @@
-export interface Product
+// Manages product-related data in ProductService.
+export interface ProductModel
 {
     ID:number;
     Name:string;
@@ -8,6 +9,7 @@ export interface Product
     Thumbnail?:string;
     Discount?:number;
     DiscountSeason?:string;
+    DiscountMonth?:string;
     Description?:string;
     Images?:string[];
     InStock?: boolean;

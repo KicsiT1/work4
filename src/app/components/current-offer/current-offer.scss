@@ -87,7 +87,7 @@ section
           border-radius: 10px;
           font-family: 'Digital-7', monospace;
           letter-spacing: 4px;
-           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),0 1px 3px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),0 1px 3px rgba(0, 0, 0, 0.06);
         }
         p
         {
@@ -250,4 +250,9 @@ section
       }
     }
   }
+}
+.disabled-icon {
+  opacity: 0.4;
+  pointer-events: none;
+  cursor: not-allowed;
 }
