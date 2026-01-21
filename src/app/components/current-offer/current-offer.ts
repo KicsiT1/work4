@@ -126,7 +126,7 @@ export class CurrentOffer implements OnInit,OnDestroy{
     this.NextIndex = 0;
     this.productService.GetMonthlySalesData().subscribe({
       next: (data) => {this.MonthlySalesItems = data; },
-      error: (err) => console.error('Hiba:', err)
+      error: (err) => console.error('Error:', err)
     });
 
     this.setTargetDateForMonth(this.NextMonth);

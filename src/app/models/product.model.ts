@@ -18,4 +18,6 @@ export interface ProductModel
     ProductFor?:string;
     Accessories?:boolean;
     CustomerReviews?:number;
+    ProductRating?:number;
+    ProductMainColor?:string;
 }

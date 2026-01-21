@@ -1,3 +1,4 @@
+//This Service use other components  1.current-offer and 2.new-arrivals
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'; 
 import { Observable } from 'rxjs';

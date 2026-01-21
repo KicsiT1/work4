@@ -16,163 +16,33 @@
     </div>
 
     <div class="ProductItems">
-
-        <article>
-            <img src="/public/assets/images/NewArrivals/P1Images.png" alt="">
+        @for(item of ProductItems.slice(0,Visibleproducts); track item.ID)
+        {
+          <article>
+            <img [src]="item.Thumbnail" alt="">
             <div class="ProductInfo">
                 <div class="ProductName">
 
                     <div class="PName">
-                        <span>Shiny Dress</span> <br>
-                        <span>Al Karam</span>
+                        <span>{{item.Name}}</span> <br>
+                        <span>{{item.BrandName}}</span>
                     </div>
-
+                    
                     <div class="PStars">
-                        <fa-icon class="Icon" [icon]="faStar"></fa-icon>
-                        <fa-icon [icon]="faStar"></fa-icon>
-                        <fa-icon [icon]="faStar"></fa-icon>
-                        <fa-icon [icon]="faStar"></fa-icon>
-                        <fa-icon [icon]="faStar"></fa-icon>
+                         @for (star of [].constructor(item.ProductRating); let i = $index; track i) 
+                        {
+                            <fa-icon class="Icon" [icon]="faStar"></fa-icon>
+                        }
                     </div>
                 </div>
-                <p>(4.1k) Customer Reviews</p>
+                <p>({{item.CustomerReviews}}) Customer Reviews</p>
                 <div class="ProductPrice">
-                    <span>$95.50</span>
+                    <span>$ {{item.Price}}</span>
                     <span>Almost Sold Out</span>
                 </div>  
             </div>
         </article>
-
-         <article>
-            <img src="/public/assets/images/NewArrivals/P2Images.png" alt="">
-            <div class="ProductInfo">
-                <div class="ProductName">
-
-                    <div class="PName">
-                        <span>Shiny Dress</span> <br>
-                        <span>Al Karam</span>
-                    </div>
-
-                    <div class="PStars">
-                        <fa-icon [icon]="faStar"></fa-icon>
-                        <fa-icon [icon]="faStar"></fa-icon>
-                        <fa-icon [icon]="faStar"></fa-icon>
-                        <fa-icon [icon]="faStar"></fa-icon>
-                        <fa-icon [icon]="faStar"></fa-icon>
-                    </div>
-                </div>
-                <p>(4.1k) Customer Reviews</p>
-                <div class="ProductPrice">
-                    <span>$95.50</span>
-                    <span>Almost Sold Out</span>
-                </div>  
-            </div>
-        </article>
-
-         <article>
-            <img src="/public/assets/images/NewArrivals/P3Images.png" alt="">
-            <div class="ProductInfo">
-                <div class="ProductName">
-
-                    <div class="PName">
-                        <span>Shiny Dress</span> <br>
-                        <span>Al Karam</span>
-                    </div>
-
-                    <div class="PStars">
-                        <fa-icon class="Icon" [icon]="faStar"></fa-icon>
-                        <fa-icon [icon]="faStar"></fa-icon>
-                        <fa-icon [icon]="faStar"></fa-icon>
-                        <fa-icon [icon]="faStar"></fa-icon>
-                        <fa-icon [icon]="faStar"></fa-icon>
-                    </div>
-                </div>
-                <p>(4.1k) Customer Reviews</p>
-                <div class="ProductPrice">
-                    <span>$95.50</span>
-                    <span>Almost Sold Out</span>
-                </div>  
-            </div>
-        </article>
-
-         <article>
-            <img src="/public/assets/images/NewArrivals/P4Images.png" alt="">
-            <div class="ProductInfo">
-                <div class="ProductName">
-
-                    <div class="PName">
-                        <span>Shiny Dress</span> <br>
-                        <span>Al Karam</span>
-                    </div>
-
-                    <div class="PStars">
-                        <fa-icon class="Icon" [icon]="faStar"></fa-icon>
-                        <fa-icon [icon]="faStar"></fa-icon>
-                        <fa-icon [icon]="faStar"></fa-icon>
-                        <fa-icon [icon]="faStar"></fa-icon>
-                        <fa-icon [icon]="faStar"></fa-icon>
-                    </div>
-                </div>
-                <p>(4.1k) Customer Reviews</p>
-                <div class="ProductPrice">
-                    <span>$95.50</span>
-                    <span>Almost Sold Out</span>
-                </div>  
-            </div>
-        </article>
-
-         <article>
-            <img src="/public/assets/images/NewArrivals/P5Images.png" alt="">
-            <div class="ProductInfo">
-                <div class="ProductName">
-
-                    <div class="PName">
-                        <span>Shiny Dress</span> <br>
-                        <span>Al Karam</span>
-                    </div>
-
-                    <div class="PStars">
-                        <fa-icon class="Icon" [icon]="faStar"></fa-icon>
-                        <fa-icon [icon]="faStar"></fa-icon>
-                        <fa-icon [icon]="faStar"></fa-icon>
-                        <fa-icon [icon]="faStar"></fa-icon>
-                        <fa-icon [icon]="faStar"></fa-icon>
-                    </div>
-                </div>
-                <p>(4.1k) Customer Reviews</p>
-                <div class="ProductPrice">
-                    <span>$95.50</span>
-                    <span>Almost Sold Out</span>
-                </div>  
-            </div>
-        </article>
-
-         <article>
-            <img src="/public/assets/images/NewArrivals/P6Images.png" alt="">
-            <div class="ProductInfo">
-                <div class="ProductName">
-
-                    <div class="PName">
-                        <span>Shiny Dress</span> <br>
-                        <span>Al Karam</span>
-                    </div>
-
-                    <div class="PStars">
-                        <fa-icon class="Icon" [icon]="faStar"></fa-icon>
-                        <fa-icon [icon]="faStar"></fa-icon>
-                        <fa-icon [icon]="faStar"></fa-icon>
-                        <fa-icon [icon]="faStar"></fa-icon>
-                        <fa-icon [icon]="faStar"></fa-icon>
-                    </div>
-                </div>
-                <p>(4.1k) Customer Reviews</p>
-                <div class="ProductPrice">
-                    <span>$95.50</span>
-                    <span>Almost Sold Out</span>
-                </div>  
-            </div>
-        </article>
-
+        }
     </div>
-    <button class="ViewMoreButton">View More</button>
+    <button class="ViewMoreButton" (click)=" ViewMore(3)">  {{ Visibleproducts < ProductItems.length ? 'Show More' : 'Show Less' }}</button>
 </section>
