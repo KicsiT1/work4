@@ -7,7 +7,9 @@
         "CustomerReviews":40,
         "Price": 95.50, 
         "ProductType": "Dress", 
-        "Thumbnail": "/public/assets/images/NewArrivals/p1.png"
+        "Thumbnail": "/public/assets/images/NewArrivals/p1.png",
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false
     },
     { 
         "ID": 2, 
@@ -17,7 +19,9 @@
         "CustomerReviews":120,
         "Price": 75.50, 
         "ProductType": "Dress", 
-        "Thumbnail": "/public/assets/images/NewArrivals/p2.png"
+        "Thumbnail": "/public/assets/images/NewArrivals/p2.png",
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false
     },
     { 
         "ID": 3, 
@@ -27,7 +31,9 @@
         "CustomerReviews":420,
         "Price": 120.50, 
         "ProductType": "Dress", 
-        "Thumbnail": "/public/assets/images/NewArrivals/p3.png"
+        "Thumbnail": "/public/assets/images/NewArrivals/p3.png",
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false
     },
     { 
         "ID": 4, 
@@ -37,7 +43,9 @@
         "CustomerReviews":220,
         "Price": 60.70, 
         "ProductType": "Dress", 
-        "Thumbnail": "/public/assets/images/NewArrivals/p4.png"
+        "Thumbnail": "/public/assets/images/NewArrivals/p4.png",
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false
     },
     { 
         "ID": 5, 
@@ -47,7 +55,9 @@
         "CustomerReviews":500,
         "Price": 80, 
         "ProductType": "Dress", 
-        "Thumbnail": "/public/assets/images/NewArrivals/p5.png"
+        "Thumbnail": "/public/assets/images/NewArrivals/p5.png",
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false
     },
     { 
         "ID": 6, 
@@ -57,7 +67,9 @@
         "CustomerReviews":500,
         "Price": 75, 
         "ProductType": "Dress", 
-        "Thumbnail": "/public/assets/images/NewArrivals/p6.png"
+        "Thumbnail": "/public/assets/images/NewArrivals/p6.png",
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false
     },
     { 
         "ID": 7, 
@@ -67,7 +79,9 @@
         "CustomerReviews":1212,
         "Price": 140, 
         "ProductType": "Dress", 
-        "Thumbnail": "/public/assets/images/NewArrivals/p7.png"
+        "Thumbnail": "/public/assets/images/NewArrivals/p7.png",
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false
     },
     { 
         "ID": 8, 
@@ -77,7 +91,9 @@
         "CustomerReviews":785,
         "Price": 65, 
         "ProductType": "Dress", 
-        "Thumbnail": "/public/assets/images/NewArrivals/p8.png"
+        "Thumbnail": "/public/assets/images/NewArrivals/p8.png",
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false
     },
     { 
         "ID": 9, 
@@ -87,7 +103,9 @@
         "CustomerReviews":785,
         "Price": 52, 
         "ProductType": "Dress", 
-        "Thumbnail": "/public/assets/images/NewArrivals/p9.png"
+        "Thumbnail": "/public/assets/images/NewArrivals/p9.png",
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false
     },
     { 
         "ID": 10, 
@@ -97,7 +115,9 @@
         "CustomerReviews":785,
         "Price": 52, 
         "ProductType": "Dress", 
-        "Thumbnail": "/public/assets/images/NewArrivals/p10.png"
+        "Thumbnail": "/public/assets/images/NewArrivals/p10.png",
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false
     },
     { 
         "ID": 11, 
@@ -107,7 +127,9 @@
         "CustomerReviews":785,
         "Price": 55, 
         "ProductType": "Dress", 
-        "Thumbnail": "/public/assets/images/NewArrivals/p11.png"
+        "Thumbnail": "/public/assets/images/NewArrivals/p11.png",
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false
     },
     { 
         "ID": 12, 
@@ -117,7 +139,9 @@
         "CustomerReviews":785,
         "Price": 55, 
         "ProductType": "Dress", 
-        "Thumbnail": "/public/assets/images/NewArrivals/p12.png"
+        "Thumbnail": "/public/assets/images/NewArrivals/p12.png",
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false
     },
     { 
         "ID": 13, 
@@ -127,7 +151,9 @@
         "CustomerReviews":785,
         "Price": 60, 
         "ProductType": "Dress", 
-        "Thumbnail": "/public/assets/images/NewArrivals/p13.png"
+        "Thumbnail": "/public/assets/images/NewArrivals/p13.png",
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false
     },
     { 
         "ID": 14, 
@@ -137,6 +163,116 @@
         "CustomerReviews":785,
         "Price": 66, 
         "ProductType": "Dress", 
-        "Thumbnail": "/public/assets/images/NewArrivals/p14.png"
+        "Thumbnail": "/public/assets/images/NewArrivals/p14.png",
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false
+    },
+    { 
+        "ID": 15, 
+        "Name": "Black jacket", 
+        "BrandName":"Al Karam",
+        "ProductRating":5,
+        "CustomerReviews":1200,
+        "Price": 80, 
+        "ProductType": "Dress", 
+        "Thumbnail": "/public/assets/images/NewArrivals/p15.png",
+        "ProductFor":"Men’s Fashion",
+        "Accessories":false
+    },
+    { 
+        "ID": 16, 
+        "Name": "Blue jacket", 
+        "BrandName":"Al Karam",
+        "ProductRating":3,
+        "CustomerReviews":12000,
+        "Price": 76, 
+        "ProductType": "Dress", 
+        "Thumbnail": "/public/assets/images/NewArrivals/p16.png",
+        "ProductFor":"Men’s Fashion",
+        "Accessories":false
+    },
+    { 
+        "ID": 17, 
+        "Name": "Black sweater", 
+        "BrandName":"Al Karam",
+        "ProductRating":3,
+        "CustomerReviews":120,
+        "Price": 90, 
+        "ProductType": "Dress", 
+        "Thumbnail": "/public/assets/images/NewArrivals/p17.png",
+        "ProductFor":"Men’s Fashion",
+        "Accessories":false
+    },
+    { 
+        "ID": 18, 
+        "Name": "Burgundy sweater", 
+        "BrandName":"Al Karam",
+        "ProductRating":3,
+        "CustomerReviews":1200,
+        "Price": 120, 
+        "ProductType": "Dress", 
+        "Thumbnail": "/public/assets/images/NewArrivals/p18.png",
+        "ProductFor":"Men’s Fashion",
+        "Accessories":false
+    },
+    { 
+        "ID": 19, 
+        "Name": "Blue watch", 
+        "BrandName":"Al Karam",
+        "ProductRating":5,
+        "CustomerReviews":111,
+        "Price": 40, 
+        "ProductType": "Object", 
+        "Thumbnail": "/public/assets/images/NewArrivals/p19.png",
+        "ProductFor":"Men’s Fashion",
+        "Accessories":true
+    },
+    { 
+        "ID": 20, 
+        "Name": "Brown leather watch", 
+        "BrandName":"Al Karam",
+        "ProductRating":4,
+        "CustomerReviews":120,
+        "Price": 45, 
+        "ProductType": "Object", 
+        "Thumbnail": "/public/assets/images/NewArrivals/p20.png",
+        "ProductFor":"Men’s Fashion",
+        "Accessories":true
+    },
+    { 
+        "ID": 21, 
+        "Name": "Brown leather watch", 
+        "BrandName":"Al Karam",
+        "ProductRating":4,
+        "CustomerReviews":120,
+        "Price": 45, 
+        "ProductType": "Object", 
+        "Thumbnail": "/public/assets/images/NewArrivals/p21.png",
+        "ProductFor":"Women’s Fashion",
+        "Accessories":true
+    },
+    { 
+        "ID": 22, 
+        "Name": "Blue leather watch", 
+        "BrandName":"Al Karam",
+        "ProductRating":4,
+        "CustomerReviews":120,
+        "Price": 45.50, 
+        "ProductType": "Object", 
+        "Thumbnail": "/public/assets/images/NewArrivals/p22.png",
+        "ProductFor":"Women’s Fashion",
+        "Accessories":true
+    },
+    { 
+        "ID": 23, 
+        "Name": "Red leather watch", 
+        "BrandName":"Al Karam",
+        "ProductRating":4,
+        "CustomerReviews":120,
+        "Price": 45.50, 
+        "ProductType": "Object", 
+        "Thumbnail": "/public/assets/images/NewArrivals/p23.png",
+        "ProductFor":"Women’s Fashion",
+        "Accessories":true
     }
 ]

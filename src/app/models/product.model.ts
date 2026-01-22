@@ -15,9 +15,15 @@ export interface ProductModel
     InStock?: boolean;
     SaleNumber?:number;
     BrandName?:string;
-    ProductFor?:string;
+    ProductFor?:ProductFor;
     Accessories?:boolean;
     CustomerReviews?:number;
     ProductRating?:number;
     ProductMainColor?:string;
+}
+
+enum ProductFor
+{
+    Men_sFashion="Men’s Fashion",
+    Women_sFashion="Women’s Fashion",
 }
