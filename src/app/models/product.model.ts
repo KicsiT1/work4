@@ -22,7 +22,7 @@ export interface ProductModel
     ProductMainColor?:string;
 }
 
-enum ProductFor
+export enum ProductFor
 {
     Men_sFashion="Men’s Fashion",
     Women_sFashion="Women’s Fashion",

@@ -4,12 +4,14 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 // The different icons I use for the menu
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+
 import { ProductService } from '../../services/product';
 import { ProductModel } from '../../models/product.model';
-
+import { FilterDataPipe } from '../../pipes/filter-data-pipe';
+import { ProductFor } from '../../models/product.model';
 @Component({
   selector: 'app-new-arrivals',
-  imports: [ FontAwesomeModule ],
+  imports: [ FontAwesomeModule ,FilterDataPipe],
   templateUrl: './new-arrivals.html',
   styleUrl: './new-arrivals.scss',
 })
@@ -17,6 +19,10 @@ import { ProductModel } from '../../models/product.model';
 export class NewArrivals {
   faStar:IconDefinition=faStar;
   protected Visibleproducts=6;
+
+  protected readonly ProductFor = ProductFor;
+  protected currentCategory: string = 'all';
+  protected showAccessoriesOnly: boolean | null = null;
   ProductItems:ProductModel[]=[];
   constructor(private productService: ProductService) 
   {}
@@ -45,4 +51,24 @@ export class NewArrivals {
       this.Visibleproducts=6;
     }
    }
+   //We set a (one)specific category like men's fashion or women's fashion
+   setCategory(cat: ProductFor | string) 
+   {
+    this.currentCategory = cat;
+    this.showAccessoriesOnly = null;
+    this.Visibleproducts = 6; 
+  }
+
+  setAccessoryFilter(mode: boolean | null) 
+  {
+    this.showAccessoriesOnly = mode;
+    this.Visibleproducts = 6;
+  }
+
+  setCombinedFilter(category: string, accessories: boolean | null) 
+  {
+    this.currentCategory = category;
+    this.showAccessoriesOnly = accessories;
+    this.Visibleproducts = 6; 
+  }
 }

@@ -8,15 +8,15 @@
     </div>
 
     <div class="Buttons">
-        <button>Men’s Fashion</button>
-        <button>Women’s Fashion</button>
-        <button>Women Accessories</button>
-        <button>Men Accessories</button>
+        <button (click)="setCategory(ProductFor.Men_sFashion)">Men’s Fashion</button>
+        <button (click)="setCategory(ProductFor.Women_sFashion)">Women’s Fashion</button>
+        <button (click)="setCombinedFilter('Women’s Fashion', true)">Women Accessories</button>
+        <button (click)="setCombinedFilter('Men’s Fashion', true)">Men Accessories</button>
         <button>Discount Deals</button>
     </div>
 
     <div class="ProductItems">
-        @for(item of ProductItems.slice(0,Visibleproducts); track item.ID)
+        @for(item of (ProductItems | filterData:currentCategory:showAccessoriesOnly).slice(0,Visibleproducts); track item.ID)
         {
           <article>
             <img [src]="item.Thumbnail" alt="">
