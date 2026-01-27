@@ -1,4 +1,5 @@
 <section>
+    <!-- Top text -->
     <div class="TextContent">
         <h3>New Arrivals</h3>
         <p>
@@ -6,18 +7,20 @@
             ultrices sollicitudin aliquam sem. Scelerisque duis ultrices sollicitudin 
         </p>
     </div>
-
+     <!-- The filter buttons -->
     <div class="Buttons">
         <button (click)="setCategory(ProductFor.Men_sFashion)">Men’s Fashion</button>
         <button (click)="setCategory(ProductFor.Women_sFashion)">Women’s Fashion</button>
-        <button (click)="setCombinedFilter('Women’s Fashion', true)">Women Accessories</button>
-        <button (click)="setCombinedFilter('Men’s Fashion', true)">Men Accessories</button>
+        <button (click)="setCombinedFilter(ProductFor.Women_sFashion, true)">Women Accessories</button>
+        <button (click)="setCombinedFilter(ProductFor.Men_sFashion, true)">Men Accessories</button>
         <button>Discount Deals</button>
     </div>
-
+    <!-- Dynamic content is displayed in the cards. -->
     <div class="ProductItems">
-        @for(item of (ProductItems | filterData:currentCategory:showAccessoriesOnly).slice(0,Visibleproducts); track item.ID)
+        <!-- For loop that includes the filter pipe. -->
+        @for(item of (ProductItems | filterData:{ProductFor: currentCategory, Accessories: showAccessoriesOnly }).slice(0,Visibleproducts); track item.ID)
         {
+          <!--Product details of the cards. -->
           <article>
             <img [src]="item.Thumbnail" alt="">
             <div class="ProductInfo">
@@ -27,7 +30,7 @@
                         <span>{{item.Name}}</span> <br>
                         <span>{{item.BrandName}}</span>
                     </div>
-                    
+                    <!--Generate the cool reviews here. -->
                     <div class="PStars">
                          @for (star of [].constructor(item.ProductRating); let i = $index; track i) 
                         {
@@ -44,5 +47,6 @@
         </article>
         }
     </div>
+    <!-- Always show 3 extra cards. -->
     <button class="ViewMoreButton" (click)=" ViewMore(3)">  {{ Visibleproducts < ProductItems.length ? 'Show More' : 'Show Less' }}</button>
 </section>

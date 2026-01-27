@@ -1,3 +1,4 @@
+// It can filter on all properties of the ProductModel[] array if needed. (Universal filtering)
 import { Pipe, PipeTransform } from '@angular/core';
 import { ProductModel } from '../models/product.model';
 @Pipe({
@@ -5,17 +6,18 @@ import { ProductModel } from '../models/product.model';
 })
 export class FilterDataPipe implements PipeTransform {
 
-transform(DataList: ProductModel[], category: string = 'all', onlyAccessories: boolean | null = null): ProductModel[] {
+transform(DataList: ProductModel[], filters: { [key: string]: any}): ProductModel[] {
   
-    if (!DataList) return [];
+    if (!DataList || !filters) return [];
 
     return DataList.filter((product) => {
     
-      const matchesCategory = (category === 'all') || (product.ProductFor === category);
-
-      const matchesAcc = (onlyAccessories === null) || (product.Accessories === onlyAccessories);
-
-      return matchesCategory && matchesAcc;
+    return Object.entries(filters).every(([key, value]) => {
+      
+      if (value === null || value === undefined) return true;
+      
+      return product[key as keyof ProductModel] === value;
     });
+  });
   }
 }

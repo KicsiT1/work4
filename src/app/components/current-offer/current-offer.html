@@ -2,7 +2,7 @@
     <!--The content on the left-->
     <div class="Content">
         <aside class="Description">
-            <h1>Deals Of The {{MonthlySalesItems[NextMonth].Month}}</h1>
+            @if(MonthlySalesItems){<h1>Deals Of The {{MonthlySalesItems[NextMonth].Month}}</h1>}
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> 
                 Scelerisque duis ultrices sollicitudin aliquam sem. <br>
@@ -55,11 +55,13 @@
             <img [src]="MonthlySalesItems[NextMonth].SaleProducts[NextIndex].Thumbnail" alt="">
                         
             <div class="ProductInfo">
+            
                 <p>{{MonthlySalesItems[NextMonth].SaleProducts[NextIndex].SaleNumber}} - {{MonthlySalesItems[NextMonth].SaleProducts[NextIndex].DiscountSeason}}  </p> <br>
                 @if(this.Distance>0)
                 {
                 <p>{{MonthlySalesItems[NextMonth].SaleProducts[NextIndex].Discount}}% OFF</p>
                 }
+            
             </div>
         </div>
                     
