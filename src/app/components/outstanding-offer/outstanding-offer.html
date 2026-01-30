@@ -1,0 +1,32 @@
+<!--Contains the text and image that the model has-->
+<section class="OutstandingOffer">
+      <!--The picture-->
+      <div class="LeftSide">
+         <img [src]=OutstandingOfferImg alt="">
+         <div class="BlackLine"></div>
+      </div>
+      <!--The text-->
+      <div class="RightSide">
+         <p class="CollectionType">Women Collection</p>
+         <h2 class="CollectionName">Peaky Blinders</h2>
+         <p class="CollectionDescription">DESCRIPTION</p>
+         <p class="CollectionMainText">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  <br>
+            Scelerisque duis ultrices sollicitudin aliquam sem. Scelerisque <br>
+            duis ultrices sollicitudin. Lorem ipsum dolor sit amet, consectetur <br>
+            adipiscing elit. Scelerisque duis.
+         </p>
+         <p class="CollectionSize">Size:  <span class="CollectionSizeM"> M </span></p>
+         <p class="Price">$100.00</p>
+         <button>Buy Now</button>
+      </div>
+</section>
+<!--Here are the pictures that are in the little white banner-->
+<section class="InfoBanner">
+  @for (item of BannerImgs; track item) 
+  {
+   <div class="Item+item">
+      <img [src]=item alt="">
+   </div>
+  }
+</section>

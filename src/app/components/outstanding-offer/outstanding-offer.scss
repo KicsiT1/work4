@@ -1,0 +1,95 @@
+:host{--SBColor:#DADADA;--PTextColor:#767676;--HoverColor:#b08484;}
+section
+{
+    display: flex;
+    gap: 30px;
+    background-color: var(--SBColor);
+    .LeftSide
+    {
+        position: relative;
+        img{display: block; width: 100%}
+        .BlackLine
+        {
+            position: absolute;
+            display: block;
+            clip-path: polygon(100% 0%, 99% 0, 82% 100%, 83% 100%);
+            background-color: black;
+            width: 100%;              
+            height: 100%;  
+            top: 0;
+        }
+    }
+    .RightSide
+    {
+        margin-top: 60px;
+        margin-bottom: 60px;
+        .CollectionType
+        {
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: var(--PTextColor);
+        }
+        .CollectionName
+        {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .CollectionDescription
+        {
+            text-decoration: underline;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .CollectionMainText
+        {
+            width: 515px;
+            line-height: 1.5rem;
+            margin-bottom: 20px;
+        }
+        .CollectionSize
+        {
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: var(--PTextColor);
+        }
+        .CollectionSizeM
+        {
+            color: white;
+            padding: 6px 20px 6px 19px;
+            background-color: black;
+            border-radius: 10px;
+        }
+        .Price
+        {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        button
+        {
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            padding: 20px 70px 20px;
+            color: white;
+            background-color: black;
+            font-weight: bold;
+        }
+        button:hover
+        {
+            color:var(--HoverColor);
+        }
+    }
+}
+.InfoBanner
+{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 72px;
+    padding-bottom: 72px; 
+
+    box-shadow: 0 8px 15px -10px rgba(0, 0, 0, 0.25);
+    background-color: white;
+ 
+}

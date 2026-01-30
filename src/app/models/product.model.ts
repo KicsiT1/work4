@@ -7,6 +7,7 @@ export interface ProductModel
     ProductType:string;
 
     Thumbnail?:string;
+    StoreThumbnail?:string;
     Discount?:number;
     DiscountSeason?:string;
     DiscountMonth?:string;
@@ -19,11 +20,29 @@ export interface ProductModel
     Accessories?:boolean;
     CustomerReviews?:number;
     ProductRating?:number;
-    ProductMainColor?:string;
+    ProductMainColor?:ProductMainColor;
 }
 
 export enum ProductFor
 {
     Men_sFashion="Men’s Fashion",
     Women_sFashion="Women’s Fashion",
+}
+
+export enum ProductMainColor
+{
+    RedCoral="RedCoral",
+    Orange="Orange",
+    Yellow="Yellow",
+    LimeGreen="LimeGreen",
+    GreenMint="GreenMint",
+    Turquoise="Turquoise",
+    SkyBlue="SkyBlue",
+    CyanLightBlue="CyanLightBlue",
+    Blue="Blue",
+    RoyalBlue="RoyalBlue",
+    VioletPurple="VioletPurple",
+    LavenderPurple="LavenderPurple",
+    MagentaPink="MagentaPink",
+    RedSalmon="RedSalmon",   
 }

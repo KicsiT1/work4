@@ -1,59 +1,80 @@
-# Work4
+// The project folder structure
+project-root/
+├─ .angular/
+├─ .vscode/
+├─ dist/
+├─ docs/
+├─ node_modules/
+│
+├─ public/
+│  └─ assets/
+│     ├─ fonts/
+│     │  └─ digital-7.ttf
+│     ├─ images/
+│     │  ├─ currentOffer/
+│     │  ├─ FollowUs/
+│     │  ├─ herosection/
+│     │  ├─ nav/
+│     │  ├─ NewArrivals/
+│     │  └─ outstanding-offer/
+│     ├─ MonthlySalesData.json
+│     └─ NewArrivalsData.json
+│
+├─ src/
+│  ├─ app/
+│  │  ├─ components/
+│  │  │  ├─ current-offer/
+│  │  │  ├─ follow-us/
+│  │  │  ├─ hero-section/
+│  │  │  ├─ nav-bar/
+│  │  │  ├─ new-arrivals/
+│  │  │  └─ outstanding-offer/
+│  │  │
+│  │  ├─ models/
+│  │  │  ├─ MonthlySales.model.ts
+│  │  │  └─ product.model.ts
+│  │  │
+│  │  ├─ pipes/
+│  │  │  └─ filter-data-pipe.ts
+│  │  │
+│  │  ├─ services/
+│  │  │  └─ product.ts
+│  │  │
+│  │  ├─ app.config.ts
+│  │  ├─ app.css
+│  │  ├─ app.html
+│  │  ├─ app.routes.ts
+│  │  ├─ app.spec.ts
+│  │  └─ app.ts
+│  │
+│  ├─ index.html
+│  ├─ main.ts
+│  └─ styles.css
+//////////////////////////////Project description////////////////////////////
+This application is a web implementation of a clothing store. The app contains all the essential functions that make it functional. But it is only implemented from the front-end side and also tries to simulate the data. The project is the first serious work of a beginner front-end developer.
+//////////////////////////////File contents//////////////////////////////////
+public/assets/
+– static resources (images, fonts, JSON data)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.3.
+src/app/components/
+– visual units of the application (hero section, navigation, offers)
 
-## Development server
+src/app/services/
+– services responsible for data management
 
-To start a local development server, run:
+src/app/models/
+– data structures used in the application (Product, MonthlySales)
 
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+src/app/pipes/
+– individual data processing pipes
+/////////////////////////Components and their functions/////////////////////////
+Components:
+- NavBarComponent – ​​navigation bar
+- HeroSectionComponent – ​​main visual section
+- CurrentOfferComponent – ​​ CurrentOfferComponent – ​​display currentoffer broken down by month
+- NewArrivalsComponent – ​​list new products
+/////////////////////////project execution///////////////////////////////////////
+Run:
+1. npm install
+2. ng serve
+3. http://localhost:4200
