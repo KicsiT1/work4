@@ -6,9 +6,10 @@ import { CurrentOffer } from './components/current-offer/current-offer';
 import { NewArrivals } from'./components/new-arrivals/new-arrivals'
 import { OutstandingOffer } from './components/outstanding-offer/outstanding-offer';
 import { FollowUs } from './components/follow-us/follow-us';
+import { UserFeedback } from './components/user-feedback/user-feedback';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,NavBar,HeroSection,CurrentOffer,NewArrivals,OutstandingOffer,FollowUs],
+  imports: [RouterOutlet,NavBar,HeroSection,CurrentOffer,NewArrivals,OutstandingOffer,FollowUs,UserFeedback],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

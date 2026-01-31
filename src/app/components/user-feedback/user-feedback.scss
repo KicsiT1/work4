@@ -1,0 +1,173 @@
+:host{--SectionBColor:#FAFAFA;--StarColor:#FCA120;--CardBColor:white;--HoverColor:#b08484;}
+section
+{
+    background-color: var(--SectionBColor);
+    overflow-x: hidden;
+    .Buttons
+    {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        margin-bottom: 58px;
+        
+        fa-icon
+        {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow:0 6px 12px rgba(0, 0, 0, 0.15);
+            font-size: 14px;
+            padding: 17px 20px 17px 20px;
+            background-color: white;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        fa-icon:hover
+        {
+            background-color: rgb(230, 230, 230);
+            color: var(--HoverColor);
+        }
+    }
+}
+.TextContent
+{
+    max-width: 716px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 100px;
+    h2
+    {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+}
+.UserFeedbackContainer
+{
+    position: relative;
+    z-index: 0;
+    max-width: 867px;
+    padding-top:70px;
+    padding-bottom: 70px;
+    margin: 0 auto;
+}
+.UFB1,.UFB2,.UFB3
+{
+    display: flex;
+    justify-content: center;
+    background-color: var(--CardBColor);
+    border-radius: 12px;
+    fa-icon{color: var(--StarColor);}
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.UFB1,.UFB3
+{
+    position: absolute;
+    top: 110px;
+   
+}
+.UFBItem>.UFB3Img,.UFB1Img>img
+{
+    width: 180.94px;
+    height: auto;
+    box-shadow: -21px 20px 0px #e6e6e6;
+}
+
+.UFB1
+{
+    gap: 62.06px;
+    left: -300px;
+    z-index: -1;
+    padding: 51.59px 37.38px 51.59px 63.64px;
+    fa-icon{font-size: 14.21px;}
+    .UFB2UserComment
+    {
+        margin-bottom: 20.02px;
+        line-height: 1rem;
+        font-size: 11.96px;
+    }
+    .BlackLine
+    {
+        max-width: 230px;
+        height: 1px;
+        background-color: black;
+        margin-top: 22.43px;
+        margin-bottom: 11.22px;
+    }
+    .UserName
+    {
+        font-size: 23.93px;
+        margin-bottom: 9.38px;
+    }
+    .UserProfession
+    {
+        font-weight: bold;
+    }
+}
+
+.UFB2
+{
+    gap: 103px;
+    padding: 69px 0px 69px 0px;
+    .UFB2Img>img
+    {
+        box-shadow: -21px 20px 0px #e6e6e6;
+    }
+    .UFB2UserComment
+    {
+        margin-bottom: 27px;
+        line-height: 1.5rem;
+    }
+    .BlackLine
+    {
+        max-width: 230px;
+        height: 1px;
+        background-color: black;
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+    .UserName
+    {
+        font-size: 2rem;
+        margin-bottom: 13px;
+    }
+    .UserProfession
+    {
+        font-weight: bold;
+    }
+}
+
+.UFB3
+{
+    gap: 62.06px;
+    left: 480px;
+    height: 299.07px;
+    width: 646px;
+    z-index: -1;
+    padding: 51.75px 37.5px 51.75px 36.75px;
+    fa-icon{font-size: 14.21px;}
+    .UFB3UserComment
+    {
+        margin-bottom: 20.25px;
+        line-height: 1rem;
+        font-size: 12px;
+    }
+    .BlackLine
+    {
+        max-width: 230px;
+        height: 1px;
+        background-color: black;
+        margin-top: 22.43px;
+        margin-bottom: 11.22px;
+    }
+    .UserName
+    {
+        font-size: 23.93px;
+        margin-bottom: 9.38px;
+    }
+    .UserProfession
+    {
+        font-weight: bold;
+    }
+}

@@ -7,7 +7,7 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 // This makes it safe to use icons (special type for icons)
 import {IconDefinition} from '@fortawesome/fontawesome-svg-core';
 // The different icons I use for the hero right side 
-import {faAngleLeft,faAngleRight,} from '@fortawesome/free-solid-svg-icons';
+import {faAngleLeft,faAngleRight} from '@fortawesome/free-solid-svg-icons';
 
 import { ProductService } from '../../services/product';
 import { MonthlySalesModel } from '../../models/MonthlySales.model';
