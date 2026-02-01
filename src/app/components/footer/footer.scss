@@ -1,0 +1,20 @@
+footer
+{
+    p{text-align: center;margin-top: 50px;margin-bottom: 20px;}
+    border-top: 1px solid #eeeeee;
+}
+.FlexBox
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-top: 30px;
+    .Logo>h1{font-size: 2rem;font-weight: bold;}
+}
+ul
+{
+    display: flex;
+    gap: 36px;
+}

@@ -1,0 +1,47 @@
+:host{
+    --HoverColor:#b08484;
+    --InputShadowColor:#ffdede;
+}
+.FlexContent
+{
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    gap: 48px;
+}
+.TextContent
+{
+    text-align: center;
+    h2
+    {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+    p{line-height: 1.5rem;}
+    input
+    {
+        margin-top: 30px;
+        width: 100%;
+        padding: 28px 30px 32px 30px;
+        font-size: 2rem;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0px 90px 90px rgba(0, 0, 0, 0.1);
+    }
+    input:focus {outline: none; box-shadow: 0px 10px 90px var(--InputShadowColor)}
+    button
+    {
+        display: block;
+        margin: 0 auto;
+        margin-top: 30px;
+        padding: 20px 44px 20px;
+        background-color: black;
+        border-radius: 10px;
+        border: none;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    button:hover{color: var(--HoverColor);}
+}
