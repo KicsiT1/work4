@@ -14,4 +14,29 @@ export class UserFeedback {
   faStar:IconDefinition=faStar;
   faAngleLeft:IconDefinition=faAngleLeft;
   faAngleRight:IconDefinition=faAngleRight;
+  
+  protected activeIndex: number = 1;
+  protected totalItems: number = 3;
+  // Responsible for swiping the card right
+  next(): void {
+    if (this.activeIndex < this.totalItems - 1) 
+    {
+      this.activeIndex++;
+    } 
+    else 
+    {
+      this.activeIndex = 0;
+    }
+  }
+  // Responsible for swiping the card to the left
+  prev(): void {
+    if (this.activeIndex > 0) 
+    {
+      this.activeIndex--;
+    } 
+    else 
+    {
+      this.activeIndex = this.totalItems - 1;
+    }
+  }
 }

@@ -1,87 +1,96 @@
 <section class="UserFeedback">
-
+    <!--The text in the middle.-->
     <div class="TextContent">
         <h2>This Is What Our Customers Say</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis</p>
     </div>
 
-    <div class="UserFeedbackContainer">
+    <div class="UserFeedbackViewport">
+        <div class="UserFeedbackContainer" [style.transform]="'translateX(' + (-activeIndex * 100) + '%)'">
+            <!--The card itself.-->
+            <div class="UFBItem" [class.active]="activeIndex === 0">
+                <div class="UFBCard UFBCard1">
+                    <!--The image in the card.-->
+                    <div class="UFBCardImg">
+                        <img src="/public/assets/images/UserAvatars/User1.png" alt="">
+                    </div>
+                    <!--Text content of the card.-->
+                    <div class="UFBCardTextContent">
+                        <p class="UFBCardUserComment">
+                           “Items That I ordered were the best investment I <br>
+                            ever made. I can't say enough about your quality <br>
+                            service."
+                        </p>
+                        <fa-icon [icon]=faStar></fa-icon>
+                        <fa-icon [icon]=faStar></fa-icon>
+                        <fa-icon [icon]=faStar></fa-icon>
+                        <fa-icon [icon]=faStar></fa-icon>
+                        <fa-icon [icon]=faStar></fa-icon>
+                        <div class="BlackLine"></div>
+                        <h3 class="UserName">Suzan B.</h3>
+                        <p class="UserProfession">UI Designer</p>
+                    </div>
 
-        <div class="UFB1 UFBItem">
-            <div class="UFB1Img">
-                <img src="/public/assets/images/UserAvatars/User1.png" alt="">
+                </div>
             </div>
 
-            <div class="UFB1TextContent">
-                <p class="UFB2UserComment">
-                   “Items That I ordered were the best investment I <br>
-                    ever made. I can't say enough about your quality <br>
-                    service."
-                </p>
-                <fa-icon [icon]=faStar></fa-icon>
-                <fa-icon [icon]=faStar></fa-icon>
-                <fa-icon [icon]=faStar></fa-icon>
-                <fa-icon [icon]=faStar></fa-icon>
-                <fa-icon [icon]=faStar></fa-icon>
-                <div class="BlackLine"></div>
-                <h3 class="UserName">Suzan B.</h3>
-                <p class="UserProfession">UI Designer</p>
+            <div class="UFBItem" [class.active]="activeIndex === 1">
+                 <div class="UFBCard">
+
+                     <div class="UFBCardImg">
+                        <img src="/public/assets/images/UserAvatars/User2.png" alt="">
+                    </div>
+
+                    <div class="UFBCardTextContent">
+                        <p class="UFBCardUserComment">
+                            "You won't regret it. I would like to personally thank <br>
+                            you for your outstanding product. Absolutely <br>
+                            wonderful!"
+                        </p>
+                        <fa-icon [icon]=faStar></fa-icon>
+                        <fa-icon [icon]=faStar></fa-icon>
+                        <fa-icon [icon]=faStar></fa-icon>
+                        <fa-icon [icon]=faStar></fa-icon>
+                        <fa-icon [icon]=faStar></fa-icon>
+                        <div class="BlackLine"></div>
+                        <h3 class="UserName">James K.</h3>
+                        <p class="UserProfession">Traveler</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="UFBItem" [class.active]="activeIndex === 2">
+               <div class="UFBCard UFBCard3">
+
+                    <div class="UFBCardImg">
+                       <img src="/public/assets/images/UserAvatars/User3.png" alt="">
+                   </div>
+
+                   <div class="UFBCardTextContent">
+                       <p class="UFBCardUserComment">
+                           “Just what I was looking for. Thank you for making it <br>
+                           painless, pleasant and most of all hassle free! All <br>
+                           products are great.”
+                       </p>
+                       <fa-icon [icon]=faStar></fa-icon>
+                       <fa-icon [icon]=faStar></fa-icon>
+                       <fa-icon [icon]=faStar></fa-icon>
+                       <fa-icon [icon]=faStar></fa-icon>
+                       <fa-icon [icon]=faStar></fa-icon>
+                       <div class="BlackLine"></div>
+                       <h3 class="UserName">Suzan B.</h3>
+                       <p class="UserProfession">UI Designer</p>
+                   </div>
+               </div>
             </div>
 
         </div>
-        
-         <div class="UFB2 UFBItem">
-
-             <div class="UFB2Img">
-                <img src="/public/assets/images/UserAvatars/User2.png" alt="">
-            </div>
-
-            <div class="UFB2TextContent">
-                <p class="UFB2UserComment">
-                    "You won't regret it. I would like to personally thank <br>
-                    you for your outstanding product. Absolutely <br>
-                    wonderful!"
-                </p>
-                <fa-icon [icon]=faStar></fa-icon>
-                <fa-icon [icon]=faStar></fa-icon>
-                <fa-icon [icon]=faStar></fa-icon>
-                <fa-icon [icon]=faStar></fa-icon>
-                <fa-icon [icon]=faStar></fa-icon>
-                <div class="BlackLine"></div>
-                <h3 class="UserName">James K.</h3>
-                <p class="UserProfession">Traveler</p>
-            </div>
-
-        </div>
-        
-        <div class="UFB3 UFBItem">
-
-             <div class="UFB3Img">
-                <img src="/public/assets/images/UserAvatars/User3.png" alt="">
-            </div>
-
-            <div class="UFB3TextContent">
-                <p class="UFB3UserComment">
-                    “Just what I was looking for. Thank you for making it <br>
-                    painless, pleasant and most of all hassle free! All <br>
-                    products are great.”
-                </p>
-                <fa-icon [icon]=faStar></fa-icon>
-                <fa-icon [icon]=faStar></fa-icon>
-                <fa-icon [icon]=faStar></fa-icon>
-                <fa-icon [icon]=faStar></fa-icon>
-                <fa-icon [icon]=faStar></fa-icon>
-                <div class="BlackLine"></div>
-                <h3 class="UserName">Suzan B.</h3>
-                <p class="UserProfession">UI Designer</p>
-            </div>
-        </div>
-
     </div>
-    <!--Nyilak kelenek ide jobb es bal-->
+    <!--The two buttons-->
     <div class="Buttons">
-        <fa-icon [icon]=faAngleLeft></fa-icon>
-        <fa-icon [icon]=faAngleRight></fa-icon>
+        <fa-icon [icon]=faAngleLeft (click)="prev()"></fa-icon>
+        <fa-icon [icon]=faAngleRight (click)="next()"></fa-icon>
     </div>
 
 </section>

@@ -1,4 +1,11 @@
-:host{--SectionBColor:#FAFAFA;--StarColor:#FCA120;--CardBColor:white;--HoverColor:#b08484;}
+:host
+{
+    --SectionBColor:#FAFAFA;
+    --StarColor:#FCA120;
+    --CardBColor:white;
+    --HoverColor:#b08484;
+}
+
 section
 {
     background-color: var(--SectionBColor);
@@ -31,6 +38,7 @@ section
         }
     }
 }
+
 .TextContent
 {
     max-width: 716px;
@@ -43,78 +51,40 @@ section
         margin-bottom: 20px;
     }
 }
+
+.UserFeedbackViewport {
+    width: 100%;
+    max-width: 850px; 
+    margin: 0 auto;
+    overflow: visible; 
+    position: relative;
+}
+
 .UserFeedbackContainer
 {
-    position: relative;
-    z-index: 0;
-    max-width: 867px;
-    padding-top:70px;
-    padding-bottom: 70px;
-    margin: 0 auto;
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 60px 0;    
+
 }
-.UFB1,.UFB2,.UFB3
+.UFBCard
 {
     display: flex;
+    gap: 80px;
     justify-content: center;
     background-color: var(--CardBColor);
     border-radius: 12px;
+    padding: 70px 50px 70px 70px;
     fa-icon{color: var(--StarColor);}
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-}
-.UFB1,.UFB3
-{
-    position: absolute;
-    top: 110px;
-   
-}
-.UFBItem>.UFB3Img,.UFB1Img>img
-{
-    width: 180.94px;
-    height: auto;
-    box-shadow: -21px 20px 0px #e6e6e6;
-}
-
-.UFB1
-{
-    gap: 62.06px;
-    left: -300px;
-    z-index: -1;
-    padding: 51.59px 37.38px 51.59px 63.64px;
-    fa-icon{font-size: 14.21px;}
-    .UFB2UserComment
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15); 
+    .UFBCardImg>img
     {
-        margin-bottom: 20.02px;
-        line-height: 1rem;
-        font-size: 11.96px;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    box-shadow: -20px 20px 0px #e6e6e6;
     }
-    .BlackLine
-    {
-        max-width: 230px;
-        height: 1px;
-        background-color: black;
-        margin-top: 22.43px;
-        margin-bottom: 11.22px;
-    }
-    .UserName
-    {
-        font-size: 23.93px;
-        margin-bottom: 9.38px;
-    }
-    .UserProfession
-    {
-        font-weight: bold;
-    }
-}
-
-.UFB2
-{
-    gap: 103px;
-    padding: 69px 0px 69px 0px;
-    .UFB2Img>img
-    {
-        box-shadow: -21px 20px 0px #e6e6e6;
-    }
-    .UFB2UserComment
+     .UFBCardUserComment
     {
         margin-bottom: 27px;
         line-height: 1.5rem;
@@ -138,36 +108,19 @@ section
     }
 }
 
-.UFB3
-{
-    gap: 62.06px;
-    left: 480px;
-    height: 299.07px;
-    width: 646px;
-    z-index: -1;
-    padding: 51.75px 37.5px 51.75px 36.75px;
-    fa-icon{font-size: 14.21px;}
-    .UFB3UserComment
-    {
-        margin-bottom: 20.25px;
-        line-height: 1rem;
-        font-size: 12px;
-    }
-    .BlackLine
-    {
-        max-width: 230px;
-        height: 1px;
-        background-color: black;
-        margin-top: 22.43px;
-        margin-bottom: 11.22px;
-    }
-    .UserName
-    {
-        font-size: 23.93px;
-        margin-bottom: 9.38px;
-    }
-    .UserProfession
-    {
-        font-weight: bold;
-    }
+.UFBItem {
+    min-width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+    transform: scale(0.8); 
+    opacity: 0.4;     
+}
+
+.UFBItem.active {
+    display: flex;
+    transform: scale(1.1); 
+    opacity: 1;
+    z-index: 10;   
 }
