@@ -1,4 +1,4 @@
-// The project folder structure
+///////////// The project folder structure /////////////
 project-root/
 ├─ .angular/
 ├─ .vscode/
@@ -16,7 +16,10 @@ project-root/
 │     │  ├─ herosection/
 │     │  ├─ nav/
 │     │  ├─ NewArrivals/
-│     │  └─ outstanding-offer/
+│     │  ├─ outstanding-offer/
+│     │  ├─ SubscribeToNews/
+│     │  └─ UserAvatars/
+│     │
 │     ├─ MonthlySalesData.json
 │     └─ NewArrivalsData.json
 │
@@ -28,7 +31,11 @@ project-root/
 │  │  │  ├─ hero-section/
 │  │  │  ├─ nav-bar/
 │  │  │  ├─ new-arrivals/
-│  │  │  └─ outstanding-offer/
+│  │  │  ├─ outstanding-offer/
+│  │  │  ├─ Follow-Us/
+│  │  │  ├─ User-Feedback/
+│  │  │  ├─ Subscribe-To-News/
+│  │  │  └─ Footer/
 │  │  │
 │  │  ├─ models/
 │  │  │  ├─ MonthlySales.model.ts
@@ -69,10 +76,15 @@ src/app/pipes/
 – individual data processing pipes
 /////////////////////////Components and their functions/////////////////////////
 Components:
-- NavBarComponent – ​​navigation bar
-- HeroSectionComponent – ​​main visual section
-- CurrentOfferComponent – ​​ CurrentOfferComponent – ​​display currentoffer broken down by month
-- NewArrivalsComponent – ​​list new products
+- NavBarComponent – ​​navigation bar.
+- HeroSectionComponent – ​​main visual section.
+- CurrentOfferComponent – ​​ CurrentOfferComponent – ​​display currentoffer broken down by month.
+- NewArrivalsComponent – ​​list new products.
+- OutstandingOffer -This component contains the latest product that the store starts selling.
+- FollowUs - The user clearly states that the page also has an Instagram page.
+- UserFeedback - User feedback can be seen in this section.
+- SubscribeToNews - In this section, the user can subscribe to the newsletter by entering their email address.
+- Footer - Standard footer.
 /////////////////////////project execution///////////////////////////////////////
 Run:
 1. npm install
