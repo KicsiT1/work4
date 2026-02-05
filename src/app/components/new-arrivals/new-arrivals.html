@@ -9,16 +9,16 @@
     </div>
      <!-- The filter buttons -->
     <div class="Buttons">
-        <button (click)="setCategory(ProductFor.Men_sFashion)">Men’s Fashion</button>
-        <button (click)="setCategory(ProductFor.Women_sFashion)">Women’s Fashion</button>
-        <button (click)="setCombinedFilter(ProductFor.Women_sFashion, true)">Women Accessories</button>
-        <button (click)="setCombinedFilter(ProductFor.Men_sFashion, true)">Men Accessories</button>
-        <button>Discount Deals</button>
+        <button [class.active]="ButtonActive===1" (click)="setCombinedFilter(ProductFor.Men_sFashion, null,1)">Men’s Fashion</button>
+        <button [class.active]="ButtonActive===2" (click)="setCombinedFilter(ProductFor.Women_sFashion, null,2)">Women’s Fashion</button>
+        <button [class.active]="ButtonActive===3" (click)="setCombinedFilter(ProductFor.Women_sFashion, true,3)">Women Accessories</button>
+        <button [class.active]="ButtonActive===4" (click)="setCombinedFilter(ProductFor.Men_sFashion, true,4)">Men Accessories</button>
+        <button [class.active]="ButtonActive===5" >Discount Deals</button>
     </div>
     <!-- Dynamic content is displayed in the cards. -->
     <div class="ProductItems">
         <!-- For loop that includes the filter pipe. -->
-        @for(item of (ProductItems | filterData:{ProductFor: currentCategory, Accessories: showAccessoriesOnly }).slice(0,Visibleproducts); track item.ID)
+        @for(item of filteredProducts.slice(0,Visibleproducts); track item.ID)
         {
           <!--Product details of the cards. -->
           <article>
@@ -48,5 +48,5 @@
         }
     </div>
     <!-- Always show 3 extra cards. -->
-    <button class="ViewMoreButton" (click)=" ViewMore(3)">  {{ Visibleproducts < ProductItems.length ? 'Show More' : 'Show Less' }}</button>
+    <button class="ViewMoreButton"  (click)=" ViewMore(3)">  {{ Visibleproducts < filteredProducts.length ? 'Show More' : 'Show Less' }}</button>
 </section>

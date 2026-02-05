@@ -9,12 +9,11 @@ import { ProductService } from '../../services/product';
 // Includes product interface and ProductFor enum.
 import { ProductModel } from '../../models/product.model';
 import { ProductFor } from '../../models/product.model';
-// This is a pipe that helps filter products.
-import { FilterDataPipe } from '../../pipes/filter-data-pipe';
+
 
 @Component({
   selector: 'app-new-arrivals',
-  imports: [ FontAwesomeModule ,FilterDataPipe],
+  imports: [FontAwesomeModule],
   templateUrl: './new-arrivals.html',
   styleUrl: './new-arrivals.scss',
 })
@@ -33,6 +32,8 @@ export class NewArrivals {
   // the page, the filter is usually set to some basic settings.
   protected currentCategory: ProductFor | 'all' = ProductFor.Women_sFashion;
   protected showAccessoriesOnly: boolean | null = null;
+  // Active only one of filter buttons.
+  protected ButtonActive:number=0;
   // The array that contains the subscribed data 
   ProductItems:ProductModel[]=[];
   // I initialize the ProductService class.
@@ -55,12 +56,27 @@ export class NewArrivals {
       });
       this.ViewMore(0);
    }
+
+  // I filter the array and get the exact size at the same time.
+  get filteredProducts(): ProductModel[] {
+  return this.ProductItems.filter(item => {
+
+    const matchesCategory = this.currentCategory === 'all' || item.ProductFor === this.currentCategory;
+    
+    const matchesAccessories = this.showAccessoriesOnly === null || item.Accessories === this.showAccessoriesOnly;
+
+
+    return matchesCategory && matchesAccessories;
+  });
+}
+
    // The ViewMore function is connected to the Show 
    // more button, after clicking it, 3 more items 
    // are always displayed.
    ViewMore(Visible:number):void
    {
-    if(this.Visibleproducts<this.ProductItems.length)
+    const currentFilteredCount = this.filteredProducts.length;
+    if(this.Visibleproducts<currentFilteredCount)
     {
       this.Visibleproducts+=Visible;
     }
@@ -69,28 +85,14 @@ export class NewArrivals {
       this.Visibleproducts=6;
     }
    }
-   // Set a (one)specific category like men's fashion or women's 
-   // fashion We can use the given enum for type consistency.
-   setCategory(cat: ProductFor | 'all') 
-   {
-    this.currentCategory = cat;
-    // I need to reset this because if I don't, the filter won't refresh.
-    this.showAccessoriesOnly = null;
-    this.Visibleproducts = 6; 
-  }
-  // This function filters out only the accessories.
-  setAccessoryFilter(mode: boolean | null) 
-  {
-    this.showAccessoriesOnly = mode;
-    this.Visibleproducts = 6;
-  }
   // This function can take into account two product properties and thus 
   // filter by product type, women's clothing or men's clothing, and can 
   // also monitor whether the product is complementary or not.
-  setCombinedFilter(category: ProductFor | 'all', accessories: boolean | null) 
+  setCombinedFilter(category: ProductFor | 'all', accessories: boolean | null,Active:number) 
   {
     this.currentCategory = category;
     this.showAccessoriesOnly = accessories;
     this.Visibleproducts = 6; 
+    this.ButtonActive=Active;
   }
 }

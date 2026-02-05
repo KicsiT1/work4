@@ -41,9 +41,6 @@ project-root/
 │  │  │  ├─ MonthlySales.model.ts
 │  │  │  └─ product.model.ts
 │  │  │
-│  │  ├─ pipes/
-│  │  │  └─ filter-data-pipe.ts
-│  │  │
 │  │  ├─ services/
 │  │  │  └─ product.ts
 │  │  │
@@ -72,8 +69,6 @@ src/app/services/
 src/app/models/
 – data structures used in the application (Product, MonthlySales)
 
-src/app/pipes/
-– individual data processing pipes
 /////////////////////////Components and their functions/////////////////////////
 Components:
 - NavBarComponent – ​​navigation bar.

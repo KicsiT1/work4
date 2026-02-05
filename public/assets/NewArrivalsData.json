@@ -273,6 +273,7 @@
         "ProductType": "Object", 
         "Thumbnail": "/public/assets/images/NewArrivals/p23.png",
         "ProductFor":"Women’s Fashion",
-        "Accessories":true
+        "Accessories":true,
+        "Discount":20
     }
 ]
