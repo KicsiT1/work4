@@ -1,3 +1,8 @@
 import { Routes } from '@angular/router';
-
-export const routes: Routes = [];
+import { Home } from './WebRouteLayouts/home/home';
+import { shop } from './WebRouteLayouts/shop/shop';
+export const routes: Routes = 
+[
+    { path: '', component: Home },
+    { path: 'shop', component:  shop },
+];

@@ -71,7 +71,7 @@ section
     .ProductItems
     {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         flex-wrap: wrap;
         gap: 61px;
         margin-bottom: 50px;
