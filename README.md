@@ -1,4 +1,5 @@
 ///////////// The project folder structure /////////////
+<pre> ```
 project-root/
 ├─ .angular/
 ├─ .vscode/
@@ -32,7 +33,6 @@ project-root/
 │  │  │  ├─ nav-bar/
 │  │  │  ├─ new-arrivals/
 │  │  │  ├─ outstanding-offer/
-│  │  │  ├─ Follow-Us/
 │  │  │  ├─ User-Feedback/
 │  │  │  ├─ Subscribe-To-News/
 │  │  │  └─ Footer/
@@ -44,6 +44,10 @@ project-root/
 │  │  ├─ services/
 │  │  │  └─ product.ts
 │  │  │
+│  │  ├─ WebRouteLayouts
+│  │  │  ├─ home/
+│  │  │  ├─ shop/
+│  │  │
 │  │  ├─ app.config.ts
 │  │  ├─ app.css
 │  │  ├─ app.html
@@ -54,6 +58,7 @@ project-root/
 │  ├─ index.html
 │  ├─ main.ts
 │  └─ styles.css
+``` </pre>
 //////////////////////////////Project description////////////////////////////
 This application is a web implementation of a clothing store. The app contains all the essential functions that make it functional. But it is only implemented from the front-end side and also tries to simulate the data. The project is the first serious work of a beginner front-end developer.
 //////////////////////////////File contents//////////////////////////////////

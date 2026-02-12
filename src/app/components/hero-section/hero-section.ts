@@ -5,9 +5,10 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {IconDefinition} from '@fortawesome/fontawesome-svg-core';
 // The different icons I use for the hero right side
 import {faCartShopping,faArrowUp} from '@fortawesome/free-solid-svg-icons';
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-hero-section',
-  imports: [FontAwesomeModule],
+  imports: [FontAwesomeModule,RouterModule],
   standalone: true,
   templateUrl: './hero-section.html',
   styleUrl: './hero-section.scss',
