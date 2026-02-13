@@ -6,6 +6,7 @@ import {IconDefinition} from '@fortawesome/fontawesome-svg-core';
 // The different icons I use for the hero right side
 import {faCartShopping,faArrowUp} from '@fortawesome/free-solid-svg-icons';
 import { RouterModule } from '@angular/router';
+
 @Component({
   selector: 'app-hero-section',
   imports: [FontAwesomeModule,RouterModule],
@@ -14,7 +15,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './hero-section.scss',
 })
 export class HeroSection {
-  
+
   // If you need to change an image in the 
   // hero section, you just need to replace the path with the new image.
   // Images (Importent put images to folder public/assets)
