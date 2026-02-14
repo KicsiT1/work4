@@ -23,10 +23,10 @@
         <img [src]="RightSideImg" alt="">
     </aside>
     <!--Two buttons in right side Cart Shopping and arrow up-->
-    <div class="Icons">
-        <fa-icon routerLink="/shop" [icon]="faCartShopping"></fa-icon>   
-        <fa-icon (click)="scrollToTop()" [icon]="faArrowUp"></fa-icon>
-    </div>
+    <app-floating-box [bottom]="'2%'" [right]="'0'" >
+        <app-shop-button></app-shop-button>
+        <app-arrow-up-button></app-arrow-up-button>
+    </app-floating-box>
 </section>
 <!--Partners banner-->
 <div class="background">

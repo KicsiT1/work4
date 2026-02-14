@@ -1,15 +1,10 @@
 import { Component } from '@angular/core';
-// Font Awesome module need for the icons
-import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
-// This makes it safe to use icons (special type for icons)
-import {IconDefinition} from '@fortawesome/fontawesome-svg-core';
-// The different icons I use for the hero right side
-import {faCartShopping,faArrowUp} from '@fortawesome/free-solid-svg-icons';
-import { RouterModule } from '@angular/router';
-
+import { FloatingBox } from '../floating-box/floating-box';
+import { ArrowUpButton } from '../floatingComponents/arrow-up-button/arrow-up-button';
+import { ShopButton } from '../floatingComponents/shop-button/shop-button';
 @Component({
   selector: 'app-hero-section',
-  imports: [FontAwesomeModule,RouterModule],
+  imports: [FloatingBox,ArrowUpButton,ShopButton],
   standalone: true,
   templateUrl: './hero-section.html',
   styleUrl: './hero-section.scss',
@@ -44,9 +39,5 @@ export class HeroSection {
     this.CalvinKleinLogo,
     this.DenimLogo
   ];
-  // icons
-  faCartShopping:IconDefinition = faCartShopping;
-  faArrowUp:IconDefinition = faArrowUp;
 
-  scrollToTop(): void { window.scrollTo({top: 0,behavior: 'smooth' })};
 }

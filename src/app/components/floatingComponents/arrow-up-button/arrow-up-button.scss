@@ -1,0 +1,24 @@
+:host
+{ 
+    --HoverColor:#b08484;
+    --FaIconColor:#b08484;
+}
+
+fa-icon
+{
+    font-size: 21px;
+}
+
+fa-icon
+{
+    padding: 17px;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+fa-icon:hover
+{
+    color: var(--HoverColor);
+    border-color: var(--FaIconColor);
+}

@@ -31,6 +31,11 @@ project-root/
 │  │  │  ├─ follow-us/
 │  │  │  ├─ hero-section/
 │  │  │  ├─ nav-bar/
+│  │  │  ├─ floating-box/
+│  │  │  ├─ floatingComponents/
+│  │  │  │  ├─ arrow-up-button/
+│  │  │  │  └─ shop-button/
+│  │  │  │
 │  │  │  ├─ new-arrivals/
 │  │  │  ├─ outstanding-offer/
 │  │  │  ├─ User-Feedback/
@@ -74,6 +79,9 @@ src/app/services/
 src/app/models/
 – data structures used in the application (Product, MonthlySales)
 
+src/app/WebRouteLayouts/
+– This folder contains the different layouts of the application at the different links.
+
 /////////////////////////Components and their functions/////////////////////////
 Components:
 - NavBarComponent – ​​navigation bar.
@@ -85,6 +93,8 @@ Components:
 - UserFeedback - User feedback can be seen in this section.
 - SubscribeToNews - In this section, the user can subscribe to the newsletter by entering their email address.
 - Footer - Standard footer.
+- floating-box - This is a floating box that we place wherever we want.
+- floatingComponents - This folder stores the small UI components that float around.
 /////////////////////////project execution///////////////////////////////////////
 Run:
 1. npm install

@@ -131,36 +131,3 @@ section
  {
     to{transform:translateX(calc(-100% - var(--gap)));}
  }
- .Icons
- {
-    position: fixed;
-    bottom: 2%;
-    right: 0;
-    transform: translate(-50%,-50%);
-     fa-icon
-    {
-        font-size: 21px;
-    }
-    fa-icon:first-child
-    {
-        padding: 17px;
-        background-color: black;
-        color: white;
-        border-radius: 10px;
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
-        cursor: pointer;
-    }
-    fa-icon:last-child
-    {
-        padding: 17px;
-        cursor: pointer;
-        border: 1px solid black;
-        border-radius: 50%;
-        margin-left: 35px;
-    }
-    fa-icon:hover
-    {
-        color: var(--HoverColor);
-        border-color: var(--FaIconColor);
-    }
- }
