@@ -25,7 +25,7 @@
     <!--Two buttons in right side Cart Shopping and arrow up-->
     <div class="Icons">
         <fa-icon routerLink="/shop" [icon]="faCartShopping"></fa-icon>   
-        <fa-icon [icon]="faArrowUp"></fa-icon>
+        <fa-icon (click)="scrollToTop()" [icon]="faArrowUp"></fa-icon>
     </div>
 </section>
 <!--Partners banner-->

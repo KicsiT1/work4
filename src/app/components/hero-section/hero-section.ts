@@ -47,4 +47,6 @@ export class HeroSection {
   // icons
   faCartShopping:IconDefinition = faCartShopping;
   faArrowUp:IconDefinition = faArrowUp;
+
+  scrollToTop(): void { window.scrollTo({top: 0,behavior: 'smooth' })};
 }
