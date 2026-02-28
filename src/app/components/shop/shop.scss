@@ -1,38 +1,3 @@
-:host
-{
-    --RedCoral:#ff6c6c;
-    --Orange:#ff7629;
-    --Yellow:#fff06c;
-    --LimeGreen:#9bff6c;
-    --GreenMint:#6cff9e;
-    --Turquoise:#6cffdc;
-    --SkyBlue:#6cb9ff;
-    --CyanLightBlue:#6cf6ff;
-    --Blue:#6ca7ff;
-    --RoyalBlue:#6c7bff;
-    --VioletPurple:#8a6cff;
-    --LavenderPurple:#b66cff;
-    --MagentaPink:#fc6cff;
-    --RedSalmon:#ff6c6c;
-
-    --PriceTextColor:#8A8A8A;
-    --SizeTextANDBoxColor:#8A8A8A;
-
-    --Shadow-RedCoral: 0 4px 12px rgba(255, 108, 108, 0.8);
-    --Shadow-Orange: 0 4px 12px rgba(255, 118, 41, 0.8);
-    --Shadow-Yellow: 0 4px 12px rgba(255, 240, 108, 0.8);
-    --Shadow-LimeGreen: 0 4px 12px rgba(155, 255, 108, 0.8);
-    --Shadow-GreenMint: 0 4px 12px rgba(108, 255, 158, 0.8);
-    --Shadow-Turquoise: 0 4px 12px rgba(108, 255, 220, 0.8);
-    --Shadow-SkyBlue: 0 4px 12px rgba(108, 185, 255, 0.8);
-    --Shadow-CyanLightBlue: 0 4px 12px rgba(108, 246, 255, 0.8);
-    --Shadow-Blue: 0 4px 12px rgba(108, 167, 255, 0.8);
-    --Shadow-RoyalBlue: 0 4px 12px rgba(108, 123, 255, 0.8);
-    --Shadow-VioletPurple: 0 4px 12px rgba(138, 108, 255, 0.8);
-    --Shadow-LavenderPurple: 0 4px 12px rgba(182, 108, 255, 0.8);
-    --Shadow-MagentaPink: 0 4px 12px rgba(252, 108, 255, 0.8);
-    --Shadow-RedSalmon: 0 4px 12px rgba(255, 108, 108, 0.8);
-}
 .TextContent
 {
     text-align: center;
@@ -46,128 +11,21 @@
         font-weight: bold;
     }
 }
-.Shop
+.Grid
 {
-    display: flex;
-    justify-content: center;
-    .FiltersContainer
-    {
-        max-width: 322px;
-        .FText{font-size: 30px;font-weight: bold;margin-bottom: 33px;}
-
-    }
-    .Size
-    {
-        p{cursor: pointer; font-weight: bold;margin-bottom: 16px;fa-icon{float: right;}}
-        ul{display: flex;gap: 12px;flex-wrap: wrap;margin-bottom: 28px;width: 60%;}
-        ul li 
-        {
-            border: 1px solid var(--SizeTextANDBoxColor);
-            border-radius: 5px;
-            text-align: center;
-            padding: 8px 12px 5px 16px;
-            color: var(--SizeTextANDBoxColor);
-        }
-        ul li:hover{box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;}
-        ul li:last-child{ padding: 8px 10px 5px 10px;}
-    }
-    .Colors
-    {
-        p
-        {
-            cursor: pointer;
-            font-weight: bold;
-            margin-bottom: 16px;
-            fa-icon{float: right;}
-        }
-        ul
-        {
-            width: 300px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 33px;
-
-            .RedCoral{background-color: var(--RedCoral);}
-            .Orange{background-color: var(--Orange);}
-            .Yellow{background-color: var(--Yellow);}
-            .LimeGreen{background-color: var(--LimeGreen);}
-            .GreenMint{background-color: var(--GreenMint);}
-            .Turquoise{background-color: var(--Turquoise);}
-            .SkyBlue{background-color: var(--SkyBlue);}
-            .CyanLightBlue{background-color: var(--CyanLightBlue);}
-            .Blue{background-color: var(--Blue);}
-            .RoyalBlue{background-color: var(--RoyalBlue);}
-            .VioletPurple{background-color: var(--VioletPurple);}
-            .LavenderPurple{background-color: var(--LavenderPurple);}
-            .MagentaPink{background-color: var(--MagentaPink);}
-            .RedSalmon{background-color: var(--RedSalmon);}
-
-            .RedCoral:hover{box-shadow: var(--Shadow-RedCoral);}
-            .Orange:hover{box-shadow: var(--Shadow-Orange);}
-            .Yellow:hover{box-shadow: var(--Shadow-Yellow);}
-            .LimeGreen:hover{box-shadow: var(--Shadow-LimeGreen);}
-            .GreenMint:hover{box-shadow: var(--Shadow-GreenMint);}
-            .Turquoise:hover{box-shadow: var(--Shadow-Turquoise);}
-            .SkyBlue:hover{box-shadow: var(--Shadow-SkyBlue);}
-            .CyanLightBlue:hover{box-shadow: var(--Shadow-SkyBlue);}
-            .Blue:hover{box-shadow: var(--Shadow-Blue);}
-            .RoyalBlue:hover{box-shadow: var(--Shadow-RoyalBlue);}
-            .VioletPurple:hover{box-shadow: var(--Shadow-VioletPurple);}
-            .LavenderPurple:hover{box-shadow: var(--Shadow-LavenderPurple);}
-            .MagentaPink:hover{box-shadow: var(--Shadow-MagentaPink);}
-            .RedSalmon:hover{box-shadow: var(--Shadow-RedSalmon);}
-
-        }
-        ul li
-        {
-            width: 30px;
-            height: 30px;
-            background-color: blueviolet;
-            border-radius: 50%;
-            border: 1px solid rgb(196, 196, 196);
-        }
-    }
-    .Price
-    {
-        p
-        {
-            cursor: pointer;
-            margin-bottom: 20px;
-            font-weight: bold;
-            fa-icon{float: right;}
-        }
-        ul li{margin-bottom: 10px;color: var(--PriceTextColor);}
-        ul li:hover{text-decoration: underline;}
-    }
-    .Brands
-    {
-        p{cursor: pointer;margin-top: 23px;margin-bottom: 15px;font-weight: bold;fa-icon{float: right;}}
-        .BrandsContent
-        {
-            span{padding: 0px 10px 10px 0px;cursor: pointer;}
-            margin-bottom: 33px;
-        }
-        span:hover
-        {
-            text-decoration: underline;
-        }
-    }
-    .Collections
-    {
-          p{cursor: pointer;margin-top: 33px;margin-bottom: 20px;font-weight: bold;fa-icon{float: right;}}
-          ul li
-          {
-            margin-bottom: 10px;
-          }
-          ul li:hover{text-decoration: underline;}
-    }
-    .Tags
-    {
-          p{cursor: pointer;margin-top: 39px;margin-bottom: 18px;font-weight: bold;fa-icon{float: right;}}
-          .TagsContent
-          {
-            span{margin-right: 12px;}
-          }
-    }
+    max-width: 1291px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 34px auto auto;
+    gap: 24px;
+    grid-template-areas:
+    "Filter ProductLayoutSwitcher"
+    "Filter ProductContent"
+    "Filter Pagination";
 }
+.Filter { grid-area: Filter; }
+.ProductLayoutSwitcher { grid-area:ProductLayoutSwitcher ;}
+.ProductContent { grid-area:ProductContent;}
+.Pagination{grid-area: Pagination;margin-top: 46px;}

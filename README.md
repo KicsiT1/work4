@@ -35,6 +35,9 @@ project-root/
 │  │  │  ├─ floatingComponents/
 │  │  │  │  ├─ arrow-up-button/
 │  │  │  │  └─ shop-button/
+│  │  │  ├─ shop/
+│  │  │  │  ├─ product-filter/
+│  │  │  │ 
 │  │  │  │
 │  │  │  ├─ new-arrivals/
 │  │  │  ├─ outstanding-offer/
@@ -95,6 +98,7 @@ Components:
 - Footer - Standard footer.
 - floating-box - This is a floating box that we place wherever we want.
 - floatingComponents - This folder stores the small UI components that float around.
+- shop - Contains smaller components related to the store, such as the filter-product component or Product-card component
 /////////////////////////project execution///////////////////////////////////////
 Run:
 1. npm install

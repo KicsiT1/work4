@@ -5,15 +5,14 @@ export interface ProductModel
     Name:string;
     Price:number;
     ProductType:string;
-
+    
     Thumbnail?:string;
-    StoreThumbnail?:string;
     Discount?:number;
     DiscountSeason?:string;
     DiscountMonth?:string;
     Description?:string;
     Images?:string[];
-    InStock?: boolean;
+    InStock?: number;
     SaleNumber?:number;
     BrandName?:string;
     ProductFor?:ProductFor;
@@ -21,6 +20,8 @@ export interface ProductModel
     CustomerReviews?:number;
     ProductRating?:number;
     ProductMainColor?:ProductMainColor;
+    Collection?:Collection;
+    Size:string[];
 }
 
 export enum ProductFor
@@ -45,4 +46,10 @@ export enum ProductMainColor
     LavenderPurple="LavenderPurple",
     MagentaPink="MagentaPink",
     RedSalmon="RedSalmon",   
+}
+
+export enum Collection
+{
+    BestSellers="Best Sellers",
+    NewArrivals="New Arrivals"
 }

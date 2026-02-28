@@ -10,7 +10,8 @@
         "Thumbnail": "/public/assets/images/NewArrivals/p1.png",
         "ProductFor":"Women’s Fashion",
         "Accessories":false,
-        "InStock":true
+        "InStock":99,
+        "Collection":"New Arrivals"
     },
     { 
         "ID": 2, 
@@ -23,7 +24,8 @@
         "Thumbnail": "/public/assets/images/NewArrivals/p2.png",
         "ProductFor":"Women’s Fashion",
         "Accessories":false,
-        "InStock":true
+        "InStock":99,
+        "Collection":"New Arrivals"
     },
     { 
         "ID": 3, 
@@ -36,7 +38,8 @@
         "Thumbnail": "/public/assets/images/NewArrivals/p3.png",
         "ProductFor":"Women’s Fashion",
         "Accessories":false,
-        "InStock":false
+        "InStock":99,
+        "Collection":"New Arrivals"
     },
     { 
         "ID": 4, 
@@ -49,7 +52,8 @@
         "Thumbnail": "/public/assets/images/NewArrivals/p4.png",
         "ProductFor":"Women’s Fashion",
         "Accessories":false,
-        "InStock":false
+        "InStock":99,
+        "Collection":"New Arrivals"
     },
     { 
         "ID": 5, 
@@ -62,7 +66,8 @@
         "Thumbnail": "/public/assets/images/NewArrivals/p5.png",
         "ProductFor":"Women’s Fashion",
         "Accessories":false,
-        "InStock":true
+        "InStock":99,
+        "Collection":"New Arrivals"
     },
     { 
         "ID": 6, 
@@ -75,7 +80,8 @@
         "Thumbnail": "/public/assets/images/NewArrivals/p6.png",
         "ProductFor":"Women’s Fashion",
         "Accessories":false,
-        "InStock":true
+        "InStock":99,
+        "Collection":"New Arrivals"
     },
     { 
         "ID": 7, 
@@ -88,7 +94,8 @@
         "Thumbnail": "/public/assets/images/NewArrivals/p7.png",
         "ProductFor":"Women’s Fashion",
         "Accessories":false,
-        "InStock":true
+        "InStock":99,
+        "Collection":"New Arrivals"
     },
     { 
         "ID": 8, 
@@ -101,7 +108,8 @@
         "Thumbnail": "/public/assets/images/NewArrivals/p8.png",
         "ProductFor":"Women’s Fashion",
         "Accessories":false,
-        "InStock":false
+        "InStock":99,
+        "Collection":"New Arrivals"
     },
     { 
         "ID": 9, 
@@ -114,7 +122,8 @@
         "Thumbnail": "/public/assets/images/NewArrivals/p9.png",
         "ProductFor":"Women’s Fashion",
         "Accessories":false,
-        "InStock":false
+        "InStock":99,
+        "Collection":"New Arrivals"
     },
     { 
         "ID": 10, 
@@ -127,7 +136,8 @@
         "Thumbnail": "/public/assets/images/NewArrivals/p10.png",
         "ProductFor":"Women’s Fashion",
         "Accessories":false,
-        "InStock":false
+        "InStock":99,
+        "Collection":"New Arrivals"
     },
     { 
         "ID": 11, 
@@ -140,7 +150,8 @@
         "Thumbnail": "/public/assets/images/NewArrivals/p11.png",
         "ProductFor":"Women’s Fashion",
         "Accessories":false,
-        "InStock":true
+        "InStock":99,
+        "Collection":"New Arrivals"
     },
     { 
         "ID": 12, 
@@ -153,7 +164,8 @@
         "Thumbnail": "/public/assets/images/NewArrivals/p12.png",
         "ProductFor":"Women’s Fashion",
         "Accessories":false,
-        "InStock":true
+        "InStock":99,
+        "Collection":"New Arrivals"
     },
     { 
         "ID": 13, 
@@ -166,7 +178,8 @@
         "Thumbnail": "/public/assets/images/NewArrivals/p13.png",
         "ProductFor":"Women’s Fashion",
         "Accessories":false,
-        "InStock":true
+        "InStock":99,
+        "Collection":"New Arrivals"
     },
     { 
         "ID": 14, 
@@ -179,7 +192,8 @@
         "Thumbnail": "/public/assets/images/NewArrivals/p14.png",
         "ProductFor":"Women’s Fashion",
         "Accessories":false,
-        "InStock":true
+        "InStock":99,
+        "Collection":"New Arrivals"
     },
     { 
         "ID": 15, 
@@ -192,7 +206,8 @@
         "Thumbnail": "/public/assets/images/NewArrivals/p15.png",
         "ProductFor":"Men’s Fashion",
         "Accessories":false,
-        "InStock":true
+        "InStock":99,
+        "Collection":"New Arrivals"
     },
     { 
         "ID": 16, 
@@ -205,7 +220,8 @@
         "Thumbnail": "/public/assets/images/NewArrivals/p16.png",
         "ProductFor":"Men’s Fashion",
         "Accessories":false,
-        "InStock":false
+        "InStock":99,
+        "Collection":"New Arrivals"
     },
     { 
         "ID": 17, 
@@ -218,7 +234,8 @@
         "Thumbnail": "/public/assets/images/NewArrivals/p17.png",
         "ProductFor":"Men’s Fashion",
         "Accessories":false,
-        "InStock":false
+        "InStock":99,
+        "Collection":"New Arrivals"
     },
     { 
         "ID": 18, 
@@ -231,7 +248,8 @@
         "Thumbnail": "/public/assets/images/NewArrivals/p18.png",
         "ProductFor":"Men’s Fashion",
         "Accessories":false,
-        "InStock":false
+        "InStock":99,
+        "Collection":"New Arrivals"
     },
     { 
         "ID": 19, 
@@ -244,7 +262,8 @@
         "Thumbnail": "/public/assets/images/NewArrivals/p19.png",
         "ProductFor":"Men’s Fashion",
         "Accessories":true,
-        "InStock":false
+        "InStock":99,
+        "Collection":"New Arrivals"
     },
     { 
         "ID": 20, 
@@ -257,7 +276,8 @@
         "Thumbnail": "/public/assets/images/NewArrivals/p20.png",
         "ProductFor":"Men’s Fashion",
         "Accessories":true,
-        "InStock":false
+        "InStock":99,
+        "Collection":"New Arrivals"
     },
     { 
         "ID": 21, 
@@ -270,7 +290,8 @@
         "Thumbnail": "/public/assets/images/NewArrivals/p21.png",
         "ProductFor":"Women’s Fashion",
         "Accessories":true,
-        "InStock":false
+        "InStock":99,
+        "Collection":"New Arrivals"
     },
     { 
         "ID": 22, 
@@ -283,7 +304,8 @@
         "Thumbnail": "/public/assets/images/NewArrivals/p22.png",
         "ProductFor":"Women’s Fashion",
         "Accessories":true,
-        "InStock":false
+        "InStock":99,
+        "Collection":"New Arrivals"
     },
     { 
         "ID": 23, 
@@ -297,6 +319,7 @@
         "ProductFor":"Women’s Fashion",
         "Accessories":true,
         "Discount":20,
-        "InStock":true
+        "InStock":99,
+        "Collection":"New Arrivals"
     }
 ]

@@ -1,0 +1,213 @@
+[
+    { 
+        "ID": 1, 
+        "Name": "Shiny Dress", 
+        "BrandName":"Al Karam",
+        "ProductRating":4,
+        "CustomerReviews":40,
+        "Price": 95.50, 
+        "ProductType": "Dress", 
+        "Thumbnail": "/public/assets/images/NewArrivals/p1Orange.png",
+        "Images":
+        [
+            "/public/assets/images/NewArrivals/p1DeepBlue.png"
+        ],
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false,
+        "InStock":100,
+        "Collection":"New Arrivals",
+        "Size":["M","L","XL","XXL"] 
+    },
+    { 
+        "ID": 2, 
+        "Name": "Long Dress", 
+        "BrandName":"Al Karam",
+        "ProductRating":4,
+        "CustomerReviews":120,
+        "Price": 75.50, 
+        "ProductType": "Dress", 
+        "Thumbnail": "/public/assets/images/NewArrivals/p2Green.png",
+        "Images":
+        [
+            "/public/assets/images/NewArrivals/p2White.png"
+        ],
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false,
+        "InStock":57,
+        "Collection":"New Arrivals",
+        "Size":["M","L","XL","XXL"] 
+    },
+    { 
+        "ID": 3, 
+        "Name": "Full Sweater", 
+        "BrandName":"Al Karam",
+        "ProductRating":5,
+        "CustomerReviews":420,
+        "Price": 120.50, 
+        "ProductType": "Dress", 
+        "Thumbnail": "/public/assets/images/NewArrivals/p3DeepGreen.png",
+        "Images":
+        [
+            "/public/assets/images/NewArrivals/p3LightBrown.png"
+        ],
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false,
+        "InStock":200,
+        "Collection":"New Arrivals",
+        "Size":["M","L","XL","XXL"] 
+    },
+    { 
+        "ID": 4, 
+        "Name": "White Dress", 
+        "BrandName":"Al Karam",
+        "ProductRating":3,
+        "CustomerReviews":220,
+        "Price": 60.70, 
+        "ProductType": "Dress", 
+        "Thumbnail": "/public/assets/images/NewArrivals/p4White.png",
+        "Images":
+        [
+            "/public/assets/images/NewArrivals/p4DeepOrange.png"
+        ],
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false,
+        "InStock":86,
+        "Collection":"New Arrivals",
+        "Size":["M","L","XL","XXL"] 
+    },
+    { 
+        "ID": 5, 
+        "Name": "Colorful Dress", 
+        "BrandName":"Al Karam",
+        "ProductRating":4,
+        "CustomerReviews":500,
+        "Price": 80, 
+        "ProductType": "Dress", 
+        "Thumbnail": "/public/assets/images/NewArrivals/p5LightBlue.png",
+        "Images":
+        [
+            "/public/assets/images/NewArrivals/p5LightGreen.png",
+            "/public/assets/images/NewArrivals/p5Rosecolor.png"
+        ],
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false,
+        "InStock":44,
+        "Collection":"New Arrivals",
+        "Size":["M","L","XL","XXL"] 
+    },
+    { 
+        "ID": 6, 
+        "Name": "White Shirt", 
+        "BrandName":"Al Karam",
+        "ProductRating":5,
+        "CustomerReviews":500,
+        "Price": 75, 
+        "ProductType": "Dress", 
+        "Thumbnail": "/public/assets/images/NewArrivals/p6White.png",
+        "Images":
+        [
+            "/public/assets/images/NewArrivals/p6Red.png",
+            "/public/assets/images/NewArrivals/p6DeepGreen.png"
+        ],
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false,
+        "InStock":25,
+        "Collection":"New Arrivals",
+        "Size":["M","L","XL","XXL"] 
+    },
+    { 
+        "ID": 7, 
+        "Name": "Black jacket", 
+        "BrandName":"Al Karam",
+        "ProductRating":5,
+        "CustomerReviews":1200,
+        "Price": 80, 
+        "ProductType": "Dress", 
+        "Thumbnail": "/public/assets/images/NewArrivals/p7LightBlack.png",
+        "Images":
+        [
+            "/public/assets/images/NewArrivals/p7DeepBlue.png"
+        ],
+        "ProductFor":"Men’s Fashion",
+        "Accessories":false,
+        "InStock":18,
+        "Collection":"New Arrivals",
+        "Size":["M","L","XL","XXL"] 
+    },
+    { 
+        "ID": 8, 
+        "Name": "Black sweater", 
+        "BrandName":"Al Karam",
+        "ProductRating":3,
+        "CustomerReviews":120,
+        "Price": 90, 
+        "ProductType": "Dress", 
+        "Thumbnail": "/public/assets/images/NewArrivals/p8DeepBlack.png",
+        "Images":
+        [
+            "/public/assets/images/NewArrivals/p8DeepRed.png"
+        ],
+        "ProductFor":"Men’s Fashion",
+        "Accessories":false,
+        "InStock":22,
+        "Collection":"New Arrivals",
+        "Size":["M","L","XL","XXL"] 
+    },
+    { 
+        "ID": 9, 
+        "Name": "Brown leather watch", 
+        "BrandName":"Al Karam",
+        "ProductRating":4,
+        "CustomerReviews":120,
+        "Price": 45, 
+        "ProductType": "Object", 
+        "Thumbnail": "/public/assets/images/NewArrivals/p9Brown.png",
+        "Images":
+        [
+            "/public/assets/images/NewArrivals/p9Blue.png",
+            "/public/assets/images/NewArrivals/p9Red.png"
+        ],
+        "ProductFor":"Women’s Fashion",
+        "Accessories":true,
+        "InStock":22,
+        "Collection":"New Arrivals"
+    },
+    { 
+        "ID": 10, 
+        "Name": "Brown leather watch", 
+        "BrandName":"Al Karam",
+        "ProductRating":4,
+        "CustomerReviews":120,
+        "Price": 45, 
+        "ProductType": "Object", 
+        "Thumbnail": "/public/assets/images/NewArrivals/p10Brown.png",
+        "Images":
+        [
+            "/public/assets/images/NewArrivals/p10DeepBlue.png"
+        ],
+        "ProductFor":"Men’s Fashion",
+        "Accessories":true,
+        "InStock":24,
+        "Collection":"New Arrivals"
+    },
+    { 
+        "ID": 11, 
+        "Name": "Sheath red dress", 
+        "BrandName":"Al Karam",
+        "ProductRating":5,
+        "CustomerReviews":120,
+        "Price": 45, 
+        "ProductType": "Dress", 
+        "Thumbnail": "/public/assets/images/NewArrivals/p11Red.png",
+        "Images":
+        [
+            "/public/assets/images/NewArrivals/p11Black.png",
+            "/public/assets/images/NewArrivals/p11DeepBlue.png"
+        ],
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false,
+        "InStock":28,
+        "Collection":"Best sellers",
+        "Size":["M","L","XL","XXL"] 
+    }
+]

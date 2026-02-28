@@ -8,7 +8,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { ProductService } from '../../services/product';
 // Includes product interface and ProductFor enum.
 import { ProductModel } from '../../models/product.model';
-import { ProductFor } from '../../models/product.model';
+import { ProductFor,Collection } from '../../models/product.model';
 
 
 @Component({
@@ -31,6 +31,7 @@ export class NewArrivals {
   // These two variables ensure that when we enter 
   // the page, the filter is usually set to some basic settings.
   protected currentCategory: ProductFor | 'all' = ProductFor.Women_sFashion;
+  protected CurrentCollection: Collection | 'all' = Collection.NewArrivals;
   protected showAccessoriesOnly: boolean | null = null;
   // Active only one of filter buttons.
   protected ButtonActive:number=0;
@@ -56,20 +57,19 @@ export class NewArrivals {
       });
       this.ViewMore(0);
    }
-
   // I filter the array and get the exact size at the same time.
   get filteredProducts(): ProductModel[] {
   return this.ProductItems.filter(item => {
-
+    
+    const matchesCollection = this.CurrentCollection==='all'|| item.Collection === this.CurrentCollection;
+    
     const matchesCategory = this.currentCategory === 'all' || item.ProductFor === this.currentCategory;
     
     const matchesAccessories = this.showAccessoriesOnly === null || item.Accessories === this.showAccessoriesOnly;
 
-
-    return matchesCategory && matchesAccessories;
+    return matchesCollection && matchesCategory && matchesAccessories;
   });
 }
-
    // The ViewMore function is connected to the Show 
    // more button, after clicking it, 3 more items 
    // are always displayed.

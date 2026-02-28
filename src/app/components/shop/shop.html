@@ -3,148 +3,22 @@
     <p>Store</p>
 </section>
 
-<section class="Shop">
-   
-    <div class="FiltersContainer">
-        <p class="FText">Filters</p>
-        <div class="Size">
-            <P>Size <fa-icon [icon]="faAngleUp"></fa-icon></P> 
-            <ul>
-                <li>S</li>
-                <li>M</li>
-                <li>L</li>
-                <li>XL</li> 
-            </ul>
-        </div>
+<div class="Grid">
 
-        <div class="Colors">
-             <P>Colors <fa-icon [icon]="faAngleUp"></fa-icon></P>
-            <ul>
-                <li class="RedCoral"></li>
-                <li class="Orange"></li>
-                <li class="Yellow"></li>
-                <li class="LimeGreen"></li>
-                <li class="GreenMint"></li>
-                <li class="Turquoise"></li>
-                <li class="SkyBlue"></li>
-                <li class="CyanLightBlue"></li>
-                <li class="Blue"></li>
-                <li class="RoyalBlue"></li>
-                <li class="VioletPurple"></li>
-                <li class="LavenderPurple"></li>
-                <li class="MagentaPink"></li>
-                <li class="RedSalmon"></li>
-            </ul>
-        </div>
-
-        <div class="Price">
-            <P>Prices <fa-icon [icon]="faAngleUp"></fa-icon></P>
-            <ul>
-                <li>$0-$50</li>
-                <li>$50-$100</li>
-                <li>$100-$150</li>
-                <li>$150-$200</li>
-                <li>$300-$400</li>
-            </ul>
-        </div>
-
-        <div class="Brands">
-            <P>Brands <fa-icon [icon]="faAngleUp"></fa-icon></P>
-            <div class="BrandsContent">
-                <span>Minimog</span>
-                <span>Retrolie</span>
-                <span>Brook</span> <br>
-                <span>Learts</span> 
-                <span>Vagabond</span> 
-                <span>Abby</span> 
-            </div>
-        </div>
-
-        <div class="Collections">
-            <p>Collections <fa-icon [icon]="faAngleUp"></fa-icon> </p>
-            <ul>
-                <li>All products</li>
-                <li>Best sellers</li>
-                <li>New arrivals</li>
-                <li>Accessories</li>
-            </ul>
-        </div>
-
-        <div class="Tags">
-            <p>Tags </p>
-            <div class="TagsContent">
-                <span>Fashion</span>
-                <span>Hats</span>
-                <span>Sandal</span>
-                <span>Belt</span>
-                <span>Bags</span> <br>
-                <span>Snacker</span>
-                <span>Denim</span>
-                <span>Minimog</span>
-                <span>Vagabond</span> <br>
-                <span>Sunglasses</span>
-                <span>Beachwear</span>
-            </div>
-        </div>
-
+    <div class="Filter">
+        <app-product-filter></app-product-filter>
     </div>
 
-    <div class="ProductsContent">
-
-        <div class="ProductBar">
-            <span>Best selling <fa-icon [icon]="faAngleUp"></fa-icon></span>
-            <div class="Icons">
-                <div class="ICon3Vertical">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-
-                <div class="ICon2Horizontal">
-                    <div></div>
-                    <div></div>
-                </div>
-
-                <div class="ICon3Horizontal">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-
-                <div class="ICon4Horizontal">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-
-                <div class="ICon5Horizontal">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="Products">
-            <div class="ProductCard">
-                <div class="ImgCover">
-                    <img src="" alt="">
-                </div>
-
-                <div class="ProductInfo">
-                    <p>Rounded Red Hat</p>
-                    <p>$8.00</p>
-                    <div class="PColor">
-                        <div class="Color1"></div>
-                        <div class="Color2"></div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+    <div class="ProductLayoutSwitcher">
+        <app-product-layout-switcher></app-product-layout-switcher>
     </div>
 
-</section>
+    <div class="ProductContent">
+        <app-product-content></app-product-content>
+    </div>
+
+     <div class="Pagination">
+        <app-pagination></app-pagination>
+    </div>
+
+</div>

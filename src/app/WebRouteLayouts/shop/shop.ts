@@ -6,11 +6,11 @@ import { FollowUs } from '../../components/follow-us/follow-us';
 import { SubscribeToNews } from '../../components/subscribe-to-news/subscribe-to-news';
 import { Footer } from '../../components/footer/footer'; 
 import { FloatingBox } from '../../components/floating-box/floating-box';
-import { ShopButton } from '../../components/floatingComponents/shop-button/shop-button';
 import { ArrowUpButton } from '../../components/floatingComponents/arrow-up-button/arrow-up-button';
+
 @Component({
   selector: 'app-shop',
-  imports: [NavBar,FloatingBox,ShopButton,ArrowUpButton,Shop,OutstandingOffer,FollowUs,SubscribeToNews,Footer],
+  imports: [NavBar,FloatingBox,ArrowUpButton,Shop,OutstandingOffer,FollowUs,SubscribeToNews,Footer],
   templateUrl: './shop.html',
   styleUrl: './shop.css',
 })

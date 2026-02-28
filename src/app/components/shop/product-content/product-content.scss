@@ -1,0 +1,84 @@
+.Products
+{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+.Product
+{
+    cursor: pointer;
+    .PImg
+    {
+        width: 302px;
+        height: 402.61px;
+        background-color: rgb(176, 176, 176);
+        img
+        {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    .PName
+    {
+        font-weight: bold;
+        margin-top: 19px;
+        margin-bottom: 6px;
+    }
+    .ProductPricesContainer
+    {
+        display: flex;
+        gap: 7px;
+        margin-bottom: 13px;
+        .DPrice
+        {
+            font-weight: bold;
+        }
+
+        .PPrice
+        {
+            text-decoration:line-through;
+        }
+    }
+    .PColors
+    {
+        .ColorContainer
+        {
+            height: 26px;
+            width: 26px;
+            padding: 6px;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 50%;
+            .Color
+            {
+                height: 13px;
+                width: 13px;
+                background-color: cornflowerblue;
+                border-radius: 50%;
+            }
+        }
+
+        // ColorContainer.active
+
+        /*
+        .ColorContainer
+        {
+            height: 26px;
+            width: 26px;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 50%;
+            .Color
+            {
+                height: 24px;
+                width: 24px;
+                background-color: cornflowerblue;
+                border-radius: 50%;
+            }
+        }
+        */
+    }
+}
