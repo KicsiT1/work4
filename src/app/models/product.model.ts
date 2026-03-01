@@ -19,7 +19,7 @@ export interface ProductModel
     Accessories?:boolean;
     CustomerReviews?:number;
     ProductRating?:number;
-    ProductMainColor?:ProductMainColor;
+    ProductMainColor?:ProductMainColor[];
     Collection?:Collection;
     Size:string[];
 }

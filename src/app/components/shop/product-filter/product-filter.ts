@@ -96,5 +96,20 @@ export class ProductFilter {
         this.SelectedSizes.push(size);
       }
     }
-    
+
+    protected ProductColorsIndex:number=-1;
+    protected SelectedProductColors:string[]=[];
+    protected ColorName:string='';
+    TogleColor(color:string)
+    {
+      if(this.SelectedProductColors.includes(color))
+      {
+        this.SelectedProductColors = this.SelectedProductColors.filter(c => c !==color);
+      }
+      else
+      {
+        this.SelectedProductColors.push(color);
+        console.log(this.SelectedProductColors);
+      }
+    }
 }

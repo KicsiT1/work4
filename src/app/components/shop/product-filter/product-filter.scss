@@ -2,21 +2,6 @@
 {
     --PriceTextColor:#8A8A8A;
     --SizeTextANDBoxColor:#8A8A8A;
-    
-    --Shadow-RedCoral: 0 4px 12px rgba(255, 108, 108, 0.8);
-    --Shadow-Orange: 0 4px 12px rgba(255, 118, 41, 0.8);
-    --Shadow-Yellow: 0 4px 12px rgba(255, 240, 108, 0.8);
-    --Shadow-LimeGreen: 0 4px 12px rgba(155, 255, 108, 0.8);
-    --Shadow-GreenMint: 0 4px 12px rgba(108, 255, 158, 0.8);
-    --Shadow-Turquoise: 0 4px 12px rgba(108, 255, 220, 0.8);
-    --Shadow-SkyBlue: 0 4px 12px rgba(108, 185, 255, 0.8);
-    --Shadow-CyanLightBlue: 0 4px 12px rgba(108, 246, 255, 0.8);
-    --Shadow-Blue: 0 4px 12px rgba(108, 167, 255, 0.8);
-    --Shadow-RoyalBlue: 0 4px 12px rgba(108, 123, 255, 0.8);
-    --Shadow-VioletPurple: 0 4px 12px rgba(138, 108, 255, 0.8);
-    --Shadow-LavenderPurple: 0 4px 12px rgba(182, 108, 255, 0.8);
-    --Shadow-MagentaPink: 0 4px 12px rgba(252, 108, 255, 0.8);
-    --Shadow-RedSalmon: 0 4px 12px rgba(255, 108, 108, 0.8);
 }
 
 .filter
@@ -59,22 +44,6 @@
             flex-wrap: wrap;
             gap: 10px;
             margin-bottom: 33px;
-
-            .RedCoral:hover{box-shadow: var(--Shadow-RedCoral);}
-            .Orange:hover{box-shadow: var(--Shadow-Orange);}
-            .Yellow:hover{box-shadow: var(--Shadow-Yellow);}
-            .LimeGreen:hover{box-shadow: var(--Shadow-LimeGreen);}
-            .GreenMint:hover{box-shadow: var(--Shadow-GreenMint);}
-            .Turquoise:hover{box-shadow: var(--Shadow-Turquoise);}
-            .SkyBlue:hover{box-shadow: var(--Shadow-SkyBlue);}
-            .CyanLightBlue:hover{box-shadow: var(--Shadow-SkyBlue);}
-            .Blue:hover{box-shadow: var(--Shadow-Blue);}
-            .RoyalBlue:hover{box-shadow: var(--Shadow-RoyalBlue);}
-            .VioletPurple:hover{box-shadow: var(--Shadow-VioletPurple);}
-            .LavenderPurple:hover{box-shadow: var(--Shadow-LavenderPurple);}
-            .MagentaPink:hover{box-shadow: var(--Shadow-MagentaPink);}
-            .RedSalmon:hover{box-shadow: var(--Shadow-RedSalmon);}
-
         }
         ul li
         {

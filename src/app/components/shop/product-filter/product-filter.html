@@ -5,7 +5,7 @@
         <div class="Size">
             <P>Size</P> 
             <ul>
-                @for (size of ProductSizes; track size; let i = $index) 
+                @for (size of ProductSizes; track size;) 
                 {
                     <li [class.active]="SelectedSizes.includes(size)" (click)="TogleSize(size)">{{ size }}</li>
                 }
@@ -15,9 +15,15 @@
         <div class="Colors">
              <P>Colors</P>
             <ul>
-                 @for (color of ProductColors; track color) 
+                @for (color of ProductColors; track color) 
                 {
-                    <li [class]="color.ClassName" [style]="{'background-color': color.Hex}"></li>
+                    <li
+                    [class.active]="SelectedProductColors.includes(color.ClassName)"
+                    [style.background-color]="color.Hex"
+                    [style.box-shadow]="'3px 3px 5px grey'"
+                    [style.opacity]="SelectedProductColors.includes(color.ClassName) ? 1 : 0.4"
+                    (click)="TogleColor(color.ClassName)">
+                    </li>
                 }
             </ul>
         </div>
