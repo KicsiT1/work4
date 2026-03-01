@@ -38,14 +38,14 @@ export class NewArrivals {
   // The array that contains the subscribed data 
   ProductItems:ProductModel[]=[];
   // I initialize the ProductService class.
-  constructor(private productService: ProductService) 
+  constructor(private ProductService: ProductService) 
 
   {}
    ngOnInit()
    {
     this.currentCategory = ProductFor.Women_sFashion;
     // This is where subscribe to the data.
-      this.productService.GetNewArrivalsData().subscribe({
+      this.ProductService.GetNewArrivalsData().subscribe({
         next: (data) => 
           {
             this.ProductItems = data;

@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { faAngleUp,faAngleDown} from '@fortawesome/free-solid-svg-icons';
-
+import { ProductModel } from '../../../models/product.model';
+import { ProductService } from '../../../services/product';
 interface ColorItem
 {
   ClassName:string;
@@ -18,6 +19,8 @@ interface ColorItem
 export class ProductFilter {
     faAngleUp:IconDefinition=faAngleUp;
     faAngleDown:IconDefinition=faAngleDown;
+
+    protected ProductItems:ProductModel[]=[];
 
     protected ProductSizes:string[]=["S","M","L","XL","XXL"];
     protected ProductColors:ColorItem[]=
@@ -41,8 +44,23 @@ export class ProductFilter {
     protected ProductBrands:string[]=["Minimog","Retrolie","Brook","Learts","Vagabond","Abby"];
     protected ProductCollections:string[]=["All products","Best sellers","New arrivals","Accessories"];
     protected ProductTags:string[]=["Fashion","Hats","Sandal","Belt","Bags","Snacker","Denim","Minimog","Vagabond","Sunglasses","Beachwear"];
-    constructor(){}
     
+    constructor(private ProductService:ProductService){}
+    
+    ngOnInit()
+    {
+      this.ProductService.GetNewArrivalsData().subscribe({
+        next: (data) => 
+          {
+            this.ProductItems = data;
+          },
+        error: (err) =>
+          {
+            console.error('Error:', err)
+          }
+      });
+    }
+
     protected BrandsDropDown:boolean=false;
     protected CollectionsDropDown:boolean=false;
     // Some menu items in the filter have drop-down menus, 
@@ -63,4 +81,20 @@ export class ProductFilter {
           console.log("there is no such drop-down text box");
       }
     }
+
+    protected ProductSizesindex:number=-1;
+    protected SelectedSizes:string[]=[];
+    TogleSize(size:string):void
+    {
+      this.ProductSizesindex=this.ProductSizes.indexOf(size);
+      if(this.SelectedSizes.includes(size))
+      {
+        this.SelectedSizes = this.SelectedSizes.filter(s => s !== size);
+      }
+      else
+      {
+        this.SelectedSizes.push(size);
+      }
+    }
+    
 }

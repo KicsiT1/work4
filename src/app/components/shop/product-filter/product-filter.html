@@ -5,9 +5,9 @@
         <div class="Size">
             <P>Size</P> 
             <ul>
-                @for (size of ProductSizes; track size) 
+                @for (size of ProductSizes; track size; let i = $index) 
                 {
-                    <li>{{ size }}</li>
+                    <li [class.active]="SelectedSizes.includes(size)" (click)="TogleSize(size)">{{ size }}</li>
                 }
             </ul>
         </div>
