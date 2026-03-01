@@ -111,5 +111,18 @@ export class ProductFilter {
         this.SelectedProductColors.push(color);
         console.log(this.SelectedProductColors);
       }
-    }
+   }
+
+   protected ProductPriceIndex:number=-1;
+   protected ProdPriceMin:number=0;
+   protected ProdPriceMax:number=0;
+   protected ProdPriceStrparts:string[]=[];
+   ToglePrice(price:string)
+   {
+      this.ProductPriceIndex=this.ProductPrices.indexOf(price);
+      this.ProdPriceStrparts=price.replace(/\$/g, "").split("-");
+      this.ProdPriceMin=Number(this.ProdPriceStrparts[0]);
+      this.ProdPriceMax=Number(this.ProdPriceStrparts[1]);
+   }
+
 }

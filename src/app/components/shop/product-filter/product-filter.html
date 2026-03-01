@@ -31,9 +31,9 @@
         <div class="Price">
             <P>Prices</P>
             <ul>
-                @for (price of ProductPrices; track price) 
+                @for (price of ProductPrices; track price; let i=$index) 
                 {
-                    <li>{{ price }}</li>
+                    <li [class.active]="i===ProductPriceIndex" (click)="ToglePrice(price)">{{ price }}</li>
                 }
             </ul>
         </div>
