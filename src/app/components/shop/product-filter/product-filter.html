@@ -50,10 +50,10 @@
             }
             </div>
             <div class="BrandsContent" [class.active]="BrandsDropDown">
-                @for (brands of ProductBrands; track brands) 
+                @for (brand of ProductBrands; track brand) 
                 {
-                    <span>{{ brands }}</span>
-                    @if(brands==="Brook"){ <br> }
+                    <span [class.active]="SelectedProductBrands.includes(brand)" (click)="TogleBrand(brand)">{{ brand }}</span>
+                    @if(brand==="Brook"){ <br> }
                 }
             </div>
         </div>

@@ -125,4 +125,18 @@ export class ProductFilter {
       this.ProdPriceMax=Number(this.ProdPriceStrparts[1]);
    }
 
+   protected ProductBrandsIndex:number=-1;
+   protected SelectedProductBrands:string[]=[];
+   TogleBrand(brand:string)
+   {
+    this.ProductBrandsIndex=this.ProductBrands.indexOf(brand);
+    if(this. SelectedProductBrands.includes(brand))
+    {
+      this.SelectedProductBrands=this.SelectedProductBrands.filter(b=>b!==brand);
+    }
+    else
+    {
+      this.SelectedProductBrands.push(brand)
+    }
+   }
 }

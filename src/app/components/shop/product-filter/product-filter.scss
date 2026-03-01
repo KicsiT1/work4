@@ -86,6 +86,7 @@
             align-items: center;
         }
         .BrandsContent.active{display: none;}
+        span.active{text-decoration: underline;}
     }
     .Collections
     {
@@ -105,10 +106,10 @@
     }
     .Tags
     {
-          p{cursor: pointer;margin-top: 39px;margin-bottom: 18px;font-weight: bold;fa-icon{float: right;}}
+          p{margin-top: 39px;margin-bottom: 18px;font-weight: bold;fa-icon{float: right;}}
           .TagsContent
           {
-            span{display: inline-block; margin-right: 12px;margin-bottom: 10px;}
+            span{cursor: pointer; display: inline-block; margin-right: 12px;margin-bottom: 10px;}
           }
     }
 }
