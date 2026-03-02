@@ -4,6 +4,7 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { faAngleUp,faAngleDown} from '@fortawesome/free-solid-svg-icons';
 import { ProductModel } from '../../../models/product.model';
 import { ProductService } from '../../../services/product';
+
 interface ColorItem
 {
   ClassName:string;
@@ -109,7 +110,6 @@ export class ProductFilter {
       else
       {
         this.SelectedProductColors.push(color);
-        console.log(this.SelectedProductColors);
       }
    }
 
@@ -139,4 +139,13 @@ export class ProductFilter {
       this.SelectedProductBrands.push(brand)
     }
    }
+
+  protected ProducCollectionsIndex:number=0;
+  protected ProducCollection:string='';
+  TogleCollection(collection:string)
+  {
+    this.ProducCollectionsIndex=this.ProductCollections.indexOf(collection);
+    this.ProducCollection=collection;
+  }
+  
 }

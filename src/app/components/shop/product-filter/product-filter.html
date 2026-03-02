@@ -71,9 +71,9 @@
             </div>
             <ul [class.active]="CollectionsDropDown">
 
-                @for (collection of ProductCollections; track collection) 
+                @for (collection of ProductCollections; track collection; let i=$index) 
                 {
-                    <li>{{ collection }}</li>
+                    <li [class.active]="i===ProducCollectionsIndex" (click)="TogleCollection(collection)">{{ collection }}</li>
                 }
 
             </ul>
