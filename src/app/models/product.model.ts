@@ -32,20 +32,27 @@ export enum ProductFor
 
 export enum ProductMainColor
 {
-    RedCoral="RedCoral",
+    RedCoral="Red Coral",
     Orange="Orange",
     Yellow="Yellow",
-    LimeGreen="LimeGreen",
-    GreenMint="GreenMint",
+    LimeGreen="Lime Green",
+    GreenMint="Green Mint",
     Turquoise="Turquoise",
-    SkyBlue="SkyBlue",
-    CyanLightBlue="CyanLightBlue",
+    SkyBlue="Sky Blue",
+    CyanLightBlue="Cyan LightBlue",
     Blue="Blue",
-    RoyalBlue="RoyalBlue",
-    VioletPurple="VioletPurple",
-    LavenderPurple="LavenderPurple",
-    MagentaPink="MagentaPink",
-    RedSalmon="RedSalmon",   
+    RoyalBlue="Royal Blue",
+    VioletPurple="Violet Purple",
+    LavenderPurple="Lavender Purple",
+    MagentaPink="Magenta Pink",
+    RedSalmon="Red Salmon",
+    SnowWhite="Snow White",   
+    LightBrown="Light Brown",
+    DeepGreen="Deep Green",
+    Lightlakeblack="Light lake black",
+    DeepBlack="Deep Black",
+    Burgundy="Burgundy",
+    Brown="Brown"
 }
 
 export enum Collection

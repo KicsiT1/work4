@@ -7,7 +7,11 @@
             <ul>
                 @for (size of ProductSizes; track size;) 
                 {
-                    <li [class.active]="SelectedSizes.includes(size)" (click)="TogleSize(size)">{{ size }}</li>
+                    <li 
+                        [class.active]="SelectedSizes.includes(size)" 
+                        (click)="TogleSize(size)">
+                        {{ size }}
+                    </li>
                 }
             </ul>
         </div>
@@ -18,11 +22,11 @@
                 @for (color of ProductColors; track color) 
                 {
                     <li
-                    [class.active]="SelectedProductColors.includes(color.ClassName)"
-                    [style.background-color]="color.Hex"
-                    [style.box-shadow]="'3px 3px 5px grey'"
-                    [style.opacity]="SelectedProductColors.includes(color.ClassName) ? 1 : 0.4"
-                    (click)="TogleColor(color.ClassName)">
+                        [class.active]="SelectedProductColors.includes(color.ClassName)"
+                        [style.background-color]="color.Hex"
+                        [style.box-shadow]="'3px 3px 5px grey'"
+                        [style.opacity]="SelectedProductColors.includes(color.ClassName) ? 1 : 0.4"
+                        (click)="TogleColor(color.ClassName)">
                     </li>
                 }
             </ul>
@@ -33,7 +37,11 @@
             <ul>
                 @for (price of ProductPrices; track price; let i=$index) 
                 {
-                    <li [class.active]="i===ProductPriceIndex" (click)="ToglePrice(price)">{{ price }}</li>
+                    <li 
+                        [class.active]="i===ProductPriceIndex" 
+                        (click)="ToglePrice(price)">
+                        {{ price }}
+                    </li>
                 }
             </ul>
         </div>
@@ -73,7 +81,11 @@
 
                 @for (collection of ProductCollections; track collection; let i=$index) 
                 {
-                    <li [class.active]="i===ProducCollectionsIndex" (click)="TogleCollection(collection)">{{ collection }}</li>
+                    <li 
+                        [class.active]="i===ProducCollectionsIndex" 
+                        (click)="TogleCollection(collection)">
+                        {{ collection }}
+                    </li>
                 }
 
             </ul>
@@ -85,7 +97,11 @@
 
                 @for (tag of ProductTags; track tag) 
                 {
-                    <span>{{ tag }}</span>
+                    <span 
+                    [class.active]="SelectedProductTags.includes(tag)"
+                    (click)="TogleTag(tag)">
+                        {{ tag }}
+                    </span>
                     @if(tag==="Bags" || tag==="Vagabond"){<br>}
                 }
                 

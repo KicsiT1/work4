@@ -130,7 +130,7 @@ export class ProductFilter {
    TogleBrand(brand:string)
    {
     this.ProductBrandsIndex=this.ProductBrands.indexOf(brand);
-    if(this. SelectedProductBrands.includes(brand))
+    if(this.SelectedProductBrands.includes(brand))
     {
       this.SelectedProductBrands=this.SelectedProductBrands.filter(b=>b!==brand);
     }
@@ -146,6 +146,28 @@ export class ProductFilter {
   {
     this.ProducCollectionsIndex=this.ProductCollections.indexOf(collection);
     this.ProducCollection=collection;
+    console.log(this.ProducCollection);
   }
-  
+
+  protected SelectedProductTags:string[]=[];
+  TogleTag(tag:string)
+  {
+    if(this.SelectedProductTags.includes(tag))
+    {
+      this.SelectedProductTags=this.SelectedProductTags.filter(t=>t!==tag);
+    }
+    else
+    {
+       this.SelectedProductTags.push(tag);
+       console.log(this.SelectedProductTags);
+    }
+  }
+
+  get FilteredProducts():ProductModel[]
+  {
+    return this.ProductItems.filter(Item=>{
+      const SuitableProductSize=this.SelectedSizes.some(size => Item.Size.includes(size));
+      return SuitableProductSize;
+    });
+  }
 }

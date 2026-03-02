@@ -16,7 +16,8 @@
         "Accessories":false,
         "InStock":100,
         "Collection":"New Arrivals",
-        "Size":["M","L","XL","XXL"] 
+        "Size":["M","L","XL","XXL"],
+        "ProductMainColor":["Royal Blue","Orange"] 
     },
     { 
         "ID": 2, 
@@ -35,7 +36,8 @@
         "Accessories":false,
         "InStock":57,
         "Collection":"New Arrivals",
-        "Size":["M","L","XL","XXL"] 
+        "Size":["M","L","XXL"],
+        "ProductMainColor":["Green Mint","Snow White"]  
     },
     { 
         "ID": 3, 
@@ -54,7 +56,8 @@
         "Accessories":false,
         "InStock":200,
         "Collection":"New Arrivals",
-        "Size":["M","L","XL","XXL"] 
+        "Size":["M","L","XL"],
+        "ProductMainColor":["Green Mint","Light Brown"]  
     },
     { 
         "ID": 4, 
@@ -73,7 +76,8 @@
         "Accessories":false,
         "InStock":86,
         "Collection":"New Arrivals",
-        "Size":["M","L","XL","XXL"] 
+        "Size":["M","L","XL","XXL"],
+        "ProductMainColor":["Orange","Snow White"]  
     },
     { 
         "ID": 5, 
@@ -93,7 +97,8 @@
         "Accessories":false,
         "InStock":44,
         "Collection":"New Arrivals",
-        "Size":["M","L","XL","XXL"] 
+        "Size":["M","XL","XXL"], 
+        "ProductMainColor":["Sky Blue","Green Mint","Magenta Pink"]  
     },
     { 
         "ID": 6, 
@@ -113,7 +118,8 @@
         "Accessories":false,
         "InStock":25,
         "Collection":"New Arrivals",
-        "Size":["M","L","XL","XXL"] 
+        "Size":["M"],
+        "ProductMainColor":["Deep Green","Snow White","Red Coral"]  
     },
     { 
         "ID": 7, 
@@ -132,7 +138,8 @@
         "Accessories":false,
         "InStock":18,
         "Collection":"New Arrivals",
-        "Size":["M","L","XL","XXL"] 
+        "Size":["M","L","XL","XXL"],
+        "ProductMainColor":["Royal Blue","Light lake black"]   
     },
     { 
         "ID": 8, 
@@ -151,7 +158,8 @@
         "Accessories":false,
         "InStock":22,
         "Collection":"New Arrivals",
-        "Size":["M","L","XL","XXL"] 
+        "Size":["M","L"],
+        "ProductMainColor":["Deep Black","Burgundy"]  
     },
     { 
         "ID": 9, 
@@ -170,7 +178,8 @@
         "ProductFor":"Women’s Fashion",
         "Accessories":true,
         "InStock":22,
-        "Collection":"New Arrivals"
+        "Collection":"New Arrivals",
+        "ProductMainColor":["Brown","Royal Blue","Red Salmon"] 
     },
     { 
         "ID": 10, 
@@ -188,7 +197,8 @@
         "ProductFor":"Men’s Fashion",
         "Accessories":true,
         "InStock":24,
-        "Collection":"New Arrivals"
+        "Collection":"New Arrivals",
+        "ProductMainColor":["Brown","Royal Blue"] 
     },
     { 
         "ID": 11, 
@@ -208,6 +218,7 @@
         "Accessories":false,
         "InStock":28,
         "Collection":"Best sellers",
-        "Size":["M","L","XL","XXL"] 
+        "Size":["M","L","XL"],
+        "ProductMainColor":["Red Coral","Deep Black","Royal Blue"]  
     }
 ]
