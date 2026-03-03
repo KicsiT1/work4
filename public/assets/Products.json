@@ -15,7 +15,7 @@
         "ProductFor":"Women’s Fashion",
         "Accessories":false,
         "InStock":100,
-        "Collection":"New Arrivals",
+        "Collection":["All products","New Arrivals"],
         "Size":["M","L","XL"],
         "MainColor":["Royal Blue","Orange"] 
     },
@@ -35,7 +35,7 @@
         "ProductFor":"Women’s Fashion",
         "Accessories":false,
         "InStock":57,
-        "Collection":"New Arrivals",
+        "Collection":["All products","New Arrivals"],
         "Size":["M","L","XL"],
         "MainColor":["Green Mint","Snow White"]  
     },
@@ -55,7 +55,7 @@
         "ProductFor":"Women’s Fashion",
         "Accessories":false,
         "InStock":200,
-        "Collection":"New Arrivals",
+        "Collection":["All products","New Arrivals"],
         "Size":["M","S","XL"],
         "MainColor":["Green Mint","Light Brown"]  
     },
@@ -75,7 +75,7 @@
         "ProductFor":"Women’s Fashion",
         "Accessories":false,
         "InStock":86,
-        "Collection":"New Arrivals",
+        "Collection":["New Arrivals"],
         "Size":["S","M","L","XL"],
         "MainColor":["Orange","Snow White"]  
     },
@@ -96,7 +96,7 @@
         "ProductFor":"Women’s Fashion",
         "Accessories":false,
         "InStock":44,
-        "Collection":"New Arrivals",
+        "Collection":["All products","New Arrivals"],
         "Size":["S","M","XL"], 
         "MainColor":["Sky Blue","Green Mint","Magenta Pink"]  
     },
@@ -117,7 +117,7 @@
         "ProductFor":"Women’s Fashion",
         "Accessories":false,
         "InStock":25,
-        "Collection":"New Arrivals",
+        "Collection":["All products","New Arrivals"],
         "Size":["M"],
         "MainColor":["Deep Green","Snow White","Red Coral"]  
     },
@@ -137,7 +137,7 @@
         "ProductFor":"Men’s Fashion",
         "Accessories":false,
         "InStock":18,
-        "Collection":"New Arrivals",
+        "Collection":["All products","New Arrivals"],
         "Size":["XL"],
         "MainColor":["Royal Blue","Light lake black"]   
     },
@@ -157,7 +157,7 @@
         "ProductFor":"Men’s Fashion",
         "Accessories":false,
         "InStock":22,
-        "Collection":"New Arrivals",
+        "Collection":["All products","New Arrivals"],
         "Size":["M","L"],
         "MainColor":["Deep Black","Burgundy"]  
     },
@@ -178,7 +178,7 @@
         "ProductFor":"Women’s Fashion",
         "Accessories":true,
         "InStock":22,
-        "Collection":"New Arrivals",
+        "Collection":["All products","New Arrivals"],
         "MainColor":["Brown","Royal Blue","Red Salmon"] 
     },
     { 
@@ -197,7 +197,7 @@
         "ProductFor":"Men’s Fashion",
         "Accessories":true,
         "InStock":24,
-        "Collection":"New Arrivals",
+        "Collection":["All products","New Arrivals"],
         "MainColor":["Brown","Royal Blue"] 
     },
     { 
@@ -217,7 +217,7 @@
         "ProductFor":"Women’s Fashion",
         "Accessories":false,
         "InStock":28,
-        "Collection":"Best sellers",
+        "Collection":["All products","Best Sellers"],
         "Size":["M","L","XL"],
         "MainColor":["Red Coral","Deep Black","Royal Blue"]  
     }

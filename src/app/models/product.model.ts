@@ -25,8 +25,6 @@ export interface ProductModel
     Tag?:TAG[];
 }
 
-
-
 export enum BRAND
 {
     Minimog="Minimog",

@@ -48,7 +48,7 @@ export class ProductFilter {
     ]
     protected ProductPrices:string[]=["$0-$50","$50-$100","$100-$150","$150-$200","$300-$400"];
     protected ProductBrands:BRAND[]=Object.values(BRAND);
-    protected ProductCollections:COLLECTION[]=Object.values(COLLECTION)
+    protected ProductCollections:COLLECTION[]=Object.values(COLLECTION);
     protected ProductTags:TAG[]=Object.values(TAG);
     
     constructor(private ProductService:ProductService){}
@@ -101,7 +101,6 @@ export class ProductFilter {
       else
       {
         this.SelectedSizes.push(size);
-        //console.log(this.SelectedSizes);
       }
       console.log('SelectedSizes:', this.SelectedSizes);
       console.log('FilteredProducts after size change:', this.FilteredProducts);
@@ -119,7 +118,6 @@ export class ProductFilter {
       else
       {
         this.SelectedProductColors.push(color);
-        //console.log(this.SelectedProductColors);
       }
       console.log('SelectedProductColors:', this.SelectedProductColors);
       console.log('FilteredProducts after color change:', this.FilteredProducts);
@@ -167,9 +165,10 @@ export class ProductFilter {
     }
     else
     {
-      this.SelectedProducCollection.push(collection)
-      //console.log( this.ProducCollection);
+      this.SelectedProducCollection.push(collection);
     }
+     console.log('SelectedProducCollection:', this.SelectedProducCollection);
+     console.log('FilteredProducts after collection change:', this.FilteredProducts);
   }
 
   protected SelectedProductTags:TAG[]=[];
@@ -182,8 +181,9 @@ export class ProductFilter {
     else
     {
        this.SelectedProductTags.push(tag);
-       console.log(this.SelectedProductTags);
     }
+     console.log('SelectedProducTag:', this.SelectedProductTags);
+     console.log('FilteredProducts after tag change:', this.FilteredProducts);
   }
   
   get FilteredProducts():ProductModel[]
@@ -199,10 +199,18 @@ export class ProductFilter {
       const SuitableProdPrice=this.ProdPriceMin===0||Item.Price>=this.ProdPriceMin && 
       Item.Price<=this.ProdPriceMax;
       
-      const SuitableProdBradns=this.SelectedProductBrands.length===0 ||
+      const SuitableProdBradns=this.SelectedProductBrands.length ===0 ||
       this.SelectedProductBrands.every(brands=>Item.BrandName?.includes(brands));
       
-      return SuitableProdSize && SuitableProdColor  && SuitableProdPrice && SuitableProdBradns ;
+      const SuitableProdCollection=this.SelectedProducCollection.length === 0 ||
+      this.SelectedProducCollection.some(collections=>Item.Collection?.includes(collections));
+
+      const SuitableProdTag=this.SelectedProductTags.length===0 ||
+      this.SelectedProductTags.every(Tags=>Item.Tag?.includes(Tags));
+
+      return SuitableProdSize       &&  SuitableProdColor   && 
+             SuitableProdPrice      &&  SuitableProdBradns  && 
+             SuitableProdCollection &&  SuitableProdTag;
       
     });  
   }
