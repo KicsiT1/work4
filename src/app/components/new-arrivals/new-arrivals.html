@@ -32,7 +32,7 @@
                     </div>
                     <!--Generate the cool reviews here. -->
                     <div class="PStars">
-                         @for (star of [].constructor(item.ProductRating); let i = $index; track i) 
+                         @for (star of [].constructor(item.Rating); let i = $index; track i) 
                         {
                             <fa-icon class="Icon" [icon]="faStar"></fa-icon>
                         }

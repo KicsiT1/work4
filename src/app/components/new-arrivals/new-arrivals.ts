@@ -8,7 +8,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { ProductService } from '../../services/product';
 // Includes product interface and ProductFor enum.
 import { ProductModel } from '../../models/product.model';
-import { ProductFor,Collection } from '../../models/product.model';
+import { PRODUCTFOR,COLLECTION } from '../../models/product.model';
 
 
 @Component({
@@ -27,11 +27,11 @@ export class NewArrivals {
   protected Visibleproducts=6;
   // the html part of my component accesses this enum 
   // variable when I set the filter.
-  protected readonly ProductFor = ProductFor;
+  protected readonly ProductFor = PRODUCTFOR;
   // These two variables ensure that when we enter 
   // the page, the filter is usually set to some basic settings.
-  protected currentCategory: ProductFor | 'all' = ProductFor.Women_sFashion;
-  protected CurrentCollection: Collection | 'all' = Collection.NewArrivals;
+  protected currentCategory: PRODUCTFOR | 'all' = PRODUCTFOR.Women_sFashion;
+  protected CurrentCollection: COLLECTION | 'all' = COLLECTION.NewArrivals;
   protected showAccessoriesOnly: boolean | null = null;
   // Active only one of filter buttons.
   protected ButtonActive:number=0;
@@ -43,7 +43,7 @@ export class NewArrivals {
   {}
    ngOnInit()
    {
-    this.currentCategory = ProductFor.Women_sFashion;
+    this.currentCategory = PRODUCTFOR.Women_sFashion;
     // This is where subscribe to the data.
       this.ProductService.GetNewArrivalsData().subscribe({
         next: (data) => 
@@ -88,7 +88,7 @@ export class NewArrivals {
   // This function can take into account two product properties and thus 
   // filter by product type, women's clothing or men's clothing, and can 
   // also monitor whether the product is complementary or not.
-  setCombinedFilter(category: ProductFor | 'all', accessories: boolean | null,Active:number) 
+  setCombinedFilter(category: PRODUCTFOR | 'all', accessories: boolean | null,Active:number) 
   {
     this.currentCategory = category;
     this.showAccessoriesOnly = accessories;

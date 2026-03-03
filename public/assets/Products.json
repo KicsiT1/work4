@@ -3,10 +3,10 @@
         "ID": 1, 
         "Name": "Shiny Dress", 
         "BrandName":"Al Karam",
-        "ProductRating":4,
+        "Rating":4,
         "CustomerReviews":40,
         "Price": 95.50, 
-        "ProductType": "Dress", 
+        "Type": "Dress", 
         "Thumbnail": "/public/assets/images/NewArrivals/p1Orange.png",
         "Images":
         [
@@ -17,16 +17,16 @@
         "InStock":100,
         "Collection":"New Arrivals",
         "Size":["M","L","XL","XXL"],
-        "ProductMainColor":["Royal Blue","Orange"] 
+        "MainColor":["Royal Blue","Orange"] 
     },
     { 
         "ID": 2, 
         "Name": "Long Dress", 
         "BrandName":"Al Karam",
-        "ProductRating":4,
+        "Rating":4,
         "CustomerReviews":120,
         "Price": 75.50, 
-        "ProductType": "Dress", 
+        "Type": "Dress", 
         "Thumbnail": "/public/assets/images/NewArrivals/p2Green.png",
         "Images":
         [
@@ -37,16 +37,16 @@
         "InStock":57,
         "Collection":"New Arrivals",
         "Size":["M","L","XXL"],
-        "ProductMainColor":["Green Mint","Snow White"]  
+        "MainColor":["Green Mint","Snow White"]  
     },
     { 
         "ID": 3, 
         "Name": "Full Sweater", 
         "BrandName":"Al Karam",
-        "ProductRating":5,
+        "Rating":5,
         "CustomerReviews":420,
         "Price": 120.50, 
-        "ProductType": "Dress", 
+        "Type": "Dress", 
         "Thumbnail": "/public/assets/images/NewArrivals/p3DeepGreen.png",
         "Images":
         [
@@ -57,16 +57,16 @@
         "InStock":200,
         "Collection":"New Arrivals",
         "Size":["M","L","XL"],
-        "ProductMainColor":["Green Mint","Light Brown"]  
+        "MainColor":["Green Mint","Light Brown"]  
     },
     { 
         "ID": 4, 
         "Name": "White Dress", 
         "BrandName":"Al Karam",
-        "ProductRating":3,
+        "Rating":3,
         "CustomerReviews":220,
         "Price": 60.70, 
-        "ProductType": "Dress", 
+        "Type": "Dress", 
         "Thumbnail": "/public/assets/images/NewArrivals/p4White.png",
         "Images":
         [
@@ -77,16 +77,16 @@
         "InStock":86,
         "Collection":"New Arrivals",
         "Size":["M","L","XL","XXL"],
-        "ProductMainColor":["Orange","Snow White"]  
+        "MainColor":["Orange","Snow White"]  
     },
     { 
         "ID": 5, 
         "Name": "Colorful Dress", 
         "BrandName":"Al Karam",
-        "ProductRating":4,
+        "Rating":4,
         "CustomerReviews":500,
         "Price": 80, 
-        "ProductType": "Dress", 
+        "Type": "Dress", 
         "Thumbnail": "/public/assets/images/NewArrivals/p5LightBlue.png",
         "Images":
         [
@@ -98,16 +98,16 @@
         "InStock":44,
         "Collection":"New Arrivals",
         "Size":["M","XL","XXL"], 
-        "ProductMainColor":["Sky Blue","Green Mint","Magenta Pink"]  
+        "MainColor":["Sky Blue","Green Mint","Magenta Pink"]  
     },
     { 
         "ID": 6, 
         "Name": "White Shirt", 
         "BrandName":"Al Karam",
-        "ProductRating":5,
+        "Rating":5,
         "CustomerReviews":500,
         "Price": 75, 
-        "ProductType": "Dress", 
+        "Type": "Dress", 
         "Thumbnail": "/public/assets/images/NewArrivals/p6White.png",
         "Images":
         [
@@ -119,16 +119,16 @@
         "InStock":25,
         "Collection":"New Arrivals",
         "Size":["M"],
-        "ProductMainColor":["Deep Green","Snow White","Red Coral"]  
+        "MainColor":["Deep Green","Snow White","Red Coral"]  
     },
     { 
         "ID": 7, 
         "Name": "Black jacket", 
         "BrandName":"Al Karam",
-        "ProductRating":5,
+        "Rating":5,
         "CustomerReviews":1200,
         "Price": 80, 
-        "ProductType": "Dress", 
+        "Type": "Dress", 
         "Thumbnail": "/public/assets/images/NewArrivals/p7LightBlack.png",
         "Images":
         [
@@ -139,16 +139,16 @@
         "InStock":18,
         "Collection":"New Arrivals",
         "Size":["M","L","XL","XXL"],
-        "ProductMainColor":["Royal Blue","Light lake black"]   
+        "MainColor":["Royal Blue","Light lake black"]   
     },
     { 
         "ID": 8, 
         "Name": "Black sweater", 
         "BrandName":"Al Karam",
-        "ProductRating":3,
+        "Rating":3,
         "CustomerReviews":120,
         "Price": 90, 
-        "ProductType": "Dress", 
+        "Type": "Dress", 
         "Thumbnail": "/public/assets/images/NewArrivals/p8DeepBlack.png",
         "Images":
         [
@@ -159,16 +159,16 @@
         "InStock":22,
         "Collection":"New Arrivals",
         "Size":["M","L"],
-        "ProductMainColor":["Deep Black","Burgundy"]  
+        "MainColor":["Deep Black","Burgundy"]  
     },
     { 
         "ID": 9, 
         "Name": "Brown leather watch", 
         "BrandName":"Al Karam",
-        "ProductRating":4,
+        "Rating":4,
         "CustomerReviews":120,
         "Price": 45, 
-        "ProductType": "Object", 
+        "Type": "Object", 
         "Thumbnail": "/public/assets/images/NewArrivals/p9Brown.png",
         "Images":
         [
@@ -179,16 +179,16 @@
         "Accessories":true,
         "InStock":22,
         "Collection":"New Arrivals",
-        "ProductMainColor":["Brown","Royal Blue","Red Salmon"] 
+        "MainColor":["Brown","Royal Blue","Red Salmon"] 
     },
     { 
         "ID": 10, 
         "Name": "Brown leather watch", 
         "BrandName":"Al Karam",
-        "ProductRating":4,
+        "Rating":4,
         "CustomerReviews":120,
         "Price": 45, 
-        "ProductType": "Object", 
+        "Type": "Object", 
         "Thumbnail": "/public/assets/images/NewArrivals/p10Brown.png",
         "Images":
         [
@@ -198,16 +198,16 @@
         "Accessories":true,
         "InStock":24,
         "Collection":"New Arrivals",
-        "ProductMainColor":["Brown","Royal Blue"] 
+        "MainColor":["Brown","Royal Blue"] 
     },
     { 
         "ID": 11, 
         "Name": "Sheath red dress", 
         "BrandName":"Al Karam",
-        "ProductRating":5,
+        "Rating":5,
         "CustomerReviews":120,
         "Price": 45, 
-        "ProductType": "Dress", 
+        "Type": "Dress", 
         "Thumbnail": "/public/assets/images/NewArrivals/p11Red.png",
         "Images":
         [
@@ -219,6 +219,6 @@
         "InStock":28,
         "Collection":"Best sellers",
         "Size":["M","L","XL"],
-        "ProductMainColor":["Red Coral","Deep Black","Royal Blue"]  
+        "MainColor":["Red Coral","Deep Black","Royal Blue"]  
     }
 ]
