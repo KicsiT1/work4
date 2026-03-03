@@ -14,20 +14,35 @@ export interface ProductModel
     Images?:string[];
     InStock?: number;
     SaleNumber?:number;
-    BrandName?:string;
+    BrandName?:BRAND[];
     ProductFor?:PRODUCTFOR;
     Accessories?:boolean;
     CustomerReviews?:number;
     Rating?:number;
     MainColor?:MAINCOLOR[];
     Collection?:COLLECTION;
-    Size:string[];
+    Size:SIZE[];
+    Tag:TAG[];
 }
 
-export enum PRODUCTFOR
+
+
+export enum BRAND
 {
-    Men_sFashion="Men’s Fashion",
-    Women_sFashion="Women’s Fashion",
+    Minimog="Minimog",
+    Retrolie="Retrolie",
+    Brook="Brook",
+    Learts="Learts",
+    Vagabond="Vagabond",
+    Abby="Abby"
+}
+
+export enum SIZE
+{
+    S="S",
+    M="M",
+    L="L",
+    XL="XL",
 }
 
 export enum MAINCOLOR
@@ -57,6 +72,29 @@ export enum MAINCOLOR
 
 export enum COLLECTION
 {
+    AllProducts="All products",
+    Accessories="Accessories",
     BestSellers="Best Sellers",
     NewArrivals="New Arrivals"
+}
+
+export enum TAG
+{
+    Fashion="Fashion",
+    Hats="Hats",
+    Sandal="Sandal",
+    Belt="Belt",
+    Bags="Bags",
+    Snacker="Snacker",
+    Denim="Denim",
+    Minimog="Minimog",
+    Vagabond="Vagabond",
+    Sunglasses="Sunglasses",
+    Beachwear="Beachwear"
+}
+
+export enum PRODUCTFOR
+{
+    Men_sFashion="Men’s Fashion",
+    Women_sFashion="Women’s Fashion",
 }

@@ -4,10 +4,14 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { faAngleUp,faAngleDown} from '@fortawesome/free-solid-svg-icons';
 import { ProductModel } from '../../../models/product.model';
 import { ProductService } from '../../../services/product';
-
+import { MAINCOLOR } from '../../../models/product.model';
+import { SIZE } from '../../../models/product.model';
+import { TAG } from '../../../models/product.model';
+import { BRAND } from '../../../models/product.model';
+import { COLLECTION } from '../../../models/product.model';
 interface ColorItem
 {
-  ClassName:string;
+  ColorName:MAINCOLOR;
   Hex:string;
 }
 
@@ -22,29 +26,29 @@ export class ProductFilter {
     faAngleDown:IconDefinition=faAngleDown;
 
     protected ProductItems:ProductModel[]=[];
+    protected ProductSizes:SIZE[]=Object.values(SIZE);
 
-    protected ProductSizes:string[]=["S","M","L","XL","XXL"];
     protected ProductColors:ColorItem[]=
     [
-      {ClassName:"RedCoral",Hex:'#ff6c6c'},
-      {ClassName:"Orange",Hex:'#ff7629'},
-      {ClassName:"Yellow",Hex:'#fff06c'},
-      {ClassName:"LimeGreen",Hex:'#9bff6c'},
-      {ClassName:"GreenMint",Hex:'#6cff9e'},
-      {ClassName:"Turquoise",Hex:"#6cffdc"},
-      {ClassName:"SkyBlue",Hex:"#6cb9ff"},
-      {ClassName:"CyanLightBlue",Hex:"#6cf6ff"},
-      {ClassName:"Blue",Hex:"#6ca7ff"},
-      {ClassName:"RoyalBlue",Hex:"#6c7bff"},
-      {ClassName:"VioletPurple",Hex:"#8a6cff"},
-      {ClassName:"LavenderPurple",Hex:"#b66cff"},
-      {ClassName:"MagentaPink",Hex:"#fc6cff"},
-      {ClassName:"RedSalmon",Hex:"#ff6c6c"},
+      {ColorName:MAINCOLOR.RedCoral,Hex:'#ff6c6c'},
+      {ColorName:MAINCOLOR.Orange,Hex:'#ff7629'},
+      {ColorName:MAINCOLOR.Yellow,Hex:'#fff06c'},
+      {ColorName:MAINCOLOR.LimeGreen,Hex:'#9bff6c'},
+      {ColorName:MAINCOLOR.GreenMint,Hex:'#6cff9e'},
+      {ColorName:MAINCOLOR.Turquoise,Hex:"#6cffdc"},
+      {ColorName:MAINCOLOR.SkyBlue,Hex:"#6cb9ff"},
+      {ColorName:MAINCOLOR.CyanLightBlue,Hex:"#6cf6ff"},
+      {ColorName:MAINCOLOR.Blue,Hex:"#6ca7ff"},
+      {ColorName:MAINCOLOR.RoyalBlue,Hex:"#6c7bff"},
+      {ColorName:MAINCOLOR.VioletPurple,Hex:"#8a6cff"},
+      {ColorName:MAINCOLOR.LavenderPurple,Hex:"#b66cff"},
+      {ColorName:MAINCOLOR.MagentaPink,Hex:"#fc6cff"},
+      {ColorName:MAINCOLOR.RedSalmon,Hex:"#ff6c6c"},
     ]
     protected ProductPrices:string[]=["$0-$50","$50-$100","$100-$150","$150-$200","$300-$400"];
-    protected ProductBrands:string[]=["Minimog","Retrolie","Brook","Learts","Vagabond","Abby"];
-    protected ProductCollections:string[]=["All products","Best sellers","New arrivals","Accessories"];
-    protected ProductTags:string[]=["Fashion","Hats","Sandal","Belt","Bags","Snacker","Denim","Minimog","Vagabond","Sunglasses","Beachwear"];
+    protected ProductBrands:BRAND[]=Object.values(BRAND);
+    protected ProductCollections:COLLECTION[]=Object.values(COLLECTION)
+    protected ProductTags:TAG[]=Object.values(TAG);
     
     constructor(private ProductService:ProductService){}
     
@@ -84,8 +88,8 @@ export class ProductFilter {
     }
 
     protected ProductSizesindex:number=-1;
-    protected SelectedSizes:string[]=[];
-    TogleSize(size:string):void
+    protected SelectedSizes:SIZE[]=[];
+    TogleSize(size:SIZE):void
     {
       this.ProductSizesindex=this.ProductSizes.indexOf(size);
       if(this.SelectedSizes.includes(size))
@@ -95,13 +99,14 @@ export class ProductFilter {
       else
       {
         this.SelectedSizes.push(size);
+        //console.log(this.SelectedSizes);
       }
     }
 
     protected ProductColorsIndex:number=-1;
-    protected SelectedProductColors:string[]=[];
+    protected SelectedProductColors:MAINCOLOR[]=[];
     protected ColorName:string='';
-    TogleColor(color:string)
+    TogleColor(color:MAINCOLOR)
     {
       if(this.SelectedProductColors.includes(color))
       {
@@ -110,6 +115,7 @@ export class ProductFilter {
       else
       {
         this.SelectedProductColors.push(color);
+        //console.log(this.SelectedProductColors);
       }
    }
 
@@ -126,8 +132,8 @@ export class ProductFilter {
    }
 
    protected ProductBrandsIndex:number=-1;
-   protected SelectedProductBrands:string[]=[];
-   TogleBrand(brand:string)
+   protected SelectedProductBrands:BRAND[]=[];
+   TogleBrand(brand:BRAND)
    {
     this.ProductBrandsIndex=this.ProductBrands.indexOf(brand);
     if(this.SelectedProductBrands.includes(brand))
@@ -141,16 +147,23 @@ export class ProductFilter {
    }
 
   protected ProducCollectionsIndex:number=0;
-  protected ProducCollection:string='';
-  TogleCollection(collection:string)
+  protected SelectedProducCollection:COLLECTION[]=[];
+  TogleCollection(collection:COLLECTION)
   {
     this.ProducCollectionsIndex=this.ProductCollections.indexOf(collection);
-    this.ProducCollection=collection;
-    console.log(this.ProducCollection);
+    if(this.SelectedProducCollection.includes(collection))
+    {
+       this.SelectedProducCollection=this.SelectedProducCollection.filter(c=>c!==collection)
+    }
+    else
+    {
+      this.SelectedProducCollection.push(collection)
+      //console.log( this.ProducCollection);
+    }
   }
 
-  protected SelectedProductTags:string[]=[];
-  TogleTag(tag:string)
+  protected SelectedProductTags:TAG[]=[];
+  TogleTag(tag:TAG)
   {
     if(this.SelectedProductTags.includes(tag))
     {
@@ -166,8 +179,8 @@ export class ProductFilter {
   get FilteredProducts():ProductModel[]
   {
     return this.ProductItems.filter(Item=>{
-      const SuitableProductSize=this.SelectedSizes.some(size => Item.Size.includes(size));
-      return SuitableProductSize;
+      
     });
   }
+
 }
