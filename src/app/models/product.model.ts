@@ -21,8 +21,8 @@ export interface ProductModel
     Rating?:number;
     MainColor?:MAINCOLOR[];
     Collection?:COLLECTION;
-    Size:SIZE[];
-    Tag:TAG[];
+    Size?:SIZE[];
+    Tag?:TAG[];
 }
 
 
@@ -34,7 +34,8 @@ export enum BRAND
     Brook="Brook",
     Learts="Learts",
     Vagabond="Vagabond",
-    Abby="Abby"
+    Abby="Abby",
+    AlKaram="Al Karam"
 }
 
 export enum SIZE

@@ -2,10 +2,10 @@
     { 
         "ID": 1, 
         "Name": "Shiny Dress", 
-        "BrandName":"Al Karam",
+        "BrandName":["Al Karam"],
         "Rating":4,
         "CustomerReviews":40,
-        "Price": 95.50, 
+        "Price": 40.50, 
         "Type": "Dress", 
         "Thumbnail": "/public/assets/images/NewArrivals/p1Orange.png",
         "Images":
@@ -16,16 +16,16 @@
         "Accessories":false,
         "InStock":100,
         "Collection":"New Arrivals",
-        "Size":["M","L","XL","XXL"],
+        "Size":["M","L","XL"],
         "MainColor":["Royal Blue","Orange"] 
     },
     { 
         "ID": 2, 
         "Name": "Long Dress", 
-        "BrandName":"Al Karam",
+        "BrandName":["Al Karam"],
         "Rating":4,
         "CustomerReviews":120,
-        "Price": 75.50, 
+        "Price": 48.50, 
         "Type": "Dress", 
         "Thumbnail": "/public/assets/images/NewArrivals/p2Green.png",
         "Images":
@@ -36,13 +36,13 @@
         "Accessories":false,
         "InStock":57,
         "Collection":"New Arrivals",
-        "Size":["M","L","XXL"],
+        "Size":["M","L","XL"],
         "MainColor":["Green Mint","Snow White"]  
     },
     { 
         "ID": 3, 
         "Name": "Full Sweater", 
-        "BrandName":"Al Karam",
+        "BrandName":["Al Karam"],
         "Rating":5,
         "CustomerReviews":420,
         "Price": 120.50, 
@@ -56,13 +56,13 @@
         "Accessories":false,
         "InStock":200,
         "Collection":"New Arrivals",
-        "Size":["M","L","XL"],
+        "Size":["M","S","XL"],
         "MainColor":["Green Mint","Light Brown"]  
     },
     { 
         "ID": 4, 
         "Name": "White Dress", 
-        "BrandName":"Al Karam",
+        "BrandName":["Al Karam"],
         "Rating":3,
         "CustomerReviews":220,
         "Price": 60.70, 
@@ -76,16 +76,16 @@
         "Accessories":false,
         "InStock":86,
         "Collection":"New Arrivals",
-        "Size":["M","L","XL","XXL"],
+        "Size":["S","M","L","XL"],
         "MainColor":["Orange","Snow White"]  
     },
     { 
         "ID": 5, 
         "Name": "Colorful Dress", 
-        "BrandName":"Al Karam",
+        "BrandName":["Al Karam"],
         "Rating":4,
         "CustomerReviews":500,
-        "Price": 80, 
+        "Price": 45, 
         "Type": "Dress", 
         "Thumbnail": "/public/assets/images/NewArrivals/p5LightBlue.png",
         "Images":
@@ -97,13 +97,13 @@
         "Accessories":false,
         "InStock":44,
         "Collection":"New Arrivals",
-        "Size":["M","XL","XXL"], 
+        "Size":["S","M","XL"], 
         "MainColor":["Sky Blue","Green Mint","Magenta Pink"]  
     },
     { 
         "ID": 6, 
         "Name": "White Shirt", 
-        "BrandName":"Al Karam",
+        "BrandName":["Al Karam"],
         "Rating":5,
         "CustomerReviews":500,
         "Price": 75, 
@@ -124,7 +124,7 @@
     { 
         "ID": 7, 
         "Name": "Black jacket", 
-        "BrandName":"Al Karam",
+        "BrandName":["Al Karam"],
         "Rating":5,
         "CustomerReviews":1200,
         "Price": 80, 
@@ -138,13 +138,13 @@
         "Accessories":false,
         "InStock":18,
         "Collection":"New Arrivals",
-        "Size":["M","L","XL","XXL"],
+        "Size":["XL"],
         "MainColor":["Royal Blue","Light lake black"]   
     },
     { 
         "ID": 8, 
         "Name": "Black sweater", 
-        "BrandName":"Al Karam",
+        "BrandName":["Al Karam"],
         "Rating":3,
         "CustomerReviews":120,
         "Price": 90, 
@@ -164,7 +164,7 @@
     { 
         "ID": 9, 
         "Name": "Brown leather watch", 
-        "BrandName":"Al Karam",
+        "BrandName":["Al Karam"],
         "Rating":4,
         "CustomerReviews":120,
         "Price": 45, 
@@ -184,7 +184,7 @@
     { 
         "ID": 10, 
         "Name": "Brown leather watch", 
-        "BrandName":"Al Karam",
+        "BrandName":["Al Karam"],
         "Rating":4,
         "CustomerReviews":120,
         "Price": 45, 
@@ -203,7 +203,7 @@
     { 
         "ID": 11, 
         "Name": "Sheath red dress", 
-        "BrandName":"Al Karam",
+        "BrandName":["Al Karam","Minimog"],
         "Rating":5,
         "CustomerReviews":120,
         "Price": 45, 

@@ -9,6 +9,7 @@ import { SIZE } from '../../../models/product.model';
 import { TAG } from '../../../models/product.model';
 import { BRAND } from '../../../models/product.model';
 import { COLLECTION } from '../../../models/product.model';
+
 interface ColorItem
 {
   ColorName:MAINCOLOR;
@@ -58,6 +59,7 @@ export class ProductFilter {
         next: (data) => 
           {
             this.ProductItems = data;
+            this.logFilteredProducts();
           },
         error: (err) =>
           {
@@ -101,6 +103,8 @@ export class ProductFilter {
         this.SelectedSizes.push(size);
         //console.log(this.SelectedSizes);
       }
+      console.log('SelectedSizes:', this.SelectedSizes);
+      console.log('FilteredProducts after size change:', this.FilteredProducts);
     }
 
     protected ProductColorsIndex:number=-1;
@@ -117,6 +121,8 @@ export class ProductFilter {
         this.SelectedProductColors.push(color);
         //console.log(this.SelectedProductColors);
       }
+      console.log('SelectedProductColors:', this.SelectedProductColors);
+      console.log('FilteredProducts after color change:', this.FilteredProducts);
    }
 
    protected ProductPriceIndex:number=-1;
@@ -129,6 +135,8 @@ export class ProductFilter {
       this.ProdPriceStrparts=price.replace(/\$/g, "").split("-");
       this.ProdPriceMin=Number(this.ProdPriceStrparts[0]);
       this.ProdPriceMax=Number(this.ProdPriceStrparts[1]);
+      console.log('SelectedProductPrice:', this.ProdPriceStrparts);
+      console.log('FilteredProducts after price change:', this.FilteredProducts);
    }
 
    protected ProductBrandsIndex:number=-1;
@@ -144,6 +152,8 @@ export class ProductFilter {
     {
       this.SelectedProductBrands.push(brand)
     }
+      console.log('SelectedProductBrands:', this.SelectedProductBrands);
+      console.log('FilteredProducts after brands change:', this.FilteredProducts);
    }
 
   protected ProducCollectionsIndex:number=0;
@@ -175,12 +185,29 @@ export class ProductFilter {
        console.log(this.SelectedProductTags);
     }
   }
-
+  
   get FilteredProducts():ProductModel[]
   {
     return this.ProductItems.filter(Item=>{
+
+      const SuitableProdSize= this.SelectedSizes.length === 0 || 
+      this.SelectedSizes.some(size => Item.Size?.includes(size));
+
+      const SuitableProdColor=this.SelectedProductColors.length ===0 ||
+      this.SelectedProductColors.every(color=>Item.MainColor?.includes(color));
+
+      const SuitableProdPrice=this.ProdPriceMin===0||Item.Price>=this.ProdPriceMin && 
+      Item.Price<=this.ProdPriceMax;
       
-    });
+      const SuitableProdBradns=this.SelectedProductBrands.length===0 ||
+      this.SelectedProductBrands.every(brands=>Item.BrandName?.includes(brands));
+      
+      return SuitableProdSize && SuitableProdColor  && SuitableProdPrice && SuitableProdBradns ;
+      
+    });  
+  }
+   logFilteredProducts() {
+    console.log(this.FilteredProducts); 
   }
 
 }
