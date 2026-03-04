@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component , Output , EventEmitter } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { faAngleUp,faAngleDown} from '@fortawesome/free-solid-svg-icons';
@@ -19,10 +19,17 @@ interface ColorItem
 @Component({
   selector: 'app-product-filter',
   imports: [FontAwesomeModule],
+  standalone: true,
   templateUrl: './product-filter.html',
   styleUrl: './product-filter.scss',
 })
 export class ProductFilter {
+  @Output() filteredProductsChange = new EventEmitter<ProductModel[]>();
+
+  sendFilteredData() 
+  {
+    this.filteredProductsChange.emit(this.FilteredProducts);
+  }
     faAngleUp:IconDefinition=faAngleUp;
     faAngleDown:IconDefinition=faAngleDown;
 
@@ -59,7 +66,8 @@ export class ProductFilter {
         next: (data) => 
           {
             this.ProductItems = data;
-            this.logFilteredProducts();
+            //this.logFilteredProducts();
+            this.sendFilteredData();
           },
         error: (err) =>
           {
@@ -102,6 +110,7 @@ export class ProductFilter {
       {
         this.SelectedSizes.push(size);
       }
+      this.sendFilteredData(); 
       console.log('SelectedSizes:', this.SelectedSizes);
       console.log('FilteredProducts after size change:', this.FilteredProducts);
     }
@@ -119,6 +128,7 @@ export class ProductFilter {
       {
         this.SelectedProductColors.push(color);
       }
+      this.sendFilteredData();
       console.log('SelectedProductColors:', this.SelectedProductColors);
       console.log('FilteredProducts after color change:', this.FilteredProducts);
    }
@@ -133,6 +143,7 @@ export class ProductFilter {
       this.ProdPriceStrparts=price.replace(/\$/g, "").split("-");
       this.ProdPriceMin=Number(this.ProdPriceStrparts[0]);
       this.ProdPriceMax=Number(this.ProdPriceStrparts[1]);
+       this.sendFilteredData();
       console.log('SelectedProductPrice:', this.ProdPriceStrparts);
       console.log('FilteredProducts after price change:', this.FilteredProducts);
    }
@@ -150,6 +161,7 @@ export class ProductFilter {
     {
       this.SelectedProductBrands.push(brand)
     }
+      this.sendFilteredData();
       console.log('SelectedProductBrands:', this.SelectedProductBrands);
       console.log('FilteredProducts after brands change:', this.FilteredProducts);
    }
@@ -167,6 +179,7 @@ export class ProductFilter {
     {
       this.SelectedProducCollection.push(collection);
     }
+     this.sendFilteredData();
      console.log('SelectedProducCollection:', this.SelectedProducCollection);
      console.log('FilteredProducts after collection change:', this.FilteredProducts);
   }
@@ -182,6 +195,7 @@ export class ProductFilter {
     {
        this.SelectedProductTags.push(tag);
     }
+     this.sendFilteredData();
      console.log('SelectedProducTag:', this.SelectedProductTags);
      console.log('FilteredProducts after tag change:', this.FilteredProducts);
   }
@@ -214,8 +228,8 @@ export class ProductFilter {
       
     });  
   }
+  
    logFilteredProducts() {
     console.log(this.FilteredProducts); 
   }
-
 }

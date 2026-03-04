@@ -6,7 +6,7 @@
 <div class="Grid">
 
     <div class="Filter">
-        <app-product-filter></app-product-filter>
+        <app-product-filter (filteredProductsChange)="onFilterApplied($event)"></app-product-filter>
     </div>
 
     <div class="ProductLayoutSwitcher">
@@ -14,7 +14,7 @@
     </div>
 
     <div class="ProductContent">
-        <app-product-content></app-product-content>
+        <app-product-content [products]="filteredData"></app-product-content>
     </div>
 
      <div class="Pagination">

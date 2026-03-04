@@ -44,6 +44,8 @@
     }
     .PColors
     {
+        display: flex;
+        gap: 5px;
         .ColorContainer
         {
             height: 26px;
