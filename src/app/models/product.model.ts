@@ -46,27 +46,27 @@ export enum SIZE
 
 export enum MAINCOLOR
 {
-    RedCoral="Red Coral",
-    Orange="Orange",
-    Yellow="Yellow",
-    LimeGreen="Lime Green",
-    GreenMint="Green Mint",
-    Turquoise="Turquoise",
-    SkyBlue="Sky Blue",
-    CyanLightBlue="Cyan LightBlue",
-    Blue="Blue",
-    RoyalBlue="Royal Blue",
-    VioletPurple="Violet Purple",
-    LavenderPurple="Lavender Purple",
-    MagentaPink="Magenta Pink",
-    RedSalmon="Red Salmon",
-    SnowWhite="Snow White",   
-    LightBrown="Light Brown",
-    DeepGreen="Deep Green",
-    Lightlakeblack="Light lake black",
-    DeepBlack="Deep Black",
-    Burgundy="Burgundy",
-    Brown="Brown"
+    RedCoral="#ff6c6c",
+    Orange="#ff7629",
+    Yellow="#fff06c",
+    LimeGreen="#9bff6c",
+    GreenMint="#6cff9e",
+    Turquoise="#6cffdc",
+    SkyBlue="#6cb9ff",
+    CyanLightBlue="#6cf6ff",
+    Blue="#6ca7ff",
+    RoyalBlue="#6c7bff",
+    VioletPurple="#8a6cff",
+    LavenderPurple="#b66cff",
+    MagentaPink="#fc6cff",
+    RedSalmon="#ff6c6c",
+    SnowWhite="	#FFFFFF",   
+    LightBrown="#D2B48C",
+    DeepGreen="#02590F",
+    Lightlakeblack="#1B1B1B",
+    DeepBlack="#050203",
+    Burgundy="#9F1D35",
+    Brown="#8B4513"
 }
 
 export enum COLLECTION

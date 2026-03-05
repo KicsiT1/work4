@@ -17,7 +17,7 @@
         "InStock":100,
         "Collection":["All products","New Arrivals"],
         "Size":["M","L","XL"],
-        "MainColor":["Royal Blue","Orange"] 
+        "MainColor":["#6c7bff","#ff7629"] 
     },
     { 
         "ID": 2, 
@@ -37,7 +37,7 @@
         "InStock":57,
         "Collection":["All products","New Arrivals"],
         "Size":["M","L","XL"],
-        "MainColor":["Green Mint","Snow White"]  
+        "MainColor":["#6cff9e","#FFFFFF"]  
     },
     { 
         "ID": 3, 
@@ -57,7 +57,7 @@
         "InStock":200,
         "Collection":["All products","New Arrivals"],
         "Size":["M","S","XL"],
-        "MainColor":["Green Mint","Light Brown"]  
+        "MainColor":["#6cff9e","#D2B48C"]  
     },
     { 
         "ID": 4, 
@@ -77,7 +77,7 @@
         "InStock":86,
         "Collection":["New Arrivals"],
         "Size":["S","M","L","XL"],
-        "MainColor":["Orange","Snow White"]  
+        "MainColor":["#ff7629","#FFFFFF"]  
     },
     { 
         "ID": 5, 
@@ -98,7 +98,7 @@
         "InStock":44,
         "Collection":["All products","New Arrivals"],
         "Size":["S","M","XL"], 
-        "MainColor":["Sky Blue","Green Mint","Magenta Pink"]  
+        "MainColor":["#6cb9ff","#6cff9e","#fc6cff"]  
     },
     { 
         "ID": 6, 
@@ -119,7 +119,7 @@
         "InStock":25,
         "Collection":["All products","New Arrivals"],
         "Size":["M"],
-        "MainColor":["Deep Green","Snow White","Red Coral"]  
+        "MainColor":["#02590F","#FFFFFF","#ff6c6c"]  
     },
     { 
         "ID": 7, 
@@ -139,7 +139,7 @@
         "InStock":18,
         "Collection":["All products","New Arrivals"],
         "Size":["XL"],
-        "MainColor":["Royal Blue","Light lake black"]   
+        "MainColor":["#6c7bff","#1B1B1B"]   
     },
     { 
         "ID": 8, 
@@ -159,7 +159,7 @@
         "InStock":22,
         "Collection":["All products","New Arrivals"],
         "Size":["M","L"],
-        "MainColor":["Deep Black","Burgundy"]  
+        "MainColor":["#050203","#9F1D35"]  
     },
     { 
         "ID": 9, 
@@ -179,7 +179,7 @@
         "Accessories":true,
         "InStock":22,
         "Collection":["All products","New Arrivals"],
-        "MainColor":["Brown","Royal Blue","Red Salmon"] 
+        "MainColor":["#8B4513","#6c7bff","#ff6c6c"] 
     },
     { 
         "ID": 10, 
@@ -198,7 +198,7 @@
         "Accessories":true,
         "InStock":24,
         "Collection":["All products","New Arrivals"],
-        "MainColor":["Brown","Royal Blue"] 
+        "MainColor":["#8B4513","#6c7bff"] 
     },
     { 
         "ID": 11, 
@@ -219,6 +219,6 @@
         "InStock":28,
         "Collection":["All products","Best Sellers"],
         "Size":["M","L","XL"],
-        "MainColor":["Red Coral","Deep Black","Royal Blue"]  
+        "MainColor":["#ff6c6c","#050203","#6c7bff"]  
     }
 ]
