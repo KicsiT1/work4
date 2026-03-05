@@ -10,12 +10,6 @@ import { TAG } from '../../../models/product.model';
 import { BRAND } from '../../../models/product.model';
 import { COLLECTION } from '../../../models/product.model';
 
-interface ColorItem
-{
-  ColorName:MAINCOLOR;
-  Hex:string;
-}
-
 @Component({
   selector: 'app-product-filter',
   imports: [FontAwesomeModule],
@@ -36,23 +30,8 @@ export class ProductFilter {
     protected ProductItems:ProductModel[]=[];
     protected ProductSizes:SIZE[]=Object.values(SIZE);
 
-    protected ProductColors:ColorItem[]=
-    [
-      {ColorName:MAINCOLOR.RedCoral,Hex:'#ff6c6c'},
-      {ColorName:MAINCOLOR.Orange,Hex:'#ff7629'},
-      {ColorName:MAINCOLOR.Yellow,Hex:'#fff06c'},
-      {ColorName:MAINCOLOR.LimeGreen,Hex:'#9bff6c'},
-      {ColorName:MAINCOLOR.GreenMint,Hex:'#6cff9e'},
-      {ColorName:MAINCOLOR.Turquoise,Hex:"#6cffdc"},
-      {ColorName:MAINCOLOR.SkyBlue,Hex:"#6cb9ff"},
-      {ColorName:MAINCOLOR.CyanLightBlue,Hex:"#6cf6ff"},
-      {ColorName:MAINCOLOR.Blue,Hex:"#6ca7ff"},
-      {ColorName:MAINCOLOR.RoyalBlue,Hex:"#6c7bff"},
-      {ColorName:MAINCOLOR.VioletPurple,Hex:"#8a6cff"},
-      {ColorName:MAINCOLOR.LavenderPurple,Hex:"#b66cff"},
-      {ColorName:MAINCOLOR.MagentaPink,Hex:"#fc6cff"},
-      {ColorName:MAINCOLOR.RedSalmon,Hex:"#ff6c6c"},
-    ]
+    protected ProductColors:MAINCOLOR[]=Object.values(MAINCOLOR);
+
     protected ProductPrices:string[]=["$0-$50","$50-$100","$100-$150","$150-$200","$300-$400"];
     protected ProductBrands:BRAND[]=Object.values(BRAND);
     protected ProductCollections:COLLECTION[]=Object.values(COLLECTION);
@@ -111,8 +90,10 @@ export class ProductFilter {
         this.SelectedSizes.push(size);
       }
       this.sendFilteredData(); 
+      /*
       console.log('SelectedSizes:', this.SelectedSizes);
       console.log('FilteredProducts after size change:', this.FilteredProducts);
+      */
     }
 
     protected ProductColorsIndex:number=-1;
@@ -129,8 +110,10 @@ export class ProductFilter {
         this.SelectedProductColors.push(color);
       }
       this.sendFilteredData();
+      /*
       console.log('SelectedProductColors:', this.SelectedProductColors);
       console.log('FilteredProducts after color change:', this.FilteredProducts);
+      */
    }
 
    protected ProductPriceIndex:number=-1;
@@ -143,9 +126,11 @@ export class ProductFilter {
       this.ProdPriceStrparts=price.replace(/\$/g, "").split("-");
       this.ProdPriceMin=Number(this.ProdPriceStrparts[0]);
       this.ProdPriceMax=Number(this.ProdPriceStrparts[1]);
-       this.sendFilteredData();
+      this.sendFilteredData();
+      /*
       console.log('SelectedProductPrice:', this.ProdPriceStrparts);
       console.log('FilteredProducts after price change:', this.FilteredProducts);
+      */
    }
 
    protected ProductBrandsIndex:number=-1;
@@ -162,8 +147,10 @@ export class ProductFilter {
       this.SelectedProductBrands.push(brand)
     }
       this.sendFilteredData();
+      /*
       console.log('SelectedProductBrands:', this.SelectedProductBrands);
       console.log('FilteredProducts after brands change:', this.FilteredProducts);
+      */
    }
 
   protected ProducCollectionsIndex:number=0;
@@ -180,8 +167,10 @@ export class ProductFilter {
       this.SelectedProducCollection.push(collection);
     }
      this.sendFilteredData();
+     /*
      console.log('SelectedProducCollection:', this.SelectedProducCollection);
      console.log('FilteredProducts after collection change:', this.FilteredProducts);
+     */
   }
 
   protected SelectedProductTags:TAG[]=[];
@@ -196,8 +185,10 @@ export class ProductFilter {
        this.SelectedProductTags.push(tag);
     }
      this.sendFilteredData();
+     /*
      console.log('SelectedProducTag:', this.SelectedProductTags);
      console.log('FilteredProducts after tag change:', this.FilteredProducts);
+     */
   }
   
   get FilteredProducts():ProductModel[]
@@ -228,8 +219,9 @@ export class ProductFilter {
       
     });  
   }
-  
+  /*
    logFilteredProducts() {
     console.log(this.FilteredProducts); 
   }
+  */
 }

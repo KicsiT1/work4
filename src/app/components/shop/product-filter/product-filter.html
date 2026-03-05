@@ -22,11 +22,11 @@
                 @for (color of ProductColors; track color) 
                 {
                     <li
-                        [class.active]="SelectedProductColors.includes(color.ColorName)"
-                        [style.background-color]="color.Hex"
+                        [class.active]="SelectedProductColors.includes(color)"
+                        [style.background-color]="color"
                         [style.box-shadow]="'3px 3px 5px grey'"
-                        [style.opacity]="SelectedProductColors.includes(color.ColorName) ? 1 : 0.4"
-                        (click)="TogleColor(color.ColorName)">
+                        [style.opacity]="SelectedProductColors.includes(color) ? 1 : 0.4"
+                        (click)="TogleColor(color)">
                     </li>
                 }
             </ul>
@@ -79,10 +79,10 @@
             </div>
             <ul [class.active]="CollectionsDropDown">
 
-                @for (collection of ProductCollections; track collection; let i=$index) 
+                @for (collection of ProductCollections; track collection) 
                 {
                     <li 
-                        [class.active]="i===ProducCollectionsIndex" 
+                        [class.Active]="SelectedProducCollection.includes(collection)" 
                         (click)="TogleCollection(collection)">
                         {{ collection }}
                     </li>

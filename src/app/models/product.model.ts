@@ -46,7 +46,7 @@ export enum SIZE
 
 export enum MAINCOLOR
 {
-    RedCoral="#ff6c6c",
+    RedCoral="#f16363",
     Orange="#ff7629",
     Yellow="#fff06c",
     LimeGreen="#9bff6c",
