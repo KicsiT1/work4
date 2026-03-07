@@ -17,14 +17,19 @@ import { ProductModel } from '../../models/product.model';
 
 export class Shop {
   filteredData: ProductModel[] = [];
-  
-  onFilterApplied(products: ProductModel[]): void {
+  ProducCollectionIndex:number=0;
+
+  onFilterApplied(products: ProductModel[]): void 
+  {
     this.filteredData = products;    
-    console.log('A szülő megkapta az adatot:', this.filteredData);
+  }
+
+  ProducCollectionIndexApplied(ProdCollectionIndex:number):void
+  {
+  this.ProducCollectionIndex=ProdCollectionIndex;
   }
 
   faAngleUp:IconDefinition=faAngleUp;
   faAngleDown:IconDefinition=faAngleDown;
-
 
 }

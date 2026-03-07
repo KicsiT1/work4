@@ -6,15 +6,20 @@
 <div class="Grid">
 
     <div class="Filter">
-        <app-product-filter (filteredProductsChange)="onFilterApplied($event)"></app-product-filter>
+        <app-product-filter 
+        (filteredProductsChange)="onFilterApplied($event)"
+        (ProducCollectionIndex)="ProducCollectionIndexApplied($event)">
+    </app-product-filter>
     </div>
 
     <div class="ProductLayoutSwitcher">
-        <app-product-layout-switcher></app-product-layout-switcher>
+        <app-product-layout-switcher  
+        [ProdCollectionIndex]="ProducCollectionIndex"></app-product-layout-switcher>
     </div>
 
     <div class="ProductContent">
-        <app-product-content [products]="filteredData"></app-product-content>
+        <app-product-content 
+        [products]="filteredData"></app-product-content>
     </div>
 
      <div class="Pagination">

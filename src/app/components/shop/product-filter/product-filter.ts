@@ -1,4 +1,4 @@
-import { Component , Output , EventEmitter } from '@angular/core';
+import { Component , Output ,Input, EventEmitter, input } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { faAngleUp,faAngleDown} from '@fortawesome/free-solid-svg-icons';
@@ -153,11 +153,20 @@ export class ProductFilter {
       */
    }
 
-  protected ProducCollectionsIndex:number=0;
+  protected ProducCollectionsIndex:number=-1;
   protected SelectedProducCollection:COLLECTION[]=[];
+  
+  @Output() ProducCollectionIndex = new EventEmitter<number>();
+
+  sendProducCollectionIndex() 
+  {
+    this.ProducCollectionIndex.emit(this.ProducCollectionsIndex);
+  }
+
   TogleCollection(collection:COLLECTION)
   {
     this.ProducCollectionsIndex=this.ProductCollections.indexOf(collection);
+    this.sendProducCollectionIndex(); 
     if(this.SelectedProducCollection.includes(collection))
     {
        this.SelectedProducCollection=this.SelectedProducCollection.filter(c=>c!==collection)
@@ -190,27 +199,27 @@ export class ProductFilter {
      console.log('FilteredProducts after tag change:', this.FilteredProducts);
      */
   }
-  
+
   get FilteredProducts():ProductModel[]
   {
     return this.ProductItems.filter(Item=>{
 
-      const SuitableProdSize= this.SelectedSizes.length === 0 || 
+      const SuitableProdSize = this.SelectedSizes.length === 0 || 
       this.SelectedSizes.some(size => Item.Size?.includes(size));
 
-      const SuitableProdColor=this.SelectedProductColors.length ===0 ||
+      const SuitableProdColor = this.SelectedProductColors.length ===0 ||
       this.SelectedProductColors.every(color=>Item.MainColor?.includes(color));
 
-      const SuitableProdPrice=this.ProdPriceMin===0||Item.Price>=this.ProdPriceMin && 
+      const SuitableProdPrice = this.ProdPriceMin===0||Item.Price>=this.ProdPriceMin && 
       Item.Price<=this.ProdPriceMax;
       
-      const SuitableProdBradns=this.SelectedProductBrands.length ===0 ||
+      const SuitableProdBradns = this.SelectedProductBrands.length ===0 ||
       this.SelectedProductBrands.every(brands=>Item.BrandName?.includes(brands));
       
-      const SuitableProdCollection=this.SelectedProducCollection.length === 0 ||
+      const SuitableProdCollection = this.SelectedProducCollection.length === 0 ||
       this.SelectedProducCollection.some(collections=>Item.Collection?.includes(collections));
 
-      const SuitableProdTag=this.SelectedProductTags.length===0 ||
+      const SuitableProdTag = this.SelectedProductTags.length===0 ||
       this.SelectedProductTags.every(Tags=>Item.Tag?.includes(Tags));
 
       return SuitableProdSize       &&  SuitableProdColor   && 
