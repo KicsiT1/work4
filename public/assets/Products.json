@@ -7,9 +7,9 @@
         "CustomerReviews":40,
         "Price": 160, 
         "Type": "Dress", 
-        "Thumbnail": "/public/assets/images/NewArrivals/p1Orange.png",
         "Images":
         [
+            "/public/assets/images/NewArrivals/p1Orange.png",
             "/public/assets/images/NewArrivals/p1DeepBlue.png"
         ],
         "ProductFor":"Women’s Fashion",
@@ -17,7 +17,7 @@
         "InStock":100,
         "Collection":["All products","New Arrivals"],
         "Size":["M","L","XL"],
-        "MainColor":["#6c7bff","#ff7629"] 
+        "MainColor":["#ff7629","#6c7bff"] 
     },
     { 
         "ID": 2, 
@@ -27,9 +27,9 @@
         "CustomerReviews":120,
         "Price": 48.50, 
         "Type": "Dress", 
-        "Thumbnail": "/public/assets/images/NewArrivals/p2Green.png",
         "Images":
         [
+            "/public/assets/images/NewArrivals/p2Green.png",
             "/public/assets/images/NewArrivals/p2White.png"
         ],
         "ProductFor":"Women’s Fashion",
@@ -47,9 +47,9 @@
         "CustomerReviews":420,
         "Price": 120.50, 
         "Type": "Dress", 
-        "Thumbnail": "/public/assets/images/NewArrivals/p3DeepGreen.png",
         "Images":
         [
+            "/public/assets/images/NewArrivals/p3DeepGreen.png",
             "/public/assets/images/NewArrivals/p3LightBrown.png"
         ],
         "ProductFor":"Women’s Fashion",
@@ -67,10 +67,10 @@
         "CustomerReviews":220,
         "Price": 60.70, 
         "Type": "Dress", 
-        "Thumbnail": "/public/assets/images/NewArrivals/p4White.png",
         "Images":
         [
-            "/public/assets/images/NewArrivals/p4DeepOrange.png"
+            "/public/assets/images/NewArrivals/p4DeepOrange.png",
+            "/public/assets/images/NewArrivals/p4White.png"
         ],
         "ProductFor":"Women’s Fashion",
         "Accessories":false,
@@ -87,9 +87,9 @@
         "CustomerReviews":500,
         "Price": 45, 
         "Type": "Dress", 
-        "Thumbnail": "/public/assets/images/NewArrivals/p5LightBlue.png",
         "Images":
         [
+            "/public/assets/images/NewArrivals/p5LightBlue.png",
             "/public/assets/images/NewArrivals/p5LightGreen.png",
             "/public/assets/images/NewArrivals/p5Rosecolor.png"
         ],
@@ -108,18 +108,18 @@
         "CustomerReviews":500,
         "Price": 75, 
         "Type": "Dress", 
-        "Thumbnail": "/public/assets/images/NewArrivals/p6White.png",
         "Images":
         [
+            "/public/assets/images/NewArrivals/p6DeepGreen.png",
             "/public/assets/images/NewArrivals/p6Red.png",
-            "/public/assets/images/NewArrivals/p6DeepGreen.png"
+            "/public/assets/images/NewArrivals/p6White.png"
         ],
         "ProductFor":"Women’s Fashion",
         "Accessories":false,
         "InStock":25,
         "Collection":["All products","New Arrivals"],
         "Size":["M"],
-        "MainColor":["#02590F","#FFFFFF","#ff6c6c"]  
+        "MainColor":["#02590F","#ff6c6c","#FFFFFF"]  
     },
     { 
         "ID": 7, 
@@ -129,10 +129,10 @@
         "CustomerReviews":1200,
         "Price": 80, 
         "Type": "Dress", 
-        "Thumbnail": "/public/assets/images/NewArrivals/p7LightBlack.png",
         "Images":
         [
-            "/public/assets/images/NewArrivals/p7DeepBlue.png"
+            "/public/assets/images/NewArrivals/p7DeepBlue.png",
+            "/public/assets/images/NewArrivals/p7LightBlack.png"
         ],
         "ProductFor":"Men’s Fashion",
         "Accessories":false,
@@ -149,9 +149,9 @@
         "CustomerReviews":120,
         "Price": 90, 
         "Type": "Dress", 
-        "Thumbnail": "/public/assets/images/NewArrivals/p8DeepBlack.png",
         "Images":
         [
+            "/public/assets/images/NewArrivals/p8DeepBlack.png",
             "/public/assets/images/NewArrivals/p8DeepRed.png"
         ],
         "ProductFor":"Men’s Fashion",
@@ -169,9 +169,9 @@
         "CustomerReviews":120,
         "Price": 45, 
         "Type": "Object", 
-        "Thumbnail": "/public/assets/images/NewArrivals/p9Brown.png",
         "Images":
         [
+            "/public/assets/images/NewArrivals/p9Brown.png",
             "/public/assets/images/NewArrivals/p9Blue.png",
             "/public/assets/images/NewArrivals/p9Red.png"
         ],
@@ -189,9 +189,9 @@
         "CustomerReviews":120,
         "Price": 45, 
         "Type": "Object", 
-        "Thumbnail": "/public/assets/images/NewArrivals/p10Brown.png",
         "Images":
         [
+            "/public/assets/images/NewArrivals/p10Brown.png",
             "/public/assets/images/NewArrivals/p10DeepBlue.png"
         ],
         "ProductFor":"Men’s Fashion",
@@ -208,9 +208,9 @@
         "CustomerReviews":120,
         "Price": 45, 
         "Type": "Dress", 
-        "Thumbnail": "/public/assets/images/NewArrivals/p11Red.png",
         "Images":
         [
+            "/public/assets/images/NewArrivals/p11Red.png",
             "/public/assets/images/NewArrivals/p11Black.png",
             "/public/assets/images/NewArrivals/p11DeepBlue.png"
         ],

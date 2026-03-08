@@ -11,7 +11,7 @@ export interface ProductModel
     DiscountSeason?:string;
     DiscountMonth?:string;
     Description?:string;
-    Images?:string[];
+    Images:string[];
     InStock?: number;
     SaleNumber?:number;
     BrandName?:BRAND[];
@@ -42,6 +42,7 @@ export enum SIZE
     M="M",
     L="L",
     XL="XL",
+    XXL="XXL"
 }
 
 export enum MAINCOLOR

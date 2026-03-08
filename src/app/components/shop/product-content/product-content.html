@@ -1,10 +1,10 @@
 <section class="ProductContainer">
     <div class="Products">
-        @for(Product of products; track Product)
+        @for(Product of products.slice(0,9); track  $index; let i=$index)
         {
         <div class="Product">
             <div class="PImg">
-                <img [src]="Product.Thumbnail" alt="">
+                <img [src]="Images[i]" alt="">
             </div>
             <p class="PName">{{Product.Name}}</p>
             <div class="ProductPricesContainer">
@@ -13,10 +13,10 @@
             </div>
             
             <div class="PColors">
-                @for(color of Product.MainColor; track color)
+                @for(color of Product.MainColor; track  $index;let j=$index)
                 {
                 <div class="ColorContainer">
-                    <div [style.backgroundColor]="color" class="Color"></div>
+                    <div (click)="GetProdIndex(i,j)" [style.backgroundColor]="color" class="Color"></div>
                 </div>
                 }
             </div>
