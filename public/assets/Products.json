@@ -178,7 +178,7 @@
         "ProductFor":"Women’s Fashion",
         "Accessories":true,
         "InStock":22,
-        "Collection":["All products","New Arrivals"],
+        "Collection":["All products","New Arrivals","Accessories"],
         "MainColor":["#8B4513","#6c7bff","#ff6c6c"] 
     },
     { 
@@ -197,7 +197,7 @@
         "ProductFor":"Men’s Fashion",
         "Accessories":true,
         "InStock":24,
-        "Collection":["All products","New Arrivals"],
+        "Collection":["All products","New Arrivals","Accessories"],
         "MainColor":["#8B4513","#6c7bff"] 
     },
     { 

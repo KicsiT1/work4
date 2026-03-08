@@ -16,6 +16,7 @@ import { ProductModel } from '../../models/product.model';
 })
 
 export class Shop {
+  
   filteredData: ProductModel[] = [];
   ProducCollectionIndex:number=0;
 

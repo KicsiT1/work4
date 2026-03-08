@@ -1,4 +1,4 @@
-import { Component , Output ,Input, EventEmitter, input } from '@angular/core';
+import { Component , Output , EventEmitter } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { faAngleUp,faAngleDown} from '@fortawesome/free-solid-svg-icons';
@@ -17,43 +17,46 @@ import { COLLECTION } from '../../../models/product.model';
   templateUrl: './product-filter.html',
   styleUrl: './product-filter.scss',
 })
-export class ProductFilter {
-  @Output() filteredProductsChange = new EventEmitter<ProductModel[]>();
 
+export class ProductFilter {
+  // The FilteredProducts() i pass getter to the parent shop component.
+  @Output() filteredProductsChange = new EventEmitter<ProductModel[]>();
+  // When I set something in the filter, I use sendFilteredData() to update 
+  // the filter so that the data appears.
   sendFilteredData() 
   {
     this.filteredProductsChange.emit(this.FilteredProducts);
   }
-    faAngleUp:IconDefinition=faAngleUp;
-    faAngleDown:IconDefinition=faAngleDown;
-
-    protected ProductItems:ProductModel[]=[];
-    protected ProductSizes:SIZE[]=Object.values(SIZE);
-
-    protected ProductColors:MAINCOLOR[]=Object.values(MAINCOLOR);
-
-    protected ProductPrices:string[]=["$0-$50","$50-$100","$100-$150","$150-$200","$300-$400"];
-    protected ProductBrands:BRAND[]=Object.values(BRAND);
-    protected ProductCollections:COLLECTION[]=Object.values(COLLECTION);
-    protected ProductTags:TAG[]=Object.values(TAG);
-    
-    constructor(private ProductService:ProductService){}
-    
-    ngOnInit()
-    {
-      this.ProductService.GetNewArrivalsData().subscribe({
-        next: (data) => 
-          {
-            this.ProductItems = data;
-            //this.logFilteredProducts();
-            this.sendFilteredData();
-          },
-        error: (err) =>
-          {
-            console.error('Error:', err)
-          }
-      });
-    }
+  // I use these two icons for the dropdown sections
+  faAngleUp:IconDefinition=faAngleUp;
+  faAngleDown:IconDefinition=faAngleDown;
+  // This is where I store the data I have already subscribed to.
+  protected ProductItems:ProductModel[]=[];
+  // The data that appears in the filter arrives here.
+  protected ProductSizes:SIZE[]=Object.values(SIZE);
+  protected ProductColors:MAINCOLOR[]=Object.values(MAINCOLOR);
+  protected ProductPrices:string[]=["$0-$50","$50-$100","$100-$150","$150-$200","$300-$400"];
+  protected ProductBrands:BRAND[]=Object.values(BRAND);
+  protected ProductCollections:COLLECTION[]=Object.values(COLLECTION);
+  protected ProductTags:TAG[]=Object.values(TAG);
+  // Need the ProductService to subscribe to the data.
+  constructor(private ProductService:ProductService){}
+  ngOnInit()
+  {
+  // Subscription
+   this.ProductService.GetNewArrivalsData().subscribe({
+     next: (data) => 
+       {
+         this.ProductItems = data;
+         //this.logFilteredProducts();
+         this.sendFilteredData();
+       },
+     error: (err) =>
+       {
+         console.error('Error:', err)
+       }
+   });
+  }
 
     protected BrandsDropDown:boolean=false;
     protected CollectionsDropDown:boolean=false;
@@ -72,12 +75,18 @@ export class ProductFilter {
         break;
 
         default:
-          console.log("there is no such drop-down text box");
+          console.warn("Unknown dropdown:", DropDown);
       }
     }
-
+    // I'm getting the ProductSizesindex so I can know what the user clicked on.
     protected ProductSizesindex:number=-1;
+    // This is where I store the value selected by the user.
     protected SelectedSizes:SIZE[]=[];
+    // The function checks if the user has selected an option and 
+    // if so, it is placed in the SelectedSizes array. 
+    // If the user clicks on a value that is already in 
+    // the array, then the element is removed from SelectedSizes array.
+    // The TogleColor(), TogleBrand(), Toggle Collection(), TogleTag() also work with this logic.
     TogleSize(size:SIZE):void
     {
       this.ProductSizesindex=this.ProductSizes.indexOf(size);
@@ -98,7 +107,6 @@ export class ProductFilter {
 
     protected ProductColorsIndex:number=-1;
     protected SelectedProductColors:MAINCOLOR[]=[];
-    protected ColorName:string='';
     TogleColor(color:MAINCOLOR)
     {
       if(this.SelectedProductColors.includes(color))
@@ -199,7 +207,7 @@ export class ProductFilter {
      console.log('FilteredProducts after tag change:', this.FilteredProducts);
      */
   }
-
+  //I pass this get function to the shop parent component
   get FilteredProducts():ProductModel[]
   {
     return this.ProductItems.filter(Item=>{
