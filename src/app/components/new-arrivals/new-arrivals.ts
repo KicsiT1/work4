@@ -31,7 +31,6 @@ export class NewArrivals {
   // These two variables ensure that when we enter 
   // the page, the filter is usually set to some basic settings.
   protected currentCategory: PRODUCTFOR | 'all' = PRODUCTFOR.Women_sFashion;
-  protected CurrentCollection: COLLECTION | 'all' = COLLECTION.NewArrivals;
   protected showAccessoriesOnly: boolean | null = null;
   // Active only one of filter buttons.
   protected ButtonActive:number=0;
@@ -58,16 +57,14 @@ export class NewArrivals {
       this.ViewMore(0);
    }
   // I filter the array and get the exact size at the same time.
-  get filteredProducts(): ProductModel[] {
+  get filteredproducts(): ProductModel[] {
   return this.ProductItems.filter(item => {
-    
-    const matchesCollection = this.CurrentCollection==='all'|| item.Collection === this.CurrentCollection;
-    
+  
     const matchesCategory = this.currentCategory === 'all' || item.ProductFor === this.currentCategory;
     
     const matchesAccessories = this.showAccessoriesOnly === null || item.Accessories === this.showAccessoriesOnly;
 
-    return matchesCollection && matchesCategory && matchesAccessories;
+    return  matchesCategory && matchesAccessories;
   });
 }
    // The ViewMore function is connected to the Show 
@@ -75,7 +72,7 @@ export class NewArrivals {
    // are always displayed.
    ViewMore(Visible:number):void
    {
-    const currentFilteredCount = this.filteredProducts.length;
+    const currentFilteredCount = this.filteredproducts.length;
     if(this.Visibleproducts<currentFilteredCount)
     {
       this.Visibleproducts+=Visible;

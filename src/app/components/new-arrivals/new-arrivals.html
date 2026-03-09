@@ -18,11 +18,11 @@
     <!-- Dynamic content is displayed in the cards. -->
     <div class="ProductItems">
         <!-- For loop that includes the filter pipe. -->
-        @for(item of filteredProducts.slice(0,Visibleproducts); track item.ID)
+        @for(item of filteredproducts.slice(0,Visibleproducts); track item.ID)
         {
           <!--Product details of the cards. -->
           <article>
-            <img [src]="item.Thumbnail" alt="">
+            <img [src]="item.Images[0]" alt="">
             <div class="ProductInfo">
                 <div class="ProductName">
 
@@ -48,5 +48,5 @@
         }
     </div>
     <!-- Always show 3 extra cards. -->
-    <button class="ViewMoreButton"  (click)=" ViewMore(3)">  {{ Visibleproducts < filteredProducts.length ? 'Show More' : 'Show Less' }}</button>
+    <button class="ViewMoreButton"  (click)=" ViewMore(3)">  {{ Visibleproducts < filteredproducts.length ? 'Show More' : 'Show Less' }}</button>
 </section>

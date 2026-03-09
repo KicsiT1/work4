@@ -1,30 +1,24 @@
 import { Component } from '@angular/core';
 import { NavBar } from '../../components/nav-bar/nav-bar';
-import { HeroSection } from '../../components/hero-section/hero-section';
+import { ProductInfo } from '../../components/shop/product-info/product-info';
 import { CurrentOffer } from '../../components/current-offer/current-offer';
-import { NewArrivals } from '../../components/new-arrivals/new-arrivals';
 import { OutstandingOffer } from '../../components/outstanding-offer/outstanding-offer';
-import { FollowUs } from '../../components/follow-us/follow-us'; 
-import { UserFeedback } from '../../components/user-feedback/user-feedback';
 import { SubscribeToNews } from '../../components/subscribe-to-news/subscribe-to-news';
 import { Footer } from '../../components/footer/footer'; 
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-productinfo',
   imports: [
     NavBar,
-    HeroSection,
+    ProductInfo,
     CurrentOffer,
-    NewArrivals,
     OutstandingOffer,
-    FollowUs,
-    UserFeedback,
     SubscribeToNews,
     Footer
   ],
-  templateUrl: './home.html',
-  styleUrl: './home.css',
+  templateUrl: './productinfo.html',
+  styleUrl: './productinfo.css',
 })
-export class Home {
+export class productinfo {
 
 }
