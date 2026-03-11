@@ -1,1 +1,125 @@
-<p>product-info works!</p>
+<section class="ProductContent">
+
+    <!-- More pictures of the product appear here.-->
+    <div class="ProductImages">
+
+        <div class="ImageCard">
+            <img src="" alt="">
+        </div>
+
+    </div>
+    <!-- One of the product images selected by the user will be displayed.-->
+    <div class="ProductCard">
+
+        <div class="ProductImage">
+            <img src="" alt="">
+        </div>
+
+    </div>
+    <!-- This is where the product information appears. -->
+    <div class="ProductInfo">
+
+        <h6 class="StoreName">FASCO</h6>
+        <div class="ProductName">
+            <h6>Denim Jacket</h6>
+            <div class="ProductStarIcon">
+                <fa-icon [icon]="faStar"></fa-icon>
+            </div>
+        </div>
+
+        <div class="ProductReview">
+            <fa-icon [icon]="faStar"></fa-icon> 
+            <fa-icon [icon]="faStar"></fa-icon>
+            <fa-icon [icon]="faStar"></fa-icon>
+            <fa-icon [icon]="faStar"></fa-icon>
+            <fa-icon [icon]="faStar"></fa-icon>
+            <span class="PrroductReviewNumber">(0)</span>
+        </div>
+
+        <div class="ProductPriceInfo">
+            <span class="APrice">$39.00</span>
+            <span class="DPrice">$59.99</span>
+            <span class="Save">SAVE 33%</span>
+        </div>
+
+        <div class="CurrentViewership">
+            <fa-icon [icon]="faEye"></fa-icon>
+            <p> 24 people are viewing this right now</p>
+        </div>
+
+        <div class="DiscountTimer"> 
+            <div class="DiscountTimerContent">
+                <span>Hurry up! Sale ends in:</span>
+                <span>00  :  00  :  00  :  00</span>
+            </div>
+        </div>
+
+        <div class="LetfInStock">
+            <p>Only 9 item(s) left in stock!</p>
+            <div class="EmptyLine">
+                <div class="RedLine"></div>
+            </div>
+        </div>
+
+        <div class="ProductSizes">
+            <p>Sizes: M</p>
+            <ul>
+                <li>S</li>
+                <li>M</li>
+                <li>L</li>
+                <li>XL</li>
+                <li>XXL</li>
+            </ul>
+        </div>
+
+        <div class="ProductColors">
+            <p>Color: Blue</p>
+            <ul>
+                <li><div class="Color"></div></li>
+                <li><div class="Color"></div></li>
+                <li><div class="Color"></div></li>
+            </ul>
+        </div>
+
+        <div class="ProductAddToCard">
+            <p>Quantity</p>
+            <div class="Quantity-AddToCard">
+
+                <div class="Quantity">
+                    <span>-</span>
+                    <span>1</span>
+                    <span>+</span>
+                </div>
+
+                <button>Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="ProductDetails">
+            <div class="ProductDetails1">
+                <span><fa-icon [icon]="faCircleQuestion"></fa-icon> Ask a question</span>
+                <span><fa-icon [icon]="faShareFromSquare"></fa-icon> Share</span>
+            </div>
+
+            <div class="ProductDelivery">
+                <p class="EstimatedD"><fa-icon [icon]="faTruck"></fa-icon> Estimated Delivery:<span>Jul 30 - Aug 03</span></p>
+                <p class="FreeShipping"><fa-icon [icon]="faSquare"></fa-icon> Free Shipping & Returns: <span>On all orders over $75</span></p> 
+            </div>
+
+            <div class="Payment">
+                <div class="PaymentOptions">
+                    <fa-icon [icon]="faCcVisa"></fa-icon>
+                    <fa-icon [icon]="faCcMastercard"></fa-icon> 
+                    <fa-icon [icon]="faCcAmex"></fa-icon> 
+                    <fa-icon [icon]="faCcJcb"></fa-icon> 
+                    <fa-icon [icon]="faCcDiscover"></fa-icon> 
+                    <fa-icon [icon]="faCcDinersClub"></fa-icon> 
+                    <fa-icon [icon]="faCcPaypal"></fa-icon> 
+                </div>
+                <p>Guarantee safe & secure checkout</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
