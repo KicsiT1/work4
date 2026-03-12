@@ -1,6 +1,6 @@
 import { Component,Input} from '@angular/core';
 import { ProductModel } from '../../../models/product.model';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-product-content',
   imports: [],
@@ -11,6 +11,7 @@ import { ProductModel } from '../../../models/product.model';
 
 export class ProductContent {
 
+  constructor(private router: Router) {}
   @Input()
   set products(value: ProductModel[]) 
   {
@@ -33,5 +34,9 @@ export class ProductContent {
   GetProdIndex(i:number,j:number)
   {    
     this.Images[i]=this.products[i].MainColor?.[j]?.Images?.[0] ?? '';
+  }
+  openProduct(id: number) 
+  {
+  this.router.navigate(['/shop/productinfo', id]);
   }
 }

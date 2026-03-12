@@ -2,7 +2,7 @@
     <div class="Products">
         @for(Product of products.slice(0,9); track  $index; let i=$index)
         {
-        <div class="Product" [class.active]="Product.InStock==0">
+        <div class="Product" [class.active]="Product.InStock==0" (click)="openProduct(Product.ID)">
             <div class="PImg">
                 <img [src]="Images[i]" alt="">
             </div>

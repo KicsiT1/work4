@@ -6,5 +6,5 @@ export const routes: Routes =
 [
     { path: '', component: Home },
     { path: 'shop', component:  shop },
-    { path: 'shop/productinfo', component: productinfo },
+    { path: 'shop/productinfo/:id', component: productinfo },
 ];
