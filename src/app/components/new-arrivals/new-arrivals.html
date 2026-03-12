@@ -22,7 +22,7 @@
         {
           <!--Product details of the cards. -->
           <article>
-            <img [src]="item.Images[0]" alt="">
+            <img [src]="item.MainColor?.[0]?.Images?.[0] ?? ''" alt="">
             <div class="ProductInfo">
                 <div class="ProductName">
 

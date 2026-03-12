@@ -7,17 +7,26 @@
         "CustomerReviews":40,
         "Price": 160, 
         "Type": "Dress", 
-        "Images":
-        [
-            "/public/assets/images/NewArrivals/p1Orange.png",
-            "/public/assets/images/NewArrivals/p1DeepBlue.png"
-        ],
         "ProductFor":"Women’s Fashion",
         "Accessories":false,
         "InStock":100,
         "Collection":["All products","New Arrivals"],
         "Size":["M","L","XL"],
-        "MainColor":["#ff7629","#6c7bff"] 
+        "MainColor":
+        [
+            {"Fantasyname":"Orange","Hex":"#ff7629",
+            "Images":
+            [
+                "/public/assets/images/NewArrivals/p1Orange.png",
+                "/public/assets/images/NewArrivals/p1Orange1.png"
+            ]},
+            {"Fantasyname":"Deep Blue","Hex":"#6c7bff",
+            "Images":
+            [
+                "/public/assets/images/NewArrivals/p1DeepBlue.png",
+                "/public/assets/images/NewArrivals/p1DeepBlue1.png"
+            ]}
+        ]
     },
     { 
         "ID": 2, 
@@ -27,17 +36,17 @@
         "CustomerReviews":120,
         "Price": 48.50, 
         "Type": "Dress", 
-        "Images":
-        [
-            "/public/assets/images/NewArrivals/p2Green.png",
-            "/public/assets/images/NewArrivals/p2White.png"
-        ],
         "ProductFor":"Women’s Fashion",
         "Accessories":false,
         "InStock":57,
         "Collection":["All products","New Arrivals"],
         "Size":["M","L","XL"],
-        "MainColor":["#6cff9e","#FFFFFF"]  
+        "MainColor":
+        [
+            
+            {"Fantasyname":"Deep Green","Hex":"#02590F","Images":["/public/assets/images/NewArrivals/p2Green.png"]},
+            {"Fantasyname":"Snow White","Hex":"#FFFFFF","Images":["/public/assets/images/NewArrivals/p2White.png"]}
+        ]  
     },
     { 
         "ID": 3, 
@@ -47,17 +56,16 @@
         "CustomerReviews":420,
         "Price": 120.50, 
         "Type": "Dress", 
-        "Images":
-        [
-            "/public/assets/images/NewArrivals/p3DeepGreen.png",
-            "/public/assets/images/NewArrivals/p3LightBrown.png"
-        ],
         "ProductFor":"Women’s Fashion",
         "Accessories":false,
         "InStock":200,
         "Collection":["All products","New Arrivals"],
         "Size":["M","S","XL"],
-        "MainColor":["#6cff9e","#D2B48C"]  
+        "MainColor":
+        [
+            {"Fantasyname":"Deep Green","Hex":"#02590F","Images":["/public/assets/images/NewArrivals/p3DeepGreen.png"]},
+            {"Fantasyname":"Light Brown","Hex":"#D2B48C","Images":["/public/assets/images/NewArrivals/p3LightBrown.png"]}
+        ]    
     },
     { 
         "ID": 4, 
@@ -67,17 +75,16 @@
         "CustomerReviews":220,
         "Price": 60.70, 
         "Type": "Dress", 
-        "Images":
-        [
-            "/public/assets/images/NewArrivals/p4DeepOrange.png",
-            "/public/assets/images/NewArrivals/p4White.png"
-        ],
         "ProductFor":"Women’s Fashion",
         "Accessories":false,
         "InStock":86,
         "Collection":["New Arrivals"],
         "Size":["S","M","L","XL"],
-        "MainColor":["#ff7629","#FFFFFF"]  
+        "MainColor":
+        [
+            {"Fantasyname":"Orange","Hex":"#ff7629","Images":["/public/assets/images/NewArrivals/p4DeepOrange.png"]},
+            {"Fantasyname":"Snow White","Hex":"#FFFFFF","Images":["/public/assets/images/NewArrivals/p4White.png"]}
+        ]     
     },
     { 
         "ID": 5, 
@@ -87,18 +94,17 @@
         "CustomerReviews":500,
         "Price": 45, 
         "Type": "Dress", 
-        "Images":
-        [
-            "/public/assets/images/NewArrivals/p5LightBlue.png",
-            "/public/assets/images/NewArrivals/p5LightGreen.png",
-            "/public/assets/images/NewArrivals/p5Rosecolor.png"
-        ],
         "ProductFor":"Women’s Fashion",
         "Accessories":false,
         "InStock":44,
         "Collection":["All products","New Arrivals"],
         "Size":["S","M","XL"], 
-        "MainColor":["#6cb9ff","#6cff9e","#fc6cff"]  
+        "MainColor":
+        [
+            {"Fantasyname":"Sky Blue","Hex":"#6cb9ff","Images":["/public/assets/images/NewArrivals/p5LightBlue.png"]},
+            {"Fantasyname":"Green Mint","Hex":"#6cff9e","Images":["/public/assets/images/NewArrivals/p5LightGreen.png"]},
+            {"Fantasyname":"Magenta Pink","Hex":"#fc6cff","Images":["/public/assets/images/NewArrivals/p5Rosecolor.png"]}
+        ]   
     },
     { 
         "ID": 6, 
@@ -108,18 +114,17 @@
         "CustomerReviews":500,
         "Price": 75, 
         "Type": "Dress", 
-        "Images":
-        [
-            "/public/assets/images/NewArrivals/p6DeepGreen.png",
-            "/public/assets/images/NewArrivals/p6Red.png",
-            "/public/assets/images/NewArrivals/p6White.png"
-        ],
         "ProductFor":"Women’s Fashion",
         "Accessories":false,
         "InStock":25,
         "Collection":["All products","New Arrivals"],
         "Size":["M"],
-        "MainColor":["#02590F","#ff6c6c","#FFFFFF"]  
+        "MainColor":
+        [
+            {"Fantasyname":"Deep Green","Hex":"#02590F","Images":["/public/assets/images/NewArrivals/p6DeepGreen.png"]},
+            {"Fantasyname":"Red Salmon","Hex":"#ff6c6c","Images":["/public/assets/images/NewArrivals/p6Red.png"]},
+            {"Fantasyname":"Snow White","Hex":"#FFFFFF","Images":["/public/assets/images/NewArrivals/p6White.png"]}
+        ]     
     },
     { 
         "ID": 7, 
@@ -129,17 +134,16 @@
         "CustomerReviews":1200,
         "Price": 80, 
         "Type": "Dress", 
-        "Images":
-        [
-            "/public/assets/images/NewArrivals/p7DeepBlue.png",
-            "/public/assets/images/NewArrivals/p7LightBlack.png"
-        ],
         "ProductFor":"Men’s Fashion",
         "Accessories":false,
         "InStock":18,
         "Collection":["All products","New Arrivals"],
         "Size":["XL"],
-        "MainColor":["#6c7bff","#1B1B1B"]   
+        "MainColor":
+        [
+            {"Fantasyname":"Royal Blue","Hex":"#6c7bff","Images":["/public/assets/images/NewArrivals/p7DeepBlue.png"]},
+            {"Fantasyname":"Light Lake Black","Hex":"#1B1B1B","Images":["/public/assets/images/NewArrivals/p7LightBlack.png"]}
+        ]      
     },
     { 
         "ID": 8, 
@@ -149,17 +153,16 @@
         "CustomerReviews":120,
         "Price": 90, 
         "Type": "Dress", 
-        "Images":
-        [
-            "/public/assets/images/NewArrivals/p8DeepBlack.png",
-            "/public/assets/images/NewArrivals/p8DeepRed.png"
-        ],
         "ProductFor":"Men’s Fashion",
         "Accessories":false,
         "InStock":22,
         "Collection":["All products","New Arrivals"],
         "Size":["M","L"],
-        "MainColor":["#050203","#9F1D35"]  
+        "MainColor":
+        [
+            {"Fantasyname":"Deep Black","Hex":"#050203","Images":["/public/assets/images/NewArrivals/p8DeepBlack.png"]},
+            {"Fantasyname":"Burgundy","Hex":"#9F1D35","Images":["/public/assets/images/NewArrivals/p8DeepRed.png"]}
+        ]    
     },
     { 
         "ID": 9, 
@@ -169,17 +172,16 @@
         "CustomerReviews":120,
         "Price": 45, 
         "Type": "Object", 
-        "Images":
-        [
-            "/public/assets/images/NewArrivals/p9Brown.png",
-            "/public/assets/images/NewArrivals/p9Blue.png",
-            "/public/assets/images/NewArrivals/p9Red.png"
-        ],
         "ProductFor":"Women’s Fashion",
         "Accessories":true,
         "InStock":22,
         "Collection":["All products","New Arrivals","Accessories"],
-        "MainColor":["#8B4513","#6c7bff","#ff6c6c"] 
+        "MainColor":
+        [
+            {"Fantasyname":"Brown","Hex":"#8B4513","Images":["/public/assets/images/NewArrivals/p9Brown.png"]},
+            {"Fantasyname":"Royal Blue","Hex":"#6c7bff","Images":["/public/assets/images/NewArrivals/p9Blue.png"]},
+            {"Fantasyname":"Red Salmon","Hex":"#ff6c6c","Images":["/public/assets/images/NewArrivals/p9Red.png"]}
+        ]     
     },
     { 
         "ID": 10, 
@@ -189,16 +191,15 @@
         "CustomerReviews":120,
         "Price": 45, 
         "Type": "Object", 
-        "Images":
-        [
-            "/public/assets/images/NewArrivals/p10Brown.png",
-            "/public/assets/images/NewArrivals/p10DeepBlue.png"
-        ],
         "ProductFor":"Men’s Fashion",
         "Accessories":true,
         "InStock":24,
         "Collection":["All products","New Arrivals","Accessories"],
-        "MainColor":["#8B4513","#6c7bff"] 
+        "MainColor":
+        [
+            {"Fantasyname":"Brown","Hex":"#8B4513","Images":["/public/assets/images/NewArrivals/p10Brown.png"]},
+            {"Fantasyname":"Royal Blue","Hex":"#6c7bff","Images":["/public/assets/images/NewArrivals/p10DeepBlue.png"]}
+        ]    
     },
     { 
         "ID": 11, 
@@ -208,17 +209,16 @@
         "CustomerReviews":120,
         "Price": 45, 
         "Type": "Dress", 
-        "Images":
-        [
-            "/public/assets/images/NewArrivals/p11Red.png",
-            "/public/assets/images/NewArrivals/p11Black.png",
-            "/public/assets/images/NewArrivals/p11DeepBlue.png"
-        ],
         "ProductFor":"Women’s Fashion",
         "Accessories":false,
         "InStock":28,
         "Collection":["All products","Best Sellers"],
         "Size":["M","L","XL"],
-        "MainColor":["#ff6c6c","#050203","#6c7bff"]  
+        "MainColor":
+        [
+            {"Fantasyname":"Red Salmon","Hex":"#ff6c6c","Images":["/public/assets/images/NewArrivals/p11Red.png"]},
+            {"Fantasyname":"Deep Black","Hex":"#050203","Images":["/public/assets/images/NewArrivals/p11Black.png"]},
+            {"Fantasyname":"Royal Blue","Hex":"#6c7bff","Images":["/public/assets/images/NewArrivals/p11DeepBlue.png"]}
+        ]      
     }
 ]

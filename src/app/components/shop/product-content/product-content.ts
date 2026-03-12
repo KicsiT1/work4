@@ -15,7 +15,7 @@ export class ProductContent {
   set products(value: ProductModel[]) 
   {
     this._products = value;
-    this.Images = value.map(p => p.Images?.[0] ?? '');
+    this.Images = value.map(p => p.MainColor?.[0]?.Images?.[0] ?? '');
   }
 
   get products(): ProductModel[] 
@@ -28,10 +28,10 @@ export class ProductContent {
   protected Images:string[]=[];
   ngOnInit()
   {
-    this.Images = this.products.map(p => p.Images[0]); 
+    this.Images = this.products.flatMap(p => p.MainColor?.flatMap(c => c.Images) ?? []);
   }
   GetProdIndex(i:number,j:number)
-  {
-    this.Images[i]=this.products[i].Images[j];
+  {    
+    this.Images[i]=this.products[i].MainColor?.[j]?.Images?.[0] ?? '';
   }
 }

@@ -215,9 +215,9 @@ export class ProductFilter {
       const SuitableProdSize = this.SelectedSizes.length === 0 || 
       this.SelectedSizes.some(size => Item.Size?.includes(size));
 
-      const SuitableProdColor = this.SelectedProductColors.length ===0 ||
-      this.SelectedProductColors.every(color=>Item.MainColor?.includes(color));
-
+      const SuitableProdColor = this.SelectedProductColors.length === 0 ||
+      this.SelectedProductColors.some(color => Item.MainColor?.some(itemColor => itemColor.Hex === color));
+      
       const SuitableProdPrice = this.ProdPriceMin===0||Item.Price>=this.ProdPriceMin && 
       Item.Price<=this.ProdPriceMax;
       

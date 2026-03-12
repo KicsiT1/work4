@@ -1,3 +1,5 @@
+import { MainColor } from "./ProductMainColor.model";
+
 // Manages product-related data in ProductService.
 export interface ProductModel
 {
@@ -11,7 +13,6 @@ export interface ProductModel
     DiscountSeason?:string;
     DiscountMonth?:string;
     Description?:string;
-    Images:string[];
     InStock?: number;
     SaleNumber?:number;
     BrandName?:BRAND[];
@@ -19,7 +20,7 @@ export interface ProductModel
     Accessories?:boolean;
     CustomerReviews?:number;
     Rating?:number;
-    MainColor?:MAINCOLOR[];
+    MainColor?:MainColor[];
     Collection?:COLLECTION;
     Size?:SIZE[];
     Tag?:TAG[];
