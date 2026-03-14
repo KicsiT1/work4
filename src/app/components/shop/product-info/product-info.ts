@@ -27,15 +27,69 @@ export class ProductInfo {
   faSquare: IconDefinition = faSquare;
   faCircleQuestion: IconDefinition = faCircleQuestion;
   faShareFromSquare: IconDefinition = faShareFromSquare;
-  product: ProductModel | undefined;
+  protected Product: ProductModel | undefined;
   ngOnInit() 
   {
 
   const id = Number(this.route.snapshot.paramMap.get('id'));
 
   this.ProductService.GetNewArrivalsData().subscribe(products => {
-  this.product = products.find(p => p.ID === id);
-  //console.log(this.product);
+  this.Product = products.find(p => p.ID === id);
+  //console.log(this.Product);
   });
+  }
+ 
+  get ProdInStock(): number
+  {
+    return this.Product?.Price ?? 0;
+  }
+  get ProdSize()
+  {
+    return this.Product?.Size;
+  }
+  get Prodprice(): number 
+  {
+  return (this.Product?.Price ?? 0);
+  }
+
+  get ProdDiscount():number
+  {
+    return (this.Product?.Discount ?? 0);
+  }
+
+  get ActivePrice(): number 
+  {
+    return this.Prodprice * (1 - this.ProdDiscount);
+  }
+
+  get ProdDiscountProcent(): number
+  {
+    return this.ProdDiscount * 100;
+  }
+
+  protected ColorNameIndex:number = 0;
+  ColorIndex(index: number): void 
+  {
+    this.ColorNameIndex = index;
+  }
+  protected Quantity:number=0;
+  QuantityIncrease()
+  {
+    if(this.Quantity!==this.ProdInStock)
+    {
+      this.Quantity++;
+    }
+  }
+  QuantityDecrease()
+  {
+    if(this.Quantity>0)
+    {
+      this.Quantity--;
+    }
+  }
+  protected SizeNameIndex:number=0;
+  SizeIndex(index: number): void 
+  {
+    this.SizeNameIndex = index;
   }
 }

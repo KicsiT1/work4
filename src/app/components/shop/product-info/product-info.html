@@ -21,7 +21,7 @@
 
         <h6 class="StoreName">FASCO</h6>
         <div class="ProductName">
-            <h6>Denim Jacket</h6>
+            <h6>{{ Product?.Name }}</h6>
             <div class="ProductStarIcon">
                 <fa-icon [icon]="faStar"></fa-icon>
             </div>
@@ -37,9 +37,12 @@
         </div>
 
         <div class="ProductPriceInfo">
-            <span class="APrice">$39.00</span>
-            <span class="DPrice">$59.99</span>
-            <span class="Save">SAVE 33%</span>
+            <span class="APrice">{{ActivePrice}}</span>
+            @if(ProdDiscount>0)
+            {
+                <span class="DPrice">{{Prodprice}}</span>
+                <span class="Save">SAVE {{ProdDiscountProcent}}%</span>
+            }
         </div>
 
         <div class="CurrentViewership">
@@ -55,29 +58,29 @@
         </div>
 
         <div class="LetfInStock">
-            <p>Only <strong>9</strong> item(s) left in stock!</p>
+            <p>Only <strong>{{ProdInStock}}</strong> item(s) left in stock!</p>
             <div class="EmptyLine">
                 <div class="RedLine"></div>
             </div>
         </div>
 
         <div class="ProductSizes">
-            <p>Sizes: M</p>
+            <p>Sizes: {{ ProdSize?.[SizeNameIndex] ?? 'Select Size' }}</p>
             <ul>
-                <li>S</li>
-                <li>M</li>
-                <li>L</li>
-                <li>XL</li>
-                <li>XXL</li>
+                @for(Size of ProdSize; track Size; let i=$index)
+                {
+                    <li [class.active]="SizeNameIndex === i" (click)=" SizeIndex(i)">{{Size}}</li>
+                }
             </ul>
         </div>
-
+        
         <div class="ProductColors">
-            <p>Color: Blue</p>
+            <p>Color: {{ Product?.MainColor?.[ColorNameIndex]?.Fantasyname ?? 'Select Color' }}</p>
             <ul>
-                <li><div class="Color"></div></li>
-                <li><div class="Color"></div></li>
-                <li><div class="Color"></div></li>
+                @for(color of Product?.MainColor; track $index; let i=$index)
+                {
+                    <li><div [class.active]="ColorNameIndex === i" (click)="ColorIndex(i)" class="Color" [style.backgroundColor]="color.Hex"></div></li>
+                }
             </ul>
         </div>
 
@@ -86,9 +89,9 @@
             <div class="Quantity-AddToCard">
 
                 <div class="Quantity">
-                    <span>-</span>
-                    <span>1</span>
-                    <span>+</span>
+                    <span (click)="QuantityDecrease()">-</span>
+                    <span>{{Quantity}}</span>
+                    <span (click)="QuantityIncrease()">+</span>
                 </div>
 
                 <button>Add to Cart</button>

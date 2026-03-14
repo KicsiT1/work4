@@ -2,14 +2,14 @@
     <div class="Products">
         @for(Product of products.slice(0,9); track  $index; let i=$index)
         {
-        <div class="Product" [class.active]="Product.InStock==0" (click)="openProduct(Product.ID)">
+        <div class="Product" [class.active]="Product.InStock==0">
             <div class="PImg">
-                <img [src]="Images[i]" alt="">
+                <img [src]="Images[i]" alt="" (click)="openProduct(Product.ID)">
             </div>
-            <p class="PName">{{Product.Name}}</p>
-            <div class="ProductPricesContainer">
-                <p class="DPrice">$0.00</p>
-                <p class="PPrice">${{Product.Price}}</p>
+            <p (click)="openProduct(Product.ID)" class="PName">{{Product.Name}}</p>
+            <div (click)="openProduct(Product.ID)" class="ProductPricesContainer">
+                <p (click)="openProduct(Product.ID)" class="DPrice">$0.00</p>
+                <p (click)="openProduct(Product.ID)" class="PPrice">${{Product.Price}}</p>
             </div>
             
             <div class="PColors">

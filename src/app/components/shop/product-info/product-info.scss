@@ -197,6 +197,12 @@
             background-color: black;
             color: white;
         }
+        ul li.active
+        {
+            cursor: pointer;
+            background-color: black;
+            color: white;
+        }
     }
     .ProductColors
     {
@@ -227,7 +233,6 @@
                 border-radius: 50%;
             }
 
-            /*
             .Color.active
             {
                 height: 30px;
@@ -236,7 +241,6 @@
                 margin: 4px;
                 border-radius: 50%;
             }
-            */
         }
     }
     .ProductAddToCard
@@ -254,6 +258,7 @@
             margin-bottom: 67px;
             .Quantity
             {
+                span{cursor: pointer;}
                 width: 128px;
                 display: flex;
                 align-items: center;

@@ -1,7 +1,8 @@
 [
     { 
         "ID": 1, 
-        "Name": "Shiny Dress", 
+        "Name": "Shiny Dress",
+        "Discount":0.03, 
         "BrandName":["Al Karam"],
         "Rating":4,
         "CustomerReviews":40,
@@ -31,6 +32,7 @@
     { 
         "ID": 2, 
         "Name": "Long Dress", 
+        "Discount":0.0,
         "BrandName":["Al Karam"],
         "Rating":4,
         "CustomerReviews":120,
@@ -51,6 +53,7 @@
     { 
         "ID": 3, 
         "Name": "Full Sweater", 
+        "Discount":0.12,
         "BrandName":["Al Karam"],
         "Rating":5,
         "CustomerReviews":420,
@@ -89,6 +92,7 @@
     { 
         "ID": 5, 
         "Name": "Colorful Dress", 
+        "Discount":0.04,
         "BrandName":["Al Karam"],
         "Rating":4,
         "CustomerReviews":500,
@@ -109,6 +113,7 @@
     { 
         "ID": 6, 
         "Name": "White Shirt", 
+        "Discount":0.05,
         "BrandName":["Al Karam"],
         "Rating":5,
         "CustomerReviews":500,
@@ -129,6 +134,7 @@
     { 
         "ID": 7, 
         "Name": "Black jacket", 
+        "Discount":0.01,
         "BrandName":["Al Karam"],
         "Rating":5,
         "CustomerReviews":1200,
@@ -148,6 +154,7 @@
     { 
         "ID": 8, 
         "Name": "Black sweater", 
+        "Discount":0.6,
         "BrandName":["Al Karam"],
         "Rating":3,
         "CustomerReviews":120,
@@ -167,6 +174,7 @@
     { 
         "ID": 9, 
         "Name": "Brown leather watch", 
+        "Discount":0.09,
         "BrandName":["Al Karam"],
         "Rating":4,
         "CustomerReviews":120,
@@ -186,6 +194,7 @@
     { 
         "ID": 10, 
         "Name": "Brown leather watch", 
+        "Discount":0.07,
         "BrandName":["Al Karam"],
         "Rating":4,
         "CustomerReviews":120,
@@ -204,6 +213,7 @@
     { 
         "ID": 11, 
         "Name": "Sheath red dress", 
+        "Discount":0.9,
         "BrandName":["Al Karam","Minimog"],
         "Rating":5,
         "CustomerReviews":120,
