@@ -3,16 +3,18 @@
     <!-- More pictures of the product appear here.-->
     <div class="ProductImages">
 
+        @for(img of Product?.MainColor?.[ColorIndex]?.Images; track $index; let i=$index)
+        {
         <div class="ImageCard">
-            <img src="" alt="">
+            <img (click)=" ImgIndexChange(i)" src="{{img}}" alt="">
         </div>
-
+        }
     </div>
     <!-- One of the product images selected by the user will be displayed.-->
     <div class="ProductCard">
 
         <div class="ProductImage">
-            <img src="" alt="">
+            <img src="{{ Product?.MainColor?.[ColorIndex]?.Images?.[ImgIndex] }}" alt="">
         </div>
 
     </div>
@@ -75,11 +77,11 @@
         </div>
         
         <div class="ProductColors">
-            <p>Color: {{ Product?.MainColor?.[ColorNameIndex]?.Fantasyname ?? 'Select Color' }}</p>
+            <p>Color: {{ Product?.MainColor?.[ColorIndex]?.Fantasyname ?? 'Select Color' }}</p>
             <ul>
                 @for(color of Product?.MainColor; track $index; let i=$index)
                 {
-                    <li><div [class.active]="ColorNameIndex === i" (click)="ColorIndex(i)" class="Color" [style.backgroundColor]="color.Hex"></div></li>
+                    <li><div [class.active]="ColorIndex === i" (click)="ColorIndexChange(i)" class="Color" [style.backgroundColor]="color.Hex"></div></li>
                 }
             </ul>
         </div>

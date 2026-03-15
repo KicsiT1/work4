@@ -60,16 +60,13 @@
     }
     .ProductCard
     {
-        width: 491px;
-        height: 600px;
-        background-color: aquamarine;
         margin-right: 80px;
         .ProductImage
         {
             img
             {
-                height: 100%;
-                width: 100%;
+                max-width: 491px;
+                height: 655px;
                 object-fit: cover;
             }
         }

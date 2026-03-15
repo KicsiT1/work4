@@ -13,6 +13,7 @@ import { faCcVisa, faCcMastercard, faCcAmex, faCcJcb, faCcDiscover, faCcDinersCl
   styleUrl: './product-info.scss',
 })
 export class ProductInfo {
+
   constructor(private route: ActivatedRoute, private ProductService: ProductService) {}
   faStar: IconDefinition = faStar;
   faEye: IconDefinition = faEye;
@@ -27,6 +28,7 @@ export class ProductInfo {
   faSquare: IconDefinition = faSquare;
   faCircleQuestion: IconDefinition = faCircleQuestion;
   faShareFromSquare: IconDefinition = faShareFromSquare;
+
   protected Product: ProductModel | undefined;
   ngOnInit() 
   {
@@ -67,10 +69,10 @@ export class ProductInfo {
     return this.ProdDiscount * 100;
   }
 
-  protected ColorNameIndex:number = 0;
-  ColorIndex(index: number): void 
+  protected ColorIndex:number = 0;
+  ColorIndexChange(index: number): void 
   {
-    this.ColorNameIndex = index;
+    this.ColorIndex = index;
   }
   protected Quantity:number=0;
   QuantityIncrease()
@@ -91,5 +93,11 @@ export class ProductInfo {
   SizeIndex(index: number): void 
   {
     this.SizeNameIndex = index;
+  }
+  
+  protected ImgIndex:number=0;
+  ImgIndexChange(index: number): void 
+  {
+    this.ImgIndex = index;
   }
 }
