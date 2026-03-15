@@ -54,8 +54,15 @@
 
         <div class="DiscountTimer"> 
             <div class="DiscountTimerContent">
-                <span>Hurry up! Sale ends in:</span>
-                <span>00  :  00  :  00  :  00</span>
+                @if(ProddiscountUntil=='')
+                {
+                    <span>Currently, the product is not on sale</span>
+                }
+                @if(cooldown$ | async; as cooldown)
+                {
+                    <span>Hurry up! Sale ends in:</span>
+                    <span>{{ pad(cooldown.days) }} : {{ pad(cooldown.hours) }}  :   {{ pad(cooldown.minutes) }}  :  {{ pad(cooldown.seconds) }}</span>
+                }
             </div>
         </div>
 

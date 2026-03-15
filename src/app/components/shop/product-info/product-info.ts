@@ -1,20 +1,28 @@
 import { Component } from '@angular/core';
-import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
-import {IconDefinition} from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../../../services/product';
 import { ProductModel } from '../../../models/product.model';
-import {faShareFromSquare,faCircleQuestion,faStar, faEye , faTruck, faSquare } from '@fortawesome/free-regular-svg-icons';
-import { faCcVisa, faCcMastercard, faCcAmex, faCcJcb, faCcDiscover, faCcDinersClub, faCcPaypal, } from '@fortawesome/free-brands-svg-icons';
+import { faShareFromSquare, faCircleQuestion, faStar, faEye , faTruck, faSquare } from '@fortawesome/free-regular-svg-icons';
+import { faCcVisa, faCcMastercard, faCcAmex, faCcJcb, faCcDiscover, faCcDinersClub, faCcPaypal } from '@fortawesome/free-brands-svg-icons';
+import { Cooldown, CooldownService } from '../../../services/cooldown-service';
+import { Observable } from 'rxjs';
+import { AsyncPipe } from '@angular/common';
 @Component({
   selector: 'app-product-info',
-  imports: [FontAwesomeModule],
+  imports: [FontAwesomeModule, AsyncPipe],
   templateUrl: './product-info.html',
   styleUrl: './product-info.scss',
 })
 export class ProductInfo {
-
-  constructor(private route: ActivatedRoute, private ProductService: ProductService) {}
+  cooldown$!: Observable<Cooldown>;
+  constructor(
+    private CoolDownService: CooldownService, 
+    private route: ActivatedRoute, 
+    private ProductService: ProductService
+   ) {}
+   
   faStar: IconDefinition = faStar;
   faEye: IconDefinition = faEye;
   faCcVisa: IconDefinition = faCcVisa;
@@ -38,13 +46,27 @@ export class ProductInfo {
   this.ProductService.GetNewArrivalsData().subscribe(products => {
   this.Product = products.find(p => p.ID === id);
   //console.log(this.Product);
+   if (this.ProddiscountUntil) {
+      this.cooldown$ = this.CoolDownService.startCooldown(this.ProddiscountUntil);
+    }
   });
   }
- 
+  
+  pad(n: number): string 
+  {
+    return n.toString().padStart(2, '0');
+  }
+
+  get ProddiscountUntil(): string
+  {
+    return this.Product?.DiscountUntil ?? '';
+  }
+
   get ProdInStock(): number
   {
-    return this.Product?.Price ?? 0;
+    return this.Product?.InStock ?? 0;
   }
+
   get ProdSize()
   {
     return this.Product?.Size;

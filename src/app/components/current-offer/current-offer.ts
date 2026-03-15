@@ -96,7 +96,7 @@ export class CurrentOffer implements OnInit,OnDestroy{
   timer()
   {
     this.CurentDate = new Date().getTime();
-    this.Distance =this.TargetDate - this.CurentDate;
+    this.Distance = this.TargetDate - this.CurentDate;
     if(this.Distance>0)
     {
     this.Days=Math.floor(this.Distance/1000/60/60/24);

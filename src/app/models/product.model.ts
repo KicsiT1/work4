@@ -9,6 +9,7 @@ export interface ProductModel
     Type:string;
     
     Thumbnail?:string;
+    DiscountUntil:string;
     Discount?:number;
     DiscountSeason?:string;
     DiscountMonth?:string;
