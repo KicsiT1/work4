@@ -6,11 +6,11 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 // This makes it safe to use icons (special type for icons)
 import {IconDefinition} from '@fortawesome/fontawesome-svg-core';
 // The different icons I use for the menu
-import {faAngleDown,faArrowRightFromBracket,faUser,faMagnifyingGlass,faStar,faBagShopping,faBars,faXmark, faL} from '@fortawesome/free-solid-svg-icons';
-
+import {faBasketShopping,faAngleDown,faArrowRightFromBracket,faUser,faMagnifyingGlass,faStar,faBagShopping,faBars,faXmark, faL} from '@fortawesome/free-solid-svg-icons';
+import { ShopingCard } from '../shop/shoping-card/shoping-card';
 @Component({
   selector: 'app-nav-bar',
-  imports: [CommonModule,FontAwesomeModule],
+  imports: [CommonModule,FontAwesomeModule,ShopingCard],
   standalone: true,
   templateUrl: './nav-bar.html',
   styleUrl: './nav-bar.scss',
@@ -25,6 +25,7 @@ export class NavBar {
   faXmark:IconDefinition = faXmark;
   faArrowRightFromBracket:IconDefinition = faArrowRightFromBracket;
   faAngleDown:IconDefinition = faAngleDown;
+  faBasketShopping:IconDefinition = faBasketShopping;
   // This variable helps to open the phone menu
   MenuOpen:boolean = false;
   // This variable helps to change the content in the menu after a possible login.
@@ -50,4 +51,10 @@ export class NavBar {
     {link:"#Products", text:'Products', icon:null},
     {link:"#Pages", text:'Pages', icon:faAngleDown}
   ];
+
+  ShoppingCard:boolean=false;
+  OpenShoppingCard()
+  {
+    this.ShoppingCard=!this.ShoppingCard;
+  }
 }

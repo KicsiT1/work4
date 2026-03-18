@@ -9,12 +9,14 @@ import { faCcVisa, faCcMastercard, faCcAmex, faCcJcb, faCcDiscover, faCcDinersCl
 import { Cooldown, CooldownService } from '../../../services/cooldown-service';
 import { Observable } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
+
 @Component({
   selector: 'app-product-info',
   imports: [FontAwesomeModule, AsyncPipe],
   templateUrl: './product-info.html',
   styleUrl: './product-info.scss',
 })
+
 export class ProductInfo {
   cooldown$!: Observable<Cooldown>;
   constructor(

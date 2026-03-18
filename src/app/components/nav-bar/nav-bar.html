@@ -20,8 +20,20 @@
                 </li>
             }  
              <div class="Buttons">
-                <a href="#SignIn">Sign in</a> 
-                <a href="#SignUp">Sign Up</a>
+                <a class="SigIn" href="#SignIn">Sign in</a> 
+                <a class="SignUp" href="#SignUp">Sign Up</a>
+
+                <div class="Basket">
+                    <div>
+                        <p>1</p>
+                    </div>
+                    <fa-icon (click)="OpenShoppingCard()" [icon]="faBasketShopping"></fa-icon>
+                    @if(ShoppingCard)
+                    {
+                    <app-shoping-card></app-shoping-card>
+                    }
+                </div>
+                
             </div>
         }
     </ul>

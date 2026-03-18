@@ -23,7 +23,7 @@
 
         <h6 class="StoreName">FASCO</h6>
         <div class="ProductName">
-            <h6>{{ Product?.Name }}</h6>
+            <h6>{{ Product?.Name }} ({{ Product?.MainColor?.[ColorIndex]?.Fantasyname }})</h6>
             <div class="ProductStarIcon">
                 <fa-icon [icon]="faStar"></fa-icon>
             </div>
@@ -39,7 +39,7 @@
         </div>
 
         <div class="ProductPriceInfo">
-            <span class="APrice">{{ActivePrice}}</span>
+            <span class="APrice">{{ActivePrice.toFixed(2)}}</span>
             @if(ProdDiscount>0)
             {
                 <span class="DPrice">{{Prodprice}}</span>

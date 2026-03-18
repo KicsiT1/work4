@@ -1,0 +1,53 @@
+@if(ShoppingCardActive)
+{
+<Section class="ShoppingBasket">
+
+    <div class="ShoppingBasketContent">
+        <div class="SBCText">
+            <h1>Shopping Cart</h1>
+            <fa-icon (click)="ChangeActive()" [icon]="faX"></fa-icon>
+        </div>
+        <p>Buy <strong>$122.35</strong>  more and get <strong>free shipping</strong> </p>
+
+        <div class="BasketProducts">
+            <div class="Product">
+                
+                <div class="Pimg">
+                    <img src="" alt="">
+                </div>
+
+                <div class="Pinfo">
+                    <strong class="ProdName">ProdcutName</strong>
+                    <span>Color: ProductColor</span>
+                    <strong>ProdPrice</strong>
+
+                    <div class="ProductEnhancer">
+                        <span class="Minus">-</span>
+                        <span>01</span>
+                        <span class="Plus">+</span>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="BasketBottom">
+            <div class="checkbox">
+                <input id="#ch" type="checkbox">
+                <label for="#ch">For $10.00 please wrap the product</label>
+            </div>
+            <div class="Line"></div>
+            <div class="SubTotal">
+                <p>Subtotal</p>
+                <p>$100.00</p>
+            </div>
+
+            <button>Checkout</button>
+        </div>
+
+        
+
+    </div>
+</Section>
+}
