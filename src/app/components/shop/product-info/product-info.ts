@@ -9,6 +9,7 @@ import { faCcVisa, faCcMastercard, faCcAmex, faCcJcb, faCcDiscover, faCcDinersCl
 import { Cooldown, CooldownService } from '../../../services/cooldown-service';
 import { Observable } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
+import { ShoppingCard } from '../../../services/shopping-card';
 
 @Component({
   selector: 'app-product-info',
@@ -22,7 +23,8 @@ export class ProductInfo {
   constructor(
     private CoolDownService: CooldownService, 
     private route: ActivatedRoute, 
-    private ProductService: ProductService
+    private ProductService: ProductService,
+    protected ShoppingCard:ShoppingCard
    ) {}
    
   faStar: IconDefinition = faStar;
@@ -98,7 +100,7 @@ export class ProductInfo {
   {
     this.ColorIndex = index;
   }
-  protected Quantity:number=0;
+  protected Quantity:number=1;
   QuantityIncrease()
   {
     if(this.Quantity!==this.ProdInStock)

@@ -4,22 +4,24 @@
 
     <div class="ShoppingBasketContent">
         <div class="SBCText">
-            <h1>Shopping Cart</h1>
+            <h1>Shopping Card</h1>
             <fa-icon (click)="ChangeActive()" [icon]="faX"></fa-icon>
         </div>
         <p>Buy <strong>$122.35</strong>  more and get <strong>free shipping</strong> </p>
 
         <div class="BasketProducts">
+            @for (item of cartService.ProductItems; track item.Pid) 
+            {
             <div class="Product">
                 
                 <div class="Pimg">
-                    <img src="" alt="">
+                    <img src="{{item.PImage}}" alt="">
                 </div>
-
+            
                 <div class="Pinfo">
-                    <strong class="ProdName">ProdcutName</strong>
-                    <span>Color: ProductColor</span>
-                    <strong>ProdPrice</strong>
+                    <strong class="ProdName">{{item.PName}}</strong>
+                    <span>Color: {{item.PColorName}}</span>
+                    <strong>${{item.DPrice}}</strong>
 
                     <div class="ProductEnhancer">
                         <span class="Minus">-</span>
@@ -29,7 +31,7 @@
 
                 </div>
             </div>
-
+            }
         </div>
 
         <div class="BasketBottom">
@@ -39,8 +41,8 @@
             </div>
             <div class="Line"></div>
             <div class="SubTotal">
-                <p>Subtotal</p>
-                <p>$100.00</p>
+                <p>Total amount</p>
+                <p>{{cartService.totalPrice}}</p>
             </div>
 
             <button>Checkout</button>

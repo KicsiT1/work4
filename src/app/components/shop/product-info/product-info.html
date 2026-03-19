@@ -102,8 +102,10 @@
                     <span>{{Quantity}}</span>
                     <span (click)="QuantityIncrease()">+</span>
                 </div>
-
-                <button>Add to Cart</button>
+                @if (Product) 
+                {
+                    <button (click)="ShoppingCard.addToCard(Product,ImgIndex,ColorIndex,ActivePrice)">Add to Cart</button>
+                }
             </div>
         </div>
 
