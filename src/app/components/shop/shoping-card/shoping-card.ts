@@ -15,11 +15,6 @@ export class ShopingCard {
 
   constructor(public cartService: ShoppingCard) {}
 
-  ngOnInit(): void 
-  {
-    console.log('Kosár tartalma:', this.cartService.ProductItems);
-  }
-
   onRemove(pid: number) 
   {
     this.cartService.removeProductItem(pid);

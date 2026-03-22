@@ -24,9 +24,12 @@
                 <a class="SignUp" href="#SignUp">Sign Up</a>
 
                 <div class="Basket">
+                    @if(ShoppingcardService.ProductItems.length!=0)
+                    {
                     <div>
-                        <p>1</p>
+                        <p>{{ShoppingcardService.ProductItems.length}}</p>
                     </div>
+                    }
                     <fa-icon (click)="OpenShoppingCard()" [icon]="faBasketShopping"></fa-icon>
                     @if(ShoppingCard)
                     {

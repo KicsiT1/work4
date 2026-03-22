@@ -7,7 +7,8 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {IconDefinition} from '@fortawesome/fontawesome-svg-core';
 // The different icons I use for the menu
 import {faBasketShopping,faAngleDown,faArrowRightFromBracket,faUser,faMagnifyingGlass,faStar,faBagShopping,faBars,faXmark, faL} from '@fortawesome/free-solid-svg-icons';
-import { ShopingCard } from '../shop/shoping-card/shoping-card';
+import {ShopingCard } from '../shop/shoping-card/shoping-card';
+import { ShoppingCard } from '../../services/shopping-card';
 @Component({
   selector: 'app-nav-bar',
   imports: [CommonModule,FontAwesomeModule,ShopingCard],
@@ -16,6 +17,7 @@ import { ShopingCard } from '../shop/shoping-card/shoping-card';
   styleUrl: './nav-bar.scss',
 })
 export class NavBar {
+  constructor(public ShoppingcardService:ShoppingCard){}
   // Font Awesome icons
   faUser:IconDefinition = faUser;
   faMagnifyingGlass:IconDefinition = faMagnifyingGlass;
@@ -56,5 +58,6 @@ export class NavBar {
   OpenShoppingCard()
   {
     this.ShoppingCard=!this.ShoppingCard;
+    console.log(this.ShoppingCard)
   }
 }
