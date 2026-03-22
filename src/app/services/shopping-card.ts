@@ -48,6 +48,7 @@ export class ShoppingCard {
           PName: product.Name,
           PPrice: product.Price,
           DPrice: Dprice,
+          PInStock: product.InStock,
           PImage: selectedImage,
           PColorName: selectedColorName,
           Pquantity: 1
@@ -63,9 +64,37 @@ export class ShoppingCard {
     return this.ProductItem;
   }
 
+  increaseQuantity(pid: number): number 
+  {
+    const item = this.ProductItem.find(p => p.Pid === pid);
+    if (item?.Pquantity !== undefined && item?.PInStock !== undefined && item.Pquantity < item.PInStock) 
+    {
+      item.Pquantity++;       
+      this.SaveToStorege();  
+      return item.Pquantity;  
+    }
+    return 0;
+  }
+
+  DecreaseQuantity(pid: number):number
+  {
+    const item = this.ProductItem.find(p => p.Pid === pid);
+    if (item && item.Pquantity>1) 
+    {
+      item.Pquantity--;       
+      this.SaveToStorege();  
+      return item.Pquantity;  
+    }
+    return item ? item.Pquantity : 0;
+  }
+
   get totalPrice(): number 
   {
-    return this.ProductItem.reduce((sum, item) => sum + (item.PPrice * item.Pquantity), 0);
+    return this.ProductItem.reduce((sum, item) => {
+      const price = item.PPrice ?? 0; 
+      const quantity = item.Pquantity ?? 0; 
+      return sum + (price * quantity);
+    }, 0);
   }
 
   removeProductItem(pid: number) 

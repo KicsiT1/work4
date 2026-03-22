@@ -24,9 +24,9 @@
                     <strong>${{item.DPrice.toFixed(2)}}</strong>
 
                     <div class="ProductEnhancer">
-                        <span class="Minus">-</span>
-                        <span>01</span>
-                        <span class="Plus">+</span>
+                        <span (click)="cartService.DecreaseQuantity(item.Pid)" class="Minus">-</span>
+                        <span>{{pad(item.Pquantity)}}</span>
+                        <span (click)="cartService.increaseQuantity(item.Pid)" class="Plus">+</span>
                     </div>
 
                 </div>

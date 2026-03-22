@@ -89,10 +89,12 @@
                     }
                     .Minus
                     {
+                        cursor: pointer;
                         color: var(--EnhancerPlusColor);
                     }
                     .Plus
                     {
+                        cursor: pointer;
                         color: var(--EnhancerMinusColor);
                     }
                 }

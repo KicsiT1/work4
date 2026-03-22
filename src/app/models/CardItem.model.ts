@@ -5,6 +5,7 @@ export interface CardItem
   PImage:string,
   PColorName:string;
   PPrice:number;
+  PInStock?:number;
   DPrice:number;
   Pquantity: number;
 }
