@@ -1,3 +1,4 @@
+// It combines the colors and the images corresponding to the colors
 export interface MainColor 
 {
   Fantasyname: string;

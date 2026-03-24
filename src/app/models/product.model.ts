@@ -26,7 +26,8 @@ export interface ProductModel
     Size?:SIZE[];
     Tag?:TAG[];
 }
-
+// If you need to add something to the store's filter, it's worth doing it here.
+// What we add here will appear in the filter on the left in shop.
 export enum BRAND
 {
     Minimog="Minimog",

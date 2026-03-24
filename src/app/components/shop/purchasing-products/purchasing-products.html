@@ -1,1 +1,121 @@
-<p>purchasing-products works!</p>
+<h1>FASCO Demo Checkout</h1>
+
+<section>
+    <div class="LeftSide">
+
+        <form class="ContactForm" action="">
+
+            <div class="TextContent">
+                <h2>Contact</h2>
+                <p>Have an account? <a href="">Create Account</a></p>
+            </div>
+
+            <input type="email" placeholder="Email Address">
+
+        </form>
+
+        <form class="DeliveryForm" action="">
+
+            <div class="TextContent">
+                <h2>Delivery</h2>
+            </div>
+
+            <div class="DeliveryInputsGrid">
+
+                <select class="CountryInput" id="country" name="country">
+                    <option value="" disabled selected>Country / Region</option>
+                    <option value="hu">Hungary</option>
+                    <option value="us">United States</option>
+                    <option value="uk">United Kingdom</option>
+                </select>
+
+                <input class="FirstName" type="text" placeholder="First Name">
+                <input class="LastName" type="text" placeholder="Last Name">
+                <input class="Address" type="text" placeholder="Address">
+                <input class="City" type="text" placeholder="City">
+                <input class="PostalCode" type="text" placeholder="Postal Code">
+                
+            </div>
+
+            <div>
+                <input type="checkbox">
+                <label for="checkbox">Save This Info for future</label>
+            </div>
+           
+        </form>
+
+        <form class="PaymentForm" action="">
+
+            <div class="TextContent">
+                <h2>Payment</h2>
+            </div>
+            
+            <select class="PaymentInput" id="Payment" name="Payment">
+                <option value="" disabled selected>Credit Card</option>
+                <option value="Visa">Visa</option>
+                <option value="PayPal">PayPal</option>
+                <option value="MasterCard">MasterCard</option>
+            </select>
+
+            <div class="PaymentDataGrid">
+                <input class="CardNumber" type="text" placeholder="Card Number">
+                <input class="ExpirationDate " type="text" placeholder="Expiration Date">
+                <input class="SecurityCode" type="text" placeholder="Security Code">
+                <input class="CardHolderName" type="text" placeholder="Card Holder Name">
+                <input type="checkbox">
+                <label for="checkbox">Save This Info for future</label>
+            </div>
+
+        </form>
+
+        <button>Pay Now</button>
+        <p>Copyright © 2022 FASCO . All Rights Reseved.</p>
+
+    </div>
+
+    <div class="RightSide">
+
+        <div class="Products">
+            <div class="PCard">
+
+                <div class="PImg">
+                    <img src="" alt="">
+                </div>
+
+                <div class="PTextInformation">
+                    <h6>Mini dress with ruffled straps</h6>
+                    <p>Red</p>
+                </div>
+                <p>$100</p>
+            </div>
+        </div>
+
+        <div class="InfoAbautProducts">
+
+            <form action="">
+                <input class="Discountcode" type="text" placeholder="Discount code">
+                <button>Apply</button>
+            </form>
+
+            <div class="ProdsTextData">
+                <div class="Subtotal">
+                    <p>Subtotal</p>
+                    <p>$100.00</p>
+                </div>
+
+                <div class="Shipping">
+                    <p>Shipping</p>
+                    <p>$40.00</p>
+                </div>
+
+                 <div class="Total">
+                    <p>Total</p>
+                    <p>$140.00</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

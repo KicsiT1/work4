@@ -55,6 +55,7 @@ export class NavBar {
   ];
 
   ShoppingCard:boolean=false;
+  // I make the shopping card openable with this function.
   OpenShoppingCard()
   {
     this.ShoppingCard=!this.ShoppingCard;

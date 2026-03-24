@@ -7,6 +7,7 @@ import { CardItem } from '../models/CardItem.model';
 })
 
 export class ShoppingCard {
+  // This is where the products we add to the cart will be placed.
   private ProductItem: CardItem[] = [];
 
   constructor() 
@@ -20,28 +21,33 @@ export class ShoppingCard {
       }
     }
   }
-
+  // Save the products
   SaveToStorege()
   {
     localStorage.setItem('shopping_cart', JSON.stringify(this.ProductItem))
   }
+  
+  // Adding the product to the cart
+  // product      <-- The big product model this is simplified.
+  // ImgIndex     <-- It will provide a thumbnail image of the Product
+  // ColorIndex   <-- It will save the exact name of the color.
+  // Dprice       <-- The discounted value of the product
+
   addToCard(product: ProductModel, ImgIndex:number=0,ColorIndex:number=0,Dprice:number) {
-  const existingItem = this.ProductItem.find(p => p.Pid === product.ID && p.PColorName === selectedColorName);
+  const existingItem = this.ProductItem.find(p => p.Pid === product.ID);
 
   const selectedColorName = product.MainColor ? product.MainColor[ColorIndex].Fantasyname.toString() : 'No color';
   
     if (existingItem) 
     {
       existingItem.Pquantity++;
-      console.log('quantity++:', existingItem.PName);
     } 
     else 
     {
-      
       const selectedImage = (product.MainColor && product.MainColor[ColorIndex]?.Images) 
       ? product.MainColor[ColorIndex].Images[ImgIndex].toString() 
       : 'No Img';
-
+        // This is where the simple model is created
         const NewItem: CardItem = 
         {
           Pid: product.ID,
@@ -53,15 +59,24 @@ export class ShoppingCard {
           PColorName: selectedColorName,
           Pquantity: 1
         };
-
+        // Add it to the cart
       this.ProductItem.push(NewItem);
-      console.log('New product in the shopping card:', NewItem.PName);
     }
     this.SaveToStorege();
   }
+
   get ProductItems() 
   {
     return this.ProductItem;
+  }
+
+  get totalPrice(): number 
+  {
+    return this.ProductItem.reduce((sum, item) => {
+      const price = item.PPrice ?? 0; 
+      const quantity = item.Pquantity ?? 0; 
+      return sum + (price * quantity);
+    }, 0);
   }
 
   increaseQuantity(pid: number): number 
@@ -87,19 +102,11 @@ export class ShoppingCard {
     }
     return item ? item.Pquantity : 0;
   }
-
-  get totalPrice(): number 
-  {
-    return this.ProductItem.reduce((sum, item) => {
-      const price = item.PPrice ?? 0; 
-      const quantity = item.Pquantity ?? 0; 
-      return sum + (price * quantity);
-    }, 0);
-  }
-
+  
   removeProductItem(pid: number) 
   {
   this.ProductItem = this.ProductItem.filter(item => item.Pid !== pid);
+  // I delete localStorage products when the user deletes the product from the cart
   this.SaveToStorege()
   console.log('Product Removed:', this.ProductItem.length);
   }

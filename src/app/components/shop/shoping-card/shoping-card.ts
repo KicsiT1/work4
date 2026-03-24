@@ -14,17 +14,17 @@ export class ShopingCard {
   ShoppingCardActive:boolean=true;
 
   constructor(public cartService: ShoppingCard) {}
-
+  // Helper function removes the product from the cart
   onRemove(pid: number) 
   {
     this.cartService.removeProductItem(pid);
   }
-  
+  // Close the shopping card
   ChangeActive()
   {
     this.ShoppingCardActive=!this.ShoppingCardActive;
   }
-
+  // If there is a single digit in the quantity, there should be a 0 on the left.
   pad(n: number): string 
   {
     return n.toString().padStart(2, '0');

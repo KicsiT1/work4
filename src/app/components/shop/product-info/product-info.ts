@@ -19,7 +19,9 @@ import { ShoppingCard } from '../../../services/shopping-card';
 })
 
 export class ProductInfo {
+  // Discount timer
   cooldown$!: Observable<Cooldown>;
+  
   constructor(
     private CoolDownService: CooldownService, 
     private route: ActivatedRoute, 
@@ -44,23 +46,26 @@ export class ProductInfo {
   protected Product: ProductModel | undefined;
   ngOnInit() 
   {
-
+  // This is where the product identifier 0,1,2... that we clicked on the card for arrives.
   const id = Number(this.route.snapshot.paramMap.get('id'));
-
+  // I will search for the given product and subscribe to it.
+  // So I can use it in the template
   this.ProductService.GetNewArrivalsData().subscribe(products => {
   this.Product = products.find(p => p.ID === id);
+
   //console.log(this.Product);
+  // The product is discounted for a while.
    if (this.ProddiscountUntil) {
       this.cooldown$ = this.CoolDownService.startCooldown(this.ProddiscountUntil);
     }
   });
   }
-  
+  // I am using the timer to display a 0 on the left side for a single digit number.
   pad(n: number): string 
   {
     return n.toString().padStart(2, '0');
   }
-
+  // I am requesting the data about the product that needs to be displayed.
   get ProddiscountUntil(): string
   {
     return this.Product?.DiscountUntil ?? '';
@@ -75,6 +80,7 @@ export class ProductInfo {
   {
     return this.Product?.Size;
   }
+
   get Prodprice(): number 
   {
   return (this.Product?.Price ?? 0);
@@ -96,11 +102,14 @@ export class ProductInfo {
   }
 
   protected ColorIndex:number = 0;
+  // Helps to display the exact name of the color
   ColorIndexChange(index: number): void 
   {
     this.ColorIndex = index;
   }
+  
   protected Quantity:number=1;
+  // Increase and decrease (functions)  the quantity of the product
   QuantityIncrease()
   {
     if(this.Quantity!==this.ProdInStock)
@@ -116,12 +125,14 @@ export class ProductInfo {
     }
   }
   protected SizeNameIndex:number=0;
+  // This function helps me to correctly display the Size of the Product.
   SizeIndex(index: number): void 
   {
     this.SizeNameIndex = index;
   }
   
   protected ImgIndex:number=0;
+  //By selecting the product color, I also select the appropriate images.
   ImgIndexChange(index: number): void 
   {
     this.ImgIndex = index;
