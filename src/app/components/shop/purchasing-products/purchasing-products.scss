@@ -2,17 +2,20 @@ h1
 {
     text-align: center;
     margin: 78px 0px 44px 0px;
+    font-size: 42px;
 }
 section
 {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 33px;
     .LeftSide
     {
+        margin-top: 81px;
         max-width: 607px;
         display: flex;
         flex-direction: column;
+        margin-left: auto;
         gap: 60px;
         .ContactForm
         {
@@ -21,6 +24,7 @@ section
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                margin-bottom: 26px;
                 h2
                 {
                     font-size: 2rem;
@@ -55,33 +59,228 @@ section
             }
             .CountryInput   {
                                 grid-area: CountryInput;
-                                padding: 23px 0px 24px 28px;
+                                padding: 23px 24px 28px;
                             }
 
             .FirstName      {
                                 grid-area: FirstName   ;
-                                padding: 23px 0px 24px 28px;
+                                padding: 23px 24px 28px;
                             }
 
             .LastName       {
                                 grid-area: LastName    ;
-                                padding: 23px 0px 24px 28px;
+                                padding: 23px 24px 28px;
                             }
 
             .Address        {
                                 grid-area: Address     ;
-                                padding: 23px 0px 24px 28px;
+                                padding: 23px 24px 28px;
                             }
 
             .City           {
                                 grid-area: City        ;
-                                padding: 23px 0px 24px 28px;
+                                padding: 23px 24px 28px;
                             }
 
             .PostalCode     {
                                 grid-area: PostalCode  ;
-                                padding: 23px 0px 24px 28px;
+                                padding: 23px 24px 28px;
                             }
+            .CH
+            {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                input
+                {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+        .PaymentForm
+        {
+            .TextContent
+            {
+                h2{font-size: 46px;margin-bottom: 16px;}
+            }
+            .PaymentContainer
+            {
+                background-color: #F5F5F5;
+                .PaymentInput
+                {
+                    padding: 24px 490px 23px 28px;
+                    margin-bottom: 18px;
+                }
+                .PaymentDataGrid
+                {
+                  padding: 0px 20px 0px 20px;
+                  display: grid;   
+                  grid-template-columns: 1fr 1fr;  
+                  grid-template-rows: auto auto auto;
+                  grid-template-areas: 
+                  "CardNumber CardNumber"
+                  "ExpirationDate SecurityCode"
+                  "CardHolderName CardHolderName";
+                  .CardNumber
+                  {
+                    grid-area: CardNumber;
+                    padding: 22px 21px 22px;
+                    margin-bottom: 7px;
+                  }  
+
+                  .ExpirationDate
+                  {
+                    grid-area: ExpirationDate;
+                    padding: 22px 21px 22px;
+                  }
+                  .SecurityCode
+                  {
+                    grid-area: SecurityCode;
+                    padding: 22px 21px 22px;
+                    margin-left: 5px;
+                  }
+                  .CardHolderName
+                  {
+                    grid-area: CardHolderName;
+                    padding: 22px 21px 22px;
+                    margin-top: 7px;
+                  }
+                  
+                }
+                .CH
+                {
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    padding: 21px 20px 33px 20px;
+                    input
+                    {
+                        height: 32px;
+                        width: 32px;
+                    }
+                }
+            }
+        }
+        button
+        {
+            cursor: pointer;
+            padding: 25px 25px;
+            border: none;
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        p
+        {
+            text-align: center;
+            font-size: 12px;
+        }
+    }
+    .RightSide
+    {
+        background-color: #F5F5F5;
+        width: 50%;
+        height: 910px;
+        padding: 52px 0px 0px 82px;
+        display: flex;
+        .PContent
+        {
+            width: 100%;
+            max-width: 558px;
+            display: flex;
+            flex-direction: column;
+            max-height: 100%;
+            overflow: hidden;
+            .Products
+            {
+                flex: 1;
+                overflow-y: auto;
+                padding-right: 10px;
+                margin-bottom: 20px;
+                .PCard
+                {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .PImg
+                    {
+                        margin-top: 13px;
+                        position: relative;
+                        width: 151px;
+                        height: 149px;
+                        background-color: aqua;
+                        .PINCard
+                        {
+                            position: absolute;
+                            top:0%;
+                            right: 0;
+                            transform: translate(50%, -50%);
+                            height: 24px;
+                            width: 24px;
+                            border-radius: 50%;
+                            background-color: red;
+                            color: white;
+                            text-align: center;
+                            line-height: 24px;
+                            z-index: 100;
+                        }
+                    }
+                    .PTextInformation
+                    {
+                        margin-left: -180px;
+                        h6
+                        {
+                            margin-bottom: 5px;
+                        }
+                    }
+                }
+            }
+            .InfoAbautProducts
+            {
+                display: flex;
+                flex-shrink: 0;
+                flex-direction: column;
+                background-color: #F5F5F5;
+                padding-top: 20px;
+                border-top: 1px solid #ddd;
+                gap: 21px;
+                form
+                {
+                    display: flex;
+                    justify-content: space-between;
+                    input
+                    {
+                        border: none;
+                        width: 70%;
+                        padding: 23px 24px 26px;
+                    }
+                    Button
+                    {
+                        cursor: pointer;
+                        padding: 25px 57px 25px 58px;
+                        border: none;
+                        border-radius: 10px;
+                        color: white;
+                        background-color: black;
+                        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+                    }
+                }
+                .ProdsTextData
+                {
+                    display: flex;
+                    flex-direction: column;
+                    padding-bottom: 10px;
+                    gap: 12px;
+                    .Subtotal,.Shipping,.Total
+                    {
+                        
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+            }
         }
     }
 }

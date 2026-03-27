@@ -37,7 +37,7 @@
                 
             </div>
 
-            <div>
+            <div class="CH">
                 <input type="checkbox">
                 <label for="checkbox">Save This Info for future</label>
             </div>
@@ -49,23 +49,27 @@
             <div class="TextContent">
                 <h2>Payment</h2>
             </div>
-            
-            <select class="PaymentInput" id="Payment" name="Payment">
-                <option value="" disabled selected>Credit Card</option>
-                <option value="Visa">Visa</option>
-                <option value="PayPal">PayPal</option>
-                <option value="MasterCard">MasterCard</option>
-            </select>
 
-            <div class="PaymentDataGrid">
-                <input class="CardNumber" type="text" placeholder="Card Number">
-                <input class="ExpirationDate " type="text" placeholder="Expiration Date">
-                <input class="SecurityCode" type="text" placeholder="Security Code">
-                <input class="CardHolderName" type="text" placeholder="Card Holder Name">
-                <input type="checkbox">
-                <label for="checkbox">Save This Info for future</label>
+            <div class="PaymentContainer">
+                <select class="PaymentInput" id="Payment" name="Payment">
+                    <option value="" disabled selected>Credit Card</option>
+                    <option value="Visa">Visa</option>
+                    <option value="PayPal">PayPal</option>
+                    <option value="MasterCard">MasterCard</option>
+                </select>
+
+                <div class="PaymentDataGrid">
+                    <input class="CardNumber" type="text" placeholder="Card Number">
+                    <input class="ExpirationDate" type="text" placeholder="Expiration Date">
+                    <input class="SecurityCode" type="text" placeholder="Security Code">
+                    <input class="CardHolderName" type="text" placeholder="Card Holder Name">
+                </div>
+
+                 <div class="CH">
+                    <input type="checkbox">
+                    <label for="checkbox">Save This Info for future</label>
+                </div>
             </div>
-
         </form>
 
         <button>Pay Now</button>
@@ -74,48 +78,51 @@
     </div>
 
     <div class="RightSide">
+        <div class="PContent">
+            <div class="Products">
 
-        <div class="Products">
-            <div class="PCard">
+                <div class="PCard">
+        
+                    <div class="PImg">
+                        <p class="PINCard">1</p>
+                        <img src="" alt="">
+                    </div>
 
-                <div class="PImg">
-                    <img src="" alt="">
+                    <div class="PTextInformation">
+                        <h6>Mini dress with ruffled straps</h6>
+                        <p>Red</p>
+                    </div>
+                    <p>$100</p>
                 </div>
 
-                <div class="PTextInformation">
-                    <h6>Mini dress with ruffled straps</h6>
-                    <p>Red</p>
-                </div>
-                <p>$100</p>
-            </div>
-        </div>
-
-        <div class="InfoAbautProducts">
-
-            <form action="">
-                <input class="Discountcode" type="text" placeholder="Discount code">
-                <button>Apply</button>
-            </form>
-
-            <div class="ProdsTextData">
-                <div class="Subtotal">
-                    <p>Subtotal</p>
-                    <p>$100.00</p>
-                </div>
-
-                <div class="Shipping">
-                    <p>Shipping</p>
-                    <p>$40.00</p>
-                </div>
-
-                 <div class="Total">
-                    <p>Total</p>
-                    <p>$140.00</p>
-                </div>
             </div>
 
-        </div>
+            <div class="InfoAbautProducts">
 
+                <form action="">
+                    <input class="Discountcode" type="text" placeholder="Discount code">
+                    <button>Apply</button>
+                </form>
+
+                <div class="ProdsTextData">
+                    <div class="Subtotal">
+                        <p>Subtotal</p>
+                        <p>$100.00</p>
+                    </div>
+
+                    <div class="Shipping">
+                        <p>Shipping</p>
+                        <p>$40.00</p>
+                    </div>
+
+                     <div class="Total">
+                        <p>Total</p>
+                        <p>$140.00</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
 
 </section>

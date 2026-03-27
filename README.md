@@ -37,7 +37,12 @@ project-root/
 │  │  │  │  └─ shop-button/
 │  │  │  ├─ shop/
 │  │  │  │  ├─ product-filter/
-│  │  │  │ 
+│  │  │  │  ├─ pagination/
+│  │  │  │  ├─ product-content
+│  │  │  │  ├─ product-info
+│  │  │  │  ├─ product-layout-switcher
+│  │  │  │  ├─ purchasing-products
+│  │  │  │  └─ shoping-card
 │  │  │  │
 │  │  │  ├─ new-arrivals/
 │  │  │  ├─ outstanding-offer/
@@ -47,14 +52,20 @@ project-root/
 │  │  │
 │  │  ├─ models/
 │  │  │  ├─ MonthlySales.model.ts
+│  │  │  ├─ CardItem.model.ts
+│  │  │  ├─ ProductMainColor.model
 │  │  │  └─ product.model.ts
 │  │  │
 │  │  ├─ services/
+│  │  │  ├─ shopping-card
+│  │  │  ├─ cooldown-service.ts
 │  │  │  └─ product.ts
 │  │  │
 │  │  ├─ WebRouteLayouts
 │  │  │  ├─ home/
 │  │  │  ├─ shop/
+│  │  │  ├─ productinfo/   
+│  │  │  └─ purchasingproducts/
 │  │  │
 │  │  ├─ app.config.ts
 │  │  ├─ app.css
