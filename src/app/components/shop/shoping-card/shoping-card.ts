@@ -3,6 +3,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faX } from '@fortawesome/free-solid-svg-icons';
 import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { ShoppingCard } from '../../../services/shopping-card';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-shoping-card',
   imports: [FontAwesomeModule],
@@ -13,7 +15,7 @@ export class ShopingCard {
   faX: IconDefinition = faX;
   ShoppingCardActive:boolean=true;
 
-  constructor(public cartService: ShoppingCard) {}
+  constructor(public cartService: ShoppingCard,private router:Router) {}
   // Helper function removes the product from the cart
   onRemove(pid: number) 
   {
@@ -28,5 +30,9 @@ export class ShopingCard {
   pad(n: number): string 
   {
     return n.toString().padStart(2, '0');
+  }
+  GoToCheckout()
+  {
+    this.router.navigate(['/Purchasing-product']);
   }
 }

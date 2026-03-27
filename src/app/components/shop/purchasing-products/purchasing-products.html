@@ -1,4 +1,4 @@
-<h1>FASCO Demo Checkout</h1>
+<h1>FASCO Checkout</h1>
 
 <section>
     <div class="LeftSide">
@@ -80,21 +80,22 @@
     <div class="RightSide">
         <div class="PContent">
             <div class="Products">
-
+                @for(Product of ShoppingCard.ProductItems;track Product)
+                {
                 <div class="PCard">
-        
+
                     <div class="PImg">
-                        <p class="PINCard">1</p>
-                        <img src="" alt="">
+                        <p class="PINCard">{{Product.Pquantity}}</p>
+                        <img src={{Product.PImage}} alt="">
                     </div>
 
                     <div class="PTextInformation">
-                        <h6>Mini dress with ruffled straps</h6>
-                        <p>Red</p>
+                        <h6>{{Product.PName}}</h6>
+                        <p>{{Product.PColorName}}</p>
                     </div>
-                    <p>$100</p>
+                    <p>${{Product.DPrice}}</p>
                 </div>
-
+                }
             </div>
 
             <div class="InfoAbautProducts">
@@ -107,17 +108,24 @@
                 <div class="ProdsTextData">
                     <div class="Subtotal">
                         <p>Subtotal</p>
-                        <p>$100.00</p>
+                        <p>${{ShoppingCard.DisctotalPrice}}</p>
                     </div>
 
                     <div class="Shipping">
                         <p>Shipping</p>
-                        <p>$40.00</p>
+                        <p>${{ShippingPrice}}</p>
                     </div>
 
                      <div class="Total">
                         <p>Total</p>
-                        <p>$140.00</p>
+                        @if(ShoppingCard.ProductItems.length===0)
+                        {
+                            <p>$0</p>
+                        }
+                        @else
+                        {
+                            <p>${{ShoppingCard.DisctotalPrice+ShippingPrice}}</p>
+                        }
                     </div>
                 </div>
 

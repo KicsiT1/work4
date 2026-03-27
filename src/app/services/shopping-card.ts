@@ -79,6 +79,15 @@ export class ShoppingCard {
     }, 0);
   }
 
+   get DisctotalPrice(): number 
+  {
+    return this.ProductItem.reduce((sum, item) => {
+      const price = item.DPrice ?? 0; 
+      const quantity = item.Pquantity ?? 0; 
+      return sum + (price * quantity);
+    }, 0);
+  }
+
   increaseQuantity(pid: number): number 
   {
     const item = this.ProductItem.find(p => p.Pid === pid);
