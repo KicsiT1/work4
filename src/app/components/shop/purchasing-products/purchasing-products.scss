@@ -31,11 +31,16 @@ section
                 {
                     font-size: 2rem;
                 }
+                p {margin: 0;}
             }
             input
             {
                 width: 100%;
                 padding: 23px 0px 24px 28px;
+            }
+            .EmailError
+            {
+                margin-top: 10px;
             }
         }
         .DeliveryForm
@@ -63,55 +68,67 @@ section
                 "City           PostalCode "
                 "CityError      PostalError";
             }
-            .CountryInput   {
-                                grid-area: CountryInput;
-                                padding: 23px 24px 28px;
-                            }
-            .CountryError   {
-                                grid-area: CountryError;
-                            }
+            .CountryInput   
+            {
+                grid-area: CountryInput;
+                padding: 23px 24px 28px;
+            }
+            .CountryError   
+            {
+                grid-area: CountryError;
+            }
 
-            .FirstName      {
-                                grid-area: FirstName   ;
-                                padding: 23px 24px 28px;
-                            }
-            .FirstNameError {
-                                grid-area: FirstNameError;
-                                font-size: 14px;
-                            }
+            .FirstName      
+            {
+                grid-area: FirstName   ;
+                padding: 23px 24px 28px;
+            }
+            .FirstNameError 
+            {
+                grid-area: FirstNameError;
+                font-size: 14px;
+            }
 
-            .LastName       {
-                                grid-area: LastName    ;
-                                padding: 23px 24px 28px;
-                            }
-            .LastNameError  {
-                                grid-area: LastNameError;
-                                font-size: 14px;
-                            }
+            .LastName       
+            {
+                grid-area: LastName    ;
+                padding: 23px 24px 28px;
+            }
+            .LastNameError  
+            {
+                grid-area: LastNameError;
+                font-size: 14px;
+            }
 
-            .Address        {
-                                grid-area: Address     ;
-                                padding: 23px 24px 28px;
-                            }
-            .AddressError   {
-                                grid-area: AddressError ;
-                            }
+            .Address        
+            {
+                grid-area: Address     ;
+                padding: 23px 24px 28px;
+            }
+            .AddressError   
+            {
+                grid-area: AddressError ;
+            }
 
-            .City           {
-                                grid-area: City;        ;
-                                padding: 23px 24px 28px;
-                            }
-            .CityError      {
-                                grid-area: CityError  ;
-                            }
+            .City           
+            {
+                grid-area: City;        ;
+                padding: 23px 24px 28px;
+            }
+            .CityError      
+            {
+                grid-area: CityError  ;
+            }
 
-            .PostalCode     {
-                                grid-area: PostalCode  ;
-                                padding: 23px 24px 28px;
-                            }
-            .PostalError    {
-                                grid-area: PostalError ;
-                            }
+            .PostalCode     
+            {
+                grid-area: PostalCode  ;
+                padding: 23px 24px 28px;
+            }
+            .PostalError    
+            {
+                grid-area: PostalError ;
+            }
 
             .CH
             {
@@ -145,11 +162,14 @@ section
                   padding: 0px 20px 0px 20px;
                   display: grid;   
                   grid-template-columns: 1fr 1fr;  
-                  grid-template-rows: auto auto auto;
+                  grid-template-rows: auto auto auto auto auto auto auto;
                   grid-template-areas: 
-                  "CardNumber CardNumber"
-                  "ExpirationDate SecurityCode"
-                  "CardHolderName CardHolderName";
+                  "CardNumber           CardNumber"
+                  "CardNumberError      CardNumberError"
+                  "ExpirationDate       SecurityCode"
+                  "ExpirationDateError  SecurityCodeError"
+                  "CardHolderName       CardHolderName"
+                  "CardHolderNameError  CardHolderNameError";
                   .CardNumber
                   {
                     grid-area: CardNumber;
@@ -157,22 +177,38 @@ section
                     margin-bottom: 7px;
                   }  
 
+                  .CardNumberError
+                   {
+                      grid-area: CardNumberError;
+                   }
                   .ExpirationDate
                   {
                     grid-area: ExpirationDate;
                     padding: 22px 21px 22px;
                   }
+                 .ExpirationDateError
+                 {
+                    grid-area: ExpirationDateError;
+                 }
                   .SecurityCode
                   {
                     grid-area: SecurityCode;
                     padding: 22px 21px 22px;
                     margin-left: 5px;
                   }
+                 .SecurityCodeError
+                 {
+                    grid-area: SecurityCodeError;
+                 }
                   .CardHolderName
                   {
                     grid-area: CardHolderName;
                     padding: 22px 21px 22px;
                     margin-top: 7px;
+                  }
+                  .CardHolderNameError
+                  {
+                    grid-area: CardHolderNameError;
                   }
                   
                 }
@@ -187,6 +223,11 @@ section
                         height: 32px;
                         width: 32px;
                     }
+                }
+                .PaymentError
+                {
+                    padding-left: 20px;
+                    margin-bottom: 15px;
                 }
             }
         }

@@ -3,14 +3,18 @@
 <section>
     <div class="LeftSide">
 
-        <form class="ContactForm" action="">
+        <form [formGroup]="ContactForm" class="ContactForm" action="">
 
             <div class="TextContent">
                 <h2>Contact</h2>
                 <p>Have an account? <a href="">Create Account</a></p>
             </div>
 
-            <input type="email" placeholder="Email Address">
+            <input formControlName="email" type="email" placeholder="Email Address">
+            @if(ContactForm.get('email')?.invalid && ContactForm.get('email')?.touched)
+            {
+                <div class="EmailError" style="color: red;">You did not provide your email address.</div>
+            }
 
         </form>
 
@@ -71,25 +75,46 @@
            
         </form>
 
-        <form class="PaymentForm" action="">
+        <form [formGroup]="Payment" class="PaymentForm" action="">
 
             <div class="TextContent">
                 <h2>Payment</h2>
             </div>
 
             <div class="PaymentContainer">
-                <select class="PaymentInput" id="Payment" name="Payment">
+                <select class="PaymentInput" id="Payment" name="Payment" formControlName="Payment">
                     <option value="" disabled selected>Credit Card</option>
                     <option value="Visa">Visa</option>
                     <option value="PayPal">PayPal</option>
                     <option value="MasterCard">MasterCard</option>
                 </select>
+                @if(Payment.get('Payment')?.touched && Payment.get('Payment')?.invalid)
+                {
+                    <div style="color: red;" class="PaymentError">Payment method selection is required.</div>
+                }
 
                 <form class="PaymentDataGrid">
-                    <input class="CardNumber" type="text" placeholder="Card Number">
-                    <input class="ExpirationDate" type="text" placeholder="MM/YYYY">
-                    <input class="SecurityCode" type="text" placeholder="Security Code">
-                    <input class="CardHolderName" type="text" placeholder="Card Holder Name">
+
+                    <input class="CardNumber" type="text" placeholder="Card Number" formControlName="CardNumber">
+                    @if(Payment.get('CardNumber')?.touched && Payment.get('CardNumber')?.invalid)
+                    {
+                        <div style="color: red;" class="CardNumberError">Card Number is required.</div>
+                    }
+                    <input class="ExpirationDate" type="text" placeholder="MM/YYYY" formControlName="ExpirationDate">
+                    @if(Payment.get('ExpirationDate')?.touched && Payment.get('ExpirationDate')?.invalid)
+                    {
+                        <div  style="color: red;" class="ExpirationDateError">Expiration Date is required.</div>
+                    }
+                    <input class="SecurityCode" type="text" placeholder="Security Code" formControlName="SecurityCode">
+                    @if(Payment.get('SecurityCode')?.touched && Payment.get('SecurityCode')?.invalid)
+                    {
+                        <div  style="color: red;" class="SecurityCodeError">Security Code is required.</div>
+                    }
+                    <input class="CardHolderName" type="text" placeholder="Card Holder Name" formControlName="CardHolderName">
+                    @if(Payment.get('CardHolderName')?.touched && Payment.get('CardHolderName')?.invalid)
+                    {
+                        <div  style="color: red;" class="CardHolderNameError">Card Holder Name is required.</div>
+                    }
                 </form>
 
                  <div class="CH">
