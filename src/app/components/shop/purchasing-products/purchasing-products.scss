@@ -52,42 +52,67 @@ section
                 display: grid;
                 grid-template-columns: 50%;
                 gap: 16px;
-                grid-template-rows: auto auto auto auto;
+                grid-template-rows: auto auto auto auto auto auto auto auto;
                 grid-template-areas: 
-                "CountryInput CountryInput"
-                "FirstName LastName"
-                "Address Address"
-                "City PostalCode ";
+                "CountryInput   CountryInput"
+                "CountryError   CountryError"
+                "FirstName      LastName"
+                "FirstNameError LastNameError"
+                "Address        Address"
+                "AddressError   AddressError"
+                "City           PostalCode "
+                "CityError      PostalError";
             }
             .CountryInput   {
                                 grid-area: CountryInput;
                                 padding: 23px 24px 28px;
+                            }
+            .CountryError   {
+                                grid-area: CountryError;
                             }
 
             .FirstName      {
                                 grid-area: FirstName   ;
                                 padding: 23px 24px 28px;
                             }
+            .FirstNameError {
+                                grid-area: FirstNameError;
+                                font-size: 14px;
+                            }
 
             .LastName       {
                                 grid-area: LastName    ;
                                 padding: 23px 24px 28px;
+                            }
+            .LastNameError  {
+                                grid-area: LastNameError;
+                                font-size: 14px;
                             }
 
             .Address        {
                                 grid-area: Address     ;
                                 padding: 23px 24px 28px;
                             }
+            .AddressError   {
+                                grid-area: AddressError ;
+                            }
 
             .City           {
-                                grid-area: City        ;
+                                grid-area: City;        ;
                                 padding: 23px 24px 28px;
+                            }
+            .CityError      {
+                                grid-area: CityError  ;
                             }
 
             .PostalCode     {
                                 grid-area: PostalCode  ;
                                 padding: 23px 24px 28px;
                             }
+            .PostalError    {
+                                grid-area: PostalError ;
+                            }
+
             .CH
             {
                 display: flex;

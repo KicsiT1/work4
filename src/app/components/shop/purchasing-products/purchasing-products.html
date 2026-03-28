@@ -30,38 +30,37 @@
                 </select>
                 @if(ContactForm.get('country')?.touched && ContactForm.get('country')?.invalid)
                 {
-                    <div Style="color:red">Select country</div>
+                    <div class="CountryError" Style="color:red">Select country</div>
                 }
 
                 <input class="FirstName" type="text" placeholder="First Name" formControlName="FirstName">
                  @if(ContactForm.get('FirstName')?.touched && ContactForm.get('FirstName')?.invalid)
                 {
-                    <div Style="color:red">First Name must be at least 3 characters long</div>
+                    <div class="FirstNameError" Style="color:red">First Name must be at least 3 characters long</div>
                 }
                 
-
                 <input class="LastName" type="text" placeholder="Last Name" formControlName="LastName">
                 @if(ContactForm.get('LastName')?.touched && ContactForm.get('LastName')?.invalid)
                 {
-                    <div Style="color:red">Last Name must be at least 3 characters long</div>
+                    <div  class="LastNameError" Style="color:red">Last Name must be at least 3 characters long</div>
                 }
 
                 <input class="Address" type="text" placeholder="Address" formControlName="Address">
                 @if(ContactForm.get('Address')?.touched && ContactForm.get('Address')?.invalid)
                 {
-                    <div Style="color:red">You must enter the street address.</div>
+                    <div class="AddressError" Style="color:red">You must enter the street address.</div>
                 }
 
                 <input class="City" type="text" placeholder="City" formControlName="City">
                 @if(ContactForm.get('City')?.touched && ContactForm.get('City')?.invalid)
                 {
-                    <div Style="color:red">The city is required.</div>
+                    <div class="CityError" Style="color:red">The city is required.</div>
                 }
 
                 <input class="PostalCode" type="text" placeholder="Postal Code" formControlName="PostalCode">
                 @if(ContactForm.get('PostalCode')?.touched && ContactForm.get('PostalCode')?.invalid)
                 {
-                    <div Style="color:red">Postal code is required.</div>
+                    <div class="PostalError" Style="color:red">Postal code is required.</div>
                 }
             </div>
 
