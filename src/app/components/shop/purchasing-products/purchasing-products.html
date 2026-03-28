@@ -14,7 +14,7 @@
 
         </form>
 
-        <form class="DeliveryForm" action="">
+        <form [formGroup]="ContactForm" class="DeliveryForm" action="">
 
             <div class="TextContent">
                 <h2>Delivery</h2>
@@ -22,19 +22,47 @@
 
             <div class="DeliveryInputsGrid">
 
-                <select class="CountryInput" id="country" name="country">
+                <select class="CountryInput" id="country" name="country" formControlName="country">
                     <option value="" disabled selected>Country / Region</option>
                     <option value="hu">Hungary</option>
                     <option value="us">United States</option>
                     <option value="uk">United Kingdom</option>
                 </select>
+                @if(ContactForm.get('country')?.touched && ContactForm.get('country')?.invalid)
+                {
+                    <div Style="color:red">Select country</div>
+                }
 
-                <input class="FirstName" type="text" placeholder="First Name">
-                <input class="LastName" type="text" placeholder="Last Name">
-                <input class="Address" type="text" placeholder="Address">
-                <input class="City" type="text" placeholder="City">
-                <input class="PostalCode" type="text" placeholder="Postal Code">
+                <input class="FirstName" type="text" placeholder="First Name" formControlName="FirstName">
+                 @if(ContactForm.get('FirstName')?.touched && ContactForm.get('FirstName')?.invalid)
+                {
+                    <div Style="color:red">First Name must be at least 3 characters long</div>
+                }
                 
+
+                <input class="LastName" type="text" placeholder="Last Name" formControlName="LastName">
+                @if(ContactForm.get('LastName')?.touched && ContactForm.get('LastName')?.invalid)
+                {
+                    <div Style="color:red">Last Name must be at least 3 characters long</div>
+                }
+
+                <input class="Address" type="text" placeholder="Address" formControlName="Address">
+                @if(ContactForm.get('Address')?.touched && ContactForm.get('Address')?.invalid)
+                {
+                    <div Style="color:red">You must enter the street address.</div>
+                }
+
+                <input class="City" type="text" placeholder="City" formControlName="City">
+                @if(ContactForm.get('City')?.touched && ContactForm.get('City')?.invalid)
+                {
+                    <div Style="color:red">The city is required.</div>
+                }
+
+                <input class="PostalCode" type="text" placeholder="Postal Code" formControlName="PostalCode">
+                @if(ContactForm.get('PostalCode')?.touched && ContactForm.get('PostalCode')?.invalid)
+                {
+                    <div Style="color:red">Postal code is required.</div>
+                }
             </div>
 
             <div class="CH">
@@ -58,12 +86,12 @@
                     <option value="MasterCard">MasterCard</option>
                 </select>
 
-                <div class="PaymentDataGrid">
+                <form class="PaymentDataGrid">
                     <input class="CardNumber" type="text" placeholder="Card Number">
-                    <input class="ExpirationDate" type="text" placeholder="Expiration Date">
+                    <input class="ExpirationDate" type="text" placeholder="MM/YYYY">
                     <input class="SecurityCode" type="text" placeholder="Security Code">
                     <input class="CardHolderName" type="text" placeholder="Card Holder Name">
-                </div>
+                </form>
 
                  <div class="CH">
                     <input type="checkbox">
