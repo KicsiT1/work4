@@ -145,18 +145,22 @@
                         <h6>{{Product.PName}}</h6>
                         <p>{{Product.PColorName}}</p>
                     </div>
-                    <p>${{Product.DPrice}}</p>
+                    <p class="DPrice">${{pad(Product.DPrice)}}</p>
                 </div>
                 }
             </div>
 
             <div class="InfoAbautProducts">
 
-                <form action="">
-                    <input class="Discountcode" type="text" placeholder="Discount code">
+                <form [formGroup]="Discountcode" action="">
+                    <input class="Discountcode" type="text" placeholder="Discount code" formControlName="DiscountCode">
                     <button>Apply</button>
                 </form>
 
+                @if(Discountcode.get("DiscountCode")?.touched && Discountcode.get("DiscountCode")?.invalid)
+                {
+                    <div  style="color: red;" class="Discountcode">The product code must be 10 characters long.</div>
+                }
                 <div class="ProdsTextData">
                     <div class="Subtotal">
                         <p>Subtotal</p>

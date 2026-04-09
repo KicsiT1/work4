@@ -17,6 +17,7 @@ export class PurchasingProducts {
   faLock:IconDefinition=faLock;
   ContactForm!: FormGroup;
   Payment!:FormGroup;
+  Discountcode!:FormGroup;
   constructor(public ShoppingCard:ShoppingCard, private fb: FormBuilder)
   {
     
@@ -33,13 +34,21 @@ export class PurchasingProducts {
 
     this.Payment=this.fb.group
     ({
-        Payment:['',[Validators.required]],
-        CardNumber:['',[Validators.required,Validators.maxLength(16)]],
-        ExpirationDate:['',[Validators.required,Validators.pattern('^(0[1-9]|1[0-2])\\/([0-9]{4})$')]],
-        SecurityCode:['',[Validators.required,Validators.maxLength(3)]],
-        CardHolderName:['',[Validators.required,Validators.min(15),Validators.max(60)]]
+        Payment:          ['',[Validators.required]],
+        CardNumber:       ['',[Validators.required,Validators.maxLength(16)]],
+        ExpirationDate:   ['',[Validators.required,Validators.pattern('^(0[1-9]|1[0-2])\\/([0-9]{4})$')]],
+        SecurityCode:     ['',[Validators.required,Validators.maxLength(3)]],
+        CardHolderName:   ['',[Validators.required,Validators.min(15),Validators.max(60)]]
     });
-    
+    this.Discountcode=this.fb.group
+    ({
+      DiscountCode:       ['',[Validators.pattern("^[A-Za-z0-9]{10}$/")]],
+    });
   }
   protected ShippingPrice:number=40;
+  
+  pad(n: number): string 
+  {
+    return n.toString().padStart(2, '0');
+  }
 }
