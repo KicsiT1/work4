@@ -1,7 +1,23 @@
 :host
 {
-    --HoverColor:#b08484;
+    --SigInHoverColor:#b08484;
+    --LoginWithButtons:#5B86E5;
+    --LoginWithButtonsText:Black;
+    --LoginWithButtonsHoverBackground:#5B86E5;
+    --LoginWithButtonsHoverText:White;
+    --LoginWithHoverText:white;
+    --LoginContainerBorder:rgb(192, 192, 192);
+    --InputBorder:rgb(192, 192, 192);
+    --SigninB: black;
+    --SigninText:white;
+    --SignupBorder:#5B86E5;
+    --SignupText:#5B86E5;
+    --SignupBColor:white;
+    --SignupHoverBColor:#5B86E5;
+    --SignupHoverText:white;
+    --FPassWorldText:#5B86E5;
 }
+
 .Login
 {
     display: flex;
@@ -9,7 +25,7 @@
     align-items: center;
     height: 100vh;    
     margin: 0;
-    form
+    .LoginContainer
     {
         img
         {
@@ -30,7 +46,7 @@
             font-size: 30px;
             margin-bottom: 29px;
         }
-        border: 1px solid rgb(192, 192, 192);
+        border: 1px solid var(--LoginContainerBorder);
         border-radius: 0px 30px 30px 0px;
         display: flex;
         flex-direction: row;
@@ -51,7 +67,7 @@
                     cursor: pointer;
                     display: flex;
                     width: 100%;
-                    border: 1px solid #5B86E5;
+                    border: 1px solid var(--LoginWithButtons);
                     border-radius: 8px;
                     padding: 8px 32px 7px 31px;
                     fa-icon
@@ -61,14 +77,17 @@
                     a
                     {
                        text-decoration: none;
-                       color: black;
+                       color: var(--LoginWithButtonsText);
                     }
                 }
                  .LoginWithGoogle:hover,.LoginWithEmail:hover
                  {
-                    background-color: #5B86E5;
-                    color: white;
-                    a{color: white;}
+                    background-color: var(--LoginWithButtonsHoverBackground);
+                    color: var(--LoginWithButtonsHoverText);
+                    a
+                    {
+                        color: var(--LoginWithHoverText);
+                    }
                  }
             }
             h3
@@ -83,7 +102,7 @@
                 padding: 7px 579px 7px 2px;
                 margin-bottom: 29px;
                 border: none;
-                border-bottom: 1px solid rgb(192, 192, 192);
+                border-bottom: 1px solid var(--InputBorder);
             }
             input:focus 
             {
@@ -104,49 +123,31 @@
             {
                 border: none;
                 margin-bottom: 19px;
-                background-color: black;
-                color: white;
+                background-color:var(--SigninB);
+                color:var(--SigninText);
             }
             .Signin:hover
             {
-                color: var(--HoverColor);
+                color: var(--SigInHoverColor);
             }
             .Signup
             {
-                border-color: #5B86E5;
-                color: #5B86E5;
-                background-color: white;
+                border-color:var(--SignupBorder);
+                color: var(--SignupText);
+                background-color: var(--SignupBColor);
             }
             .Signup:hover
             {
-                background-color: #5B86E5;
-                color: white;
+                background-color: var(--SignupHoverBColor);
+                color: var(--SignupHoverText);
             }
             a
             {
                 text-decoration: none; 
                 margin-top: 10px;
                 margin-left: auto; 
-                color: #5B86E5;
+                color: var(--FPassWorldText);
                 font-weight: bold;
-            }
-            app-floating-box
-            {
-                a
-                {
-                    border: 1px solid #5B86E5;
-                    color: white;
-                    background-color: #5B86E5;
-                    padding: 10px 30px 10px 30px;
-                    border-radius: 10px;
-                    cursor: pointer;
-                }
-                a:hover
-                {
-                    color: #5B86E5;
-                    background-color: white;
-                    padding: 10px 30px 10px 30px;
-                }
             }
         }
     }

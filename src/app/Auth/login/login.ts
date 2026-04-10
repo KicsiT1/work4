@@ -3,13 +3,12 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import{ faGoogle } from '@fortawesome/free-brands-svg-icons';
 import{ faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { IconDefinition } from '@fortawesome/angular-fontawesome';
-import { FloatingBox } from '../../components/floating-box/floating-box';
 import { FormBuilder, Validators,FormGroup } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
-  imports: [FontAwesomeModule,FloatingBox,ReactiveFormsModule],
+  imports: [FontAwesomeModule,ReactiveFormsModule],
   templateUrl: './login.html',
   styleUrl: './login.scss',
 })
