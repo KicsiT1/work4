@@ -1,0 +1,153 @@
+:host
+{
+    --HoverColor:#b08484;
+}
+.Login
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;    
+    margin: 0;
+    form
+    {
+        img
+        {
+            display: block;
+            height: 1077px; 
+            width: 100%;
+            object-fit: cover;
+        }
+
+        h1
+        {
+            font-size: 66.6px;
+            margin-top: 91.7px;
+            margin-bottom: 82.3px;
+        }
+        h2
+        {
+            font-size: 30px;
+            margin-bottom: 29px;
+        }
+        border: 1px solid rgb(192, 192, 192);
+        border-radius: 0px 30px 30px 0px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 187px;
+
+        .LoginPanel
+        {
+            display: flex;
+            flex-direction: column;
+            padding-right: 156px;
+            .LoginOptions
+            {
+                display: flex;
+                gap: 64px;
+                .LoginWithGoogle,.LoginWithEmail
+                {
+                    cursor: pointer;
+                    display: flex;
+                    width: 100%;
+                    border: 1px solid #5B86E5;
+                    border-radius: 8px;
+                    padding: 8px 32px 7px 31px;
+                    fa-icon
+                    {
+                        font-size: 36px;
+                    }
+                    a
+                    {
+                       text-decoration: none;
+                       color: black;
+                    }
+                }
+                 .LoginWithGoogle:hover,.LoginWithEmail:hover
+                 {
+                    background-color: #5B86E5;
+                    color: white;
+                    a{color: white;}
+                 }
+            }
+            h3
+            {
+                margin-top: 84px;
+                margin-bottom: 49px;
+                text-align: center;
+                font-size: 30px;
+            }
+            input
+            {
+                padding: 7px 579px 7px 2px;
+                margin-bottom: 29px;
+                border: none;
+                border-bottom: 1px solid rgb(192, 192, 192);
+            }
+            input:focus 
+            {
+                outline: none;
+            }
+            .PasswordError,.EmailError
+            {
+                margin-bottom: 10px;
+            }
+            button
+            {
+                font-weight: bold;
+                padding: 10px 0px 10px 0px;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+            .Signin
+            {
+                border: none;
+                margin-bottom: 19px;
+                background-color: black;
+                color: white;
+            }
+            .Signin:hover
+            {
+                color: var(--HoverColor);
+            }
+            .Signup
+            {
+                border-color: #5B86E5;
+                color: #5B86E5;
+                background-color: white;
+            }
+            .Signup:hover
+            {
+                background-color: #5B86E5;
+                color: white;
+            }
+            a
+            {
+                text-decoration: none; 
+                margin-top: 10px;
+                margin-left: auto; 
+                color: #5B86E5;
+                font-weight: bold;
+            }
+            app-floating-box
+            {
+                a
+                {
+                    border: 1px solid #5B86E5;
+                    color: white;
+                    background-color: #5B86E5;
+                    padding: 10px 30px 10px 30px;
+                    border-radius: 10px;
+                    cursor: pointer;
+                }
+                a:hover
+                {
+                    color: #5B86E5;
+                    background-color: white;
+                    padding: 10px 30px 10px 30px;
+                }
+            }
+        }
+    }
+}
