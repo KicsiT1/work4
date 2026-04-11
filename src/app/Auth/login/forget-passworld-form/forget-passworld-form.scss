@@ -1,0 +1,61 @@
+.ForgetPasswordPanel
+{
+    padding-right: 120px;
+    display: grid;
+    h1
+    {
+        font-size: 66.6px;
+        margin-bottom: 197.3px;
+    }
+    h2
+    {
+        font-size: 30px;
+        margin-bottom: 55px;
+    }
+    .Inputs
+    {
+        .InputRow
+        {
+            margin-bottom: 29px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+            input
+            {
+                width: 324px;
+                border: none;
+                border-bottom: 1px solid black;
+                padding: 7px 0px 7px 0px;
+            }
+            input:focus{display: none}
+        }
+       
+    }
+    .SendCodeButton
+    {
+        margin: 0 auto;
+        display: block;
+        cursor: pointer;
+        border: none;
+        padding: 10px 187px 10px;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+    p
+    {
+        display: block;
+        margin: 0 auto;
+        margin-top: 19px;
+        font-weight: bold;
+        a{
+            cursor: pointer;
+            color: #5B86E5;
+        }
+    }
+    .Error
+    {
+        margin-bottom: 15px;
+    }
+}

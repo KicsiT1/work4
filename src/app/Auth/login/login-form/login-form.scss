@@ -1,0 +1,128 @@
+ :host
+{
+    --SigInHoverColor:#b08484;
+    --LoginWithButtons:#5B86E5;
+    --LoginWithButtonsText:Black;
+    --LoginWithButtonsHoverBackground:#5B86E5;
+    --LoginWithButtonsHoverText:White;
+    --LoginWithHoverText:white;
+    --LoginContainerBorder:rgb(192, 192, 192);
+    --InputBorder:rgb(192, 192, 192);
+    --SigninB: black;
+    --SigninText:white;
+    --SignupBorder:#5B86E5;
+    --SignupText:#5B86E5;
+    --SignupBColor:white;
+    --SignupHoverBColor:#5B86E5;
+    --SignupHoverText:white;
+    --FPassWorldText:#5B86E5;
+}
+
+ .LoginPanel
+{
+    display: flex;
+    flex-direction: column;
+    padding-right: 156px;
+    h1
+    {
+        font-size: 66.6px;
+        margin-top: 91.7px;
+        margin-bottom: 82.3px;
+    }
+    h2
+    {
+        font-size: 30px;
+        margin-bottom: 29px;
+    }
+    .LoginOptions
+    {
+        display: flex;
+        gap: 64px;
+        .LoginWithGoogle,.LoginWithEmail
+        {
+            cursor: pointer;
+            display: flex;
+            width: 100%;
+            border: 1px solid var(--LoginWithButtons);
+            border-radius: 8px;
+            padding: 8px 32px 7px 31px;
+            fa-icon
+            {
+                font-size: 36px;
+            }
+            a
+            {
+               text-decoration: none;
+               color: var(--LoginWithButtonsText);
+            }
+        }
+         .LoginWithGoogle:hover,.LoginWithEmail:hover
+         {
+            background-color: var(--LoginWithButtonsHoverBackground);
+            color: var(--LoginWithButtonsHoverText);
+            a
+            {
+                color: var(--LoginWithHoverText);
+            }
+         }
+    }
+    h3
+    {
+        margin-top: 84px;
+        margin-bottom: 49px;
+        text-align: center;
+        font-size: 30px;
+    }
+    input
+    {
+        padding: 7px 579px 7px 2px;
+        margin-bottom: 29px;
+        border: none;
+        border-bottom: 1px solid var(--InputBorder);
+    }
+    input:focus 
+    {
+        outline: none;
+    }
+    .PasswordError,.EmailError
+    {
+        margin-bottom: 10px;
+    }
+    button
+    {
+        font-weight: bold;
+        padding: 10px 0px 10px 0px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .Signin
+    {
+        border: none;
+        margin-bottom: 19px;
+        background-color:var(--SigninB);
+        color:var(--SigninText);
+    }
+    .Signin:hover
+    {
+        color: var(--SigInHoverColor);
+    }
+    .Signup
+    {
+        border-color:var(--SignupBorder);
+        color: var(--SignupText);
+        background-color: var(--SignupBColor);
+    }
+    .Signup:hover
+    {
+        background-color: var(--SignupHoverBColor);
+        color: var(--SignupHoverText);
+    }
+    a
+    {
+        text-decoration: none; 
+        margin-top: 10px;
+        margin-left: auto; 
+        color: var(--FPassWorldText);
+        font-weight: bold;
+    }
+}

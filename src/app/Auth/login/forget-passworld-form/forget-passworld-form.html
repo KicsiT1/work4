@@ -1,0 +1,41 @@
+<form [formGroup]="ForgetPassword" class="ForgetPasswordPanel">
+
+    <h1>FASCO</h1>
+
+    <h2>Forget Password</h2>
+
+    <div class="Inputs">
+        <div class="InputRow">
+            <input formControlName="FirstName" type="text" placeholder="First Name">
+            <input formControlName="LastName" type="text" placeholder="Last Name ">
+        </div>
+
+        <div class="InputRow">
+            <input formControlName="Email" type="email" placeholder="Email Address (required)">
+            <input formControlName="PhoneNumber" type="text" placeholder="Phone Number  (required)">
+        </div>
+    </div>
+
+    @if(ForgetPassword.get('FirstName')?.touched && ForgetPassword.get('FirstName')?.invalid)
+    {
+        <div class="FirstName Error" style="color: red;">You did not provide your first name.</div>
+    }
+
+    @if(ForgetPassword.get('LastName')?.touched && ForgetPassword.get('LastName')?.invalid)
+    {
+        <div class="LastName Error" style="color: red;">You did not provide your last name.</div>
+    }
+
+    @if(ForgetPassword.get('Email')?.touched && ForgetPassword.get('Email')?.invalid)
+    {
+        <div class="Email Error" style="color: red;">You did not provide your email address.</div>
+    }
+
+    @if(ForgetPassword.get('PhoneNumber')?.touched && ForgetPassword.get('PhoneNumber')?.invalid)
+    {
+        <div class="PhoneNumber Error" style="color: red;">You did not provide your phone number.</div>
+    }
+
+    <button class="SendCodeButton">Send Confirmation Code</button>
+    <p>Already have an account? <a (click)="emitEvent()">Login</a></p>          
+</form>
