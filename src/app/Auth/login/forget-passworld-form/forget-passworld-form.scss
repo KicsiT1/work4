@@ -1,3 +1,11 @@
+ :host
+{
+    --ConfirmCodeButtonHover:#b08484;
+    --LogigaTag:#5B86E5;
+    --FormBottomBorder:rgb(192, 192, 192);
+}
+
+
 .ForgetPasswordPanel
 {
     padding-right: 120px;
@@ -24,10 +32,10 @@
             {
                 width: 324px;
                 border: none;
-                border-bottom: 1px solid black;
+                border-bottom: 1px solid var(--FormBottomBorder);
                 padding: 7px 0px 7px 0px;
             }
-            input:focus{display: none}
+            input:focus{outline: none;}
         }
        
     }
@@ -43,6 +51,10 @@
         font-weight: bold;
         border-radius: 10px;
     }
+     .SendCodeButton:hover
+     {
+        color: var(--ConfirmCodeButtonHover);
+     }
     p
     {
         display: block;
@@ -51,11 +63,18 @@
         font-weight: bold;
         a{
             cursor: pointer;
-            color: #5B86E5;
+            color: var(--LogigaTag);
         }
     }
     .Error
     {
         margin-bottom: 15px;
+    }
+    .Terms-Codnitions
+    {
+        font-weight: normal;
+        margin: 0 auto;
+        display: block;
+        margin-top: 30px;
     }
 }

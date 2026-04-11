@@ -1,0 +1,17 @@
+<form [formGroup]="ConfirmationCode" class="ConfirmationCodePanel">
+
+    <h1>FASCO</h1>
+
+    <h2>Enter The Confirmation Code</h2>
+    
+    <input formControlName="ConfirmationCode" type="text" placeholder="Confirmation Code">
+
+    @if(ConfirmationCode.get('ConfirmationCode')?.touched && ConfirmationCode.get('ConfirmationCode')?.invalid)
+    {
+        <div class="ConfirmationCode Error" style="color: red;">the code can only consist of 8 numbers.</div>
+    }
+    
+    <button class="SendConfCodeButton">Recover Account</button>
+    <p>Didn’t receive Confirmation Code? <a href="">Resend Now</a></p>
+    <p class="Terms-Codnitions">Terms & Codnitions</p>           
+</form>

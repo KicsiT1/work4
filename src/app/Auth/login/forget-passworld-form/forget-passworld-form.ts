@@ -13,10 +13,10 @@ export class ForgetPassworldForm {
   {
     this.ForgetPassword=this.fb.group
     ({
-      FirstName:['',[Validators.maxLength(100)]],
-      LastName:['',[Validators.maxLength(100)]],
-      Email:['',[Validators.email,Validators.required],Validators.maxLength(200)],
-      PhoneNumber:['',[Validators.required,Validators.pattern('^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$')]]
+      FirstName:      ['',[Validators.maxLength(100)]],
+      LastName:       ['',[Validators.maxLength(100)]],
+      Email:          ['',[Validators.email,Validators.required],Validators.maxLength(200)],
+      PhoneNumber:    ['',[Validators.required,Validators.pattern('^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$')]]
     });
   }
 

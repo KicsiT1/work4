@@ -75,7 +75,8 @@
     }
     input
     {
-        padding: 7px 579px 7px 2px;
+        min-width: 628px;
+        padding: 7px 0px 7px;
         margin-bottom: 29px;
         border: none;
         border-bottom: 1px solid var(--InputBorder);
@@ -90,8 +91,11 @@
     }
     button
     {
+        min-width: 575px;
+        margin: 0 auto;
+        display: block;
         font-weight: bold;
-        padding: 10px 0px 10px 0px;
+        padding: 10px 0px 10px;
         border-radius: 10px;
         cursor: pointer;
     }
@@ -101,6 +105,7 @@
         margin-bottom: 19px;
         background-color:var(--SigninB);
         color:var(--SigninText);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
     }
     .Signin:hover
     {
@@ -124,5 +129,11 @@
         margin-left: auto; 
         color: var(--FPassWorldText);
         font-weight: bold;
+    }
+    p
+    {
+        margin: 0 auto;
+        display: block;
+        margin-top: 10px;
     }
 }

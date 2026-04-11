@@ -5,6 +5,7 @@
         <div class="BigImg">
             <img src="/public/assets/images/Sign in img.png" alt="">
         </div>
+         
         @if(!isForgetOpen)
         {
         <login-form (OpenForgetPassPanel)="handleForgetPassPanel($event)"></login-form>
@@ -13,6 +14,12 @@
         {
         <forget-passworld-form (OpenLoginPanel)="handleLoginPanel($event)"></forget-passworld-form>
         }
+        
+        <!--
+        <confirmation-code></confirmation-code>
+        
+        <confirmation-passworld></confirmation-passworld>
+        -->
     </div>
 
 </section>

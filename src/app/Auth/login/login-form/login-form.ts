@@ -21,7 +21,7 @@ export class LoginForm {
     this.Login=this.fb.group
     ({
       Email:['',[Validators.email,Validators.required]],
-      Password:['',[Validators.required,  Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$')]],
+      Password:['',[Validators.required, Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$')]],
     });
   }
 

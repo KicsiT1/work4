@@ -1,0 +1,27 @@
+<form [formGroup]="ConfirmationPassworldForm" class="ConfirmationPassworldPanel">
+
+    <h1>FASCO</h1>
+
+    <h2>Enter Your New Password</h2>
+    
+    <input formControlName="NewPassword" type="password" placeholder="New Password">
+    <input formControlName="ConfirmationPassword" type="password" placeholder="Confirmation Password">
+
+    @if(ConfirmationPassworldForm.get('NewPassword')?.touched && ConfirmationPassworldForm.get('NewPassword')?.hasError('pattern'))
+    {
+        <div class="NewPassword Error" style="color: red;">The password must be at least 8 characters long and contain letters, numbers, and special characters.</div>
+    }
+
+     @if(ConfirmationPassworldForm.get('ConfirmationPassword')?.touched && ConfirmationPassworldForm.get('ConfirmationPassword')?.hasError('pattern'))
+    {
+        <div class="NewPassword Error" style="color: red;">The password must be at least 8 characters long and contain letters, numbers, and special characters.</div>
+    }
+
+    @if(ConfirmationPassworldForm.hasError('passwordMismatch') && ConfirmationPassworldForm.get('ConfirmationPassword')?.touched)
+    {
+        <div class="Error" style="color:red;">Passwords do not match</div>
+    }
+
+    <button class="ConfPassButton">Submit</button>
+    <p class="Terms-Codnitions">Terms & Codnitions</p>                
+</form>
