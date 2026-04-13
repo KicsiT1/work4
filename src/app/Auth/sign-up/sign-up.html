@@ -1,1 +1,75 @@
-<p>sign-up works!</p>
+<section class="SignUpPanel">
+
+    <div class="SignUpContainer">
+
+        <div class="BigImg">
+            <img src="/public/assets/images/Sign Up.png" alt="">
+        </div>
+
+        <div class="SignUp">
+            <div class="Text">
+                <h1>FASCO</h1>
+                <h2>Create Account</h2>
+            </div>
+
+            <div class="SignUpOptions">
+
+                <div class="SignUpWithGoogle">
+                    <fa-icon [icon]="faGoogle"></fa-icon>
+                    <a href="">Sign up with Google</a>
+                </div>
+
+                <div class="SignUpWithEmail">
+                    <fa-icon [icon]="faEnvelope"></fa-icon>
+                    <a href="">Sign up with Email</a>
+                </div>
+                 
+            </div>
+
+            <form  [formGroup]="SignUp" class="Inputs">
+
+                <h3 class="Text">- OR -</h3>
+
+                <input class="FirstName"  formControlName="FirstName"          type="text"       placeholder="First Name">
+                @if(SignUp.get('FirstName')?.touched && SignUp.get('FirstName')?.hasError('maxlength'))
+                {
+                    <div class="FirstNameError">First name can be a maximum of 60 characters.</div>
+                }
+                <input class="LastName"  formControlName="LastName"           type="text"       placeholder="Last Name">
+                @if(SignUp.get('LastName')?.touched && SignUp.get('LastName')?.hasError('maxlength'))
+                {
+                    <div class="LastNameError">Last name can be a maximum of 60 characters.</div>
+                }
+                <input class="EmailAddress" formControlName="EmailAddress"     type="email"      placeholder="Email Address (required)">
+                @if(SignUp.get('EmailAddress')?.touched && SignUp.get('EmailAddress')?.hasError('required'))
+                {
+                    <div class="EmailAddressError">Email address is required.</div>
+                }
+                <input class="PhoneNumber" formControlName="PhoneNumber"       type="text"       placeholder="Phone Number (required)">
+                @if(SignUp.get('PhoneNumber')?.touched && SignUp.get('PhoneNumber')?.hasError('required'))
+                {
+                    <div class="PhoneNumberError">Phone number is required.</div>
+                }
+                <input class="Password"         formControlName="Password"           type="password"   placeholder="Password (required)">
+                @if(SignUp.get('Password')?.touched && SignUp.get('Password')?.hasError('required'))
+                {
+                    <div class="PasswordError">Password is required <br> The password must contain: <br> lowercase, <br> uppercase,<br> number, <br> special character, <br> minimum 8 characters long.</div>
+                }
+                <input class="ConfirmPassword"  formControlName="ConfirmPassword"    type="password"   placeholder="Confirm Password (required)">
+                @if(SignUp.get('ConfirmPassword')?.touched && SignUp.get('ConfirmPassword')?.hasError('required'))
+                {
+                    <div class="ConfirmPasswordError">Confirm password is required <br> The password must contain: <br> lowercase, <br> uppercase, <br> number, <br> special character, <br> minimum 8 characters long.</div>
+                }
+                @if(SignUp.hasError('passwordMismatch') && SignUp.get('ConfirmPassword')?.touched)
+                {
+                    <div class="ConfirmPasswordMismatch">Passwords do not match.</div>
+                }
+            </form>       
+
+            <button class="SignUpButton">Create Account</button>
+            <p>Already have an account? <a>Login</a></p>
+            <p class="TermsConditions">FASCO Terms & Conditions</p>  
+            
+        </div>   
+    </div>
+</section>
