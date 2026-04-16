@@ -9,10 +9,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 @Component({
   selector: 'login-form',
   imports: [ReactiveFormsModule,FontAwesomeModule],
-  templateUrl: './login-form.html',
-  styleUrl: './login-form.scss',
+  templateUrl: './Sign-in-form.html',
+  styleUrl: './Sign-in-form.scss',
 })
-export class LoginForm {
+export class SigninForm {
   faGoogle:IconDefinition = faGoogle;
   faEnvelope:IconDefinition = faEnvelope;
   Login!:FormGroup;

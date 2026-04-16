@@ -11,7 +11,7 @@ import {ShopingCard } from '../shop/shoping-card/shoping-card';
 import { ShoppingCard } from '../../services/shopping-card';
 @Component({
   selector: 'app-nav-bar',
-  imports: [CommonModule,FontAwesomeModule,ShopingCard],
+  imports: [CommonModule, FontAwesomeModule, ShopingCard],
   standalone: true,
   templateUrl: './nav-bar.html',
   styleUrl: './nav-bar.scss',
@@ -61,4 +61,5 @@ export class NavBar {
     this.ShoppingCard=!this.ShoppingCard;
     console.log(this.ShoppingCard)
   }
+
 }
