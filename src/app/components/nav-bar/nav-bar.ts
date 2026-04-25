@@ -29,14 +29,9 @@ export class NavBar {
   faAngleDown:IconDefinition = faAngleDown;
   faBasketShopping:IconDefinition = faBasketShopping;
   // This variable helps to open the phone menu
-  MenuOpen:boolean = false;
+  isMenuOpen: boolean = false;
   // This variable helps to change the content in the menu after a possible login.
   IsLoggedIn:boolean = false;
-  //This function reverses the value of the MenuOpen variable
-  IconChange()
-  {
-    this.MenuOpen =! this.MenuOpen;
-  }
   // This array contains the data that is displayed when the user is not yet logged in.
   loggedOutMenu:{link:string, text:string}[]=
   [
@@ -62,4 +57,17 @@ export class NavBar {
     console.log(this.ShoppingCard)
   }
 
+  toggleMenu() 
+  {
+    this.isMenuOpen = !this.isMenuOpen;
+
+    if (this.isMenuOpen) 
+    {
+    document.body.style.overflow = 'hidden';
+    } 
+    else 
+    {
+      document.body.style.overflow = '';
+    }
+}
 }

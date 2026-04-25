@@ -131,3 +131,48 @@ section
  {
     to{transform:translateX(calc(-100% - var(--gap)));}
  }
+
+
+@media screen and (max-width: 1024px) and (min-width: 425px) 
+{
+    section
+    {
+        padding: 0px 10px 0px 10px;
+    }
+}
+
+
+@media screen and (max-width: 425px) 
+{
+    section
+    {
+        padding: 0px 5px 0px 5px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 25px;
+        justify-items: center;
+        grid-template-areas: 
+        "item1"
+        "item2"
+        "item3";
+    }
+    .item1{grid-area: item1;}
+    .item2{grid-area: item2;}
+    .item3{grid-area: item3;}
+
+    .item 
+    {
+    width: 100%;
+    max-width: 100%;
+    height: auto; 
+    }
+
+    .item2
+    {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    }
+}

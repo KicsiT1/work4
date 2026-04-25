@@ -256,3 +256,123 @@ section
   pointer-events: none;
   cursor: not-allowed;
 }
+
+@media screen and (max-width: 890px) and (min-width: 768px) 
+{
+   section {
+    padding-right: 10px;
+    padding-left: 10px;
+    .Content {
+      .ProductsGrid 
+      {
+        grid-template-columns: 1fr 1fr;;
+        grid-template-areas:
+          "Item1 Item1"
+          "Icons step";
+        .Item2,
+        .Item3{
+          display: none;
+        }
+        .Icons
+        {
+          justify-content: center;
+          align-items: center;
+        }
+        .step
+        {
+          ul
+          {
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+          }
+          
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) 
+{
+  section
+  {
+    padding-right: 10px;
+    padding-left: 10px;
+    .Content
+    {
+      flex-direction: column;
+      align-items: center;
+      .Description
+      {
+        text-align: center;
+        h1
+        {
+          font-size: 2rem;
+        }
+        p
+        {
+          font-size: 0.9rem;
+          line-height: 22px;
+        }
+        button
+        {
+          padding: 15px 50px 15px 50px;
+          font-size: 0.9rem;
+        }
+        h4
+        {
+          font-size: 1.2rem;
+        }
+        .Timer_Flex_content
+        {
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 20px;
+          .Timer
+          {
+            span
+            {
+              font-size: 1.5rem;
+              padding: 15px 10px 15px 10px;
+            }
+            p
+            {
+              font-size: 18px;
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+      .ProductsGrid
+      {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "Icons"
+        "Item1"
+        "step";
+        .Item2,
+        .Item3{
+          display: none;
+        }
+        .Icons
+        {
+          justify-content: center;
+          align-items: center;
+          margin-top: 20px;
+        }
+        .step
+        {
+          ul
+          {
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+          }
+          
+        }
+      }
+    }
+  }
+}

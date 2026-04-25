@@ -53,10 +53,10 @@
     }
     <!-- The hamburger menu -->
     <div class="HamburgerMenu">
-        <fa-icon [icon]="MenuOpen ? faXmark:faBars" (click)="IconChange()"></fa-icon>
+        <fa-icon [icon]="isMenuOpen ? faXmark:faBars" (click)="toggleMenu() "></fa-icon>
     </div>
      <!--Dynamic menu displayed on the phone-->
-     <ul class="MobileMenu" [class.HamburgerMenu]="MenuOpen">
+     <ul class="MobileMenu" [class.HamburgerMenu]="isMenuOpen">
          @if (IsLoggedIn) 
          {
             @for (item of LoggedInMenu; track item.link) 

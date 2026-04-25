@@ -115,10 +115,6 @@ nav
 
     @media screen and (max-width: 1024px) 
     {
-        h1
-        {
-            margin-left: 32px;
-        }
 
         .HamburgerMenu
         {
@@ -131,17 +127,16 @@ nav
         }
         .MobileMenu
         {
-            position: absolute;
-            background-color: var(--MobileMenuColor);
+            margin-top: 60px;
+            position: fixed;
             top: 60px;
-            left: 10;
+            left: 0;
             width: 100%;
-            overflow: hidden;
+            background-color: var(--MobileMenuColor);
         }
-
         .MobileMenu.open 
         {
-            max-height: 300px;
+            display: block;
         }
         
         .MobileMenu li:not(:last-child) 
