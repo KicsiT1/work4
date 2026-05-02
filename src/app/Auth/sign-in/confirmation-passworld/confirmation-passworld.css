@@ -1,0 +1,55 @@
+:host {
+  --SubmitTextHover:#5B86E5;
+  --SubmitBorderHover:#5B86E5;
+  --SubmitBackGHover:white;
+  --FormBottomBorder:rgb(192, 192, 192);
+}
+
+.ConfirmationPassworldPanel {
+  padding-right: 148px;
+  display: grid;
+}
+.ConfirmationPassworldPanel h1 {
+  font-size: 66.6px;
+  margin-bottom: 197.3px;
+}
+.ConfirmationPassworldPanel h2 {
+  font-size: 30px;
+  margin-bottom: 55px;
+}
+.ConfirmationPassworldPanel input {
+  min-width: 636px;
+  margin-bottom: 29px;
+  border: none;
+  border-bottom: 1px solid var(--FormBottomBorder);
+  padding: 7px 0px 7px;
+}
+.ConfirmationPassworldPanel input:focus {
+  outline: none;
+}
+.ConfirmationPassworldPanel .ConfPassButton {
+  cursor: pointer;
+  border: none;
+  margin: 0 auto;
+  display: block;
+  padding: 10px 216px 10px;
+  margin-bottom: 23px;
+  background-color: #5B86E5;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+}
+.ConfirmationPassworldPanel .ConfPassButton:hover {
+  border: 1px solid var(--SubmitBorderHover);
+  background-color: var(--SubmitBackGHover);
+  color: var(--SubmitTextHover);
+}
+.ConfirmationPassworldPanel .Error {
+  margin-bottom: 20px;
+}
+.ConfirmationPassworldPanel .Terms-Codnitions {
+  font-weight: normal;
+  margin: 0 auto;
+  display: block;
+  margin-top: 30px;
+}/*# sourceMappingURL=confirmation-passworld.css.map */

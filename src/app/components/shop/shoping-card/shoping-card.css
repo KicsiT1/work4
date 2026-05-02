@@ -1,0 +1,141 @@
+:host {
+  --SCTextColor:black;
+  --BBC:white;
+  --BCEnhancer:#F1F1F1;
+  --EnhancerPlusColor:black;
+  --EnhancerMinusColor:black;
+  --StrokeColor:rgb(159, 159, 159);
+  --BasketBottomBorderColor:rgb(159, 159, 159);
+}
+
+.ShoppingBasket {
+  box-shadow: -20px 0 10px rgba(0, 0, 0, 0.3);
+  height: 990px;
+  width: 741px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: var(--BBC);
+  z-index: 1000;
+}
+.ShoppingBasket .ShoppingBasketContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 33px 39px 76px 44px;
+}
+.ShoppingBasket .ShoppingBasketContent h1 {
+  color: var(--SCTextColor);
+}
+.ShoppingBasket .ShoppingBasketContent .SBCText {
+  display: flex;
+  align-items: center;
+  margin-bottom: 26px;
+  justify-content: space-between;
+}
+.ShoppingBasket .ShoppingBasketContent .SBCText fa-icon {
+  cursor: pointer;
+  font-size: 24px;
+}
+.ShoppingBasket .ShoppingBasketContent p {
+  font-size: 1.6rem;
+  margin-bottom: 67px;
+}
+.ShoppingBasket .BasketProducts {
+  flex: 1;
+  height: 50px;
+  overflow-y: auto;
+}
+.ShoppingBasket .BasketProducts .Product {
+  display: flex;
+  gap: 22px;
+  margin-bottom: 19px;
+}
+.ShoppingBasket .BasketProducts .Product .Pimg img {
+  width: 168px;
+  height: 225px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.ShoppingBasket .BasketProducts .Product .Pinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.ShoppingBasket .BasketProducts .Product .Pinfo .ProdName {
+  margin-top: 5px;
+}
+.ShoppingBasket .BasketProducts .Product .Pinfo span, .ShoppingBasket .BasketProducts .Product .Pinfo strong {
+  font-size: 22px;
+}
+.ShoppingBasket .BasketProducts .Product .Pinfo .ProductEnhancer {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 28px;
+  background-color: var(--BCEnhancer);
+  border-radius: 5px;
+}
+.ShoppingBasket .BasketProducts .Product .Pinfo .ProductEnhancer span {
+  font-size: 35.75px;
+  font-weight: bold;
+}
+.ShoppingBasket .BasketProducts .Product .Pinfo .ProductEnhancer .Minus {
+  cursor: pointer;
+  color: var(--EnhancerPlusColor);
+}
+.ShoppingBasket .BasketProducts .Product .Pinfo .ProductEnhancer .Plus {
+  cursor: pointer;
+  color: var(--EnhancerMinusColor);
+}
+.ShoppingBasket .BasketProducts .Product fa-icon {
+  margin-left: auto;
+  cursor: pointer;
+}
+.ShoppingBasket .BasketBottom {
+  background-color: white;
+  position: sticky;
+  bottom: 0;
+}
+.ShoppingBasket .BasketBottom .checkbox {
+  width: 650px;
+  display: flex;
+  align-items: center;
+}
+.ShoppingBasket .BasketBottom .Line {
+  margin-top: 21px;
+  height: 1px;
+  width: auto;
+  background-color: var(--StrokeColor);
+}
+.ShoppingBasket .BasketBottom input {
+  margin-right: 13px;
+  height: 32px;
+  width: 32px;
+}
+.ShoppingBasket .BasketBottom label {
+  font-size: 22px;
+}
+.ShoppingBasket .BasketBottom .SubTotal {
+  display: flex;
+  justify-content: space-between;
+}
+.ShoppingBasket .BasketBottom .SubTotal p {
+  margin-top: 45px;
+  margin-bottom: 29px;
+  font-weight: bold;
+  font-size: 22px;
+}
+.ShoppingBasket .BasketBottom button {
+  cursor: pointer;
+  margin: auto;
+  display: block;
+  padding: 25px 265px 25px 265px;
+  background-color: black;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.ShoppingBasket .BasketBottom Button:hover {
+  color: #b08484;
+}/*# sourceMappingURL=shoping-card.css.map */

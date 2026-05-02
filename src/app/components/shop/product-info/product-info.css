@@ -1,0 +1,316 @@
+:host {
+  --ProductNameColor:Black;
+  --ProductStarColor:Black;
+  --StarNumberSpenColor:Black;
+  --StarCircleColor:rgb(212, 212, 212);
+  --APriceColor:Black;
+  --DPriceColor:#666666;
+  --SAVEBColor:#DA3F3F;
+  --SAVESpanTextColor:white;
+  --ViewingNowColor:#8A8A8A;
+  --TimerSpanColor:#FF706B;
+  --DiscountTimerBColor:#FDEFEE;
+  --DiscountTimerBorderColor:#F8CCCC;
+  --EmptyLineColor:#DEDEDE;
+  --RedLineColor:#EF2D2D;
+  --SizeBcolor: white;
+  --SizeBorderColor:#EEEEEE;
+  --SizeTextColor:Black;
+  --ColorTextColor:Black;
+  --QuantityBordercolor:#EEEEEE;
+  --ButtonHoverColor:rgb(233, 233, 233);
+}
+
+.ProductContent {
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-top: 78px;
+  margin-bottom: 26px;
+  display: flex;
+  flex-direction: row;
+}
+.ProductContent .ProductImages {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.ProductContent .ProductImages .ImageCard {
+  width: 70px;
+  height: 90px;
+  padding: 6px;
+}
+.ProductContent .ProductImages .ImageCard img {
+  width: 58px;
+  height: 77px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.ProductContent .ProductImages .ImageCard:hover {
+  border: 1px solid black;
+}
+.ProductContent .ProductImages {
+  /*
+  .ImageCard.active
+  {
+      cursor: pointer;
+      border: 1px solid black;
+  }
+  */
+}
+.ProductContent .ProductCard {
+  margin-right: 80px;
+}
+.ProductContent .ProductCard .ProductImage img {
+  max-width: 491px;
+  height: 655px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.ProductContent .ProductInfo {
+  padding: 0px 15px 0px 15px;
+}
+.ProductContent .ProductInfo .StoreName {
+  font-size: 14px;
+  width: 585px;
+}
+.ProductContent .ProductInfo .ProductName {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ProductContent .ProductInfo .ProductName h6 {
+  font-size: 42px;
+  color: var(--ProductNameColor);
+}
+.ProductContent .ProductInfo .ProductName fa-icon {
+  cursor: pointer;
+  padding: 12px;
+  height: 20px;
+  width: 20px;
+  border: 1px solid var(--StarCircleColor);
+  border-radius: 50%;
+}
+.ProductContent .ProductInfo .ProductReview {
+  cursor: pointer;
+  margin-top: 2px;
+}
+.ProductContent .ProductInfo .ProductReview span {
+  margin-left: 8px;
+  color: var(--StarNumberSpenColor);
+  font-weight: bold;
+}
+.ProductContent .ProductInfo .ProductReview fa-icon {
+  color: var(--ProductStarColor);
+}
+.ProductContent .ProductPriceInfo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 20px 0px 30px 0px;
+}
+.ProductContent .ProductPriceInfo .APrice {
+  font-size: 1.5rem;
+  color: var(--APriceColor);
+  font-weight: bold;
+}
+.ProductContent .ProductPriceInfo .DPrice {
+  font-size: 1rem;
+  color: var(--DPriceColor);
+  font-weight: bold;
+  text-decoration: line-through;
+}
+.ProductContent .ProductPriceInfo .Save {
+  font-size: 11px;
+  padding: 3px 10px 3px 10px;
+  background-color: var(--SAVEBColor);
+  color: var(--SAVESpanTextColor);
+  border-radius: 10px;
+}
+.ProductContent .CurrentViewership {
+  display: flex;
+  margin: 30px 0px 30px;
+}
+.ProductContent .CurrentViewership fa-icon {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}
+.ProductContent .CurrentViewership p {
+  color: var(--ViewingNowColor);
+}
+.ProductContent .DiscountTimer {
+  margin-bottom: 29px;
+}
+.ProductContent .DiscountTimer .DiscountTimerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 21px 11px 14px;
+  background-color: var(--DiscountTimerBColor);
+  border: 1px solid var(--DiscountTimerBorderColor);
+}
+.ProductContent .DiscountTimer .DiscountTimerContent span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--TimerSpanColor);
+}
+.ProductContent .LetfInStock {
+  margin-bottom: 30px;
+}
+.ProductContent .LetfInStock .EmptyLine {
+  margin-top: 12px;
+  width: 100%;
+  height: 5px;
+  background-color: var(--EmptyLineColor);
+}
+.ProductContent .LetfInStock .EmptyLine .RedLine {
+  height: 100%;
+  width: 5%;
+  background-color: var(--RedLineColor);
+}
+.ProductContent .ProductSizes p {
+  font-weight: bold;
+}
+.ProductContent .ProductSizes ul {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  margin-bottom: 14px;
+}
+.ProductContent .ProductSizes ul li {
+  color: var(--SizeTextColor);
+  font-weight: bold;
+  background-color: var(--SizeBcolor);
+  padding: 9px 14px 9px 14px;
+  border-radius: 5px;
+  border: 1px solid var(--SizeBorderColor);
+}
+.ProductContent .ProductSizes ul li:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+.ProductContent .ProductSizes ul li.active {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+.ProductContent .ProductColors {
+  margin-bottom: 29px;
+}
+.ProductContent .ProductColors p {
+  font-weight: bold;
+  color: var(--ColorTextColor);
+  margin-bottom: 12px;
+}
+.ProductContent .ProductColors ul {
+  display: flex;
+  gap: 10px;
+}
+.ProductContent .ProductColors ul li {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+.ProductContent .ProductColors ul li .Color {
+  height: 38px;
+  width: 38px;
+  background-color: chartreuse;
+  border-radius: 50%;
+}
+.ProductContent .ProductColors ul li .Color.active {
+  height: 30px;
+  width: 30px;
+  background-color: chartreuse;
+  margin: 4px;
+  border-radius: 50%;
+}
+.ProductContent .ProductAddToCard p {
+  font-weight: bold;
+  margin-bottom: 13px;
+}
+.ProductContent .ProductAddToCard .Quantity-AddToCard {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 67px;
+}
+.ProductContent .ProductAddToCard .Quantity-AddToCard .Quantity span {
+  cursor: pointer;
+}
+.ProductContent .ProductAddToCard .Quantity-AddToCard .Quantity {
+  width: 128px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  border: 1px solid var(--QuantityBordercolor);
+  padding: 10px;
+}
+.ProductContent .ProductAddToCard .Quantity-AddToCard button {
+  cursor: pointer;
+  padding: 11px 179px 11px 179px;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+}
+.ProductContent .ProductAddToCard .Quantity-AddToCard button:hover {
+  background-color: var(--ButtonHoverColor);
+}
+.ProductContent .ProductDetails1 {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--SizeBorderColor);
+}
+.ProductContent .ProductDetails1 span {
+  margin-bottom: 12px;
+  color: var(--SizeTextColor);
+  cursor: pointer;
+}
+.ProductContent .ProductDetails1 span fa-icon {
+  height: 20px;
+  width: 20px;
+}
+.ProductContent .ProductDelivery {
+  margin-bottom: 30px;
+}
+.ProductContent .ProductDelivery p {
+  font-weight: bold;
+}
+.ProductContent .ProductDelivery .EstimatedD fa-icon {
+  height: 20px;
+  width: 20px;
+}
+.ProductContent .ProductDelivery .EstimatedD span {
+  font-weight: normal;
+}
+.ProductContent .ProductDelivery .FreeShipping fa-icon {
+  height: 20px;
+  width: 20px;
+}
+.ProductContent .ProductDelivery .FreeShipping span {
+  font-weight: bold;
+}
+.ProductContent .Payment {
+  background-color: var(--SizeBorderColor);
+  border-radius: 5px;
+}
+.ProductContent .Payment .PaymentOptions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  padding: 20px 133px 21px 133px;
+}
+.ProductContent .Payment .PaymentOptions fa-icon {
+  width: 30px;
+}
+.ProductContent .Payment p {
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 21px;
+}/*# sourceMappingURL=product-info.css.map */

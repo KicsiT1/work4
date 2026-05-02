@@ -1,0 +1,158 @@
+:host {
+  --PriceTextColor:#8A8A8A;
+  --SizeTextANDBoxColor:#8A8A8A;
+}
+
+.filter .FiltersContainer {
+  max-width: 322px;
+}
+.filter .FiltersContainer .FText {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 33px;
+}
+.filter .Size p {
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.filter .Size p fa-icon {
+  float: right;
+}
+.filter .Size ul {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+  width: 60%;
+}
+.filter .Size ul li {
+  border: 1px solid var(--SizeTextANDBoxColor);
+  border-radius: 5px;
+  text-align: center;
+  padding: 8px 12px 5px 16px;
+  color: var(--SizeTextANDBoxColor);
+}
+.filter .Size ul li:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.filter .Size ul li:last-child {
+  padding: 8px 10px 5px 10px;
+}
+.filter .Size li.active {
+  background-color: rgb(0, 233, 23);
+}
+.filter .Colors p {
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.filter .Colors p fa-icon {
+  float: right;
+}
+.filter .Colors ul {
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 33px;
+}
+.filter .Colors ul li {
+  width: 30px;
+  height: 30px;
+  background-color: blueviolet;
+  border-radius: 50%;
+  border: 1px solid rgb(196, 196, 196);
+}
+.filter .Price p {
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.filter .Price p fa-icon {
+  float: right;
+}
+.filter .Price ul li {
+  margin-bottom: 10px;
+  color: var(--PriceTextColor);
+}
+.filter .Price ul li:hover {
+  text-decoration: underline;
+}
+.filter .Price li.active {
+  text-decoration: underline;
+}
+.filter .Brands p {
+  cursor: pointer;
+  margin-top: 23px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+.filter .Brands p fa-icon {
+  float: right;
+}
+.filter .Brands .BrandsContent span {
+  display: inline-block;
+  padding: 0px 10px 10px 0px;
+  cursor: pointer;
+}
+.filter .Brands .BrandsContent {
+  margin-bottom: 13px;
+}
+.filter .Brands span:hover {
+  text-decoration: underline;
+}
+.filter .Brands .BrandsText {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.filter .Brands .BrandsContent.active {
+  display: none;
+}
+.filter .Brands span.active {
+  text-decoration: underline;
+}
+.filter .Collections p {
+  cursor: pointer;
+  margin-top: 33px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.filter .Collections p fa-icon {
+  float: right;
+}
+.filter .Collections ul li {
+  margin-bottom: 10px;
+}
+.filter .Collections ul li:hover {
+  text-decoration: underline;
+}
+.filter .Collections .CollectionsText {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.filter .Collections ul.active {
+  display: none;
+}
+.filter .Collections li.Active {
+  text-decoration: underline;
+}
+.filter .Tags p {
+  margin-top: 39px;
+  margin-bottom: 18px;
+  font-weight: bold;
+}
+.filter .Tags p fa-icon {
+  float: right;
+}
+.filter .Tags .TagsContent span {
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 12px;
+  margin-bottom: 10px;
+}
+.filter .Tags span.active {
+  text-decoration: underline;
+}/*# sourceMappingURL=product-filter.css.map */

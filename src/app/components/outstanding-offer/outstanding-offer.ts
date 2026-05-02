@@ -8,7 +8,8 @@ import { Component } from '@angular/core';
 })
 export class OutstandingOffer {
   // Section main img
-  readonly OutstandingOfferImg:string="/public/assets/images/outstanding-offer/image.png";
+  readonly OutstandingOfferImg1:string="/public/assets/images/outstanding-offer/image.png";
+  readonly OutstandingOfferImg2:string="/public/assets/images/outstanding-offer/image2.png";
   // Bannner imgs paths
   readonly HighQualityImg:string="/public/assets/images/outstanding-offer/feature4.png";
   readonly WarranyProtectionImg:string="/public/assets/images/outstanding-offer/feature1.png";

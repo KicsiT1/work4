@@ -1,0 +1,125 @@
+:host {
+  --H1Color:#484848;
+  --Acolor:#484848;
+  --HoverColor:#b08484;
+  --MobileMenuColor:white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0px auto;
+  margin-top: 30px;
+  position: relative;
+}
+nav h1 {
+  font-size: 3.5rem;
+}
+nav h1 a {
+  text-decoration: none;
+  color: var(--H1Color);
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 58px;
+  margin-right: 10px;
+}
+nav ul a {
+  font-size: 1rem;
+  color: var(--Acolor);
+  font-weight: bold;
+}
+nav .Buttons .Basket {
+  max-width: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+nav .Buttons .Basket div {
+  height: 25px;
+  width: 25px;
+  padding: 5px;
+  background-color: red;
+  border-radius: 50%;
+}
+nav .Buttons .Basket div p {
+  color: white;
+}
+nav .Buttons .Basket fa-icon {
+  font-size: 20px;
+}
+nav .Buttons .Basket fa-icon:hover {
+  cursor: pointer;
+}
+nav .Buttons .SignUp {
+  margin-left: 3.5rem;
+  background-color: black;
+  color: white;
+  padding: 20px 46px 20px 46px;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+nav .Buttons > a:hover {
+  color: var(--HoverColor);
+}
+nav ul li a:hover {
+  color: var(--HoverColor);
+}
+nav .MobileMenu {
+  display: none;
+}
+nav .HamburgerMenu {
+  display: none;
+  font-size: 32px;
+  cursor: pointer;
+}
+nav .HamburgerMenu:hover {
+  color: var(--HoverColor);
+}
+nav div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav div fa-icon {
+  padding: 12px 17px 12px 17px;
+}
+@media screen and (max-width: 1024px) {
+  nav .HamburgerMenu {
+    display: block;
+  }
+  nav ul {
+    display: none;
+  }
+  nav .MobileMenu {
+    margin-top: 60px;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--MobileMenuColor);
+  }
+  nav .MobileMenu.open {
+    display: block;
+  }
+  nav .MobileMenu li:not(:last-child) {
+    padding: 1rem 0rem 1rem 0rem;
+    border-bottom: 1px solid #444;
+    text-align: center;
+  }
+  nav .MobileMenu li:last-child {
+    margin: 16px;
+    text-align: center;
+  }
+  nav .MobileMenu a {
+    color: var(--Acolor);
+  }
+  nav .Buttons {
+    margin-top: 16px;
+    margin-bottom: 35px;
+  }
+}/*# sourceMappingURL=nav-bar.css.map */

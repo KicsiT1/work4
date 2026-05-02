@@ -1,0 +1,176 @@
+:host {
+  --SigUpHoverColor:#b08484;
+  --SignUpWithButtons:#5B86E5;
+  --SignUpWithButtonsText:Black;
+  --SignUpWithButtonsHoverBackground:#5B86E5;
+  --SignUpWithButtonsHoverText:White;
+  --SignUpWithHoverText:white;
+  --SignUpContainerBorder:rgb(192, 192, 192);
+  --InputBorder:rgb(192, 192, 192);
+  --SigninB: black;
+  --SignupText:white;
+  --SignupBorder:#5B86E5;
+  --SignupText:#ffffff;
+  --SignupBColor:rgb(0, 0, 0);
+  --SignupHoverBColor:#5B86E5;
+  --SignupHoverText:white;
+  --FLoginWorldText:#5B86E5;
+}
+
+.SignUpPanel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.SignUpPanel .SignUpContainer {
+  border: 1px solid var(--SignUpContainerBorder);
+  border-radius: 0px 30px 30px 0px;
+  padding-right: 212px;
+  display: flex;
+  flex-direction: row;
+  gap: 93px;
+}
+.SignUpPanel .SignUpContainer .BigImg img {
+  display: block;
+  height: 1077px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.SignUpPanel .SignUpContainer .SignUp {
+  min-width: 666px;
+}
+.SignUpPanel .SignUpContainer .SignUp .Text h1 {
+  font-size: 66.6px;
+  margin-top: 94.7px;
+  margin-bottom: 82.3px;
+}
+.SignUpPanel .SignUpContainer .SignUp .Text h2 {
+  font-size: 30px;
+  margin-bottom: 29px;
+}
+.SignUpPanel .SignUpContainer .SignUp .SignUpOptions {
+  display: flex;
+  gap: 64px;
+}
+.SignUpPanel .SignUpContainer .SignUp .SignUpOptions .SignUpWithGoogle, .SignUpPanel .SignUpContainer .SignUp .SignUpOptions .SignUpWithEmail {
+  cursor: pointer;
+  display: flex;
+  gap: 13px;
+  width: 100%;
+  border: 1px solid var(--SignUpWithButtons);
+  border-radius: 8px;
+  padding: 8px 32px 7px 31px;
+  align-items: center;
+}
+.SignUpPanel .SignUpContainer .SignUp .SignUpOptions .SignUpWithGoogle fa-icon, .SignUpPanel .SignUpContainer .SignUp .SignUpOptions .SignUpWithEmail fa-icon {
+  font-size: 36px;
+}
+.SignUpPanel .SignUpContainer .SignUp .SignUpOptions .SignUpWithGoogle a, .SignUpPanel .SignUpContainer .SignUp .SignUpOptions .SignUpWithEmail a {
+  text-decoration: none;
+  display: block;
+  color: var(--SignupWithButtonsText);
+}
+.SignUpPanel .SignUpContainer .SignUp .SignUpOptions .SignUpWithGoogle:hover, .SignUpPanel .SignUpContainer .SignUp .SignUpOptions .SignUpWithEmail:hover {
+  background-color: var(--SignupHoverBColor);
+  color: var(--SignUpWithButtonsHoverText);
+}
+.SignUpPanel .SignUpContainer .SignUp .SignUpOptions .SignUpWithGoogle:hover a, .SignUpPanel .SignUpContainer .SignUp .SignUpOptions .SignUpWithEmail:hover a {
+  color: var(--SignupWithHoverText);
+}
+.SignUpPanel .SignUpContainer .SignUp .Inputs {
+  margin-bottom: 44px;
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "Text                   Text" "FirstName              LastName" "FirstNameError         LastNameError" "EmailAddress           PhoneNumber" "EmailAddressError      PhoneNumberError" "Password               ConfirmPassword" "PasswordError          ConfirmPasswordError" "ConfirmPasswordMismatch ConfirmPasswordMismatch";
+}
+.SignUpPanel .SignUpContainer .SignUp .Inputs input {
+  padding: 7px;
+  border: none;
+  border-bottom: 1px solid var(--InputBorder);
+}
+.SignUpPanel .SignUpContainer .SignUp .Inputs input:focus {
+  outline: none;
+}
+.SignUpPanel .SignUpContainer .SignUp .Inputs .FirstName {
+  grid-area: FirstName;
+}
+.SignUpPanel .SignUpContainer .SignUp .Inputs .LastName {
+  grid-area: LastName;
+}
+.SignUpPanel .SignUpContainer .SignUp .Inputs .EmailAddress {
+  grid-area: EmailAddress;
+}
+.SignUpPanel .SignUpContainer .SignUp .Inputs .PhoneNumber {
+  grid-area: PhoneNumber;
+}
+.SignUpPanel .SignUpContainer .SignUp .Inputs .Password {
+  grid-area: Password;
+}
+.SignUpPanel .SignUpContainer .SignUp .Inputs .ConfirmPassword {
+  grid-area: ConfirmPassword;
+}
+.SignUpPanel .SignUpContainer .SignUp .Inputs .FirstNameError {
+  grid-area: FirstNameError;
+  color: red;
+}
+.SignUpPanel .SignUpContainer .SignUp .Inputs .LastNameError {
+  grid-area: LastNameError;
+  color: red;
+}
+.SignUpPanel .SignUpContainer .SignUp .Inputs .EmailAddressError {
+  grid-area: EmailAddressError;
+  color: red;
+}
+.SignUpPanel .SignUpContainer .SignUp .Inputs .PhoneNumberError {
+  grid-area: PhoneNumberError;
+  color: red;
+}
+.SignUpPanel .SignUpContainer .SignUp .Inputs .PasswordError {
+  grid-area: PasswordError;
+  color: red;
+}
+.SignUpPanel .SignUpContainer .SignUp .Inputs .ConfirmPasswordError {
+  grid-area: ConfirmPasswordError;
+  color: red;
+}
+.SignUpPanel .SignUpContainer .SignUp .Inputs .ConfirmPasswordMismatch {
+  grid-area: ConfirmPasswordMismatch;
+  color: red;
+}
+.SignUpPanel .SignUpContainer .SignUp .Inputs .Text {
+  grid-area: Text;
+  margin: 0 auto;
+  font-size: 30px;
+  margin-top: 84px;
+  margin-bottom: 64px;
+}
+.SignUpPanel .SignUpContainer .SignUp .SignUpButton {
+  margin: 0 auto;
+  display: block;
+  padding: 10px 214px 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--SignupBColor);
+  color: var(--SignupText);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+.SignUpPanel .SignUpContainer .SignUp .SignUpButton:hover {
+  color: var(--SigUpHoverColor);
+}
+.SignUpPanel .SignUpContainer .SignUp p {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
+.SignUpPanel .SignUpContainer .SignUp p a {
+  color: var(--FLoginWorldText);
+  text-decoration: none;
+  font-weight: bold;
+}
+.SignUpPanel .SignUpContainer .SignUp .TermsConditions {
+  font-weight: normal;
+}/*# sourceMappingURL=sign-up.css.map */

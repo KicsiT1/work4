@@ -1,0 +1,293 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Digital-7";
+  src: url("/public/assets/fonts/digital-7.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+:host {
+  --H1Color:#484848;
+  --Pcolor:#8A8A8A;
+  --ButtonColor:black;
+  --ButtonTextColor:White;
+  --H4Color:#484848;
+  --HoverColor: #b08484;
+}
+
+section {
+  background: linear-gradient(90deg, #F2EFEA 0%, #F7F6F2 50%, #FFFFFF 100%);
+}
+section .Content {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 165px;
+  padding-bottom: 145px;
+}
+section .Content .Description h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: var(--H1Color);
+}
+section .Content .Description p {
+  font-size: 1rem;
+  line-height: 26px;
+  margin-bottom: 40px;
+  color: var(--Pcolor);
+}
+section .Content .Description button {
+  padding: 20px 70px 20px 70px;
+  border: none;
+  border-radius: 10px;
+  color: var(--ButtonTextColor);
+  background-color: var(--ButtonColor);
+  margin-bottom: 70px;
+  font-size: 1rem;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.35);
+  font-weight: bold;
+}
+section .Content .Description button:hover {
+  cursor: pointer;
+  color: var(--HoverColor);
+}
+section .Content .Description h4 {
+  font-size: 1.5rem;
+  color: var(--H4Color);
+}
+section .Content .Timer_Flex_content {
+  display: flex;
+  gap: 30px;
+  margin-top: 37px;
+}
+section .Content .Timer_Flex_content .Timer span {
+  font-size: 2rem;
+  padding: 22px 12px 22px 12px;
+  background-color: white;
+  border-radius: 10px;
+  font-family: "Digital-7", monospace;
+  letter-spacing: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+section .Content .Timer_Flex_content .Timer p {
+  text-align: center;
+  margin: 0;
+  margin-top: 37px;
+  font-size: 24px;
+}
+section .Content .ProductsGrid {
+  display: grid;
+  grid-template-columns: 112px 404px 372px 372px;
+  grid-template-areas: "Icons Item1 Item2 Item3" "Icons Item1 step  step";
+  gap: 24px;
+  overflow-x: hidden;
+}
+section .Content .ProductsGrid .Icons {
+  grid-area: Icons;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 16px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+section .Content .ProductsGrid .Icons fa-icon:hover {
+  cursor: pointer;
+}
+section .Content .ProductsGrid .Icons fa-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: white;
+  border-radius: 50%;
+  font-size: 14px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+section .Content .ProductsGrid .Item1 {
+  grid-area: Item1;
+  height: 582px;
+  background-color: #8A8A8A;
+}
+section .Content .ProductsGrid .Item1 .Product {
+  position: relative;
+}
+section .Content .ProductsGrid .Item1 .Product img {
+  width: 100%;
+  height: 582px;
+  display: block;
+}
+section .Content .ProductsGrid .Item1 .ProductInfo {
+  position: absolute;
+  top: 70%;
+  left: 5%;
+  width: 217px;
+  height: 150px;
+  background-color: white;
+}
+section .Content .ProductsGrid .Item1 .ProductInfo p:first-child {
+  font-size: 1rem;
+  padding-top: 32px;
+  padding-right: 42px;
+  padding-left: 26px;
+  text-align: center;
+}
+section .Content .ProductsGrid .Item1 .ProductInfo p:last-child {
+  font-size: 1.5rem;
+  padding-right: 42px;
+  padding-left: 26px;
+  text-align: center;
+}
+section .Content .ProductsGrid .Item2 {
+  grid-area: Item2;
+  height: 486px;
+}
+section .Content .ProductsGrid .Item2 img {
+  display: block;
+  height: 486px;
+  width: 100%;
+}
+section .Content .ProductsGrid .Item2 {
+  background-color: #8A8A8A;
+}
+section .Content .ProductsGrid .Item3 {
+  grid-area: Item3;
+  height: 486px;
+}
+section .Content .ProductsGrid .Item3 img {
+  display: block;
+  height: 486px;
+  width: 100%;
+}
+section .Content .ProductsGrid .Item3 {
+  background-color: #8A8A8A;
+}
+section .Content .ProductsGrid .step {
+  grid-area: step;
+}
+section .Content .ProductsGrid .step ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+section .Content .ProductsGrid .step li {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: #b3b3b3; /* szürke pont */
+  position: relative;
+}
+section .Content .ProductsGrid .step li.active {
+  width: 27px;
+  height: 27px;
+  background-color: transparent;
+  border: 2px solid #444444;
+}
+section .Content .ProductsGrid .step li.active::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: black;
+}
+section .Content .ProductsGrid .step li:not(.active) {
+  border: none;
+  margin-top: 8px;
+}
+section .Content .ProductsGrid .step ul li:hover {
+  cursor: pointer;
+}
+
+.disabled-icon {
+  opacity: 0.4;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 890px) and (min-width: 768px) {
+  section {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  section .Content .ProductsGrid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "Item1 Item1" "Icons step";
+  }
+  section .Content .ProductsGrid .Item2,
+  section .Content .ProductsGrid .Item3 {
+    display: none;
+  }
+  section .Content .ProductsGrid .Icons {
+    justify-content: center;
+    align-items: center;
+  }
+  section .Content .ProductsGrid .step ul {
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  section {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  section .Content {
+    flex-direction: column;
+    align-items: center;
+  }
+  section .Content .Description {
+    text-align: center;
+  }
+  section .Content .Description h1 {
+    font-size: 2rem;
+  }
+  section .Content .Description p {
+    font-size: 0.9rem;
+    line-height: 22px;
+  }
+  section .Content .Description button {
+    padding: 15px 50px 15px 50px;
+    font-size: 0.9rem;
+  }
+  section .Content .Description h4 {
+    font-size: 1.2rem;
+  }
+  section .Content .Description .Timer_Flex_content {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  section .Content .Description .Timer_Flex_content .Timer span {
+    font-size: 1.5rem;
+    padding: 15px 10px 15px 10px;
+  }
+  section .Content .Description .Timer_Flex_content .Timer p {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  section .Content .ProductsGrid {
+    grid-template-columns: 1fr;
+    grid-template-areas: "Icons" "Item1" "step";
+  }
+  section .Content .ProductsGrid .Item2,
+  section .Content .ProductsGrid .Item3 {
+    display: none;
+  }
+  section .Content .ProductsGrid .Icons {
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  section .Content .ProductsGrid .step ul {
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}/*# sourceMappingURL=current-offer.css.map */

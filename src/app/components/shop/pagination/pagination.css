@@ -1,0 +1,31 @@
+:host {
+  --ActiveColor:#f3f3f3;
+}
+
+.Pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.Pagination p {
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  gap: 8px;
+}
+
+ul li {
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+}
+ul li p {
+  padding: 14px 17px 14px;
+}
+
+li.active {
+  background-color: var(--ActiveColor);
+}/*# sourceMappingURL=pagination.css.map */

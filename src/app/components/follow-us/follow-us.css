@@ -1,0 +1,23 @@
+.TextContent {
+  max-width: 614px;
+  margin: 0 auto;
+  margin-top: 150px;
+  margin-bottom: 100px;
+}
+.TextContent h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.TextContent p {
+  text-align: center;
+  line-height: 1.5rem;
+}
+
+.ImgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  margin-bottom: 150px;
+}/*# sourceMappingURL=follow-us.css.map */

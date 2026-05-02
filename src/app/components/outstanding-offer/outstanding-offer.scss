@@ -1,33 +1,12 @@
 :host{--SBColor:#DADADA;--PTextColor:#767676;--HoverColor:#b08484;}
 section
 {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    background-color: var(--SBColor);
-    .LeftSide
-    {
-        flex: 1.2;
-        position: relative;
-        img
-        {
-            display: block;
-            max-width: 100%; 
-            height: auto;
-        }
-        .BlackLine
-        {
-            position: absolute;
-            clip-path: polygon(100% 0%, 99% 0, 82% 100%, 83% 100%);
-            background-color: black;
-            width: 100%;              
-            height: 100%;  
-            top: 0;
-        }
-    }
+   display: flex;
+   gap: 60px;
+   background-color: var(--SBColor);
+   .img2{display: none;}
     .RightSide
     {
-        flex: 1;
         margin-top: 60px;
         margin-bottom: 60px;
         .CollectionType
@@ -87,6 +66,7 @@ section
         }
     }
 }
+
 .InfoBanner
 {
     display: flex;
@@ -99,4 +79,141 @@ section
     box-shadow: 0 8px 15px -10px rgba(0, 0, 0, 0.25);
     background-color: white;
  
+}
+
+
+@media screen and (max-width:320px)
+{
+    section{
+        .RightSide
+        {
+            .CollectionType
+            {
+                margin-bottom: 10px;
+                font-weight: bold;
+                font-size: 2rem;
+            }
+            .CollectionName
+            {
+                font-size: 2rem;
+                margin-bottom: 10px;
+            }
+            .CollectionDescription
+            {
+                text-decoration: underline;
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+            .CollectionMainText
+            {
+                line-height: 1.5rem;
+                margin-bottom: 10px;
+            }
+            .CollectionSize
+            {
+                margin-bottom: 10px;
+                font-weight: bold;
+                color: var(--PTextColor);
+            }
+            .CollectionSizeM
+            {
+                color: white;
+                padding: 6px 20px 6px 19px;
+                background-color: black;
+                border-radius: 10px;
+            }
+            .Price
+            {
+                text-align: center;
+                font-size: 1.8rem;
+                margin-bottom: 10px;
+            }
+            button
+            {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1214px)
+{
+    section
+    {
+        .RightSide
+        {
+            .CollectionType
+            {
+                text-align: center;
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+            .CollectionName
+            {
+                text-align: center;
+                margin-bottom: 10px;
+            }
+            .CollectionDescription
+            {
+                text-align: center;
+                text-decoration: underline;
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+            .CollectionMainText
+            {
+                line-height: 1.5rem;
+                margin-bottom: 10px;
+                font-size: 1.2rem;
+            }
+            .CollectionSize
+            {
+                margin-bottom: 10px;
+                font-weight: bold;
+                color: var(--PTextColor);
+            }
+            .CollectionSizeM
+            {
+                color: white;
+                padding: 6px 20px 6px 19px;
+                background-color: black;
+                border-radius: 10px;
+            }
+            .Price
+            {
+                text-align: center;
+            }
+            button
+            {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1214px)
+{
+    section
+    {
+     padding: 0px 10px 0px 10px;
+     flex-wrap: wrap;
+     justify-content: center;
+    }
+    .InfoBanner
+    {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+@media screen and (max-width:1440px)
+{
+    section
+    {
+        gap: 20px;
+        padding-right: 30px;
+        .img1{display: none;}
+        .img2{display: block; width: 100%;height: auto;padding-left: 30px;}
+    }
 }

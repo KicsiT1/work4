@@ -1,0 +1,80 @@
+:host {
+  --SBColor:#DADADA;
+  --PTextColor:#767676;
+  --HoverColor:#b08484;
+}
+
+section {
+  display: flex;
+  gap: 60px;
+}
+section .img2 {
+  display: none;
+}
+section .RightSide {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+section .RightSide .CollectionType {
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: var(--PTextColor);
+}
+section .RightSide .CollectionName {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+section .RightSide .CollectionDescription {
+  text-decoration: underline;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+section .RightSide .CollectionMainText {
+  display: flex;
+  line-height: 1.5rem;
+  margin-bottom: 20px;
+}
+section .RightSide .CollectionSize {
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: var(--PTextColor);
+}
+section .RightSide .CollectionSizeM {
+  color: white;
+  padding: 6px 20px 6px 19px;
+  background-color: black;
+  border-radius: 10px;
+}
+section .RightSide .Price {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+section .RightSide button {
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  padding: 20px 70px 20px;
+  color: white;
+  background-color: black;
+  font-weight: bold;
+}
+section .RightSide button:hover {
+  color: var(--HoverColor);
+}
+
+.InfoBanner {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 72px;
+  padding-bottom: 72px;
+  box-shadow: 0 8px 15px -10px rgba(0, 0, 0, 0.25);
+  background-color: white;
+}
+
+@media screen and (max-width: 925px) {
+  section {
+    flex-wrap: wrap;
+  }
+}/*# sourceMappingURL=outstanding-offer.css.map */
