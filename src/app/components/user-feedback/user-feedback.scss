@@ -64,14 +64,15 @@ section
 {
     display: flex;
     transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    padding: 60px 0;    
-
+    padding: 60px 0;   
 }
+
 .UFBCard
 {
     display: flex;
     gap: 80px;
     justify-content: center;
+    flex-wrap: wrap;
     background-color: var(--CardBColor);
     border-radius: 12px;
     padding: 70px 50px 70px 70px;
@@ -123,4 +124,16 @@ section
     transform: scale(1.1); 
     opacity: 1;
     z-index: 10;   
+}
+
+@media screen and (max-width:1440px)
+{
+    .TextContent
+    {
+        h2
+        {
+            font-size: 1.9rem;
+            margin-bottom: 20px;
+        }
+    }
 }

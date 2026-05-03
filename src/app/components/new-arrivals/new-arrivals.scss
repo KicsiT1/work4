@@ -146,38 +146,19 @@ section
        color:var(--HoverColor);
      }
 }
+
 .PStars fa-icon  
 {
     color: var(--ProductStarColor);
 }
 
-/*
-@media screen and (max-width:768px)
-{
-    section
-    {
-        .ProductItems
-        {
-            justify-content: center;
-        }
-
-        .ProductItems article
-        {
-            flex: 1 1 60%;
-            max-width: 60%;
-        }
-    }
-}
-*/
-
 @media screen and (max-width:1024px)
 {
     section
     {
-        padding: 0px 10px 0px 10px;
         .ProductItems
         {
-            justify-content: center;
+            gap: 3px;
         }
     }
 }

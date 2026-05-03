@@ -14,4 +14,5 @@ export const routes: Routes =
     { path: 'Purchasing-product', component: Purchasingproducts },
     { path: 'signin', component: signin },
     { path: 'signup', component: signup },
+    /*{ path: '**' },*/
 ];
