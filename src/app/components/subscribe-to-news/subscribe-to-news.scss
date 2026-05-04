@@ -45,3 +45,54 @@
     }
     button:hover{color: var(--HoverColor);}
 }
+
+
+@media screen and (max-width:375px)
+{
+    .TextContent
+    {
+        h2
+        {
+            font-size: 1.5rem;
+        }
+        p{font-size: 1.3rem;}
+         input{font-size: 1.5rem;}
+    }
+}
+
+@media screen and (max-width:768px)
+{
+    .FlexContent{flex-wrap: wrap;}
+}
+
+
+@media screen and (max-width:1024px)
+{
+    .SubscribeToNews
+    {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .FlexContent
+    {
+        gap: 20px;
+        .IMG1,.IMG2
+        {
+            display: flex;
+            justify-content: center;
+            img
+            {
+                width: 100%;
+                height: auto;
+            }
+        }
+       
+    }
+    .TextContent
+    {
+        h2
+        {
+            font-size: 2rem;
+        }
+    }
+}
