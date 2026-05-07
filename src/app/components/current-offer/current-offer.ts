@@ -22,8 +22,10 @@ import { MonthlySalesModel } from '../../models/MonthlySales.model';
 })
 
 export class CurrentOffer implements OnInit,OnDestroy{
+
   protected NextIndex:number=0;
   protected NextMonth:number=0;
+  readonly CurrentMonth = new Date().getMonth();
   // This part would be better to convert into a separate 
   // class later because the countdown timer is not 
   // only displayed here.
@@ -53,14 +55,13 @@ export class CurrentOffer implements OnInit,OnDestroy{
   NextM(index: number) 
   {
     const next = this.NextMonth + index;
-
     if (next >= 0 && next <= 11) 
     {
       this.NextMonth = next;
       this.NextIndex = 0;
-      this.setTargetDateForMonth(this.NextMonth);
     }
   }
+  
   setTargetDateForMonth(monthIndex: number)
   {
     const now = new Date();
@@ -120,9 +121,7 @@ export class CurrentOffer implements OnInit,OnDestroy{
   }
   // initialize the functions
   ngOnInit() {
-    const currentMonth = new Date().getMonth();
-
-    this.NextMonth = currentMonth;
+    this.NextMonth = this.CurrentMonth;
     this.NextIndex = 0;
     this.productService.GetMonthlySalesData().subscribe({
       next: (data) => {this.MonthlySalesItems = data; },

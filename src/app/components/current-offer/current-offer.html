@@ -9,7 +9,7 @@
                 Scelerisque duis ultrices sollicitudin 
             </p>
             <button>Buy Now</button>
-            @if (Distance > 0) 
+            @if (NextMonth === CurrentMonth) 
             {
             <h4>Hurry, Before It’s Too Late!</h4>
             <div class="Timer_Flex_content">
@@ -46,7 +46,7 @@
                 
     <div class="Icons">
          <fa-icon (click)="NextM(-1)" [icon]="faAngleLeft"  [class.disabled-icon]="NextMonth===0"></fa-icon>
-         <fa-icon (click)="NextM(1)" [icon]="faAngleRight"  [class.disabled-icon]="NextMonth===11 || Distance > 0"></fa-icon>
+         <fa-icon (click)="NextM(1)" [icon]="faAngleRight"  [class.disabled-icon]="NextMonth===CurrentMonth"></fa-icon>
     </div>
     <!--The 3 product cards-->
     <div class="Item Item1">
