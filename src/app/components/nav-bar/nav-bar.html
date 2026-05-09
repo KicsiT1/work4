@@ -54,6 +54,20 @@
     <!-- The hamburger menu -->
     <div class="HamburgerMenu">
         <fa-icon [icon]="isMenuOpen ? faXmark:faBars" (click)="toggleMenu() "></fa-icon>
+
+        <div class="Basket">
+            @if(ShoppingcardService.ProductItems.length!=0)
+            {
+            <div>
+                <p>{{ShoppingcardService.ProductItems.length}}</p>
+            </div>
+            }
+            <fa-icon (click)="OpenShoppingCard()" [icon]="faBasketShopping"></fa-icon>
+            @if(ShoppingCard)
+            {
+            <app-shoping-card></app-shoping-card>
+            }
+        </div>
     </div>
      <!--Dynamic menu displayed on the phone-->
      <ul class="MobileMenu" [class.HamburgerMenu]="isMenuOpen">

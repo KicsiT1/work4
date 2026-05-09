@@ -106,6 +106,7 @@
             }
         }
     }
+    
     .BasketBottom
     {
         background-color: white;
@@ -135,8 +136,8 @@
         button
         {
             cursor: pointer;
-            margin: auto;
             display: block;
+            margin: auto;
             padding: 25px 265px 25px 265px;
             background-color: black;
             border-radius: 10px;
@@ -150,4 +151,46 @@
         }
     }
     
+}
+@media screen and (max-width:768px)
+{
+    .ShoppingBasket
+    {
+        width: 100%;
+        max-height: 990px;
+        .ShoppingBasketContent
+        {
+            padding:5px;
+           h1
+           {
+            font-size: 1.5rem;
+           }
+            .SBCText
+            {
+                p{font-size: 0.5rem;}
+            }
+        }
+
+        .BasketProducts
+        {
+            .Pimg
+            {
+                img
+                {
+                    display: block;
+                    width: 10%;
+                    height: auto;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .BasketBottom
+        {
+           button
+           {
+                padding: 25px 100px 25px 100px;
+           }
+        }
+    }
 }
