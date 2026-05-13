@@ -56,7 +56,7 @@ nav
                     color: white;
                 }
             }
-             fa-icon
+            fa-icon
             {
                 font-size: 20px;
             }
@@ -159,10 +159,28 @@ nav
         {
             color: var(--Acolor);
         }
+       
         .Buttons
         {
             margin-top: 16px;
             margin-bottom: 35px;
+        }
+
+         .Basket
+        {
+            div
+            {
+                height: 30px;
+                width: 30px;
+                padding: 5px;
+                background-color: red;
+                border-radius: 50%;
+                p
+                {
+                    font-size: 20px;
+                    color: white;
+                }
+            }
         }
     }
 }
