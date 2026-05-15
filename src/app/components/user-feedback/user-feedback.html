@@ -8,81 +8,24 @@
     <div class="UserFeedbackViewport">
         <div class="UserFeedbackContainer" [style.transform]="'translateX(' + (-activeIndex * 100) + '%)'">
             <!--The card itself.-->
-            <div class="UFBItem" [class.active]="activeIndex === 0">
+            <div class="UFBItem" *ngFor="let user of users$ | async ; let i = index" [class.active]=" activeIndex === i">
                 <div class="UFBCard UFBCard1">
                     <!--The image in the card.-->
                     <div class="UFBCardImg">
-                        <img src="/public/assets/images/UserAvatars/User1.png" alt="">
+                        <img src="{{user.AvatarImg}}" alt="">
                     </div>
                     <!--Text content of the card.-->
                     <div class="UFBCardTextContent">
                         <p class="UFBCardUserComment">
-                           “Items That I ordered were the best investment I <br>
-                            ever made. I can't say enough about your quality <br>
-                            service."
+                           “{{user.OpinionAboutStore}}”
                         </p>
-                        <fa-icon [icon]=faStar></fa-icon>
-                        <fa-icon [icon]=faStar></fa-icon>
-                        <fa-icon [icon]=faStar></fa-icon>
-                        <fa-icon [icon]=faStar></fa-icon>
-                        <fa-icon [icon]=faStar></fa-icon>
+                        <fa-icon *ngFor="let i of [].constructor(user.GeneralRating)" [icon]=faStar></fa-icon>
                         <div class="BlackLine"></div>
-                        <h3 class="UserName">Suzan B.</h3>
-                        <p class="UserProfession">UI Designer</p>
+                        <h3 class="UserName">{{user.FirstName}}</h3>
+                        <p class="UserProfession">{{user.Profession}}</p>
                     </div>
 
                 </div>
-            </div>
-
-            <div class="UFBItem" [class.active]="activeIndex === 1">
-                 <div class="UFBCard">
-
-                     <div class="UFBCardImg">
-                        <img src="/public/assets/images/UserAvatars/User2.png" alt="">
-                    </div>
-
-                    <div class="UFBCardTextContent">
-                        <p class="UFBCardUserComment">
-                            "You won't regret it. I would like to personally thank <br>
-                            you for your outstanding product. Absolutely <br>
-                            wonderful!"
-                        </p>
-                        <fa-icon [icon]=faStar></fa-icon>
-                        <fa-icon [icon]=faStar></fa-icon>
-                        <fa-icon [icon]=faStar></fa-icon>
-                        <fa-icon [icon]=faStar></fa-icon>
-                        <fa-icon [icon]=faStar></fa-icon>
-                        <div class="BlackLine"></div>
-                        <h3 class="UserName">James K.</h3>
-                        <p class="UserProfession">Traveler</p>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="UFBItem" [class.active]="activeIndex === 2">
-               <div class="UFBCard UFBCard3">
-
-                    <div class="UFBCardImg">
-                       <img src="/public/assets/images/UserAvatars/User3.png" alt="">
-                   </div>
-
-                   <div class="UFBCardTextContent">
-                       <p class="UFBCardUserComment">
-                           “Just what I was looking for. Thank you for making it <br>
-                           painless, pleasant and most of all hassle free! All <br>
-                           products are great.”
-                       </p>
-                       <fa-icon [icon]=faStar></fa-icon>
-                       <fa-icon [icon]=faStar></fa-icon>
-                       <fa-icon [icon]=faStar></fa-icon>
-                       <fa-icon [icon]=faStar></fa-icon>
-                       <fa-icon [icon]=faStar></fa-icon>
-                       <div class="BlackLine"></div>
-                       <h3 class="UserName">Suzan B.</h3>
-                       <p class="UserProfession">UI Designer</p>
-                   </div>
-               </div>
             </div>
 
         </div>

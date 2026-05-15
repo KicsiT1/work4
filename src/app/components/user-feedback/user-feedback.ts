@@ -2,10 +2,14 @@ import { Component } from '@angular/core';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { faStar,faAngleLeft,faAngleRight} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
+import { UserService } from '../../services/User-service';
+import { User } from '../../models/User.model';
+import { Observable } from 'rxjs';
+import{NgFor} from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 @Component({
   selector: 'app-user-feedback',
-  imports: [FontAwesomeModule],
+  imports: [FontAwesomeModule, NgFor, AsyncPipe],
   templateUrl: './user-feedback.html',
   styleUrl: './user-feedback.scss',
 })
@@ -14,9 +18,15 @@ export class UserFeedback {
   faStar:IconDefinition=faStar;
   faAngleLeft:IconDefinition=faAngleLeft;
   faAngleRight:IconDefinition=faAngleRight;
-  
+  users$!: Observable<User[]>;
+  constructor(private userService:UserService) {}
+  ngOnInit()
+  {
+      this.users$ = this.userService.GetUsersData();
+  }
   protected activeIndex: number = 1;
   protected totalItems: number = 3;
+  
   // Responsible for swiping the card right
   next(): void {
     if (this.activeIndex < this.totalItems - 1) 

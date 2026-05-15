@@ -7,8 +7,8 @@ export interface User
     PhoneNumber:string;
     Password:string;
 
-    UserAvatar?:string;
-    UserProfession?:string;
+    AvatarImg?:string;
+    Profession?:string;
     FavoriteProducts?:string[];
     OpinionAboutStore?:string;
     GeneralRating?:number;
