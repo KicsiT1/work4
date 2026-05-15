@@ -8,7 +8,9 @@
     <div class="UserFeedbackViewport">
         <div class="UserFeedbackContainer" [style.transform]="'translateX(' + (-activeIndex * 100) + '%)'">
             <!--The card itself.-->
-            <div class="UFBItem" *ngFor="let user of users$ | async ; let i = index" [class.active]=" activeIndex === i">
+            @for (user of users$ | async; track $index; let i = $index)
+            {
+            <div class="UFBItem" [class.active]=" activeIndex === i">
                 <div class="UFBCard UFBCard1">
                     <!--The image in the card.-->
                     <div class="UFBCardImg">
@@ -19,7 +21,10 @@
                         <p class="UFBCardUserComment">
                            “{{user.OpinionAboutStore}}”
                         </p>
-                        <fa-icon *ngFor="let i of [].constructor(user.GeneralRating)" [icon]=faStar></fa-icon>
+                        @for(i of [].constructor(user.GeneralRating); track $index)
+                        {
+                            <fa-icon [icon]=faStar></fa-icon>
+                        }
                         <div class="BlackLine"></div>
                         <h3 class="UserName">{{user.FirstName}}</h3>
                         <p class="UserProfession">{{user.Profession}}</p>
@@ -27,7 +32,7 @@
 
                 </div>
             </div>
-
+            }
         </div>
     </div>
     <!--The two buttons-->

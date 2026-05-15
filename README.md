@@ -21,11 +21,15 @@ project-root/
 │     │  ├─ SubscribeToNews/
 │     │  └─ UserAvatars/
 │     │
+│     ├─ Users.json
 │     ├─ MonthlySalesData.json
 │     └─ NewArrivalsData.json
 │
 ├─ src/
 │  ├─ app/
+│  │  ├─Auth
+│  │  │ ├─sign-in
+│  │  │ └─sign-up
 │  │  ├─ components/
 │  │  │  ├─ current-offer/
 │  │  │  ├─ follow-us/
@@ -54,18 +58,23 @@ project-root/
 │  │  │  ├─ MonthlySales.model.ts
 │  │  │  ├─ CardItem.model.ts
 │  │  │  ├─ ProductMainColor.model
-│  │  │  └─ product.model.ts
-│  │  │
+│  │  │  ├─ product.model.ts
+│  │  │  └─ User.model.ts
+│  │  │ 
 │  │  ├─ services/
 │  │  │  ├─ shopping-card
 │  │  │  ├─ cooldown-service.ts
-│  │  │  └─ product.ts
+│  │  │  ├─ product.ts
+│  │  │  └─ User-service.ts
 │  │  │
 │  │  ├─ WebRouteLayouts
 │  │  │  ├─ home/
+│  │  │  ├─ productinfo/
 │  │  │  ├─ shop/
 │  │  │  ├─ productinfo/   
-│  │  │  └─ purchasingproducts/
+│  │  │  ├─ purchasingproducts/
+│  │  │  ├─ signin
+│  │  │  └─ signup
 │  │  │
 │  │  ├─ app.config.ts
 │  │  ├─ app.css
@@ -78,9 +87,9 @@ project-root/
 │  ├─ main.ts
 │  └─ styles.css
 ``` </pre>
-//////////////////////////////Project description////////////////////////////
+//////////////////////////////Project description//////////////////////////// <br>
 This application is a web implementation of a clothing store. The app contains all the essential functions that make it functional. But it is only implemented from the front-end side and also tries to simulate the data. The project is the first serious work of a beginner front-end developer.
-//////////////////////////////File contents//////////////////////////////////
+//////////////////////////////File contents////////////////////////////////// <br>
 public/assets/
 – static resources (images, fonts, JSON data)
 
@@ -96,7 +105,7 @@ src/app/models/
 src/app/WebRouteLayouts/
 – This folder contains the different layouts of the application at the different links.
 
-/////////////////////////Components and their functions/////////////////////////
+/////////////////////////Components and their functions///////////////////////// <br>
 Components:
 - NavBarComponent – ​​navigation bar.
 - HeroSectionComponent – ​​main visual section.
@@ -109,8 +118,15 @@ Components:
 - Footer - Standard footer.
 - floating-box - This is a floating box that we place wherever we want.
 - floatingComponents - This folder stores the small UI components that float around.
-- shop - Contains smaller components related to the store, such as the filter-product component or Product-card component
-/////////////////////////project execution///////////////////////////////////////
+- shop - Contains smaller components related to the store, such as the filter-product component or Product-card component.  
+  - pagination - At the bottom of the product list, only 9 products appear, if we click on 2, then 9 or less appear.
+  - product-content - The products appear here after filtering.
+  - product-filter - We can filter between products, the product data comes in here and from there it goes on to the product-content.
+  - product-info - It contains the product description and can be added to the cart here.
+  - product-layout-switcher - changes the display of products (not connected)
+  - purchasing-products - To purchase the product, the user enters their details here.
+  - shopping-card - The small card itself that appears in front of the user 
+/////////////////////////project execution/////////////////////////////////////// <br>
 Run:
 1. npm install
 2. ng serve

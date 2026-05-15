@@ -5,11 +5,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { UserService } from '../../services/User-service';
 import { User } from '../../models/User.model';
 import { Observable } from 'rxjs';
-import{NgFor} from '@angular/common';
 import { AsyncPipe } from '@angular/common';
 @Component({
   selector: 'app-user-feedback',
-  imports: [FontAwesomeModule, NgFor, AsyncPipe],
+  imports: [FontAwesomeModule, AsyncPipe],
   templateUrl: './user-feedback.html',
   styleUrl: './user-feedback.scss',
 })
