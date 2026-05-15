@@ -1,26 +1,32 @@
 [
     {
         "ID":1,
-        "FirstName":"Alice",
-        "LastName":"Smith",
-        "EmailAdress":"alice.smith@example.com",
-        "PhoneNumber":"555-1234",
-        "Password":"password123"
+        "FirstName":"Suzan",
+        "LastName":"Bell",
+        "EmailAdress":"Suzan.bell@example.com",
+        "PhoneNumber":"555-1234-148",
+        "Password":"password123",
+        "OpinionAboutStore":"Items That I ordered were the best investment I ever made. I can't say enough about your quality service.",
+        "GeneralRating":5
     },
     {
         "ID":2,
-        "FirstName":"Bob",
-        "LastName":"Johnson",
-        "EmailAdress":"bob.johnson@example.com",
-        "PhoneNumber":"555-5678",
-        "Password":"password456"
+        "FirstName":"James",
+        "LastName":"Kohnson",
+        "EmailAdress":"James.kohnson@example.com",
+        "PhoneNumber":"555-5678-144",
+        "Password":"password456",
+        "OpinionAboutStore":"You won't regret it. I would like to personally thank you for your outstanding product. Absolutely wonderful!",
+        "GeneralRating":5
     },
     {
         "ID":3,
-        "FirstName":"Charlie",
+        "FirstName":"Ketty",
         "LastName":"Brown",
-        "EmailAdress":"charlie.brown@example.com",
-        "PhoneNumber":"555-9012",
-        "Password":"password789"
+        "EmailAdress":"Ketty.brown@example.com",
+        "PhoneNumber":"555-9012-147",
+        "Password":"password789",
+        "OpinionAboutStore":"Just what I was looking for. Thank you for making it painless, pleasant and most of all hassle free! All products are great.",
+        "GeneralRating":5
     }
 ]
