@@ -29,3 +29,43 @@
 .ProductLayoutSwitcher { grid-area:ProductLayoutSwitcher ;}
 .ProductContent { grid-area:ProductContent;}
 .Pagination{grid-area: Pagination;margin-top: 46px;}
+
+@media screen and (max-width: 768px)
+{
+    .Grid
+    {
+        display: grid;
+        margin: 0 auto;
+        grid-template-columns: auto 1fr auto;
+        gap: 12px;
+        grid-template-areas:
+        " ,ProductLayoutSwitcher,"
+        " ,ProductContent,"
+        " ,Pagination,";
+    }
+    .ProductContent
+    {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .ProductCard
+    {
+        width: 100%;
+        min-width: 0;
+    }
+
+    img
+    {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1440px)
+{
+   .Grid
+   {
+        padding: 0px 10px 0px 10px;
+   }
+}

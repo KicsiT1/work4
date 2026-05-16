@@ -58,7 +58,6 @@
             {
                 height: 13px;
                 width: 13px;
-                /*background-color: cornflowerblue; */
                 border-radius: 50%;
             }
         }
@@ -85,3 +84,34 @@
     }
 }
 .Product.active{opacity: 0.5;}
+
+@media screen and (max-width: 768px)
+{
+    .Product
+    {
+        width: 100%;
+        max-width: 500px; 
+    }
+
+     .Product .PImg
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    .Product .PImg img
+    {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1440px)
+{
+    .Products
+    {
+        justify-content: center;
+        gap: 12px;
+    }
+}

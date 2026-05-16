@@ -88,7 +88,7 @@ project-root/
 │  └─ styles.css
 ``` </pre>
 //////////////////////////////Project description//////////////////////////// <br>
-This application is a web implementation of a clothing store. The app contains all the essential functions that make it functional. But it is only implemented from the front-end side and also tries to simulate the data. The project is the first serious work of a beginner front-end developer.
+This application is a web implementation of a clothing store. The app contains all the essential functions that make it functional. But it is only implemented from the front-end side and also tries to simulate the data. The project is the first serious work of a beginner front-end developer. <br>
 //////////////////////////////File contents////////////////////////////////// <br>
 public/assets/
 – static resources (images, fonts, JSON data)
@@ -125,7 +125,7 @@ Components:
   - product-info - It contains the product description and can be added to the cart here.
   - product-layout-switcher - changes the display of products (not connected)
   - purchasing-products - To purchase the product, the user enters their details here.
-  - shopping-card - The small card itself that appears in front of the user 
+  - shopping-card - The small card itself that appears in front of the user  <br>
 /////////////////////////project execution/////////////////////////////////////// <br>
 Run:
 1. npm install
