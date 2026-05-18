@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Login } from '../../Auth/sign-in/sign-in';
+import { Login } from '../../components/Auth/sign-in/sign-in'; 
 @Component({
   selector: 'app-signin',
   imports: [Login],

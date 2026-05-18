@@ -27,10 +27,11 @@ project-root/
 │
 ├─ src/
 │  ├─ app/
-│  │  ├─Auth
-│  │  │ ├─sign-in
-│  │  │ └─sign-up
 │  │  ├─ components/
+│  │  │  ├─ Auth/
+│  │  │  │  ├─sign-in/
+│  │  │  │  └─sign-up/
+│  │  │  │
 │  │  │  ├─ current-offer/
 │  │  │  ├─ follow-us/
 │  │  │  ├─ hero-section/
@@ -87,26 +88,32 @@ project-root/
 │  ├─ main.ts
 │  └─ styles.css
 ``` </pre>
-//////////////////////////////Project description//////////////////////////// <br>
+
+//////////////////////////////🧾Project description//////////////////////////// <br>
+
 This application is a web implementation of a clothing store. The app contains all the essential functions that make it functional. But it is only implemented from the front-end side and also tries to simulate the data. The project is the first serious work of a beginner front-end developer. <br>
-//////////////////////////////File contents////////////////////////////////// <br>
-public/assets/
+
+//////////////////////////////🧾File contents////////////////////////////////// <br>
+
+📁public/assets/
 – static resources (images, fonts, JSON data)
 
-src/app/components/
+📁src/app/components/
 – visual units of the application (hero section, navigation, offers)
 
-src/app/services/
+📁src/app/services/
 – services responsible for data management
 
-src/app/models/
+📁src/app/models/
 – data structures used in the application (Product, MonthlySales)
 
-src/app/WebRouteLayouts/
+📁src/app/WebRouteLayouts/
 – This folder contains the different layouts of the application at the different links.
 
-/////////////////////////Components and their functions///////////////////////// <br>
-Components:
+/////////////////////////🧾Components and their functions///////////////////////// <br>
+
+🧩Components:
+- Auth - It includes a login and registration panel, the panels have been validated from the client side.
 - NavBarComponent – ​​navigation bar.
 - HeroSectionComponent – ​​main visual section.
 - CurrentOfferComponent – ​​ CurrentOfferComponent – ​​display currentoffer broken down by month.
@@ -126,8 +133,18 @@ Components:
   - product-layout-switcher - changes the display of products (not connected)
   - purchasing-products - To purchase the product, the user enters their details here.
   - shopping-card - The small card itself that appears in front of the user  <br>
-/////////////////////////project execution/////////////////////////////////////// <br>
-Run:
+
+/////////////////////////🔌Show Rout///////////////////////////////////////  <br>
+
+Short explanation: When the user enters the page (in this case, they will arrive at the home page). Then there is a home component in the WebRouteLayouts folder and in the home component, in the home.html file, there are the components that should be displayed on the home page, i.e. the link: http://localhost:4200/.  <br>
+
+/////////////////////////👉Information exchange between components///////////////////////////////////////  <br>
+
+
+  
+/////////////////////////⚙project execution/////////////////////////////////////// <br>
+
+🔴Run:
 1. npm install
 2. ng serve
 3. http://localhost:4200
