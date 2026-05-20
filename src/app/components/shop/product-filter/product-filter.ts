@@ -27,6 +27,11 @@ export class ProductFilter {
   {
     this.filteredProductsChange.emit(this.FilteredProducts);
   }
+  @Output() closeFilter  = new EventEmitter<boolean>();
+  CloseFilter()
+  {
+    this.closeFilter.emit(false);
+  }
   // I use these two icons for the dropdown sections
   faAngleUp:IconDefinition=faAngleUp;
   faAngleDown:IconDefinition=faAngleDown;

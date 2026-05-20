@@ -9,6 +9,25 @@
     .FiltersContainer
     {
         max-width: 322px;
+        .FilterText
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+             .CloseF
+             {
+                display: block;
+                cursor: pointer;
+                border: none;
+                padding: 12px;
+                margin-right: 10px;
+                border-radius: 10px;
+                background-color: black;
+                font-weight: bold;
+                color: white;
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.35);
+             }
+        }
         .FText{font-size: 30px;font-weight: bold;margin-bottom: 33px;}
 
     }
@@ -114,5 +133,33 @@
             span{cursor: pointer; display: inline-block; margin-right: 12px;margin-bottom: 10px;}
           }
         span.active{text-decoration: underline;}
+    }
+}
+
+@media screen and (min-width: 769px)
+{
+    .filter
+    {
+        .FiltersContainer
+        {
+            .FilterText
+            {
+                .CloseF{display: none;}
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px)
+{
+    .filter
+    {
+        .FiltersContainer
+        {
+            .FilterText
+            {
+                .CloseF{display: block;}
+            }
+        }
     }
 }

@@ -18,4 +18,9 @@ export class ProductLayoutSwitcher {
   protected ProdCollection:COLLECTION[]=Object.values(COLLECTION);
   faAngleDown:IconDefinition=faAngleDown;
   SearchInputData:string='';
+  @Output() FilterActive:EventEmitter<boolean> = new EventEmitter<boolean>();
+  FilterOn()
+  {
+    this.FilterActive.emit(true);
+  }
 }

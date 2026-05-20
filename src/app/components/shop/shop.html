@@ -7,6 +7,7 @@
 
     <div class="Filter">
         <app-product-filter 
+        
         (filteredProductsChange)="onFilterApplied($event)"
         (ProducCollectionIndex)="ProducCollectionIndexApplied($event)">
         </app-product-filter>
@@ -14,6 +15,7 @@
 
     <div class="ProductLayoutSwitcher">
         <app-product-layout-switcher  
+        (FilterActive)="FilterActive($event)"
         [ProdCollectionIndex]="ProducCollectionIndex"></app-product-layout-switcher>
     </div>
 
@@ -28,9 +30,10 @@
 
 </div>
 
-<div class="PhoneFilter" [class.active]="!MouseOnPhoneFilter">
+<div class="PhoneFilter"  [class.active]="!PhoneFilterOpen">
     <app-product-filter 
     (filteredProductsChange)="onFilterApplied($event)"
+     (closeFilter)="onCloseFilter($event)"
     (ProducCollectionIndex)="ProducCollectionIndexApplied($event)">
     </app-product-filter>
 </div>
