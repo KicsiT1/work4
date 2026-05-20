@@ -44,6 +44,18 @@
         button:hover{color: var(--HoverColor);}
     }
     */
+    .Filter-Button
+    {
+        display: block;
+        cursor: pointer;
+        border: none;
+        padding: 12px;
+        border-radius: 10px;
+        background-color: black;
+        font-weight: bold;
+        color: white;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.35);
+    }
 }
 .IconBar
 {
@@ -152,6 +164,32 @@
             width: 2px;
             height: 100%;
             background-color: var(--IconColor);
+        }
+    }
+}
+
+@media screen and (min-width: 769px)
+{
+     .ProductLayoutSwitcher
+    {
+        .Filter-Button
+        {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 768px)
+{
+    .ProductLayoutSwitcher
+    {
+        .IconBar
+        {
+            display: none;
+        }
+        .Filter-Button
+        {
+            display: block;
         }
     }
 }
