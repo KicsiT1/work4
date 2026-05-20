@@ -51,10 +51,6 @@ export class Shop
   onCloseFilter(cf:boolean):void
   {
     this.PhoneFilterOpen=cf;
-    console.log(this.PhoneFilterOpen);
-    if(cf)
-    {
-      document.body.style.overflow = 'auto';
-    }
+    document.body.style.overflow = 'auto';
   }
 }
