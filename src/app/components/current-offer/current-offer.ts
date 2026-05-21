@@ -1,7 +1,7 @@
 // OnInit - lifecycle hook i use to initialize the functions.
 // OnDestroy - I am currently using it against memory leaks.
 // ChangeDetectorRef - manually controls Angular change detection
-import {Component,OnInit,OnDestroy,ChangeDetectorRef,ChangeDetectionStrategy} from '@angular/core';
+import {inject,Component,OnInit,OnDestroy,ChangeDetectorRef,ChangeDetectionStrategy} from '@angular/core';
 // Font Awesome module need for the icons
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 // This makes it safe to use icons (special type for icons)
@@ -42,9 +42,9 @@ export class CurrentOffer implements OnInit,OnDestroy{
   faAngleLeft:IconDefinition=faAngleLeft;
   faAngleRight:IconDefinition=faAngleRight;
   MonthlySalesItems: MonthlySalesModel[] = [];
-  constructor(private cdr: ChangeDetectorRef,private productService: ProductService) 
-  {}
-
+  
+  protected cdr = inject(ChangeDetectorRef);
+  protected productService = inject(ProductService);
   ////////////////////////////////////////////
   // This is needed to move between points, I did the calculation in the html code.
   NextProduct(NewIndex:number)

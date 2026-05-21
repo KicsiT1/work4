@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,inject} from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { faLock} from '@fortawesome/free-solid-svg-icons';
@@ -18,7 +18,9 @@ export class PurchasingProducts {
   ContactForm!: FormGroup;
   Payment!:FormGroup;
   Discountcode!:FormGroup;
-  constructor(public ShoppingCard:ShoppingCard, private fb: FormBuilder)
+  protected ShoppingCard = inject(ShoppingCard);
+  protected fb = inject(FormBuilder);
+  constructor()
   {
     
     this.ContactForm = this.fb.group

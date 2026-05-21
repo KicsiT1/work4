@@ -273,6 +273,10 @@
                 color: black;
             }
             button:hover{background-color: var(--ButtonHoverColor);}
+            button.active
+            {
+                display: none;
+            }
         }
     }
     .ProductDetails1

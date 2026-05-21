@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component , inject } from '@angular/core';
 import { FormBuilder, Validators,FormGroup } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 @Component({
@@ -10,8 +10,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 export class ConfirmationPassworld {
 
   ConfirmationPassworldForm!:FormGroup;
-
-  constructor(private fb:FormBuilder)
+  protected fb:FormBuilder=inject(FormBuilder);
+  constructor()
   {
     this.ConfirmationPassworldForm=this.fb.group
     (

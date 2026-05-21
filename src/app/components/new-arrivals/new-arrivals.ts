@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 // This makes it safe to use icons (special type for icons)
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
@@ -37,9 +37,8 @@ export class NewArrivals {
   // The array that contains the subscribed data 
   ProductItems:ProductModel[]=[];
   // I initialize the ProductService class.
-  constructor(private ProductService: ProductService) 
-
-  {}
+  protected ProductService = inject(ProductService);
+  
    ngOnInit()
    {
     this.currentCategory = PRODUCTFOR.Women_sFashion;

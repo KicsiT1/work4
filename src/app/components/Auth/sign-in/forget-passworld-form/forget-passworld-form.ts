@@ -1,4 +1,4 @@
-import { Component , Output , EventEmitter } from '@angular/core';
+import { Component , Output , EventEmitter, inject } from '@angular/core';
 import { FormBuilder, Validators,FormGroup } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 @Component({
@@ -9,7 +9,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 })
 export class ForgetPassworldForm {
   ForgetPassword!:FormGroup;
-  constructor(private fb:FormBuilder)
+  protected fb:FormBuilder=inject(FormBuilder);
+  constructor()
   {
     this.ForgetPassword=this.fb.group
     ({

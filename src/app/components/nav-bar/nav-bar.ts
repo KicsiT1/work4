@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component,inject} from '@angular/core';
 // Module that allows the use of *ngif,*ngFor in html (no need)
 import {CommonModule} from '@angular/common';
 // Font Awesome module need for the icons
@@ -17,7 +17,7 @@ import { ShoppingCard } from '../../services/shopping-card';
   styleUrl: './nav-bar.scss',
 })
 export class NavBar {
-  constructor(public ShoppingcardService:ShoppingCard){}
+  protected ShoppingcardService = inject(ShoppingCard);
   // Font Awesome icons
   faUser:IconDefinition = faUser;
   faMagnifyingGlass:IconDefinition = faMagnifyingGlass;

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import{ faGoogle } from '@fortawesome/free-brands-svg-icons';
 import{ faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -17,7 +17,8 @@ export class SignUp {
     faGoogle:IconDefinition = faGoogle;
     faEnvelope:IconDefinition = faEnvelope;
     SignUp!:FormGroup;
-    constructor(private fb:FormBuilder)
+    protected fb:FormBuilder=inject(FormBuilder);
+    constructor()
   {
     
     this.SignUp=this.fb.group

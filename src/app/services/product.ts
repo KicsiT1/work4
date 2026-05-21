@@ -1,5 +1,5 @@
 //This Service use other components  1.current-offer and 2.new-arrivals
-import { Injectable } from '@angular/core';
+import { Injectable,inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http'; 
 import { Observable } from 'rxjs';
 import { MonthlySalesModel } from '../models/MonthlySales.model';
@@ -12,8 +12,7 @@ export class ProductService {
   // The data is in separate files, I decided to split it up for myself so it would be more transparent.
   private MonthlySalesDataUrl:string = '/public/assets/MonthlySalesData.json';
   private ProductDataUrl:string = '/public/assets/Products.json';
-
-  constructor(private http: HttpClient) {}
+  protected http = inject(HttpClient);
   // Provides data to the current-offer component
   GetMonthlySalesData(): Observable<MonthlySalesModel[]> 
   {

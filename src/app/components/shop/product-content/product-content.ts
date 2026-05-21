@@ -10,7 +10,6 @@ import { Router } from '@angular/router';
 })
 
 export class ProductContent {
-
   constructor(private router: Router) {}
   // This is where the filtered data comes in.
   @Input()

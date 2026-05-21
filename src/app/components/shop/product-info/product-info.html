@@ -104,8 +104,14 @@
                 </div>
                 @if (Product) 
                 {
-                    <button (click)="ShoppingCard.addToCard(Product,ImgIndex,ColorIndex,ActivePrice)">Add to Cart</button>
+                    <button [class.active]="ProdInStock===0" (click)="ShoppingCard.addToCard(Product,ImgIndex,ColorIndex,ActivePrice)">Add to Cart</button>
                 }
+
+                @if(ProdInStock===0)
+                {
+                    <p>Product not available</p>
+                }
+                
             </div>
         </div>
 

@@ -41,7 +41,7 @@
         "Type": "Dress", 
         "ProductFor":"Women’s Fashion",
         "Accessories":false,
-        "InStock":57,
+        "InStock":0,
         "Collection":["All products","New Arrivals"],
         "Size":["M","L","XL"],
         "MainColor":

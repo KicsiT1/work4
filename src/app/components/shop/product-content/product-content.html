@@ -4,7 +4,7 @@
         {
         <div class="Product" [class.active]="Product.InStock==0">
             <div class="PImg">
-                <img [src]="Images[i]" alt="" (click)="openProduct(Product.ID)">
+                <img [src]="Images[i]" alt="{{ Product.Name }}" (click)="openProduct(Product.ID)">
             </div>
             <p (click)="openProduct(Product.ID)" class="PName">{{Product.Name}}</p>
             <div (click)="openProduct(Product.ID)" class="ProductPricesContainer">

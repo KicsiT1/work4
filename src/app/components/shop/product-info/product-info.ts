@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component , inject} from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { ActivatedRoute } from '@angular/router';
@@ -21,14 +21,11 @@ import { ShoppingCard } from '../../../services/shopping-card';
 export class ProductInfo {
   // Discount timer
   cooldown$!: Observable<Cooldown>;
+  protected CooldownService = inject(CooldownService); 
+  protected route = inject(ActivatedRoute);
+  protected ProductService = inject(ProductService);
+  protected ShoppingCard = inject(ShoppingCard);
   
-  constructor(
-    private CoolDownService: CooldownService, 
-    private route: ActivatedRoute, 
-    private ProductService: ProductService,
-    protected ShoppingCard:ShoppingCard
-   ) {}
-   
   faStar: IconDefinition = faStar;
   faEye: IconDefinition = faEye;
   faCcVisa: IconDefinition = faCcVisa;
@@ -56,7 +53,7 @@ export class ProductInfo {
   //console.log(this.Product);
   // The product is discounted for a while.
    if (this.ProddiscountUntil) {
-      this.cooldown$ = this.CoolDownService.startCooldown(this.ProddiscountUntil);
+      this.cooldown$ = this.CooldownService.startCooldown(this.ProddiscountUntil);
     }
   });
   }

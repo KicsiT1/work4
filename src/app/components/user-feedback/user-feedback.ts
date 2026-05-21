@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component , inject} from '@angular/core';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { faStar,faAngleLeft,faAngleRight} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -18,7 +18,7 @@ export class UserFeedback {
   faAngleLeft:IconDefinition=faAngleLeft;
   faAngleRight:IconDefinition=faAngleRight;
   users$!: Observable<User[]>;
-  constructor(private userService:UserService) {}
+  protected userService = inject(UserService);
   ngOnInit()
   {
       this.users$ = this.userService.GetUsersData();

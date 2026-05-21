@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,inject} from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faX } from '@fortawesome/free-solid-svg-icons';
 import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
@@ -14,8 +14,10 @@ import { Router } from '@angular/router';
 export class ShopingCard {
   faX: IconDefinition = faX;
   ShoppingCardActive:boolean=true;
+  
+  protected cartService = inject(ShoppingCard);
+  protected router = inject(Router);
 
-  constructor(public cartService: ShoppingCard,private router:Router) {}
   // Helper function removes the product from the cart
   onRemove(pid: number) 
   {

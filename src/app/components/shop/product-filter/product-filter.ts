@@ -1,4 +1,4 @@
-import { Component , Output , EventEmitter } from '@angular/core';
+import { Component , Output , EventEmitter , inject} from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { faAngleUp,faAngleDown} from '@fortawesome/free-solid-svg-icons';
@@ -45,7 +45,7 @@ export class ProductFilter {
   protected ProductCollections:COLLECTION[]=Object.values(COLLECTION);
   protected ProductTags:TAG[]=Object.values(TAG);
   // Need the ProductService to subscribe to the data.
-  constructor(private ProductService:ProductService){}
+  protected ProductService = inject(ProductService);
   ngOnInit()
   {
   // Subscription

@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http'; 
 import { Observable } from 'rxjs';
 import { User } from '../models/User.model';
@@ -8,8 +8,7 @@ import { User } from '../models/User.model';
 export class UserService 
 {
   private UsersDataUrl:string = '/public/assets/Users.json';
-
-  constructor(private http: HttpClient) {}
+  private http = inject(HttpClient);
   
   GetUsersData(): Observable<User[]>
   {
