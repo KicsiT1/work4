@@ -1,14 +1,25 @@
-import {Component,inject} from '@angular/core';
+import { Component, inject} from '@angular/core';
 // Module that allows the use of *ngif,*ngFor in html (no need)
-import {CommonModule} from '@angular/common';
+import { CommonModule} from '@angular/common';
 // Font Awesome module need for the icons
-import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import { FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 // This makes it safe to use icons (special type for icons)
-import {IconDefinition} from '@fortawesome/fontawesome-svg-core';
+import { IconDefinition} from '@fortawesome/fontawesome-svg-core';
 // The different icons I use for the menu
-import {faBasketShopping,faAngleDown,faArrowRightFromBracket,faUser,faMagnifyingGlass,faStar,faBagShopping,faBars,faXmark, faL} from '@fortawesome/free-solid-svg-icons';
-import {ShopingCard } from '../shop/shoping-card/shoping-card';
+import { 
+  faBasketShopping, 
+  faAngleDown, 
+  faArrowRightFromBracket, 
+  faUser, 
+  faMagnifyingGlass, 
+  faStar, 
+  faBagShopping, 
+  faBars, 
+  faXmark, faL} from '@fortawesome/free-solid-svg-icons';
+import { ShopingCard } from '../shop/shoping-card/shoping-card';
 import { ShoppingCard } from '../../services/shopping-card';
+import { AuthService } from '../../services/auth';
+
 @Component({
   selector: 'app-nav-bar',
   imports: [CommonModule, FontAwesomeModule, ShopingCard],
@@ -30,8 +41,7 @@ export class NavBar {
   faBasketShopping:IconDefinition = faBasketShopping;
   // This variable helps to open the phone menu
   isMenuOpen: boolean = false;
-  // This variable helps to change the content in the menu after a possible login.
-  IsLoggedIn:boolean = false;
+  protected authService = inject(AuthService);
   // This array contains the data that is displayed when the user is not yet logged in.
   loggedOutMenu:{link:string, text:string}[]=
   [

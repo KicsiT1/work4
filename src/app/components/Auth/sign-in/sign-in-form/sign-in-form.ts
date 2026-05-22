@@ -5,7 +5,8 @@ import{ faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { IconDefinition } from '@fortawesome/angular-fontawesome';
 import { FormBuilder, Validators,FormGroup } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { AuthService } from '../../../../services/auth';
+import { Router } from '@angular/router';
 @Component({
   selector: 'login-form',
   imports: [ReactiveFormsModule,FontAwesomeModule],
@@ -17,6 +18,8 @@ export class SigninForm {
   faEnvelope:IconDefinition = faEnvelope;
   Login!:FormGroup;
   protected fb:FormBuilder=inject(FormBuilder);
+  protected authService: AuthService = inject(AuthService);
+  protected router = inject(Router);
   constructor()
   {
     this.Login=this.fb.group
@@ -35,5 +38,30 @@ export class SigninForm {
     this.IsOpen=!this.IsOpen;
     this.OpenForgetPassPanel.emit(this.IsOpen);
   }
-  
+  protected EmailAddress!:string;
+  protected Password!:string;
+
+  LoginUser()
+  {
+    this.EmailAddress=this.Login.get('Email')?.value;
+    this.Password=this.Login.get('Password')?.value;
+    this.authService.login(this.EmailAddress, this.Password).subscribe(user => 
+    {
+    if (user) 
+    {
+      console.log("Logged in");
+      this.router.navigate(['/']);
+    } 
+    else 
+    {
+      console.log("Invalid login");
+    }
+  });
+  }
+
+  RegisterUser()
+  {
+    this.router.navigate(['/signup']);
+  }
+
 }

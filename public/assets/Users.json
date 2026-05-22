@@ -6,7 +6,7 @@
         "AvatarImg":"public/assets/images/UserAvatars/User1.png",
         "EmailAdress":"Suzan.bell@example.com",
         "PhoneNumber":"555-1234-148",
-        "Password":"password123",
+        "Password":"Password123@",
         "OpinionAboutStore":"Items That I ordered were the best investment I \n ever made. I can't say enough about your quality \n service.",
         "GeneralRating":5,
         "Profession": "UI Designer"
@@ -18,7 +18,7 @@
         "AvatarImg":"public/assets/images/UserAvatars/User2.png",
         "EmailAdress":"James.kohnson@example.com",
         "PhoneNumber":"555-5678-144",
-        "Password":"password456",
+        "Password":"Password456@",
         "OpinionAboutStore":"You won't regret it. I would like to personally thank \n you for your outstanding product. Absolutely \n wonderful!",
         "GeneralRating":5,
         "Profession": "Traveler"
@@ -30,7 +30,7 @@
         "AvatarImg":"public/assets/images/UserAvatars/User3.png",
         "EmailAdress":"Ketty.brown@example.com",
         "PhoneNumber":"555-9012-147",
-        "Password":"password789",
+        "Password":"Password789@",
         "OpinionAboutStore":"Just what I was looking for. Thank you for making it \n painless, pleasant and most of all hassle free! All \n products are great.",
         "GeneralRating":5,
         "Profession": "Photographer"

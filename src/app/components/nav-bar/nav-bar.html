@@ -3,7 +3,7 @@
     <h1><a href="/">FASCO</a></h1>
     <!-- Dynamic Menu list -->
     <ul>
-         @if (IsLoggedIn) 
+         @if (authService.Authenticated) 
          {
             @for (item of LoggedInMenu; track item.link) 
             {
@@ -41,14 +41,14 @@
         }
     </ul>
     <!-- This is the icon menu (appears after logging in) -->
-    @if(IsLoggedIn)
+    @if(authService.Authenticated)
     {
         <div class="UserMenu">
             <fa-icon [icon]="faMagnifyingGlass"></fa-icon>
             <fa-icon [icon]="faUser"></fa-icon>
             <fa-icon [icon]="faStar"></fa-icon>
             <fa-icon [icon]="faBagShopping"></fa-icon>
-            <fa-icon [icon]="faArrowRightFromBracket"></fa-icon>
+            <fa-icon (click)="authService.logout()" [icon]="faArrowRightFromBracket"></fa-icon>
         </div>
     }
     <!-- The hamburger menu -->
@@ -71,7 +71,7 @@
     </div>
      <!--Dynamic menu displayed on the phone-->
      <ul class="MobileMenu" [class.HamburgerMenu]="isMenuOpen">
-         @if (IsLoggedIn) 
+         @if (authService.Authenticated) 
          {
             @for (item of LoggedInMenu; track item.link) 
             {

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { map, timer } from 'rxjs';
+import { map , timer } from 'rxjs';
 import { Observable } from 'rxjs';
 // The Timer
 export interface Cooldown 

@@ -1,4 +1,4 @@
-<form [formGroup]="Login" class="LoginPanel">
+<form [formGroup]="Login" class="LoginPanel" (ngSubmit)="LoginUser()">
     <h1>FASCO</h1>
     <h2>Sign In To FASCO</h2>
     <div class="LoginOptions">
@@ -25,8 +25,8 @@
     {
         <div class="PasswordError" style="color: red;">The password must contain uppercase and lowercase letters, numbers, and special characters.</div>
     }
-    <button class="Signin">Sign in</button>
-    <button class="Signup">Register Now</button>
+    <button type="submit" class="Signin">Sign in</button>
+    <button  class="Signup"  (click)="RegisterUser()" >Register Now</button>
     <a (click)="emitEvent()">Forget Password?</a>
     <p>FASCO Terms & Codnitions</p>            
 </form>

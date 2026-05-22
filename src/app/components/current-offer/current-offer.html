@@ -1,8 +1,10 @@
-<section>
+    @if(MonthlySalesItems  && MonthlySalesItems[NextMonth])
+    {
+    <section>
     <!--The content on the left-->
     <div class="Content">
         <aside class="Description">
-            @if(MonthlySalesItems){<h1>Deals Of The {{MonthlySalesItems[NextMonth].Month}}</h1>}
+            <h1>Deals Of The {{MonthlySalesItems[NextMonth]?.Month}}</h1>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> 
                 Scelerisque duis ultrices sollicitudin aliquam sem. <br>
@@ -49,22 +51,23 @@
          <fa-icon (click)="NextM(1)" [icon]="faAngleRight"  [class.disabled-icon]="NextMonth===CurrentMonth"></fa-icon>
     </div>
     <!--The 3 product cards-->
+   
     <div class="Item Item1">
-                    
+
         <div class="Product">
             <img [src]="MonthlySalesItems[NextMonth].SaleProducts[NextIndex].Thumbnail" alt="">
                         
             <div class="ProductInfo">
             
-                <p>{{MonthlySalesItems[NextMonth].SaleProducts[NextIndex].SaleNumber}} - {{MonthlySalesItems[NextMonth].SaleProducts[NextIndex].DiscountSeason}}  </p> <br>
+                <p>{{MonthlySalesItems[NextMonth].SaleProducts[NextIndex]?.SaleNumber}} - {{MonthlySalesItems[NextMonth].SaleProducts[NextIndex]?.DiscountSeason}}  </p> <br>
                 @if(this.Distance>0)
                 {
-                <p>{{MonthlySalesItems[NextMonth].SaleProducts[NextIndex].Discount}}% OFF</p>
+                <p>{{MonthlySalesItems[NextMonth].SaleProducts[NextIndex]?.Discount}}% OFF</p>
                 }
             
             </div>
         </div>
-                    
+         
     </div>
 
     <div class="Item2">
@@ -74,6 +77,7 @@
     <div class="Item3">
         <img [src]=" MonthlySalesItems[NextMonth].SaleProducts[(NextIndex + 2) % MonthlySalesItems[0].SaleProducts.length].Thumbnail" alt="">
     </div>
+    
     <!--The point steppers-->
     <div class="step">
         <ul>
@@ -85,3 +89,4 @@
     </div>
 </div>
 </section>
+}
