@@ -5,7 +5,7 @@ import { productinfo } from './WebRouteLayouts/productinfo/productinfo';
 import { Purchasingproducts } from './WebRouteLayouts/purchasingproducts/purchasingproducts';
 import { signin } from './WebRouteLayouts/signin/signin';
 import { signup } from './WebRouteLayouts/signup/signup';
-
+import { PageNotFound } from './WebRouteLayouts/page-not-found/page-not-found';
 export const routes: Routes = 
 [
     { path: '',                     component: Home },
@@ -14,5 +14,5 @@ export const routes: Routes =
     { path: 'Purchasing-product',   component: Purchasingproducts },
     { path: 'signin',               component: signin },
     { path: 'signup',               component: signup },
-    /*{ path: '**', component:PageNotFound},*/
+    { path: '**',                   component: PageNotFound },
 ];
