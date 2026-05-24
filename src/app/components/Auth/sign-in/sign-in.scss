@@ -23,3 +23,18 @@
         gap: 187px;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .Login
+    {
+        .LoginContainer
+        {
+            flex-direction: column;
+            gap: 20px;
+            img
+            {
+                display: none;
+            }
+        }
+    }
+}

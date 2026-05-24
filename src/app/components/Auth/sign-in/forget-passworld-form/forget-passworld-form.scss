@@ -78,3 +78,56 @@
         margin-top: 30px;
     }
 }
+@media screen and (max-width: 768px)
+{
+    .ForgetPasswordPanel
+    {
+        padding-right: 0px;
+        h1
+        {
+            font-size: 40px;
+            margin-bottom: 50px;
+        }
+        h2
+        {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        .Inputs
+        {
+            .InputRow
+            {
+                margin-bottom: 15px;
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 18px;
+                input
+                {
+                    width: 100%;
+                    border: none;
+                    border-bottom: 1px solid var(--FormBottomBorder);
+                    padding: 7px 0px 7px 0px;
+                }
+                input:focus{outline: none;}
+            }
+           
+        }
+        .SendCodeButton
+        {
+            margin: 0 auto;
+            display: block;
+            cursor: pointer;
+            border: none;
+            padding: 10px 50px 10px;
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+        
+         .SendCodeButton:hover
+         {
+            color: var(--ConfirmCodeButtonHover);
+         }
+    }
+}

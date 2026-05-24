@@ -75,7 +75,7 @@
     }
     input
     {
-        min-width: 628px;
+        max-width: 628px;
         padding: 7px 0px 7px;
         margin-bottom: 29px;
         border: none;
@@ -135,5 +135,41 @@
         margin: 0 auto;
         display: block;
         margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .LoginPanel 
+    {
+        padding-right: 0;
+        h1 {
+            font-size: 40px;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .LoginOptions
+        { 
+            flex-direction: column;
+            gap: 20px;
+            padding: 0 10px 0px 10px;
+            .LoginWithGoogle, .LoginWithEmail {
+              max-width: 100%;
+            }
+        }
+      
+        .Signin
+        {
+           min-width: 80%;
+        }
+         .Signup
+        {
+           min-width: 80%;
+        }
     }
 }
