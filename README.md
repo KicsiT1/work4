@@ -138,9 +138,11 @@ This application is a web implementation of a clothing store. The app contains a
 
 Short explanation: When the user enters the page (in this case, they will arrive at the home page). Then there is a home component in the WebRouteLayouts folder and in the home component, in the home.html file, there are the components that should be displayed on the home page, i.e. the link: http://localhost:4200/.  <br>
 
+To better understand the routes, you should take a look at the WebRouteLayouts.drawio file.  <br>
+
 /////////////////////////👉Information exchange between components///////////////////////////////////////  <br>
 
-
+Look at the Data Stream.drawin file, it contains which service the data is connected to and which component it goes to.  <br>
   
 /////////////////////////⚙project execution/////////////////////////////////////// <br>
 
