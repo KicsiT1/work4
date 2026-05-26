@@ -146,7 +146,8 @@ Look at the Data Stream.drawin file, it contains which service the data is conne
   
 /////////////////////////⚙project execution/////////////////////////////////////// <br>
 
-🔴Run:
-1. npm install
-2. ng serve
-3. http://localhost:4200
+1. **Download and run** Docker environment (Docker Desktop)
+2. **Build the image** If you just want to try out the working application, use: docker build -t angular-portfolio-app . 
+3. **Run the project (with hot-reload & port configuration automatically):**
+   ```bash
+   docker compose up

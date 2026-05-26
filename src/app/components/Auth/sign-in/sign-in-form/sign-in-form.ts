@@ -10,8 +10,8 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'login-form',
   imports: [ReactiveFormsModule,FontAwesomeModule],
-  templateUrl: './Sign-in-form.html',
-  styleUrl: './Sign-in-form.scss',
+  templateUrl: './sign-in-form.html',
+  styleUrl: './sign-in-form.scss',
 })
 export class SigninForm {
   faGoogle:IconDefinition = faGoogle;
