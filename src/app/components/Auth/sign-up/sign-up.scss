@@ -44,7 +44,6 @@
         }
         .SignUp
         {
-             min-width: 666px;
             .Text
             {
                 h1
@@ -69,7 +68,6 @@
                     cursor: pointer;
                     display: flex;
                     gap: 13px;
-                    width: 100%;
                     border: 1px solid var(--SignUpWithButtons);
                     border-radius: 8px;
                     padding: 8px 32px 7px 31px;
@@ -177,6 +175,98 @@
             .TermsConditions
             {
                 font-weight: normal;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:425px)
+{
+    .SignUpPanel
+    {
+         .SignUpContainer
+         {
+            .SignUp
+            {
+                .SignUpOptions
+                {
+                    flex-direction: column; 
+                }
+                .Inputs
+                {
+                    grid-template-columns: 1fr;
+                    grid-template-areas: 
+                    "Text"
+                    "FirstName"
+                    "FirstNameError"
+                    "LastName"
+                    "LastNameError"
+                    "EmailAddress"
+                    "EmailAddressError"
+                    "PhoneNumber"
+                    "PhoneNumberError"
+                    "Password"
+                    "PasswordError"
+                    "ConfirmPassword"
+                    "ConfirmPasswordError";
+                }
+            }
+         }
+    }
+}
+
+@media screen and (max-width:768px)
+{
+    .SignUpPanel
+    {
+         .SignUpContainer
+         {
+            .SignUp
+            {
+                .SignUpOptions
+                {
+                    align-items: center;
+                    gap: 10px;
+                    .SignUpWithGoogle,.SignUpWithEmail
+                    {
+                      justify-content: space-evenly;
+                    }
+                }
+            }
+         }
+    }
+}
+@media screen and (max-width:1024px)
+{
+    .SignUpPanel
+    {
+         .SignUpContainer
+        {
+            gap: 0px;
+            justify-content: center;
+             .BigImg
+            {
+                img
+                {
+                    display: none;
+                }
+            }
+            padding: 0px 5px 0px 5px;
+            .SignUp
+            {
+                .Text
+                {
+                    text-align: center;
+                    h1
+                    {
+                        padding-top: 35px;
+                        margin-bottom: 10px;
+                    }
+                }
+                .SignUpButton
+                {
+                    padding: 10px 120px 10px;
+                }
             }
         }
     }
