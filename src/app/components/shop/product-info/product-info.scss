@@ -23,12 +23,13 @@
 }
 .ProductContent
 {
-    max-width: 1280px;
     margin: 0 auto;
     margin-top: 78px;
     margin-bottom: 26px;
     display: flex;
+    justify-content: center;
     flex-direction: row;
+    flex-wrap: wrap;
     .ProductImages
     {
         display: flex;
@@ -41,7 +42,6 @@
             width: 70px;
             height: 90px;
             padding: 6px;
-            
             img
             {
                 width: 58px;
@@ -50,23 +50,17 @@
             }
         }
         .ImageCard:hover{border: 1px solid black;}
-        /*
-        .ImageCard.active
-        {
-            cursor: pointer;
-            border: 1px solid black;
-        }
-        */
     }
     .ProductCard
     {
         margin-right: 80px;
         .ProductImage
         {
+            max-width: 491px;
             img
             {
-                max-width: 491px;
-                height: 655px;
+                width: 100%;
+                height: auto;
                 object-fit: cover;
             }
         }
@@ -74,11 +68,12 @@
     .ProductInfo
     {
         padding: 0px 15px 0px 15px;
-        .StoreName{font-size: 14px; width: 585px;}
+        .StoreName{font-size: 14px;}
         .ProductName{
             display: flex; 
             align-items: center; 
             justify-content: space-between;
+            gap: 20px;
             h6{ font-size: 42px;color: var(--ProductNameColor);}
             fa-icon
             {
@@ -100,7 +95,7 @@
     }
     .ProductPriceInfo
     {
-        display:  flex;
+        display: flex;
         gap: 10px;
         align-items: center;
         margin: 20px 0px 30px 0px;
@@ -350,6 +345,62 @@
             text-align: center;
             font-weight: bold;
             padding-bottom: 21px;
+        }
+    }
+}
+
+@media screen and (max-width:425px)
+{
+     .ProductContent
+     {
+         .ProductImages
+        {
+            flex-direction: row;
+        }
+     }
+}
+@media screen and (max-width:1024px)
+{
+    .ProductContent
+    {
+        //align-items: center;
+        gap: 20px;
+        margin-top: 39px;
+        .ProductImages
+        {
+            margin-right: 0px;
+        }
+        .ProductCard
+        {
+            margin-right: 0px;
+        }
+        .ProductInfo
+        {
+            padding: 0px 5px 0px 5px;
+            .ProductName
+            {
+                h6
+                {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        .ProductAddToCard
+        {
+            .Quantity-AddToCard
+            {
+                button
+                {
+                    padding: 11px 50px 11px 50px;
+                }
+            }
+        }
+        .Payment
+        {
+            .PaymentOptions
+            {
+               padding: 20px 40px 21px 40px;
+            }
         }
     }
 }

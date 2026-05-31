@@ -1,6 +1,7 @@
 <section class="ProductContent">
 
     <!-- More pictures of the product appear here.-->
+    
     <div class="ProductImages">
 
         @for(img of Product?.MainColor?.[ColorIndex]?.Images; track $index; let i=$index)
@@ -10,7 +11,9 @@
         </div>
         }
     </div>
+
     <!-- One of the product images selected by the user will be displayed.-->
+    
     <div class="ProductCard">
 
         <div class="ProductImage">
@@ -18,6 +21,7 @@
         </div>
 
     </div>
+
     <!-- This is where the product information appears. -->
     <div class="ProductInfo">
 
@@ -54,7 +58,7 @@
 
         <div class="DiscountTimer"> 
             <div class="DiscountTimerContent">
-                @if(ProddiscountUntil=='')
+                @if(ProddiscountUntil==='' || ProddiscountUntil===0)
                 {
                     <span>Currently, the product is not on sale</span>
                 }

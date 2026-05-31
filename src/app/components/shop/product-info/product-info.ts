@@ -63,7 +63,7 @@ export class ProductInfo {
     return n.toString().padStart(2, '0');
   }
   // I am requesting the data about the product that needs to be displayed.
-  get ProddiscountUntil(): string
+  get ProddiscountUntil():string | number
   {
     return this.Product?.DiscountUntil ?? '';
   }
