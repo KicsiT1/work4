@@ -1,6 +1,7 @@
 <h1>FASCO Checkout</h1>
 
 <section>
+    
     <div class="LeftSide">
 
         <form [formGroup]="ContactForm" class="ContactForm" action="">
@@ -74,7 +75,7 @@
             </div>
            
         </form>
-
+    
         <form [formGroup]="Payment" class="PaymentForm" action="">
 
             <div class="TextContent">
@@ -126,9 +127,8 @@
 
         <button>Pay Now</button>
         <p>Copyright © 2022 FASCO . All Rights Reseved.</p>
-
     </div>
-
+ 
     <div class="RightSide">
         <div class="PContent">
             <div class="Products">
@@ -145,7 +145,7 @@
                         <h6>{{Product.PName}}</h6>
                         <p>{{Product.PColorName}}</p>
                     </div>
-                    <p class="DPrice">${{pad(Product.DPrice)}}</p>
+                    <p class="DPrice">${{pad(Product.PPrice)}}</p>
                 </div>
                 }
             </div>

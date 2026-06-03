@@ -14,7 +14,6 @@ section
     {
         padding-right: 33px;
         margin-top: 81px;
-        max-width: 607px;
         display: flex;
         flex-direction: column;
         margin-left: auto;
@@ -161,7 +160,7 @@ section
                 {
                   padding: 0px 20px 0px 20px;
                   display: grid;   
-                  grid-template-columns: 1fr 1fr;  
+                  grid-template-columns: 1fr;  
                   grid-template-rows: auto auto auto auto auto auto auto;
                   grid-template-areas: 
                   "CardNumber           CardNumber"
@@ -178,9 +177,9 @@ section
                   }  
 
                   .CardNumberError
-                   {
-                      grid-area: CardNumberError;
-                   }
+                  {
+                    grid-area: CardNumberError;
+                  }
                   .ExpirationDate
                   {
                     grid-area: ExpirationDate;
@@ -190,22 +189,22 @@ section
                  {
                     grid-area: ExpirationDateError;
                  }
-                  .SecurityCode
-                  {
-                    grid-area: SecurityCode;
-                    padding: 22px 21px 22px;
-                    margin-left: 5px;
-                  }
-                 .SecurityCodeError
-                 {
-                    grid-area: SecurityCodeError;
-                 }
-                  .CardHolderName
-                  {
-                    grid-area: CardHolderName;
-                    padding: 22px 21px 22px;
-                    margin-top: 7px;
-                  }
+                .SecurityCode
+                {
+                  grid-area: SecurityCode;
+                  padding: 22px 21px 22px;
+                  margin-left: 5px;
+                }
+                .SecurityCodeError
+                {
+                   grid-area: SecurityCodeError;
+                }
+                .CardHolderName
+                {
+                  grid-area: CardHolderName;
+                  padding: 22px 21px 22px;
+                  margin-top: 7px;
+                }
                   .CardHolderNameError
                   {
                     grid-area: CardHolderNameError;
@@ -337,7 +336,7 @@ section
                     input
                     {
                         border: none;
-                        width: 70%;
+                        width: 60%;
                         padding: 23px 24px 26px;
                     }
                     Button
@@ -370,6 +369,127 @@ section
                     }
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width:491px)
+{
+    section
+    {
+
+        .LeftSide
+        {
+            .DeliveryForm
+            {
+               .DeliveryInputsGrid
+               {
+                   display: grid;
+                   gap: 10px;
+                   grid-template-columns: 1fr;
+                   grid-template-areas: 
+                   "CountryInput"
+                   "CountryError"
+                   "FirstName"
+                   "FirstNameError"
+                   "LastName"
+                   "LastNameError"
+                   "Address"
+                   "AddressError"
+                   "City"
+                   "CityError"
+                   "PostalCode"
+                   "PostalError";
+               }
+            }
+            .PaymentForm
+            {
+                  .PaymentContainer
+                  {
+                    .PaymentInput
+                    {
+                       margin-bottom: 10px;
+                       margin-top: 10px;
+                    }
+                  
+                    .PaymentDataGrid
+                    {
+                        display: grid;   
+                        grid-template-columns: 1fr;  
+                        padding: 0px 5px 0px 5px;
+                        grid-template-areas: 
+                        "CardNumber"
+                        "CardNumberError"
+                        "ExpirationDate"
+                        "ExpirationDateError"
+                        "SecurityCode"
+                        "SecurityCodeError" 
+                        "CardHolderName"
+                        "CardHolderNameError";
+                        .CardNumber
+                        {
+                          padding: 11px 21px 11px;
+                        }  
+
+                        .ExpirationDate
+                        {
+                          padding: 11px 21px 11px;
+                        }
+                        .SecurityCode
+                        {
+                          padding: 11px 21px 11px;
+                          margin-left: 0px;
+                        }
+                        .CardHolderName
+                        {
+                          padding: 11px 21px 11px;
+                          margin-top: 7px;
+                        }
+                    }
+                  }
+            }
+        }
+    }
+   
+}
+
+@media screen and (max-width:906px)
+{
+    section
+    {
+        gap: 30px;
+        flex-wrap: wrap;
+        .LeftSide
+        {
+           margin: 0 auto;
+           padding-right: 0px;
+           order:2;
+        }
+        .RightSide
+        {
+           
+           width: 100%;
+           order:1;
+           justify-content: center;
+            .PContent
+            {
+                .Products
+                {
+                  padding-right: 0px;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:1060px)
+{
+    section
+    {
+        .RightSide
+        {
+            padding: 5px;
         }
     }
 }
