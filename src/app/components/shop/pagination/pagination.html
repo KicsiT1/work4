@@ -3,7 +3,7 @@
     @for (page of PagesArray.slice(PagignationStart, PaginationEnd); track $index) 
     {
     <ul>
-        <li [class.active]="$index === 0"><p>{{ page }}</p></li>
+        <li [class.active]="$index === pageIndex" (click)="GetPage(page)"><p>{{ page }}</p></li>
     </ul>
     }
     <p (click)="next()">&gt;&gt;</p>

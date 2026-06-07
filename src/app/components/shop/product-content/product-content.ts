@@ -1,6 +1,7 @@
-import { Component,EventEmitter, Input, Output} from '@angular/core';
+import { Component,EventEmitter, Input, Output,SimpleChanges} from '@angular/core';
 import { ProductModel } from '../../../models/product.model';
 import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-product-content',
   imports: [],
@@ -10,6 +11,33 @@ import { Router } from '@angular/router';
 })
 
 export class ProductContent {
+  // This is where the current page number is placed, and it is used to 
+  // determine which products to display based on the page number.
+  @Input() currentPage!: number;
+  // These two variables are used to determine the range of products 
+  // to be displayed based on the current page number.
+  startIndex: number = 0;
+  endIndex: number = 9;
+  // This function is called whenever there is a change in the input properties of the component,
+  // and it updates the startIndex and endIndex based on the current page number.
+  ngOnChanges(changes: SimpleChanges) {
+
+    if (changes['currentPage']) 
+    {
+      console.log('New Data:', changes['currentPage'].currentValue);
+      if( this.currentPage === undefined )
+      {
+        this.startIndex = 0;
+        this.endIndex = 9;
+      }
+      else
+      {
+        this.startIndex = (this.currentPage - 1) * 9;
+        this.endIndex = this.startIndex + 9;
+      }
+    }
+
+  }
   protected NumberOfProducts:number = 0; // NumberOfProducts = ProductsArraylength
   @Output() ProductsArrayLength = new EventEmitter<number>();
   constructor(private router: Router) {}

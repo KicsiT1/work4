@@ -20,12 +20,13 @@
 
     <div class="ProductContent">
         <app-product-content 
+        [currentPage]="Pages"
         [products]="filteredData"
         (ProductsArrayLength)="onProductsLengthChanged($event)"></app-product-content>
     </div>
 
      <div class="Pagination">
-        <app-pagination  [productsLength]="ProductsLength"></app-pagination>
+        <app-pagination  (pageChanged)="onPageChanged($event)"  [productsLength]="ProductsLength"></app-pagination>
     </div>
 
 </div>

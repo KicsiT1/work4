@@ -1,10 +1,10 @@
 <section class="ProductContainer">
     <div class="Products">
-        @for(Product of products.slice(0,9); track  $index; let i=$index)
+        @for(Product of products.slice(startIndex, endIndex); track  $index; let i=$index)
         {
         <div class="Product" [class.active]="Product.InStock==0">
             <div class="PImg">
-                <img [src]="Images[i]" alt="{{ Product.Name }}" (click)="openProduct(Product.ID)">
+                <img [src]="Images[i+startIndex]" alt="{{ Product.Name }}" (click)="openProduct(Product.ID)">
             </div>
             <p (click)="openProduct(Product.ID)" class="PName">{{Product.Name}}</p>
             <div (click)="openProduct(Product.ID)" class="ProductPricesContainer">
@@ -16,7 +16,7 @@
                 @for(color of Product.MainColor; track  $index;let j=$index)
                 {
                 <div class="ColorContainer">
-                    <div (click)="GetProdIndex(i,j)" [style.backgroundColor]="color.Hex" class="Color"></div>
+                    <div (click)="GetProdIndex(i+startIndex,j)" [style.backgroundColor]="color.Hex" class="Color"></div>
                 </div>
                 }
             </div>

@@ -62,4 +62,11 @@ export class Shop
     //console.log(this.ProductsLength)
   }
 
+  // This variable is used to keep track of the current page number 
+  // in the pagination component.
+  Pages!:number;
+  onPageChanged(page: number) 
+  {
+    this.Pages=page;
+  }
 }
