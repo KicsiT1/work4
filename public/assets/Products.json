@@ -232,5 +232,707 @@
             {"Fantasyname":"Deep Black","Hex":"#050203","Images":["/public/assets/images/NewArrivals/p11Black.png"]},
             {"Fantasyname":"Royal Blue","Hex":"#6c7bff","Images":["/public/assets/images/NewArrivals/p11DeepBlue.png"]}
         ]      
+    },
+        { 
+        "ID": 1, 
+        "Name": "Shiny Dress",
+        "Discount":0.03, 
+        "DiscountUntil":"",
+        "BrandName":["Al Karam"],
+        "Rating":4,
+        "CustomerReviews":40,
+        "Price": 160, 
+        "Type": "Dress", 
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false,
+        "InStock":100,
+        "Collection":["All products","New Arrivals"],
+        "Size":["M","L","XL"],
+        "MainColor":
+        [
+            {"Fantasyname":"Orange","Hex":"#ff7629",
+            "Images":
+            [
+                "/public/assets/images/NewArrivals/p1Orange.png",
+                "/public/assets/images/NewArrivals/p1Orange1.png"
+            ]},
+            {"Fantasyname":"Deep Blue","Hex":"#6c7bff",
+            "Images":
+            [
+                "/public/assets/images/NewArrivals/p1DeepBlue.png",
+                "/public/assets/images/NewArrivals/p1DeepBlue1.png"
+            ]}
+        ]
+    },
+    { 
+        "ID": 2, 
+        "Name": "Long Dress", 
+        "Discount":0.0,
+        "DiscountUntil":0,
+        "BrandName":["Al Karam"],
+        "Rating":4,
+        "CustomerReviews":120,
+        "Price": 48.50, 
+        "Type": "Dress", 
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false,
+        "InStock":0,
+        "Collection":["All products","New Arrivals"],
+        "Size":["M","L","XL"],
+        "MainColor":
+        [
+            
+            {"Fantasyname":"Deep Green","Hex":"#02590F","Images":["/public/assets/images/NewArrivals/p2Green.png"]},
+            {"Fantasyname":"Snow White","Hex":"#FFFFFF","Images":["/public/assets/images/NewArrivals/p2White.png"]}
+        ]  
+    },
+    { 
+        "ID": 3, 
+        "Name": "Full Sweater", 
+        "Discount":0.12,
+        "BrandName":["Al Karam"],
+        "Rating":5,
+        "CustomerReviews":420,
+        "Price": 120.50, 
+        "Type": "Dress", 
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false,
+        "InStock":200,
+        "Collection":["All products","New Arrivals"],
+        "Size":["M","S","XL"],
+        "MainColor":
+        [
+            {"Fantasyname":"Deep Green","Hex":"#02590F","Images":["/public/assets/images/NewArrivals/p3DeepGreen.png"]},
+            {"Fantasyname":"Light Brown","Hex":"#D2B48C","Images":["/public/assets/images/NewArrivals/p3LightBrown.png"]}
+        ]    
+    },
+    { 
+        "ID": 4, 
+        "Name": "White Dress", 
+        "BrandName":["Al Karam"],
+        "Rating":3,
+        "CustomerReviews":220,
+        "Price": 60.70, 
+        "Type": "Dress", 
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false,
+        "InStock":86,
+        "Collection":["New Arrivals"],
+        "Size":["S","M","L","XL"],
+        "MainColor":
+        [
+            {"Fantasyname":"Orange","Hex":"#ff7629","Images":["/public/assets/images/NewArrivals/p4DeepOrange.png"]},
+            {"Fantasyname":"Snow White","Hex":"#FFFFFF","Images":["/public/assets/images/NewArrivals/p4White.png"]}
+        ]     
+    },
+    { 
+        "ID": 5, 
+        "Name": "Colorful Dress", 
+        "Discount":0.04,
+        "BrandName":["Al Karam"],
+        "Rating":4,
+        "CustomerReviews":500,
+        "Price": 45, 
+        "Type": "Dress", 
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false,
+        "InStock":44,
+        "Collection":["All products","New Arrivals"],
+        "Size":["S","M","XL"], 
+        "MainColor":
+        [
+            {"Fantasyname":"Sky Blue","Hex":"#6cb9ff","Images":["/public/assets/images/NewArrivals/p5LightBlue.png"]},
+            {"Fantasyname":"Green Mint","Hex":"#6cff9e","Images":["/public/assets/images/NewArrivals/p5LightGreen.png"]},
+            {"Fantasyname":"Magenta Pink","Hex":"#fc6cff","Images":["/public/assets/images/NewArrivals/p5Rosecolor.png"]}
+        ]   
+    },
+    { 
+        "ID": 6, 
+        "Name": "White Shirt", 
+        "Discount":0.05,
+        "BrandName":["Al Karam"],
+        "Rating":5,
+        "CustomerReviews":500,
+        "Price": 75, 
+        "Type": "Dress", 
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false,
+        "InStock":25,
+        "Collection":["All products","New Arrivals"],
+        "Size":["M"],
+        "MainColor":
+        [
+            {"Fantasyname":"Deep Green","Hex":"#02590F","Images":["/public/assets/images/NewArrivals/p6DeepGreen.png"]},
+            {"Fantasyname":"Red Salmon","Hex":"#ff6c6c","Images":["/public/assets/images/NewArrivals/p6Red.png"]},
+            {"Fantasyname":"Snow White","Hex":"#FFFFFF","Images":["/public/assets/images/NewArrivals/p6White.png"]}
+        ]     
+    },
+    { 
+        "ID": 7, 
+        "Name": "Black jacket", 
+        "Discount":0.01,
+        "BrandName":["Al Karam"],
+        "Rating":5,
+        "CustomerReviews":1200,
+        "Price": 80, 
+        "Type": "Dress", 
+        "ProductFor":"Men’s Fashion",
+        "Accessories":false,
+        "InStock":18,
+        "Collection":["All products","New Arrivals"],
+        "Size":["XL"],
+        "MainColor":
+        [
+            {"Fantasyname":"Royal Blue","Hex":"#6c7bff","Images":["/public/assets/images/NewArrivals/p7DeepBlue.png"]},
+            {"Fantasyname":"Light Lake Black","Hex":"#1B1B1B","Images":["/public/assets/images/NewArrivals/p7LightBlack.png"]}
+        ]      
+    },
+    { 
+        "ID": 8, 
+        "Name": "Black sweater", 
+        "Discount":0.6,
+        "BrandName":["Al Karam"],
+        "Rating":3,
+        "CustomerReviews":120,
+        "Price": 90, 
+        "Type": "Dress", 
+        "ProductFor":"Men’s Fashion",
+        "Accessories":false,
+        "InStock":22,
+        "Collection":["All products","New Arrivals"],
+        "Size":["M","L"],
+        "MainColor":
+        [
+            {"Fantasyname":"Deep Black","Hex":"#050203","Images":["/public/assets/images/NewArrivals/p8DeepBlack.png"]},
+            {"Fantasyname":"Burgundy","Hex":"#9F1D35","Images":["/public/assets/images/NewArrivals/p8DeepRed.png"]}
+        ]    
+    },
+    { 
+        "ID": 9, 
+        "Name": "leather watch", 
+        "Discount":0.09,
+        "BrandName":["Al Karam"],
+        "Rating":4,
+        "CustomerReviews":120,
+        "Price": 45, 
+        "Type": "Object", 
+        "ProductFor":"Women’s Fashion",
+        "Accessories":true,
+        "InStock":22,
+        "Collection":["All products","New Arrivals","Accessories"],
+        "MainColor":
+        [
+            {"Fantasyname":"Brown","Hex":"#8B4513","Images":["/public/assets/images/NewArrivals/p9Brown.png"]},
+            {"Fantasyname":"Royal Blue","Hex":"#6c7bff","Images":["/public/assets/images/NewArrivals/p9Blue.png"]},
+            {"Fantasyname":"Red Salmon","Hex":"#ff6c6c","Images":["/public/assets/images/NewArrivals/p9Red.png"]}
+        ]     
+    },
+    { 
+        "ID": 10, 
+        "Name": "Brown leather watch", 
+        "Discount":0.07,
+        "BrandName":["Al Karam"],
+        "Rating":4,
+        "CustomerReviews":120,
+        "Price": 45, 
+        "Type": "Object", 
+        "ProductFor":"Men’s Fashion",
+        "Accessories":true,
+        "InStock":24,
+        "Collection":["All products","New Arrivals","Accessories"],
+        "MainColor":
+        [
+            {"Fantasyname":"Brown","Hex":"#8B4513","Images":["/public/assets/images/NewArrivals/p10Brown.png"]},
+            {"Fantasyname":"Royal Blue","Hex":"#6c7bff","Images":["/public/assets/images/NewArrivals/p10DeepBlue.png"]}
+        ]    
+    },
+    { 
+        "ID": 11, 
+        "Name": "Sheath red dress", 
+        "Discount":0.9,
+        "BrandName":["Al Karam","Minimog"],
+        "Rating":5,
+        "CustomerReviews":120,
+        "Price": 45, 
+        "Type": "Dress", 
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false,
+        "InStock":28,
+        "Collection":["All products","Best Sellers"],
+        "Size":["M","L","XL"],
+        "MainColor":
+        [
+            {"Fantasyname":"Red Salmon","Hex":"#ff6c6c","Images":["/public/assets/images/NewArrivals/p11Red.png"]},
+            {"Fantasyname":"Deep Black","Hex":"#050203","Images":["/public/assets/images/NewArrivals/p11Black.png"]},
+            {"Fantasyname":"Royal Blue","Hex":"#6c7bff","Images":["/public/assets/images/NewArrivals/p11DeepBlue.png"]}
+        ]      
+    },
+        { 
+        "ID": 1, 
+        "Name": "Shiny Dress",
+        "Discount":0.03, 
+        "DiscountUntil":"",
+        "BrandName":["Al Karam"],
+        "Rating":4,
+        "CustomerReviews":40,
+        "Price": 160, 
+        "Type": "Dress", 
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false,
+        "InStock":100,
+        "Collection":["All products","New Arrivals"],
+        "Size":["M","L","XL"],
+        "MainColor":
+        [
+            {"Fantasyname":"Orange","Hex":"#ff7629",
+            "Images":
+            [
+                "/public/assets/images/NewArrivals/p1Orange.png",
+                "/public/assets/images/NewArrivals/p1Orange1.png"
+            ]},
+            {"Fantasyname":"Deep Blue","Hex":"#6c7bff",
+            "Images":
+            [
+                "/public/assets/images/NewArrivals/p1DeepBlue.png",
+                "/public/assets/images/NewArrivals/p1DeepBlue1.png"
+            ]}
+        ]
+    },
+    { 
+        "ID": 2, 
+        "Name": "Long Dress", 
+        "Discount":0.0,
+        "DiscountUntil":0,
+        "BrandName":["Al Karam"],
+        "Rating":4,
+        "CustomerReviews":120,
+        "Price": 48.50, 
+        "Type": "Dress", 
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false,
+        "InStock":0,
+        "Collection":["All products","New Arrivals"],
+        "Size":["M","L","XL"],
+        "MainColor":
+        [
+            
+            {"Fantasyname":"Deep Green","Hex":"#02590F","Images":["/public/assets/images/NewArrivals/p2Green.png"]},
+            {"Fantasyname":"Snow White","Hex":"#FFFFFF","Images":["/public/assets/images/NewArrivals/p2White.png"]}
+        ]  
+    },
+    { 
+        "ID": 3, 
+        "Name": "Full Sweater", 
+        "Discount":0.12,
+        "BrandName":["Al Karam"],
+        "Rating":5,
+        "CustomerReviews":420,
+        "Price": 120.50, 
+        "Type": "Dress", 
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false,
+        "InStock":200,
+        "Collection":["All products","New Arrivals"],
+        "Size":["M","S","XL"],
+        "MainColor":
+        [
+            {"Fantasyname":"Deep Green","Hex":"#02590F","Images":["/public/assets/images/NewArrivals/p3DeepGreen.png"]},
+            {"Fantasyname":"Light Brown","Hex":"#D2B48C","Images":["/public/assets/images/NewArrivals/p3LightBrown.png"]}
+        ]    
+    },
+    { 
+        "ID": 4, 
+        "Name": "White Dress", 
+        "BrandName":["Al Karam"],
+        "Rating":3,
+        "CustomerReviews":220,
+        "Price": 60.70, 
+        "Type": "Dress", 
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false,
+        "InStock":86,
+        "Collection":["New Arrivals"],
+        "Size":["S","M","L","XL"],
+        "MainColor":
+        [
+            {"Fantasyname":"Orange","Hex":"#ff7629","Images":["/public/assets/images/NewArrivals/p4DeepOrange.png"]},
+            {"Fantasyname":"Snow White","Hex":"#FFFFFF","Images":["/public/assets/images/NewArrivals/p4White.png"]}
+        ]     
+    },
+    { 
+        "ID": 5, 
+        "Name": "Colorful Dress", 
+        "Discount":0.04,
+        "BrandName":["Al Karam"],
+        "Rating":4,
+        "CustomerReviews":500,
+        "Price": 45, 
+        "Type": "Dress", 
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false,
+        "InStock":44,
+        "Collection":["All products","New Arrivals"],
+        "Size":["S","M","XL"], 
+        "MainColor":
+        [
+            {"Fantasyname":"Sky Blue","Hex":"#6cb9ff","Images":["/public/assets/images/NewArrivals/p5LightBlue.png"]},
+            {"Fantasyname":"Green Mint","Hex":"#6cff9e","Images":["/public/assets/images/NewArrivals/p5LightGreen.png"]},
+            {"Fantasyname":"Magenta Pink","Hex":"#fc6cff","Images":["/public/assets/images/NewArrivals/p5Rosecolor.png"]}
+        ]   
+    },
+    { 
+        "ID": 6, 
+        "Name": "White Shirt", 
+        "Discount":0.05,
+        "BrandName":["Al Karam"],
+        "Rating":5,
+        "CustomerReviews":500,
+        "Price": 75, 
+        "Type": "Dress", 
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false,
+        "InStock":25,
+        "Collection":["All products","New Arrivals"],
+        "Size":["M"],
+        "MainColor":
+        [
+            {"Fantasyname":"Deep Green","Hex":"#02590F","Images":["/public/assets/images/NewArrivals/p6DeepGreen.png"]},
+            {"Fantasyname":"Red Salmon","Hex":"#ff6c6c","Images":["/public/assets/images/NewArrivals/p6Red.png"]},
+            {"Fantasyname":"Snow White","Hex":"#FFFFFF","Images":["/public/assets/images/NewArrivals/p6White.png"]}
+        ]     
+    },
+    { 
+        "ID": 7, 
+        "Name": "Black jacket", 
+        "Discount":0.01,
+        "BrandName":["Al Karam"],
+        "Rating":5,
+        "CustomerReviews":1200,
+        "Price": 80, 
+        "Type": "Dress", 
+        "ProductFor":"Men’s Fashion",
+        "Accessories":false,
+        "InStock":18,
+        "Collection":["All products","New Arrivals"],
+        "Size":["XL"],
+        "MainColor":
+        [
+            {"Fantasyname":"Royal Blue","Hex":"#6c7bff","Images":["/public/assets/images/NewArrivals/p7DeepBlue.png"]},
+            {"Fantasyname":"Light Lake Black","Hex":"#1B1B1B","Images":["/public/assets/images/NewArrivals/p7LightBlack.png"]}
+        ]      
+    },
+    { 
+        "ID": 8, 
+        "Name": "Black sweater", 
+        "Discount":0.6,
+        "BrandName":["Al Karam"],
+        "Rating":3,
+        "CustomerReviews":120,
+        "Price": 90, 
+        "Type": "Dress", 
+        "ProductFor":"Men’s Fashion",
+        "Accessories":false,
+        "InStock":22,
+        "Collection":["All products","New Arrivals"],
+        "Size":["M","L"],
+        "MainColor":
+        [
+            {"Fantasyname":"Deep Black","Hex":"#050203","Images":["/public/assets/images/NewArrivals/p8DeepBlack.png"]},
+            {"Fantasyname":"Burgundy","Hex":"#9F1D35","Images":["/public/assets/images/NewArrivals/p8DeepRed.png"]}
+        ]    
+    },
+    { 
+        "ID": 9, 
+        "Name": "leather watch", 
+        "Discount":0.09,
+        "BrandName":["Al Karam"],
+        "Rating":4,
+        "CustomerReviews":120,
+        "Price": 45, 
+        "Type": "Object", 
+        "ProductFor":"Women’s Fashion",
+        "Accessories":true,
+        "InStock":22,
+        "Collection":["All products","New Arrivals","Accessories"],
+        "MainColor":
+        [
+            {"Fantasyname":"Brown","Hex":"#8B4513","Images":["/public/assets/images/NewArrivals/p9Brown.png"]},
+            {"Fantasyname":"Royal Blue","Hex":"#6c7bff","Images":["/public/assets/images/NewArrivals/p9Blue.png"]},
+            {"Fantasyname":"Red Salmon","Hex":"#ff6c6c","Images":["/public/assets/images/NewArrivals/p9Red.png"]}
+        ]     
+    },
+    { 
+        "ID": 10, 
+        "Name": "Brown leather watch", 
+        "Discount":0.07,
+        "BrandName":["Al Karam"],
+        "Rating":4,
+        "CustomerReviews":120,
+        "Price": 45, 
+        "Type": "Object", 
+        "ProductFor":"Men’s Fashion",
+        "Accessories":true,
+        "InStock":24,
+        "Collection":["All products","New Arrivals","Accessories"],
+        "MainColor":
+        [
+            {"Fantasyname":"Brown","Hex":"#8B4513","Images":["/public/assets/images/NewArrivals/p10Brown.png"]},
+            {"Fantasyname":"Royal Blue","Hex":"#6c7bff","Images":["/public/assets/images/NewArrivals/p10DeepBlue.png"]}
+        ]    
+    },
+    { 
+        "ID": 11, 
+        "Name": "Sheath red dress", 
+        "Discount":0.9,
+        "BrandName":["Al Karam","Minimog"],
+        "Rating":5,
+        "CustomerReviews":120,
+        "Price": 45, 
+        "Type": "Dress", 
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false,
+        "InStock":28,
+        "Collection":["All products","Best Sellers"],
+        "Size":["M","L","XL"],
+        "MainColor":
+        [
+            {"Fantasyname":"Red Salmon","Hex":"#ff6c6c","Images":["/public/assets/images/NewArrivals/p11Red.png"]},
+            {"Fantasyname":"Deep Black","Hex":"#050203","Images":["/public/assets/images/NewArrivals/p11Black.png"]},
+            {"Fantasyname":"Royal Blue","Hex":"#6c7bff","Images":["/public/assets/images/NewArrivals/p11DeepBlue.png"]}
+        ]      
+    },
+        { 
+        "ID": 1, 
+        "Name": "Shiny Dress",
+        "Discount":0.03, 
+        "DiscountUntil":"",
+        "BrandName":["Al Karam"],
+        "Rating":4,
+        "CustomerReviews":40,
+        "Price": 160, 
+        "Type": "Dress", 
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false,
+        "InStock":100,
+        "Collection":["All products","New Arrivals"],
+        "Size":["M","L","XL"],
+        "MainColor":
+        [
+            {"Fantasyname":"Orange","Hex":"#ff7629",
+            "Images":
+            [
+                "/public/assets/images/NewArrivals/p1Orange.png",
+                "/public/assets/images/NewArrivals/p1Orange1.png"
+            ]},
+            {"Fantasyname":"Deep Blue","Hex":"#6c7bff",
+            "Images":
+            [
+                "/public/assets/images/NewArrivals/p1DeepBlue.png",
+                "/public/assets/images/NewArrivals/p1DeepBlue1.png"
+            ]}
+        ]
+    },
+    { 
+        "ID": 2, 
+        "Name": "Long Dress", 
+        "Discount":0.0,
+        "DiscountUntil":0,
+        "BrandName":["Al Karam"],
+        "Rating":4,
+        "CustomerReviews":120,
+        "Price": 48.50, 
+        "Type": "Dress", 
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false,
+        "InStock":0,
+        "Collection":["All products","New Arrivals"],
+        "Size":["M","L","XL"],
+        "MainColor":
+        [
+            
+            {"Fantasyname":"Deep Green","Hex":"#02590F","Images":["/public/assets/images/NewArrivals/p2Green.png"]},
+            {"Fantasyname":"Snow White","Hex":"#FFFFFF","Images":["/public/assets/images/NewArrivals/p2White.png"]}
+        ]  
+    },
+    { 
+        "ID": 3, 
+        "Name": "Full Sweater", 
+        "Discount":0.12,
+        "BrandName":["Al Karam"],
+        "Rating":5,
+        "CustomerReviews":420,
+        "Price": 120.50, 
+        "Type": "Dress", 
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false,
+        "InStock":200,
+        "Collection":["All products","New Arrivals"],
+        "Size":["M","S","XL"],
+        "MainColor":
+        [
+            {"Fantasyname":"Deep Green","Hex":"#02590F","Images":["/public/assets/images/NewArrivals/p3DeepGreen.png"]},
+            {"Fantasyname":"Light Brown","Hex":"#D2B48C","Images":["/public/assets/images/NewArrivals/p3LightBrown.png"]}
+        ]    
+    },
+    { 
+        "ID": 4, 
+        "Name": "White Dress", 
+        "BrandName":["Al Karam"],
+        "Rating":3,
+        "CustomerReviews":220,
+        "Price": 60.70, 
+        "Type": "Dress", 
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false,
+        "InStock":86,
+        "Collection":["New Arrivals"],
+        "Size":["S","M","L","XL"],
+        "MainColor":
+        [
+            {"Fantasyname":"Orange","Hex":"#ff7629","Images":["/public/assets/images/NewArrivals/p4DeepOrange.png"]},
+            {"Fantasyname":"Snow White","Hex":"#FFFFFF","Images":["/public/assets/images/NewArrivals/p4White.png"]}
+        ]     
+    },
+    { 
+        "ID": 5, 
+        "Name": "Colorful Dress", 
+        "Discount":0.04,
+        "BrandName":["Al Karam"],
+        "Rating":4,
+        "CustomerReviews":500,
+        "Price": 45, 
+        "Type": "Dress", 
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false,
+        "InStock":44,
+        "Collection":["All products","New Arrivals"],
+        "Size":["S","M","XL"], 
+        "MainColor":
+        [
+            {"Fantasyname":"Sky Blue","Hex":"#6cb9ff","Images":["/public/assets/images/NewArrivals/p5LightBlue.png"]},
+            {"Fantasyname":"Green Mint","Hex":"#6cff9e","Images":["/public/assets/images/NewArrivals/p5LightGreen.png"]},
+            {"Fantasyname":"Magenta Pink","Hex":"#fc6cff","Images":["/public/assets/images/NewArrivals/p5Rosecolor.png"]}
+        ]   
+    },
+    { 
+        "ID": 6, 
+        "Name": "White Shirt", 
+        "Discount":0.05,
+        "BrandName":["Al Karam"],
+        "Rating":5,
+        "CustomerReviews":500,
+        "Price": 75, 
+        "Type": "Dress", 
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false,
+        "InStock":25,
+        "Collection":["All products","New Arrivals"],
+        "Size":["M"],
+        "MainColor":
+        [
+            {"Fantasyname":"Deep Green","Hex":"#02590F","Images":["/public/assets/images/NewArrivals/p6DeepGreen.png"]},
+            {"Fantasyname":"Red Salmon","Hex":"#ff6c6c","Images":["/public/assets/images/NewArrivals/p6Red.png"]},
+            {"Fantasyname":"Snow White","Hex":"#FFFFFF","Images":["/public/assets/images/NewArrivals/p6White.png"]}
+        ]     
+    },
+    { 
+        "ID": 7, 
+        "Name": "Black jacket", 
+        "Discount":0.01,
+        "BrandName":["Al Karam"],
+        "Rating":5,
+        "CustomerReviews":1200,
+        "Price": 80, 
+        "Type": "Dress", 
+        "ProductFor":"Men’s Fashion",
+        "Accessories":false,
+        "InStock":18,
+        "Collection":["All products","New Arrivals"],
+        "Size":["XL"],
+        "MainColor":
+        [
+            {"Fantasyname":"Royal Blue","Hex":"#6c7bff","Images":["/public/assets/images/NewArrivals/p7DeepBlue.png"]},
+            {"Fantasyname":"Light Lake Black","Hex":"#1B1B1B","Images":["/public/assets/images/NewArrivals/p7LightBlack.png"]}
+        ]      
+    },
+    { 
+        "ID": 8, 
+        "Name": "Black sweater", 
+        "Discount":0.6,
+        "BrandName":["Al Karam"],
+        "Rating":3,
+        "CustomerReviews":120,
+        "Price": 90, 
+        "Type": "Dress", 
+        "ProductFor":"Men’s Fashion",
+        "Accessories":false,
+        "InStock":22,
+        "Collection":["All products","New Arrivals"],
+        "Size":["M","L"],
+        "MainColor":
+        [
+            {"Fantasyname":"Deep Black","Hex":"#050203","Images":["/public/assets/images/NewArrivals/p8DeepBlack.png"]},
+            {"Fantasyname":"Burgundy","Hex":"#9F1D35","Images":["/public/assets/images/NewArrivals/p8DeepRed.png"]}
+        ]    
+    },
+    { 
+        "ID": 9, 
+        "Name": "leather watch", 
+        "Discount":0.09,
+        "BrandName":["Al Karam"],
+        "Rating":4,
+        "CustomerReviews":120,
+        "Price": 45, 
+        "Type": "Object", 
+        "ProductFor":"Women’s Fashion",
+        "Accessories":true,
+        "InStock":22,
+        "Collection":["All products","New Arrivals","Accessories"],
+        "MainColor":
+        [
+            {"Fantasyname":"Brown","Hex":"#8B4513","Images":["/public/assets/images/NewArrivals/p9Brown.png"]},
+            {"Fantasyname":"Royal Blue","Hex":"#6c7bff","Images":["/public/assets/images/NewArrivals/p9Blue.png"]},
+            {"Fantasyname":"Red Salmon","Hex":"#ff6c6c","Images":["/public/assets/images/NewArrivals/p9Red.png"]}
+        ]     
+    },
+    { 
+        "ID": 10, 
+        "Name": "Brown leather watch", 
+        "Discount":0.07,
+        "BrandName":["Al Karam"],
+        "Rating":4,
+        "CustomerReviews":120,
+        "Price": 45, 
+        "Type": "Object", 
+        "ProductFor":"Men’s Fashion",
+        "Accessories":true,
+        "InStock":24,
+        "Collection":["All products","New Arrivals","Accessories"],
+        "MainColor":
+        [
+            {"Fantasyname":"Brown","Hex":"#8B4513","Images":["/public/assets/images/NewArrivals/p10Brown.png"]},
+            {"Fantasyname":"Royal Blue","Hex":"#6c7bff","Images":["/public/assets/images/NewArrivals/p10DeepBlue.png"]}
+        ]    
+    },
+    { 
+        "ID": 11, 
+        "Name": "Sheath red dress", 
+        "Discount":0.9,
+        "BrandName":["Al Karam","Minimog"],
+        "Rating":5,
+        "CustomerReviews":120,
+        "Price": 45, 
+        "Type": "Dress", 
+        "ProductFor":"Women’s Fashion",
+        "Accessories":false,
+        "InStock":28,
+        "Collection":["All products","Best Sellers"],
+        "Size":["M","L","XL"],
+        "MainColor":
+        [
+            {"Fantasyname":"Red Salmon","Hex":"#ff6c6c","Images":["/public/assets/images/NewArrivals/p11Red.png"]},
+            {"Fantasyname":"Deep Black","Hex":"#050203","Images":["/public/assets/images/NewArrivals/p11Black.png"]},
+            {"Fantasyname":"Royal Blue","Hex":"#6c7bff","Images":["/public/assets/images/NewArrivals/p11DeepBlue.png"]}
+        ]      
     }
 ]

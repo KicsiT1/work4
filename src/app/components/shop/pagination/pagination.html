@@ -1,10 +1,10 @@
 <div class="Pagination">
-    <p>&lt;&lt;</p>
-    @for (page of PagesArray; track $index) 
+    <p (click)="Previous()">&lt;&lt;</p>
+    @for (page of PagesArray.slice(PagignationStart, PaginationEnd); track $index) 
     {
     <ul>
         <li [class.active]="$index === 0"><p>{{ page }}</p></li>
     </ul>
     }
-    <p>&gt;&gt;</p>
+    <p (click)="next()">&gt;&gt;</p>
 </div>
