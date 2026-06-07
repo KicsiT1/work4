@@ -53,4 +53,13 @@ export class Shop
     this.PhoneFilterOpen=cf;
     document.body.style.overflow = 'auto';
   }
+
+  ProductsLength!: number;
+
+  onProductsLengthChanged(length: number) 
+  {
+    this.ProductsLength = length;
+    //console.log(this.ProductsLength)
+  }
+
 }

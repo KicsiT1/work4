@@ -7,7 +7,6 @@
 
     <div class="Filter">
         <app-product-filter 
-        
         (filteredProductsChange)="onFilterApplied($event)"
         (ProducCollectionIndex)="ProducCollectionIndexApplied($event)">
         </app-product-filter>
@@ -21,11 +20,12 @@
 
     <div class="ProductContent">
         <app-product-content 
-        [products]="filteredData"></app-product-content>
+        [products]="filteredData"
+        (ProductsArrayLength)="onProductsLengthChanged($event)"></app-product-content>
     </div>
 
      <div class="Pagination">
-        <app-pagination></app-pagination>
+        <app-pagination  [productsLength]="ProductsLength"></app-pagination>
     </div>
 
 </div>

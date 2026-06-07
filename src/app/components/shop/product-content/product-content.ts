@@ -1,4 +1,4 @@
-import { Component,Input} from '@angular/core';
+import { Component,EventEmitter, Input, Output} from '@angular/core';
 import { ProductModel } from '../../../models/product.model';
 import { Router } from '@angular/router';
 @Component({
@@ -10,12 +10,16 @@ import { Router } from '@angular/router';
 })
 
 export class ProductContent {
+  protected NumberOfProducts:number = 0; // NumberOfProducts = ProductsArraylength
+  @Output() ProductsArrayLength = new EventEmitter<number>();
   constructor(private router: Router) {}
   // This is where the filtered data comes in.
   @Input()
   set products(value: ProductModel[]) 
   {
     this._products = value;
+    this.NumberOfProducts=this._products.length;
+    this.ProductsArrayLength.emit(this.NumberOfProducts);
     this.Images = value.map(p => p.MainColor?.[0]?.Images?.[0] ?? '');
   }
 

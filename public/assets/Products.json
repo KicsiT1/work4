@@ -34,7 +34,7 @@
         "ID": 2, 
         "Name": "Long Dress", 
         "Discount":0.0,
-        "DiscountUntil":10000000000000,
+        "DiscountUntil":0,
         "BrandName":["Al Karam"],
         "Rating":4,
         "CustomerReviews":120,
