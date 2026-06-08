@@ -43,7 +43,7 @@
     "Month": "June",
     "SaleProducts": [
       { "ID": 16, "Name": "P16", "Price": 100, "ProductType": "Dress", "Thumbnail": "/public/assets/images/currentOffer/p16.png", "Discount": 45, "DiscountSeason": "Summer sale", "SaleNumber": 1 },
-      { "ID": 17, "Name": "P17", "Price": 95, "ProductType": "Dress", "Thumbnail": "/public/assets/images/currentOffer/p17.png", "Discount": 20, "DiscountSeason": "Summer sale", "SaleNumber": 2 },
+      { "ID": 17, "Name": "P17", "Price": 95, "ProductType": "Dress", "Thumbnail":  "/public/assets/images/currentOffer/p17.png", "Discount": 20, "DiscountSeason": "Summer sale", "SaleNumber": 2 },
       { "ID": 18, "Name": "P18", "Price": 110, "ProductType": "Dress", "Thumbnail": "/public/assets/images/currentOffer/p18.png", "Discount": 15, "DiscountSeason": "Summer sale", "SaleNumber": 3 }
     ]
   },

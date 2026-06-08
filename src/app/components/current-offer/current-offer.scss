@@ -257,9 +257,19 @@ section
   cursor: not-allowed;
 }
 
+@media screen and (max-width: 1440px) 
+{
+  section
+  {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+} 
+
 @media screen and (max-width: 890px) and (min-width: 768px) 
 {
-   section {
+   section 
+   {
     padding-right: 10px;
     padding-left: 10px;
     .Content {
@@ -297,8 +307,6 @@ section
 {
   section
   {
-    padding-right: 10px;
-    padding-left: 10px;
     .Content
     {
       flex-direction: column;
