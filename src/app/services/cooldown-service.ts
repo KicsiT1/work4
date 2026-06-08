@@ -20,6 +20,11 @@ export class CooldownService {
   startCooldown(targetDate: number | string):Observable<Cooldown> 
   {
     // I handle the incoming type value
+    if (typeof targetDate === 'number') 
+    {
+      targetDate = Date.now() + targetDate;
+    }
+
     if (typeof targetDate === 'string') 
     {
       // I'm breaking the string
