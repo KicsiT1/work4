@@ -24,7 +24,6 @@ export class CooldownService {
     {
       targetDate = Date.now() + targetDate;
     }
-
     if (typeof targetDate === 'string') 
     {
       // I'm breaking the string
