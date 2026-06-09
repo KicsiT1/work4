@@ -19,14 +19,14 @@
             {"Fantasyname":"Orange","Hex":"#ff7629",
             "Images":
             [
-                "/public/assets/images/NewArrivals/p1Orange.png",
-                "/public/assets/images/NewArrivals/p1Orange1.png"
+                "public/assets/images/NewArrivals/p1Orange.png",
+                "public/assets/images/NewArrivals/p1Orange1.png"
             ]},
             {"Fantasyname":"Deep Blue","Hex":"#6c7bff",
             "Images":
             [
-                "/public/assets/images/NewArrivals/p1DeepBlue.png",
-                "/public/assets/images/NewArrivals/p1DeepBlue1.png"
+                "public/assets/images/NewArrivals/p1DeepBlue.png",
+                "public/assets/images/NewArrivals/p1DeepBlue1.png"
             ]}
         ]
     },
@@ -48,8 +48,8 @@
         "MainColor":
         [
             
-            {"Fantasyname":"Deep Green","Hex":"#02590F","Images":["/public/assets/images/NewArrivals/p2Green.png"]},
-            {"Fantasyname":"Snow White","Hex":"#FFFFFF","Images":["/public/assets/images/NewArrivals/p2White.png"]}
+            {"Fantasyname":"Deep Green","Hex":"#02590F","Images":["public/assets/images/NewArrivals/p2Green.png"]},
+            {"Fantasyname":"Snow White","Hex":"#FFFFFF","Images":["public/assets/images/NewArrivals/p2White.png"]}
         ]  
     },
     { 
@@ -68,8 +68,8 @@
         "Size":["M","S","XL"],
         "MainColor":
         [
-            {"Fantasyname":"Deep Green","Hex":"#02590F","Images":["/public/assets/images/NewArrivals/p3DeepGreen.png"]},
-            {"Fantasyname":"Light Brown","Hex":"#D2B48C","Images":["/public/assets/images/NewArrivals/p3LightBrown.png"]}
+            {"Fantasyname":"Deep Green","Hex":"#02590F","Images":["public/assets/images/NewArrivals/p3DeepGreen.png"]},
+            {"Fantasyname":"Light Brown","Hex":"#D2B48C","Images":["public/assets/images/NewArrivals/p3LightBrown.png"]}
         ]    
     },
     { 
@@ -87,8 +87,8 @@
         "Size":["S","M","L","XL"],
         "MainColor":
         [
-            {"Fantasyname":"Orange","Hex":"#ff7629","Images":["/public/assets/images/NewArrivals/p4DeepOrange.png"]},
-            {"Fantasyname":"Snow White","Hex":"#FFFFFF","Images":["/public/assets/images/NewArrivals/p4White.png"]}
+            {"Fantasyname":"Orange","Hex":"#ff7629","Images":["public/assets/images/NewArrivals/p4DeepOrange.png"]},
+            {"Fantasyname":"Snow White","Hex":"#FFFFFF","Images":["public/assets/images/NewArrivals/p4White.png"]}
         ]     
     },
     { 
@@ -107,9 +107,9 @@
         "Size":["S","M","XL"], 
         "MainColor":
         [
-            {"Fantasyname":"Sky Blue","Hex":"#6cb9ff","Images":["/public/assets/images/NewArrivals/p5LightBlue.png"]},
-            {"Fantasyname":"Green Mint","Hex":"#6cff9e","Images":["/public/assets/images/NewArrivals/p5LightGreen.png"]},
-            {"Fantasyname":"Magenta Pink","Hex":"#fc6cff","Images":["/public/assets/images/NewArrivals/p5Rosecolor.png"]}
+            {"Fantasyname":"Sky Blue","Hex":"#6cb9ff","Images":["public/assets/images/NewArrivals/p5LightBlue.png"]},
+            {"Fantasyname":"Green Mint","Hex":"#6cff9e","Images":["public/assets/images/NewArrivals/p5LightGreen.png"]},
+            {"Fantasyname":"Magenta Pink","Hex":"#fc6cff","Images":["public/assets/images/NewArrivals/p5Rosecolor.png"]}
         ]   
     },
     { 
@@ -128,9 +128,9 @@
         "Size":["M"],
         "MainColor":
         [
-            {"Fantasyname":"Deep Green","Hex":"#02590F","Images":["/public/assets/images/NewArrivals/p6DeepGreen.png"]},
-            {"Fantasyname":"Red Salmon","Hex":"#ff6c6c","Images":["/public/assets/images/NewArrivals/p6Red.png"]},
-            {"Fantasyname":"Snow White","Hex":"#FFFFFF","Images":["/public/assets/images/NewArrivals/p6White.png"]}
+            {"Fantasyname":"Deep Green","Hex":"#02590F","Images":["public/assets/images/NewArrivals/p6DeepGreen.png"]},
+            {"Fantasyname":"Red Salmon","Hex":"#ff6c6c","Images":["public/assets/images/NewArrivals/p6Red.png"]},
+            {"Fantasyname":"Snow White","Hex":"#FFFFFF","Images":["public/assets/images/NewArrivals/p6White.png"]}
         ]     
     },
     { 
@@ -149,8 +149,8 @@
         "Size":["XL"],
         "MainColor":
         [
-            {"Fantasyname":"Royal Blue","Hex":"#6c7bff","Images":["/public/assets/images/NewArrivals/p7DeepBlue.png"]},
-            {"Fantasyname":"Light Lake Black","Hex":"#1B1B1B","Images":["/public/assets/images/NewArrivals/p7LightBlack.png"]}
+            {"Fantasyname":"Royal Blue","Hex":"#6c7bff","Images":["public/assets/images/NewArrivals/p7DeepBlue.png"]},
+            {"Fantasyname":"Light Lake Black","Hex":"#1B1B1B","Images":["public/assets/images/NewArrivals/p7LightBlack.png"]}
         ]      
     },
     { 
@@ -169,8 +169,8 @@
         "Size":["M","L"],
         "MainColor":
         [
-            {"Fantasyname":"Deep Black","Hex":"#050203","Images":["/public/assets/images/NewArrivals/p8DeepBlack.png"]},
-            {"Fantasyname":"Burgundy","Hex":"#9F1D35","Images":["/public/assets/images/NewArrivals/p8DeepRed.png"]}
+            {"Fantasyname":"Deep Black","Hex":"#050203","Images":["public/assets/images/NewArrivals/p8DeepBlack.png"]},
+            {"Fantasyname":"Burgundy","Hex":"#9F1D35","Images":["public/assets/images/NewArrivals/p8DeepRed.png"]}
         ]    
     },
     { 
@@ -188,9 +188,9 @@
         "Collection":["All products","New Arrivals","Accessories"],
         "MainColor":
         [
-            {"Fantasyname":"Brown","Hex":"#8B4513","Images":["/public/assets/images/NewArrivals/p9Brown.png"]},
-            {"Fantasyname":"Royal Blue","Hex":"#6c7bff","Images":["/public/assets/images/NewArrivals/p9Blue.png"]},
-            {"Fantasyname":"Red Salmon","Hex":"#ff6c6c","Images":["/public/assets/images/NewArrivals/p9Red.png"]}
+            {"Fantasyname":"Brown","Hex":"#8B4513","Images":["public/assets/images/NewArrivals/p9Brown.png"]},
+            {"Fantasyname":"Royal Blue","Hex":"#6c7bff","Images":["public/assets/images/NewArrivals/p9Blue.png"]},
+            {"Fantasyname":"Red Salmon","Hex":"#ff6c6c","Images":["public/assets/images/NewArrivals/p9Red.png"]}
         ]     
     },
     { 
@@ -208,8 +208,8 @@
         "Collection":["All products","New Arrivals","Accessories"],
         "MainColor":
         [
-            {"Fantasyname":"Brown","Hex":"#8B4513","Images":["/public/assets/images/NewArrivals/p10Brown.png"]},
-            {"Fantasyname":"Royal Blue","Hex":"#6c7bff","Images":["/public/assets/images/NewArrivals/p10DeepBlue.png"]}
+            {"Fantasyname":"Brown","Hex":"#8B4513","Images":["public/assets/images/NewArrivals/p10Brown.png"]},
+            {"Fantasyname":"Royal Blue","Hex":"#6c7bff","Images":["public/assets/images/NewArrivals/p10DeepBlue.png"]}
         ]    
     },
     { 
@@ -228,9 +228,9 @@
         "Size":["M","L","XL"],
         "MainColor":
         [
-            {"Fantasyname":"Red Salmon","Hex":"#ff6c6c","Images":["/public/assets/images/NewArrivals/p11Red.png"]},
-            {"Fantasyname":"Deep Black","Hex":"#050203","Images":["/public/assets/images/NewArrivals/p11Black.png"]},
-            {"Fantasyname":"Royal Blue","Hex":"#6c7bff","Images":["/public/assets/images/NewArrivals/p11DeepBlue.png"]}
+            {"Fantasyname":"Red Salmon","Hex":"#ff6c6c","Images":["public/assets/images/NewArrivals/p11Red.png"]},
+            {"Fantasyname":"Deep Black","Hex":"#050203","Images":["public/assets/images/NewArrivals/p11Black.png"]},
+            {"Fantasyname":"Royal Blue","Hex":"#6c7bff","Images":["public/assets/images/NewArrivals/p11DeepBlue.png"]}
         ]      
     }
 ]
