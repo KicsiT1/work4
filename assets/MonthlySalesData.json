@@ -1,0 +1,98 @@
+[
+  {
+    "Month": "January",
+    "SaleProducts": [
+      { "ID": 1, "Name": "P1", "Price": 70, "ProductType": "Dress", "Thumbnail": "assets/images/currentOffer/p1.png", "Discount": 30, "DiscountSeason": "Winter season", "SaleNumber": 1 },
+      { "ID": 2, "Name": "P2", "Price": 90, "ProductType": "Dress", "Thumbnail": "assets/images/currentOffer/p2.png", "Discount": 50, "DiscountSeason": "Winter season", "SaleNumber": 2 },
+      { "ID": 3, "Name": "P3", "Price": 40, "ProductType": "Dress", "Thumbnail": "assets/images/currentOffer/p3.png", "Discount": 10, "DiscountSeason": "Winter season", "SaleNumber": 3 }
+    ]
+  },
+  {
+    "Month": "February",
+    "SaleProducts": [
+      { "ID": 4, "Name": "P4", "Price": 45, "ProductType": "Dress", "Thumbnail": "assets/images/currentOffer/p4.png", "Discount": 20, "DiscountSeason": "Winter season", "SaleNumber": 1 },
+      { "ID": 5, "Name": "P5", "Price": 50, "ProductType": "Dress", "Thumbnail": "assets/images/currentOffer/p5.png", "Discount": 15, "DiscountSeason": "Winter season", "SaleNumber": 2 },
+      { "ID": 6, "Name": "P6", "Price": 35, "ProductType": "Dress", "Thumbnail": "assets/images/currentOffer/p6.png", "Discount": 25, "DiscountSeason": "Winter season", "SaleNumber": 3 }
+    ]
+  },
+  {
+    "Month": "March",
+    "SaleProducts": [
+      { "ID": 7, "Name": "P7", "Price": 60, "ProductType": "Dress", "Thumbnail": "assets/images/currentOffer/p7.png", "Discount": 40, "DiscountSeason": "Spring sale", "SaleNumber": 1 },
+      { "ID": 8, "Name": "P8", "Price": 55, "ProductType": "Dress", "Thumbnail": "assets/images/currentOffer/p8.png", "Discount": 10, "DiscountSeason": "Spring sale", "SaleNumber": 2 },
+      { "ID": 9, "Name": "P9", "Price": 70, "ProductType": "Dress", "Thumbnail": "assets/images/currentOffer/p9.png", "Discount": 30, "DiscountSeason": "Spring sale", "SaleNumber": 3 }
+    ]
+  },
+  {
+    "Month": "April",
+    "SaleProducts": [
+      { "ID": 10, "Name": "P10", "Price": 40, "ProductType": "Dress", "Thumbnail": "assets/images/currentOffer/p10.png", "Discount": 15, "DiscountSeason": "Spring sale", "SaleNumber": 1 },
+      { "ID": 11, "Name": "P11", "Price": 45, "ProductType": "Dress", "Thumbnail": "assets/images/currentOffer/p11.png", "Discount": 20, "DiscountSeason": "Spring sale", "SaleNumber": 2 },
+      { "ID": 12, "Name": "P12", "Price": 55, "ProductType": "Dress", "Thumbnail": "assets/images/currentOffer/p12.png", "Discount": 50, "DiscountSeason": "Spring sale", "SaleNumber": 3 }
+    ]
+  },
+  {
+    "Month": "May",
+    "SaleProducts": [
+      { "ID": 13, "Name": "P13", "Price": 80, "ProductType": "Dress", "Thumbnail": "assets/images/currentOffer/p13.png", "Discount": 25, "DiscountSeason": "Spring sale", "SaleNumber": 1 },
+      { "ID": 14, "Name": "P14", "Price": 85, "ProductType": "Dress", "Thumbnail": "assets/images/currentOffer/p14.png", "Discount": 10, "DiscountSeason": "Spring sale", "SaleNumber": 2 },
+      { "ID": 15, "Name": "P15", "Price": 90, "ProductType": "Dress", "Thumbnail": "assets/images/currentOffer/p15.png", "Discount": 30, "DiscountSeason": "Spring sale", "SaleNumber": 3 }
+    ]
+  },
+  {
+    "Month": "June",
+    "SaleProducts": [
+      { "ID": 16, "Name": "P16", "Price": 100, "ProductType": "Dress", "Thumbnail": "assets/images/currentOffer/p16.png", "Discount": 45, "DiscountSeason": "Summer sale", "SaleNumber": 1 },
+      { "ID": 17, "Name": "P17", "Price": 95, "ProductType": "Dress", "Thumbnail":  "assets/images/currentOffer/p17.png", "Discount": 20, "DiscountSeason": "Summer sale", "SaleNumber": 2 },
+      { "ID": 18, "Name": "P18", "Price": 110, "ProductType": "Dress", "Thumbnail": "assets/images/currentOffer/p18.png", "Discount": 15, "DiscountSeason": "Summer sale", "SaleNumber": 3 }
+    ]
+  },
+  {
+    "Month": "July",
+    "SaleProducts": [
+      { "ID": 19, "Name": "P19", "Price": 120, "ProductType": "Dress", "Thumbnail": "assets/images/currentOffer/p19.png", "Discount": 50, "DiscountSeason": "Summer sale", "SaleNumber": 1 },
+      { "ID": 20, "Name": "P20", "Price": 115, "ProductType": "Dress", "Thumbnail": "assets/images/currentOffer/p20.png", "Discount": 60, "DiscountSeason": "Summer sale", "SaleNumber": 2 },
+      { "ID": 21, "Name": "P21", "Price": 130, "ProductType": "Dress", "Thumbnail": "assets/images/currentOffer/p21.png", "Discount": 40, "DiscountSeason": "Summer sale", "SaleNumber": 3 }
+    ]
+  },
+  {
+    "Month": "August",
+    "SaleProducts": [
+      { "ID": 22, "Name": "P22", "Price": 90, "ProductType": "Dress", "Thumbnail": "assets/images/currentOffer/p22.png", "Discount": 70, "DiscountSeason": "Summer sale", "SaleNumber": 1 },
+      { "ID": 23, "Name": "P23", "Price": 85, "ProductType": "Dress", "Thumbnail": "assets/images/currentOffer/p23.png", "Discount": 25, "DiscountSeason": "Summer sale", "SaleNumber": 2 },
+      { "ID": 24, "Name": "P24", "Price": 80, "ProductType": "Dress", "Thumbnail": "assets/images/currentOffer/p24.png", "Discount": 35, "DiscountSeason": "Summer sale", "SaleNumber": 3 }
+    ]
+  },
+  {
+    "Month": "September",
+    "SaleProducts": [
+      { "ID": 25, "Name": "P25", "Price": 75, "ProductType": "Dress", "Thumbnail": "assets/images/currentOffer/p25.png", "Discount": 15, "DiscountSeason": "Autumn sale", "SaleNumber": 1 },
+      { "ID": 26, "Name": "P26", "Price": 70, "ProductType": "Dress", "Thumbnail": "assets/images/currentOffer/p26.png", "Discount": 20, "DiscountSeason": "Autumn sale", "SaleNumber": 2 },
+      { "ID": 27, "Name": "P27", "Price": 80, "ProductType": "Dress", "Thumbnail": "assets/images/currentOffer/p27.png", "Discount": 10, "DiscountSeason": "Autumn sale", "SaleNumber": 3 }
+    ]
+  },
+  {
+    "Month": "October",
+    "SaleProducts": [
+      { "ID": 28, "Name": "P28", "Price": 65, "ProductType": "Dress", "Thumbnail": "assets/images/currentOffer/p28.png", "Discount": 30, "DiscountSeason": "Autumn sale", "SaleNumber": 1 },
+      { "ID": 29, "Name": "P29", "Price": 60, "ProductType": "Dress", "Thumbnail": "assets/images/currentOffer/p29.png", "Discount": 40, "DiscountSeason": "Autumn sale", "SaleNumber": 2 },
+      { "ID": 30, "Name": "P30", "Price": 55, "ProductType": "Dress", "Thumbnail": "assets/images/currentOffer/p30.png", "Discount": 25, "DiscountSeason": "Autumn sale", "SaleNumber": 3 }
+    ]
+  },
+  {
+    "Month": "November",
+    "SaleProducts": [
+      { "ID": 31, "Name": "P31", "Price": 150, "ProductType": "Dress", "Thumbnail": "assets/images/currentOffer/p31.png", "Discount": 80, "DiscountSeason": "Autumn sale", "SaleNumber": 1 },
+      { "ID": 32, "Name": "P32", "Price": 140, "ProductType": "Dress", "Thumbnail": "assets/images/currentOffer/p32.png", "Discount": 75, "DiscountSeason": "Autumn sale", "SaleNumber": 2 },
+      { "ID": 33, "Name": "P33", "Price": 160, "ProductType": "Dress", "Thumbnail": "assets/images/currentOffer/p33.png", "Discount": 85, "DiscountSeason": "Autumn sale", "SaleNumber": 3 }
+    ]
+  },
+  {
+    "Month": "December",
+    "SaleProducts": [
+      { "ID": 34, "Name": "P34", "Price": 200, "ProductType": "Dress", "Thumbnail": "public/assets/images/currentOffer/p34.png", "Discount": 50, "DiscountSeason": "Winter season", "SaleNumber": 1 },
+      { "ID": 35, "Name": "P35", "Price": 190, "ProductType": "Dress", "Thumbnail": "public/assets/images/currentOffer/p35.png", "Discount": 45, "DiscountSeason": "Winter season", "SaleNumber": 2 },
+      { "ID": 36, "Name": "P36", "Price": 210, "ProductType": "Dress", "Thumbnail": "public/assets/images/currentOffer/p36.png", "Discount": 60, "DiscountSeason": "Winter season", "SaleNumber": 3 }
+    ]
+  }
+]
