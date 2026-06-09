@@ -35,6 +35,6 @@ export class ShopingCard {
   }
   GoToCheckout()
   {
-    this.router.navigate(['/Purchasing-product']);
+    this.router.navigate(['Purchasing-product']);
   }
 }

@@ -7,7 +7,7 @@ import { User } from '../models/User.model';
 })
 export class UserService 
 {
-  private UsersDataUrl:string = '/public/assets/Users.json';
+  private UsersDataUrl:string = 'assets/Users.json';
   private http = inject(HttpClient);
   
   GetUsersData(): Observable<User[]>

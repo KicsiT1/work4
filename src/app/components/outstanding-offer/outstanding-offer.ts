@@ -8,13 +8,13 @@ import { Component } from '@angular/core';
 })
 export class OutstandingOffer {
   // Section main img
-  readonly OutstandingOfferImg1:string="public/assets/images/outstanding-offer/image.png";
-  readonly OutstandingOfferImg2:string="public/assets/images/outstanding-offer/image2.png";
+  readonly OutstandingOfferImg1:string="assets/images/outstanding-offer/image.png";
+  readonly OutstandingOfferImg2:string="assets/images/outstanding-offer/image2.png";
   // Bannner imgs paths
-  readonly HighQualityImg:string="public/assets/images/outstanding-offer/feature4.png";
-  readonly WarranyProtectionImg:string="public/assets/images/outstanding-offer/feature1.png";
-  readonly FreeShippingImg:string="public/assets/images/outstanding-offer/feature2.png";
-  readonly SupportImg:string="public/assets/images/outstanding-offer/feature3.png";
+  readonly HighQualityImg:string="assets/images/outstanding-offer/feature4.png";
+  readonly WarranyProtectionImg:string="assets/images/outstanding-offer/feature1.png";
+  readonly FreeShippingImg:string="assets/images/outstanding-offer/feature2.png";
+  readonly SupportImg:string="assets/images/outstanding-offer/feature3.png";
   readonly BannerImgs:string[]=[this.HighQualityImg,this.WarranyProtectionImg,this.FreeShippingImg,this.SupportImg];
   
 }

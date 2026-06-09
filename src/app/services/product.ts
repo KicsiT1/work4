@@ -10,8 +10,8 @@ import { ProductModel } from '../models/product.model';
 export class ProductService {
 
   // The data is in separate files, I decided to split it up for myself so it would be more transparent.
-  private MonthlySalesDataUrl:string = '/public/assets/MonthlySalesData.json';
-  private ProductDataUrl:string = '/public/assets/Products.json';
+  private MonthlySalesDataUrl:string = 'assets/MonthlySalesData.json';
+  private ProductDataUrl:string = 'assets/Products.json';
   protected http = inject(HttpClient);
   // Provides data to the current-offer component
   GetMonthlySalesData(): Observable<MonthlySalesModel[]> 

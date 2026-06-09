@@ -72,6 +72,6 @@ export class ProductContent {
   // redirect us to another route
   openProduct(id: number) 
   {
-  this.router.navigate(['/shop/productinfo', id]);
+  this.router.navigate(['shop/productinfo', id]);
   }
 }
