@@ -1,6 +1,6 @@
 <nav>
      <!-- Logo -->
-    <h1><a href="/">FASCO</a></h1>
+    <h1><a routerLink="/">FASCO</a></h1>
     <!-- Dynamic Menu list -->
     <ul>
          @if (authService.Authenticated) 
@@ -20,8 +20,8 @@
                 </li>
             }  
              <div class="Buttons">
-                <a class="SigIn" href="signin">Sign in</a> 
-                <a class="SignUp" href="signup">Sign Up</a>
+                <a class="SigIn"  routerLink="/signin">Sign in</a> 
+                <a class="SignUp" routerLink="/signup">Sign Up</a>
 
                 <div class="Basket">
                     @if(ShoppingcardService.ProductItems.length!=0)
@@ -89,8 +89,8 @@
                 </li>
             }  
             <div class="Buttons">
-            <a class="SigIn" href="signin">Sign in</a> 
-            <a class="SignUp" href="signup">Sign Up</a>
+            <a class="SigIn"  routerLink="/signin">Sign in</a> 
+            <a class="SignUp" routerLink="/signup">Sign Up</a>
             </div>
         }
     </ul>

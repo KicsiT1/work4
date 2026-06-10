@@ -6,6 +6,7 @@ import { FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 // This makes it safe to use icons (special type for icons)
 import { IconDefinition} from '@fortawesome/fontawesome-svg-core';
 // The different icons I use for the menu
+import { RouterLink } from '@angular/router';
 import { 
   faBasketShopping, 
   faAngleDown, 
@@ -22,7 +23,7 @@ import { AuthService } from '../../services/auth';
 
 @Component({
   selector: 'app-nav-bar',
-  imports: [CommonModule, FontAwesomeModule, ShopingCard],
+  imports: [CommonModule, FontAwesomeModule, ShopingCard,RouterLink],
   standalone: true,
   templateUrl: './nav-bar.html',
   styleUrl: './nav-bar.scss',
